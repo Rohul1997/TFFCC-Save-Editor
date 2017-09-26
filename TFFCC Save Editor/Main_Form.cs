@@ -24,7 +24,7 @@ namespace TFFCC_Save_Editor
                 {
                     BinaryReader br = new BinaryReader(File.OpenRead(open.FileName));
                     int count = 0;
-                    for (int i = 0x5FD54; i < 0x66EEF; i += 0x2C)
+                    for (int i = 0x5FD54; i < 0x66F48; i += 0x2C)
                     {
                         var index = Songs_dataGridView.Rows.Add();
                         Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
