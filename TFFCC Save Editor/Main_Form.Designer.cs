@@ -30,17 +30,37 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Points = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main_tabPage = new System.Windows.Forms.TabPage();
             this.Total_playtime_seconds_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Total_playtime_minutes_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Total_playtime_hours_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Scores_played_expert_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Scores_played_basic_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AI_battle_victories_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Keys_used_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Stages_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Bosses_conquered_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.EX_bursts_used_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Scores_played_expert_label = new System.Windows.Forms.Label();
             this.Inherited_quests_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Scores_played_basic_label = new System.Windows.Forms.Label();
             this.Long_quests_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AI_battle_victories_label = new System.Windows.Forms.Label();
             this.Medium_quests_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Keys_used_label = new System.Windows.Forms.Label();
             this.Short_quests_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Stages_cleared_label = new System.Windows.Forms.Label();
             this.Total_quests_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Bosses_conquered_label = new System.Windows.Forms.Label();
             this.SSS_ranks_received_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.EX_bursts_used_label = new System.Windows.Forms.Label();
             this.Crowns_received_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Inherited_quests_cleared_label = new System.Windows.Forms.Label();
             this.Daily_specials_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -88,32 +108,19 @@
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EX_bursts_used_label = new System.Windows.Forms.Label();
-            this.EX_bursts_used_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Bosses_conquered_label = new System.Windows.Forms.Label();
-            this.Bosses_conquered_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Stages_cleared_label = new System.Windows.Forms.Label();
-            this.Stages_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Keys_used_label = new System.Windows.Forms.Label();
-            this.Keys_used_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AI_battle_victories_label = new System.Windows.Forms.Label();
-            this.AI_battle_victories_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Scores_played_basic_label = new System.Windows.Forms.Label();
-            this.Scores_played_basic_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Scores_played_expert_label = new System.Windows.Forms.Label();
-            this.Scores_played_expert_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Points = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Total_playtime_seconds_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Total_playtime_minutes_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Total_playtime_hours_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_expert_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_basic_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AI_battle_victories_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Keys_used_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stages_cleared_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bosses_conquered_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EX_bursts_used_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Inherited_quests_cleared_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Long_quests_cleared_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Medium_quests_cleared_numericUpDown)).BeginInit();
@@ -137,13 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EX_bursts_used_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Bosses_conquered_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Stages_cleared_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Keys_used_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AI_battle_victories_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_basic_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_expert_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -176,6 +176,48 @@
             this.Songs_dataGridView.RowHeadersVisible = false;
             this.Songs_dataGridView.Size = new System.Drawing.Size(457, 395);
             this.Songs_dataGridView.TabIndex = 2;
+            // 
+            // Level_name
+            // 
+            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Level_name.HeaderText = "Level Name";
+            this.Level_name.Name = "Level_name";
+            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Points
+            // 
+            this.Points.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Points.HeaderText = "Points";
+            this.Points.Name = "Points";
+            this.Points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Chain
+            // 
+            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Chain.HeaderText = "Chain";
+            this.Chain.Name = "Chain";
+            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Play_style
+            // 
+            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Play_style.HeaderText = "Play Style";
+            this.Play_style.Name = "Play_style";
+            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_played
+            // 
+            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_played.HeaderText = "Times Played";
+            this.Times_played.Name = "Times_played";
+            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_cleared
+            // 
+            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_cleared.HeaderText = "Times Cleared";
+            this.Times_cleared.Name = "Times_cleared";
+            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tabControl1
             // 
@@ -300,6 +342,99 @@
             this.Total_playtime_hours_numericUpDown.Size = new System.Drawing.Size(45, 20);
             this.Total_playtime_hours_numericUpDown.TabIndex = 2;
             // 
+            // Scores_played_expert_numericUpDown
+            // 
+            this.Scores_played_expert_numericUpDown.Location = new System.Drawing.Point(372, 345);
+            this.Scores_played_expert_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.Scores_played_expert_numericUpDown.Name = "Scores_played_expert_numericUpDown";
+            this.Scores_played_expert_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.Scores_played_expert_numericUpDown.TabIndex = 2;
+            // 
+            // Scores_played_basic_numericUpDown
+            // 
+            this.Scores_played_basic_numericUpDown.Location = new System.Drawing.Point(372, 319);
+            this.Scores_played_basic_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.Scores_played_basic_numericUpDown.Name = "Scores_played_basic_numericUpDown";
+            this.Scores_played_basic_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.Scores_played_basic_numericUpDown.TabIndex = 2;
+            // 
+            // AI_battle_victories_numericUpDown
+            // 
+            this.AI_battle_victories_numericUpDown.Location = new System.Drawing.Point(372, 293);
+            this.AI_battle_victories_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.AI_battle_victories_numericUpDown.Name = "AI_battle_victories_numericUpDown";
+            this.AI_battle_victories_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.AI_battle_victories_numericUpDown.TabIndex = 2;
+            // 
+            // Keys_used_numericUpDown
+            // 
+            this.Keys_used_numericUpDown.Location = new System.Drawing.Point(372, 267);
+            this.Keys_used_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.Keys_used_numericUpDown.Name = "Keys_used_numericUpDown";
+            this.Keys_used_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.Keys_used_numericUpDown.TabIndex = 2;
+            // 
+            // Stages_cleared_numericUpDown
+            // 
+            this.Stages_cleared_numericUpDown.Location = new System.Drawing.Point(372, 241);
+            this.Stages_cleared_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.Stages_cleared_numericUpDown.Name = "Stages_cleared_numericUpDown";
+            this.Stages_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.Stages_cleared_numericUpDown.TabIndex = 2;
+            // 
+            // Bosses_conquered_numericUpDown
+            // 
+            this.Bosses_conquered_numericUpDown.Location = new System.Drawing.Point(372, 215);
+            this.Bosses_conquered_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.Bosses_conquered_numericUpDown.Name = "Bosses_conquered_numericUpDown";
+            this.Bosses_conquered_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.Bosses_conquered_numericUpDown.TabIndex = 2;
+            // 
+            // EX_bursts_used_numericUpDown
+            // 
+            this.EX_bursts_used_numericUpDown.Location = new System.Drawing.Point(372, 371);
+            this.EX_bursts_used_numericUpDown.Maximum = new decimal(new int[] {
+            -1,
+            0,
+            0,
+            0});
+            this.EX_bursts_used_numericUpDown.Name = "EX_bursts_used_numericUpDown";
+            this.EX_bursts_used_numericUpDown.Size = new System.Drawing.Size(83, 20);
+            this.EX_bursts_used_numericUpDown.TabIndex = 2;
+            // 
+            // Scores_played_expert_label
+            // 
+            this.Scores_played_expert_label.AutoSize = true;
+            this.Scores_played_expert_label.Location = new System.Drawing.Point(242, 347);
+            this.Scores_played_expert_label.Name = "Scores_played_expert_label";
+            this.Scores_played_expert_label.Size = new System.Drawing.Size(111, 13);
+            this.Scores_played_expert_label.TabIndex = 0;
+            this.Scores_played_expert_label.Text = "Scores Played Expert:";
+            // 
             // Inherited_quests_cleared_numericUpDown
             // 
             this.Inherited_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 189);
@@ -311,6 +446,15 @@
             this.Inherited_quests_cleared_numericUpDown.Name = "Inherited_quests_cleared_numericUpDown";
             this.Inherited_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Inherited_quests_cleared_numericUpDown.TabIndex = 2;
+            // 
+            // Scores_played_basic_label
+            // 
+            this.Scores_played_basic_label.AutoSize = true;
+            this.Scores_played_basic_label.Location = new System.Drawing.Point(242, 321);
+            this.Scores_played_basic_label.Name = "Scores_played_basic_label";
+            this.Scores_played_basic_label.Size = new System.Drawing.Size(107, 13);
+            this.Scores_played_basic_label.TabIndex = 0;
+            this.Scores_played_basic_label.Text = "Scores Played Basic:";
             // 
             // Long_quests_cleared_numericUpDown
             // 
@@ -324,6 +468,15 @@
             this.Long_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Long_quests_cleared_numericUpDown.TabIndex = 2;
             // 
+            // AI_battle_victories_label
+            // 
+            this.AI_battle_victories_label.AutoSize = true;
+            this.AI_battle_victories_label.Location = new System.Drawing.Point(242, 295);
+            this.AI_battle_victories_label.Name = "AI_battle_victories_label";
+            this.AI_battle_victories_label.Size = new System.Drawing.Size(93, 13);
+            this.AI_battle_victories_label.TabIndex = 0;
+            this.AI_battle_victories_label.Text = "AI Battle Victories:";
+            // 
             // Medium_quests_cleared_numericUpDown
             // 
             this.Medium_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 137);
@@ -335,6 +488,15 @@
             this.Medium_quests_cleared_numericUpDown.Name = "Medium_quests_cleared_numericUpDown";
             this.Medium_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Medium_quests_cleared_numericUpDown.TabIndex = 2;
+            // 
+            // Keys_used_label
+            // 
+            this.Keys_used_label.AutoSize = true;
+            this.Keys_used_label.Location = new System.Drawing.Point(242, 269);
+            this.Keys_used_label.Name = "Keys_used_label";
+            this.Keys_used_label.Size = new System.Drawing.Size(61, 13);
+            this.Keys_used_label.TabIndex = 0;
+            this.Keys_used_label.Text = "Keys Used:";
             // 
             // Short_quests_cleared_numericUpDown
             // 
@@ -348,6 +510,15 @@
             this.Short_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Short_quests_cleared_numericUpDown.TabIndex = 2;
             // 
+            // Stages_cleared_label
+            // 
+            this.Stages_cleared_label.AutoSize = true;
+            this.Stages_cleared_label.Location = new System.Drawing.Point(242, 243);
+            this.Stages_cleared_label.Name = "Stages_cleared_label";
+            this.Stages_cleared_label.Size = new System.Drawing.Size(82, 13);
+            this.Stages_cleared_label.TabIndex = 0;
+            this.Stages_cleared_label.Text = "Stages Cleared:";
+            // 
             // Total_quests_cleared_numericUpDown
             // 
             this.Total_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 85);
@@ -360,6 +531,15 @@
             this.Total_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Total_quests_cleared_numericUpDown.TabIndex = 2;
             // 
+            // Bosses_conquered_label
+            // 
+            this.Bosses_conquered_label.AutoSize = true;
+            this.Bosses_conquered_label.Location = new System.Drawing.Point(242, 217);
+            this.Bosses_conquered_label.Name = "Bosses_conquered_label";
+            this.Bosses_conquered_label.Size = new System.Drawing.Size(99, 13);
+            this.Bosses_conquered_label.TabIndex = 0;
+            this.Bosses_conquered_label.Text = "Bosses Conquered:";
+            // 
             // SSS_ranks_received_numericUpDown
             // 
             this.SSS_ranks_received_numericUpDown.Location = new System.Drawing.Point(372, 59);
@@ -371,6 +551,15 @@
             this.SSS_ranks_received_numericUpDown.Name = "SSS_ranks_received_numericUpDown";
             this.SSS_ranks_received_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.SSS_ranks_received_numericUpDown.TabIndex = 2;
+            // 
+            // EX_bursts_used_label
+            // 
+            this.EX_bursts_used_label.AutoSize = true;
+            this.EX_bursts_used_label.Location = new System.Drawing.Point(242, 373);
+            this.EX_bursts_used_label.Name = "EX_bursts_used_label";
+            this.EX_bursts_used_label.Size = new System.Drawing.Size(84, 13);
+            this.EX_bursts_used_label.TabIndex = 0;
+            this.EX_bursts_used_label.Text = "EX Bursts Used:";
             // 
             // Crowns_received_numericUpDown
             // 
@@ -439,7 +628,7 @@
             // 
             this.Ultimate_scores_cleared_numericUpDown.Location = new System.Drawing.Point(138, 318);
             this.Ultimate_scores_cleared_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
+            321,
             0,
             0,
             0});
@@ -460,7 +649,7 @@
             // 
             this.Expert_scores_cleared_numericUpDown.Location = new System.Drawing.Point(138, 292);
             this.Expert_scores_cleared_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
+            321,
             0,
             0,
             0});
@@ -481,7 +670,7 @@
             // 
             this.Basic_scores_cleared_numericUpDown.Location = new System.Drawing.Point(138, 267);
             this.Basic_scores_cleared_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
+            321,
             0,
             0,
             0});
@@ -841,195 +1030,6 @@
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
             // 
-            // EX_bursts_used_label
-            // 
-            this.EX_bursts_used_label.AutoSize = true;
-            this.EX_bursts_used_label.Location = new System.Drawing.Point(242, 373);
-            this.EX_bursts_used_label.Name = "EX_bursts_used_label";
-            this.EX_bursts_used_label.Size = new System.Drawing.Size(84, 13);
-            this.EX_bursts_used_label.TabIndex = 0;
-            this.EX_bursts_used_label.Text = "EX Bursts Used:";
-            // 
-            // EX_bursts_used_numericUpDown
-            // 
-            this.EX_bursts_used_numericUpDown.Location = new System.Drawing.Point(372, 371);
-            this.EX_bursts_used_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.EX_bursts_used_numericUpDown.Name = "EX_bursts_used_numericUpDown";
-            this.EX_bursts_used_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.EX_bursts_used_numericUpDown.TabIndex = 2;
-            // 
-            // Bosses_conquered_label
-            // 
-            this.Bosses_conquered_label.AutoSize = true;
-            this.Bosses_conquered_label.Location = new System.Drawing.Point(242, 217);
-            this.Bosses_conquered_label.Name = "Bosses_conquered_label";
-            this.Bosses_conquered_label.Size = new System.Drawing.Size(99, 13);
-            this.Bosses_conquered_label.TabIndex = 0;
-            this.Bosses_conquered_label.Text = "Bosses Conquered:";
-            // 
-            // Bosses_conquered_numericUpDown
-            // 
-            this.Bosses_conquered_numericUpDown.Location = new System.Drawing.Point(372, 215);
-            this.Bosses_conquered_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.Bosses_conquered_numericUpDown.Name = "Bosses_conquered_numericUpDown";
-            this.Bosses_conquered_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.Bosses_conquered_numericUpDown.TabIndex = 2;
-            // 
-            // Stages_cleared_label
-            // 
-            this.Stages_cleared_label.AutoSize = true;
-            this.Stages_cleared_label.Location = new System.Drawing.Point(242, 243);
-            this.Stages_cleared_label.Name = "Stages_cleared_label";
-            this.Stages_cleared_label.Size = new System.Drawing.Size(82, 13);
-            this.Stages_cleared_label.TabIndex = 0;
-            this.Stages_cleared_label.Text = "Stages Cleared:";
-            // 
-            // Stages_cleared_numericUpDown
-            // 
-            this.Stages_cleared_numericUpDown.Location = new System.Drawing.Point(372, 241);
-            this.Stages_cleared_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.Stages_cleared_numericUpDown.Name = "Stages_cleared_numericUpDown";
-            this.Stages_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.Stages_cleared_numericUpDown.TabIndex = 2;
-            // 
-            // Keys_used_label
-            // 
-            this.Keys_used_label.AutoSize = true;
-            this.Keys_used_label.Location = new System.Drawing.Point(242, 269);
-            this.Keys_used_label.Name = "Keys_used_label";
-            this.Keys_used_label.Size = new System.Drawing.Size(61, 13);
-            this.Keys_used_label.TabIndex = 0;
-            this.Keys_used_label.Text = "Keys Used:";
-            // 
-            // Keys_used_numericUpDown
-            // 
-            this.Keys_used_numericUpDown.Location = new System.Drawing.Point(372, 267);
-            this.Keys_used_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.Keys_used_numericUpDown.Name = "Keys_used_numericUpDown";
-            this.Keys_used_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.Keys_used_numericUpDown.TabIndex = 2;
-            // 
-            // AI_battle_victories_label
-            // 
-            this.AI_battle_victories_label.AutoSize = true;
-            this.AI_battle_victories_label.Location = new System.Drawing.Point(242, 295);
-            this.AI_battle_victories_label.Name = "AI_battle_victories_label";
-            this.AI_battle_victories_label.Size = new System.Drawing.Size(93, 13);
-            this.AI_battle_victories_label.TabIndex = 0;
-            this.AI_battle_victories_label.Text = "AI Battle Victories:";
-            // 
-            // AI_battle_victories_numericUpDown
-            // 
-            this.AI_battle_victories_numericUpDown.Location = new System.Drawing.Point(372, 293);
-            this.AI_battle_victories_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.AI_battle_victories_numericUpDown.Name = "AI_battle_victories_numericUpDown";
-            this.AI_battle_victories_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.AI_battle_victories_numericUpDown.TabIndex = 2;
-            // 
-            // Scores_played_basic_label
-            // 
-            this.Scores_played_basic_label.AutoSize = true;
-            this.Scores_played_basic_label.Location = new System.Drawing.Point(242, 321);
-            this.Scores_played_basic_label.Name = "Scores_played_basic_label";
-            this.Scores_played_basic_label.Size = new System.Drawing.Size(107, 13);
-            this.Scores_played_basic_label.TabIndex = 0;
-            this.Scores_played_basic_label.Text = "Scores Played Basic:";
-            // 
-            // Scores_played_basic_numericUpDown
-            // 
-            this.Scores_played_basic_numericUpDown.Location = new System.Drawing.Point(372, 319);
-            this.Scores_played_basic_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.Scores_played_basic_numericUpDown.Name = "Scores_played_basic_numericUpDown";
-            this.Scores_played_basic_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.Scores_played_basic_numericUpDown.TabIndex = 2;
-            // 
-            // Scores_played_expert_label
-            // 
-            this.Scores_played_expert_label.AutoSize = true;
-            this.Scores_played_expert_label.Location = new System.Drawing.Point(242, 347);
-            this.Scores_played_expert_label.Name = "Scores_played_expert_label";
-            this.Scores_played_expert_label.Size = new System.Drawing.Size(111, 13);
-            this.Scores_played_expert_label.TabIndex = 0;
-            this.Scores_played_expert_label.Text = "Scores Played Expert:";
-            // 
-            // Scores_played_expert_numericUpDown
-            // 
-            this.Scores_played_expert_numericUpDown.Location = new System.Drawing.Point(372, 345);
-            this.Scores_played_expert_numericUpDown.Maximum = new decimal(new int[] {
-            -1,
-            0,
-            0,
-            0});
-            this.Scores_played_expert_numericUpDown.Name = "Scores_played_expert_numericUpDown";
-            this.Scores_played_expert_numericUpDown.Size = new System.Drawing.Size(83, 20);
-            this.Scores_played_expert_numericUpDown.TabIndex = 2;
-            // 
-            // Times_cleared
-            // 
-            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_cleared.HeaderText = "Times Cleared";
-            this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_played
-            // 
-            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_played.HeaderText = "Times Played";
-            this.Times_played.Name = "Times_played";
-            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Play_style
-            // 
-            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Play_style.HeaderText = "Play Style";
-            this.Play_style.Name = "Play_style";
-            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Chain
-            // 
-            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Chain.HeaderText = "Chain";
-            this.Chain.Name = "Chain";
-            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Points
-            // 
-            this.Points.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Points.HeaderText = "Points";
-            this.Points.Name = "Points";
-            this.Points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Level_name
-            // 
-            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Level_name.HeaderText = "Level Name";
-            this.Level_name.Name = "Level_name";
-            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1050,6 +1050,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Total_playtime_seconds_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Total_playtime_minutes_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Total_playtime_hours_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_expert_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_basic_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AI_battle_victories_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Keys_used_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stages_cleared_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bosses_conquered_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EX_bursts_used_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Inherited_quests_cleared_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Long_quests_cleared_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Medium_quests_cleared_numericUpDown)).EndInit();
@@ -1075,13 +1082,6 @@
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EX_bursts_used_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Bosses_conquered_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Stages_cleared_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Keys_used_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AI_battle_victories_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_basic_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Scores_played_expert_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
