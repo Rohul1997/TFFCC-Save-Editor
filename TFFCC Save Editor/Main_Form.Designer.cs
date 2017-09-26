@@ -30,13 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main_tabPage = new System.Windows.Forms.TabPage();
             this.Total_playtime_seconds_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -111,6 +104,14 @@
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -172,63 +173,15 @@
             this.Status,
             this.Play_style,
             this.Times_played,
-            this.Times_cleared});
+            this.Times_cleared,
+            this.Date});
             this.Songs_dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Songs_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Songs_dataGridView.Location = new System.Drawing.Point(3, 21);
             this.Songs_dataGridView.Name = "Songs_dataGridView";
             this.Songs_dataGridView.RowHeadersVisible = false;
-            this.Songs_dataGridView.Size = new System.Drawing.Size(457, 395);
+            this.Songs_dataGridView.Size = new System.Drawing.Size(509, 395);
             this.Songs_dataGridView.TabIndex = 2;
-            // 
-            // Level_name
-            // 
-            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Level_name.HeaderText = "Level Name";
-            this.Level_name.Name = "Level_name";
-            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Score
-            // 
-            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Score.HeaderText = "Score";
-            this.Score.Name = "Score";
-            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Chain
-            // 
-            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Chain.HeaderText = "Chain";
-            this.Chain.Name = "Chain";
-            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Play_style
-            // 
-            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Play_style.HeaderText = "Play Style";
-            this.Play_style.Name = "Play_style";
-            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_played
-            // 
-            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_played.HeaderText = "Times Played";
-            this.Times_played.Name = "Times_played";
-            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_cleared
-            // 
-            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_cleared.HeaderText = "Times Cleared";
-            this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tabControl1
             // 
@@ -238,7 +191,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(471, 445);
+            this.tabControl1.Size = new System.Drawing.Size(523, 445);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 3;
             // 
@@ -313,13 +266,13 @@
             this.Main_tabPage.Location = new System.Drawing.Point(4, 22);
             this.Main_tabPage.Name = "Main_tabPage";
             this.Main_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Main_tabPage.Size = new System.Drawing.Size(463, 419);
+            this.Main_tabPage.Size = new System.Drawing.Size(515, 419);
             this.Main_tabPage.TabIndex = 0;
             this.Main_tabPage.Text = "Main";
             // 
             // Total_playtime_seconds_numericUpDown
             // 
-            this.Total_playtime_seconds_numericUpDown.Location = new System.Drawing.Point(410, 30);
+            this.Total_playtime_seconds_numericUpDown.Location = new System.Drawing.Point(437, 30);
             this.Total_playtime_seconds_numericUpDown.Maximum = new decimal(new int[] {
             59,
             0,
@@ -331,7 +284,7 @@
             // 
             // Total_playtime_minutes_numericUpDown
             // 
-            this.Total_playtime_minutes_numericUpDown.Location = new System.Drawing.Point(352, 30);
+            this.Total_playtime_minutes_numericUpDown.Location = new System.Drawing.Point(379, 30);
             this.Total_playtime_minutes_numericUpDown.Maximum = new decimal(new int[] {
             59,
             0,
@@ -343,7 +296,7 @@
             // 
             // Total_playtime_hours_numericUpDown
             // 
-            this.Total_playtime_hours_numericUpDown.Location = new System.Drawing.Point(293, 30);
+            this.Total_playtime_hours_numericUpDown.Location = new System.Drawing.Point(320, 30);
             this.Total_playtime_hours_numericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -355,7 +308,7 @@
             // 
             // Scores_played_expert_numericUpDown
             // 
-            this.Scores_played_expert_numericUpDown.Location = new System.Drawing.Point(372, 345);
+            this.Scores_played_expert_numericUpDown.Location = new System.Drawing.Point(399, 345);
             this.Scores_played_expert_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -367,7 +320,7 @@
             // 
             // Scores_played_basic_numericUpDown
             // 
-            this.Scores_played_basic_numericUpDown.Location = new System.Drawing.Point(372, 319);
+            this.Scores_played_basic_numericUpDown.Location = new System.Drawing.Point(399, 319);
             this.Scores_played_basic_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -379,7 +332,7 @@
             // 
             // AI_battle_victories_numericUpDown
             // 
-            this.AI_battle_victories_numericUpDown.Location = new System.Drawing.Point(372, 293);
+            this.AI_battle_victories_numericUpDown.Location = new System.Drawing.Point(399, 293);
             this.AI_battle_victories_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -391,7 +344,7 @@
             // 
             // Keys_used_numericUpDown
             // 
-            this.Keys_used_numericUpDown.Location = new System.Drawing.Point(372, 267);
+            this.Keys_used_numericUpDown.Location = new System.Drawing.Point(399, 267);
             this.Keys_used_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -403,7 +356,7 @@
             // 
             // Stages_cleared_numericUpDown
             // 
-            this.Stages_cleared_numericUpDown.Location = new System.Drawing.Point(372, 241);
+            this.Stages_cleared_numericUpDown.Location = new System.Drawing.Point(399, 241);
             this.Stages_cleared_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -415,7 +368,7 @@
             // 
             // Bosses_conquered_numericUpDown
             // 
-            this.Bosses_conquered_numericUpDown.Location = new System.Drawing.Point(372, 215);
+            this.Bosses_conquered_numericUpDown.Location = new System.Drawing.Point(399, 215);
             this.Bosses_conquered_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -427,7 +380,7 @@
             // 
             // EX_bursts_used_numericUpDown
             // 
-            this.EX_bursts_used_numericUpDown.Location = new System.Drawing.Point(372, 371);
+            this.EX_bursts_used_numericUpDown.Location = new System.Drawing.Point(399, 371);
             this.EX_bursts_used_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -440,7 +393,7 @@
             // Scores_played_expert_label
             // 
             this.Scores_played_expert_label.AutoSize = true;
-            this.Scores_played_expert_label.Location = new System.Drawing.Point(242, 347);
+            this.Scores_played_expert_label.Location = new System.Drawing.Point(269, 347);
             this.Scores_played_expert_label.Name = "Scores_played_expert_label";
             this.Scores_played_expert_label.Size = new System.Drawing.Size(111, 13);
             this.Scores_played_expert_label.TabIndex = 0;
@@ -448,7 +401,7 @@
             // 
             // Inherited_quests_cleared_numericUpDown
             // 
-            this.Inherited_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 189);
+            this.Inherited_quests_cleared_numericUpDown.Location = new System.Drawing.Point(399, 189);
             this.Inherited_quests_cleared_numericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -461,7 +414,7 @@
             // Scores_played_basic_label
             // 
             this.Scores_played_basic_label.AutoSize = true;
-            this.Scores_played_basic_label.Location = new System.Drawing.Point(242, 321);
+            this.Scores_played_basic_label.Location = new System.Drawing.Point(269, 321);
             this.Scores_played_basic_label.Name = "Scores_played_basic_label";
             this.Scores_played_basic_label.Size = new System.Drawing.Size(107, 13);
             this.Scores_played_basic_label.TabIndex = 0;
@@ -469,7 +422,7 @@
             // 
             // Long_quests_cleared_numericUpDown
             // 
-            this.Long_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 163);
+            this.Long_quests_cleared_numericUpDown.Location = new System.Drawing.Point(399, 163);
             this.Long_quests_cleared_numericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -482,7 +435,7 @@
             // AI_battle_victories_label
             // 
             this.AI_battle_victories_label.AutoSize = true;
-            this.AI_battle_victories_label.Location = new System.Drawing.Point(242, 295);
+            this.AI_battle_victories_label.Location = new System.Drawing.Point(269, 295);
             this.AI_battle_victories_label.Name = "AI_battle_victories_label";
             this.AI_battle_victories_label.Size = new System.Drawing.Size(93, 13);
             this.AI_battle_victories_label.TabIndex = 0;
@@ -490,7 +443,7 @@
             // 
             // Medium_quests_cleared_numericUpDown
             // 
-            this.Medium_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 137);
+            this.Medium_quests_cleared_numericUpDown.Location = new System.Drawing.Point(399, 137);
             this.Medium_quests_cleared_numericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -503,7 +456,7 @@
             // Keys_used_label
             // 
             this.Keys_used_label.AutoSize = true;
-            this.Keys_used_label.Location = new System.Drawing.Point(242, 269);
+            this.Keys_used_label.Location = new System.Drawing.Point(269, 269);
             this.Keys_used_label.Name = "Keys_used_label";
             this.Keys_used_label.Size = new System.Drawing.Size(61, 13);
             this.Keys_used_label.TabIndex = 0;
@@ -511,7 +464,7 @@
             // 
             // Short_quests_cleared_numericUpDown
             // 
-            this.Short_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 111);
+            this.Short_quests_cleared_numericUpDown.Location = new System.Drawing.Point(399, 111);
             this.Short_quests_cleared_numericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -524,7 +477,7 @@
             // Stages_cleared_label
             // 
             this.Stages_cleared_label.AutoSize = true;
-            this.Stages_cleared_label.Location = new System.Drawing.Point(242, 243);
+            this.Stages_cleared_label.Location = new System.Drawing.Point(269, 243);
             this.Stages_cleared_label.Name = "Stages_cleared_label";
             this.Stages_cleared_label.Size = new System.Drawing.Size(82, 13);
             this.Stages_cleared_label.TabIndex = 0;
@@ -532,7 +485,7 @@
             // 
             // Total_quests_cleared_numericUpDown
             // 
-            this.Total_quests_cleared_numericUpDown.Location = new System.Drawing.Point(372, 85);
+            this.Total_quests_cleared_numericUpDown.Location = new System.Drawing.Point(399, 85);
             this.Total_quests_cleared_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -545,7 +498,7 @@
             // Bosses_conquered_label
             // 
             this.Bosses_conquered_label.AutoSize = true;
-            this.Bosses_conquered_label.Location = new System.Drawing.Point(242, 217);
+            this.Bosses_conquered_label.Location = new System.Drawing.Point(269, 217);
             this.Bosses_conquered_label.Name = "Bosses_conquered_label";
             this.Bosses_conquered_label.Size = new System.Drawing.Size(99, 13);
             this.Bosses_conquered_label.TabIndex = 0;
@@ -553,7 +506,7 @@
             // 
             // SSS_ranks_received_numericUpDown
             // 
-            this.SSS_ranks_received_numericUpDown.Location = new System.Drawing.Point(372, 59);
+            this.SSS_ranks_received_numericUpDown.Location = new System.Drawing.Point(399, 59);
             this.SSS_ranks_received_numericUpDown.Maximum = new decimal(new int[] {
             -1,
             0,
@@ -566,7 +519,7 @@
             // EX_bursts_used_label
             // 
             this.EX_bursts_used_label.AutoSize = true;
-            this.EX_bursts_used_label.Location = new System.Drawing.Point(242, 373);
+            this.EX_bursts_used_label.Location = new System.Drawing.Point(269, 373);
             this.EX_bursts_used_label.Name = "EX_bursts_used_label";
             this.EX_bursts_used_label.Size = new System.Drawing.Size(84, 13);
             this.EX_bursts_used_label.TabIndex = 0;
@@ -587,7 +540,7 @@
             // Inherited_quests_cleared_label
             // 
             this.Inherited_quests_cleared_label.AutoSize = true;
-            this.Inherited_quests_cleared_label.Location = new System.Drawing.Point(242, 191);
+            this.Inherited_quests_cleared_label.Location = new System.Drawing.Point(269, 191);
             this.Inherited_quests_cleared_label.Name = "Inherited_quests_cleared_label";
             this.Inherited_quests_cleared_label.Size = new System.Drawing.Size(126, 13);
             this.Inherited_quests_cleared_label.TabIndex = 0;
@@ -608,7 +561,7 @@
             // Long_quests_cleared_label
             // 
             this.Long_quests_cleared_label.AutoSize = true;
-            this.Long_quests_cleared_label.Location = new System.Drawing.Point(242, 166);
+            this.Long_quests_cleared_label.Location = new System.Drawing.Point(269, 166);
             this.Long_quests_cleared_label.Name = "Long_quests_cleared_label";
             this.Long_quests_cleared_label.Size = new System.Drawing.Size(109, 13);
             this.Long_quests_cleared_label.TabIndex = 0;
@@ -629,7 +582,7 @@
             // Medium_quests_cleared_label
             // 
             this.Medium_quests_cleared_label.AutoSize = true;
-            this.Medium_quests_cleared_label.Location = new System.Drawing.Point(242, 140);
+            this.Medium_quests_cleared_label.Location = new System.Drawing.Point(269, 140);
             this.Medium_quests_cleared_label.Name = "Medium_quests_cleared_label";
             this.Medium_quests_cleared_label.Size = new System.Drawing.Size(122, 13);
             this.Medium_quests_cleared_label.TabIndex = 0;
@@ -650,7 +603,7 @@
             // Short_quests_cleared_label
             // 
             this.Short_quests_cleared_label.AutoSize = true;
-            this.Short_quests_cleared_label.Location = new System.Drawing.Point(242, 114);
+            this.Short_quests_cleared_label.Location = new System.Drawing.Point(269, 114);
             this.Short_quests_cleared_label.Name = "Short_quests_cleared_label";
             this.Short_quests_cleared_label.Size = new System.Drawing.Size(110, 13);
             this.Short_quests_cleared_label.TabIndex = 0;
@@ -671,7 +624,7 @@
             // Total_quests_cleared_label
             // 
             this.Total_quests_cleared_label.AutoSize = true;
-            this.Total_quests_cleared_label.Location = new System.Drawing.Point(242, 88);
+            this.Total_quests_cleared_label.Location = new System.Drawing.Point(269, 88);
             this.Total_quests_cleared_label.Name = "Total_quests_cleared_label";
             this.Total_quests_cleared_label.Size = new System.Drawing.Size(109, 13);
             this.Total_quests_cleared_label.TabIndex = 0;
@@ -692,7 +645,7 @@
             // SSS_ranks_received_label
             // 
             this.SSS_ranks_received_label.AutoSize = true;
-            this.SSS_ranks_received_label.Location = new System.Drawing.Point(242, 62);
+            this.SSS_ranks_received_label.Location = new System.Drawing.Point(269, 62);
             this.SSS_ranks_received_label.Name = "SSS_ranks_received_label";
             this.SSS_ranks_received_label.Size = new System.Drawing.Size(114, 13);
             this.SSS_ranks_received_label.TabIndex = 0;
@@ -907,7 +860,7 @@
             // Total_playtime_seconds_label
             // 
             this.Total_playtime_seconds_label.AutoSize = true;
-            this.Total_playtime_seconds_label.Location = new System.Drawing.Point(408, 11);
+            this.Total_playtime_seconds_label.Location = new System.Drawing.Point(435, 11);
             this.Total_playtime_seconds_label.Name = "Total_playtime_seconds_label";
             this.Total_playtime_seconds_label.Size = new System.Drawing.Size(49, 13);
             this.Total_playtime_seconds_label.TabIndex = 0;
@@ -925,7 +878,7 @@
             // Total_playtime_minutes_label
             // 
             this.Total_playtime_minutes_label.AutoSize = true;
-            this.Total_playtime_minutes_label.Location = new System.Drawing.Point(352, 11);
+            this.Total_playtime_minutes_label.Location = new System.Drawing.Point(379, 11);
             this.Total_playtime_minutes_label.Name = "Total_playtime_minutes_label";
             this.Total_playtime_minutes_label.Size = new System.Drawing.Size(44, 13);
             this.Total_playtime_minutes_label.TabIndex = 0;
@@ -943,7 +896,7 @@
             // Total_playtime_hours_label
             // 
             this.Total_playtime_hours_label.AutoSize = true;
-            this.Total_playtime_hours_label.Location = new System.Drawing.Point(296, 11);
+            this.Total_playtime_hours_label.Location = new System.Drawing.Point(323, 11);
             this.Total_playtime_hours_label.Name = "Total_playtime_hours_label";
             this.Total_playtime_hours_label.Size = new System.Drawing.Size(35, 13);
             this.Total_playtime_hours_label.TabIndex = 0;
@@ -961,7 +914,7 @@
             // Total_playtime_label
             // 
             this.Total_playtime_label.AutoSize = true;
-            this.Total_playtime_label.Location = new System.Drawing.Point(238, 18);
+            this.Total_playtime_label.Location = new System.Drawing.Point(265, 18);
             this.Total_playtime_label.Name = "Total_playtime_label";
             this.Total_playtime_label.Size = new System.Drawing.Size(49, 26);
             this.Total_playtime_label.TabIndex = 0;
@@ -1005,7 +958,7 @@
             this.Songs_tabPage.Location = new System.Drawing.Point(4, 22);
             this.Songs_tabPage.Name = "Songs_tabPage";
             this.Songs_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Songs_tabPage.Size = new System.Drawing.Size(463, 419);
+            this.Songs_tabPage.Size = new System.Drawing.Size(515, 419);
             this.Songs_tabPage.TabIndex = 1;
             this.Songs_tabPage.Text = "Songs";
             // 
@@ -1061,11 +1014,67 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Total Songs Found: 0";
             // 
+            // Level_name
+            // 
+            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Level_name.HeaderText = "Level Name";
+            this.Level_name.Name = "Level_name";
+            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Score
+            // 
+            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Score.HeaderText = "Score";
+            this.Score.Name = "Score";
+            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Chain
+            // 
+            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Chain.HeaderText = "Chain";
+            this.Chain.Name = "Chain";
+            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Play_style
+            // 
+            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Play_style.HeaderText = "Play Style";
+            this.Play_style.Name = "Play_style";
+            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_played
+            // 
+            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_played.HeaderText = "Times Played";
+            this.Times_played.Name = "Times_played";
+            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_cleared
+            // 
+            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_cleared.HeaderText = "Times Cleared";
+            this.Times_cleared.Name = "Times_cleared";
+            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 472);
+            this.ClientSize = new System.Drawing.Size(523, 472);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1193,6 +1202,8 @@
         private System.Windows.Forms.Label Stages_cleared_label;
         private System.Windows.Forms.Label Bosses_conquered_label;
         private System.Windows.Forms.Label EX_bursts_used_label;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chain;
@@ -1200,8 +1211,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Play_style;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }
 

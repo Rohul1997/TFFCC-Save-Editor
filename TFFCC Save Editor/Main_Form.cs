@@ -90,6 +90,16 @@ namespace TFFCC_Save_Editor
                         //Read times cleared value for song
                         br.BaseStream.Position = i + 0x10;
                         Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                        //Read date value for song
+                        br.BaseStream.Position = i + 0x26;
+                        var year = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+                        br.BaseStream.Position = i + 0x28;
+                        var month = br.ReadByte();
+                        br.BaseStream.Position = i + 0x29;
+                        var day = br.ReadByte();
+                        Songs_dataGridView.Rows[index].Cells["Date"].Value = $"{day}.{month}.{year}";
+
                         ++Main_count;
                     }
                     label1.Text = $"Songs Found: {Main_count}";
@@ -160,6 +170,16 @@ namespace TFFCC_Save_Editor
                         //Read times cleared value for song
                         br.BaseStream.Position = i + 0x10;
                         Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                        //Read date value for song
+                        br.BaseStream.Position = i + 0x26;
+                        var year = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+                        br.BaseStream.Position = i + 0x28;
+                        var month = br.ReadByte();
+                        br.BaseStream.Position = i + 0x29;
+                        var day = br.ReadByte();
+                        Songs_dataGridView.Rows[index].Cells["Date"].Value = $"{day}.{month}.{year}";
+
                         ++DLC_count;
                     }
                     label2.Text = $"DLC Songs Found: {DLC_count}";
