@@ -31,8 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
             this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Points = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,8 +165,9 @@
             this.Songs_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Songs_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Level_name,
-            this.Points,
+            this.Score,
             this.Chain,
+            this.Status,
             this.Play_style,
             this.Times_played,
             this.Times_cleared});
@@ -184,12 +186,12 @@
             this.Level_name.Name = "Level_name";
             this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Points
+            // Score
             // 
-            this.Points.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Points.HeaderText = "Points";
-            this.Points.Name = "Points";
-            this.Points.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Score.HeaderText = "Score";
+            this.Score.Name = "Score";
+            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Chain
             // 
@@ -197,6 +199,13 @@
             this.Chain.HeaderText = "Chain";
             this.Chain.Name = "Chain";
             this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Play_style
             // 
@@ -1163,8 +1172,9 @@
         private System.Windows.Forms.Label Bosses_conquered_label;
         private System.Windows.Forms.Label EX_bursts_used_label;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Points;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Play_style;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;

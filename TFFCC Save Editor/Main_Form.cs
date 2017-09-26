@@ -29,13 +29,33 @@ namespace TFFCC_Save_Editor
                         var index = Songs_dataGridView.Rows.Add();
                         Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
 
-                        //Read points value for song
+                        //Read Score value for song
                         br.BaseStream.Position = i;
-                        Songs_dataGridView.Rows[index].Cells["Points"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                        Songs_dataGridView.Rows[index].Cells["Score"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                         //Read chain value for song
                         br.BaseStream.Position = i + 0x04;
                         Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                        //Read status value for song
+                        br.BaseStream.Position = i + 0x09;
+                        var status = br.ReadByte();
+                        if (status == 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
+                        }
+                        else if (status == 0x01)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
+                        }
+                        else if (status == 0x02)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
+                        }
+                        else
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed/Unknown";
+                        }
 
                         //Read playstyle value for song
                         br.BaseStream.Position = i + 0x0A;
@@ -88,7 +108,7 @@ namespace TFFCC_Save_Editor
                 if (open_main.ShowDialog() == DialogResult.OK)
                 {
                     BinaryReader br = new BinaryReader(File.OpenRead(open_main.FileName));
-                    
+
                     //Read player name
                     br.BaseStream.Position = 0x12;
                     Player_name_textBox.Text = Encoding.Unicode.GetString(br.ReadBytes(0x0C));
@@ -181,7 +201,7 @@ namespace TFFCC_Save_Editor
                     Long_quests_cleared_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
 
                     //Read inherited quests cleared
-                    br.BaseStream.Position = 0x37BE ;
+                    br.BaseStream.Position = 0x37BE;
                     Inherited_quests_cleared_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
 
                     //Read bosses conquered
