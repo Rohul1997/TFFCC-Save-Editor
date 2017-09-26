@@ -91,7 +91,7 @@
             this.StreetPasses_label = new System.Windows.Forms.Label();
             this.Rhythmia_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ProfiCards_received_label = new System.Windows.Forms.Label();
-            this.Name_textBox = new System.Windows.Forms.TextBox();
+            this.Player_name_textBox = new System.Windows.Forms.TextBox();
             this.Critical_triggers_label = new System.Windows.Forms.Label();
             this.Total_playtime_seconds_label = new System.Windows.Forms.Label();
             this.Chained_triggers_label = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             this.Total_playtime_label = new System.Windows.Forms.Label();
             this.Songs_played_label = new System.Windows.Forms.Label();
             this.Rhythmia_label = new System.Windows.Forms.Label();
-            this.Name_label = new System.Windows.Forms.Label();
+            this.Player_name_label = new System.Windows.Forms.Label();
             this.Songs_tabPage = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -287,7 +287,7 @@
             this.Main_tabPage.Controls.Add(this.StreetPasses_label);
             this.Main_tabPage.Controls.Add(this.Rhythmia_numericUpDown);
             this.Main_tabPage.Controls.Add(this.ProfiCards_received_label);
-            this.Main_tabPage.Controls.Add(this.Name_textBox);
+            this.Main_tabPage.Controls.Add(this.Player_name_textBox);
             this.Main_tabPage.Controls.Add(this.Critical_triggers_label);
             this.Main_tabPage.Controls.Add(this.Total_playtime_seconds_label);
             this.Main_tabPage.Controls.Add(this.Chained_triggers_label);
@@ -298,7 +298,7 @@
             this.Main_tabPage.Controls.Add(this.Total_playtime_label);
             this.Main_tabPage.Controls.Add(this.Songs_played_label);
             this.Main_tabPage.Controls.Add(this.Rhythmia_label);
-            this.Main_tabPage.Controls.Add(this.Name_label);
+            this.Main_tabPage.Controls.Add(this.Player_name_label);
             this.Main_tabPage.Location = new System.Drawing.Point(4, 22);
             this.Main_tabPage.Name = "Main_tabPage";
             this.Main_tabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -876,13 +876,13 @@
             this.ProfiCards_received_label.TabIndex = 0;
             this.ProfiCards_received_label.Text = "ProfiCards Received:";
             // 
-            // Name_textBox
+            // Player_name_textBox
             // 
-            this.Name_textBox.Location = new System.Drawing.Point(138, 7);
-            this.Name_textBox.MaxLength = 6;
-            this.Name_textBox.Name = "Name_textBox";
-            this.Name_textBox.Size = new System.Drawing.Size(83, 20);
-            this.Name_textBox.TabIndex = 1;
+            this.Player_name_textBox.Location = new System.Drawing.Point(138, 7);
+            this.Player_name_textBox.MaxLength = 6;
+            this.Player_name_textBox.Name = "Player_name_textBox";
+            this.Player_name_textBox.Size = new System.Drawing.Size(83, 20);
+            this.Player_name_textBox.TabIndex = 1;
             // 
             // Critical_triggers_label
             // 
@@ -975,14 +975,14 @@
             this.Rhythmia_label.TabIndex = 0;
             this.Rhythmia_label.Text = "Rhythmia:";
             // 
-            // Name_label
+            // Player_name_label
             // 
-            this.Name_label.AutoSize = true;
-            this.Name_label.Location = new System.Drawing.Point(8, 10);
-            this.Name_label.Name = "Name_label";
-            this.Name_label.Size = new System.Drawing.Size(38, 13);
-            this.Name_label.TabIndex = 0;
-            this.Name_label.Text = "Name:";
+            this.Player_name_label.AutoSize = true;
+            this.Player_name_label.Location = new System.Drawing.Point(8, 10);
+            this.Player_name_label.Name = "Player_name_label";
+            this.Player_name_label.Size = new System.Drawing.Size(70, 13);
+            this.Player_name_label.TabIndex = 0;
+            this.Player_name_label.Text = "Player Name:";
             // 
             // Songs_tabPage
             // 
@@ -1097,8 +1097,8 @@
         private System.Windows.Forms.ToolStripMenuItem File_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Open_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Open_main_ToolStripMenuItem;
-        private System.Windows.Forms.TextBox Name_textBox;
-        private System.Windows.Forms.Label Name_label;
+        private System.Windows.Forms.TextBox Player_name_textBox;
+        private System.Windows.Forms.Label Player_name_label;
         private System.Windows.Forms.Label Rhythmia_label;
         private System.Windows.Forms.NumericUpDown Rhythmia_numericUpDown;
         private System.Windows.Forms.Label Total_playtime_label;
