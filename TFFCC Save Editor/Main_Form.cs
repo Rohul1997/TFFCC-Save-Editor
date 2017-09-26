@@ -23,7 +23,9 @@ namespace TFFCC_Save_Editor
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     BinaryReader br = new BinaryReader(File.OpenRead(open.FileName));
-                    int count = 0;
+
+                    //Main songs
+                    int Main_count = 0;
                     for (int i = 0x5FD54; i < 0x66F48; i += 0x2C)
                     {
                         var index = Songs_dataGridView.Rows.Add();
@@ -88,9 +90,80 @@ namespace TFFCC_Save_Editor
                         //Read times cleared value for song
                         br.BaseStream.Position = i + 0x10;
                         Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-                        ++count;
+                        ++Main_count;
                     }
-                    label1.Text = $"Songs Found: {count}";
+                    label1.Text = $"Songs Found: {Main_count}";
+
+                    //DLC songs
+                    int DLC_count = 0;
+                    for (int i = 0x670D4; i < 0x6A438; i += 0x2C)
+                    {
+                        var index = Songs_dataGridView.Rows.Add();
+                        Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
+
+                        //Read Score value for song
+                        br.BaseStream.Position = i;
+                        Songs_dataGridView.Rows[index].Cells["Score"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                        //Read chain value for song
+                        br.BaseStream.Position = i + 0x04;
+                        Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                        //Read status value for song
+                        br.BaseStream.Position = i + 0x09;
+                        var status = br.ReadByte();
+                        if (status == 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
+                        }
+                        else if (status == 0x01)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
+                        }
+                        else if (status == 0x02)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
+                        }
+                        else
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed/Unknown";
+                        }
+
+                        //Read playstyle value for song
+                        br.BaseStream.Position = i + 0x0A;
+                        var playstyle = br.ReadByte();
+                        if (playstyle == 0x01)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Stylus";
+                        }
+                        else if (playstyle == 0x02)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Button";
+                        }
+                        else if (playstyle == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Hybrid";
+                        }
+                        else if (playstyle == 0x04)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "One-Handed";
+                        }
+                        else
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed/Unknown";
+                        }
+
+                        //Read times played value for song
+                        br.BaseStream.Position = i + 0x0C;
+                        Songs_dataGridView.Rows[index].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                        //Read times cleared value for song
+                        br.BaseStream.Position = i + 0x10;
+                        Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                        ++DLC_count;
+                    }
+                    label2.Text = $"DLC Songs Found: {DLC_count}";
+                    label3.Text = $"Total Songs Found: {Main_count + DLC_count}";
                     br.Close();
                 }
             }

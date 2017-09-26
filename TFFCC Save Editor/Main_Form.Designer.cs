@@ -109,6 +109,8 @@
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -152,9 +154,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Songs Found: 0";
+            this.label1.Text = "Main Songs Found: 0";
             // 
             // Songs_dataGridView
             // 
@@ -996,6 +998,8 @@
             // Songs_tabPage
             // 
             this.Songs_tabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.Songs_tabPage.Controls.Add(this.label3);
+            this.Songs_tabPage.Controls.Add(this.label2);
             this.Songs_tabPage.Controls.Add(this.label1);
             this.Songs_tabPage.Controls.Add(this.Songs_dataGridView);
             this.Songs_tabPage.Location = new System.Drawing.Point(4, 22);
@@ -1038,6 +1042,24 @@
             this.Open_main_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(131, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DLC Songs Found: 0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(257, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Total Songs Found: 0";
             // 
             // Main_Form
             // 
@@ -1178,6 +1200,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Play_style;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
