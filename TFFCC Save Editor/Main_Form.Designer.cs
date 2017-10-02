@@ -119,6 +119,8 @@
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -1049,9 +1051,11 @@
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.comboBox3);
             this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.comboBox4);
             this.tabPage1.Controls.Add(this.comboBox2);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -1148,6 +1152,24 @@
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Items";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox4.Location = new System.Drawing.Point(8, 229);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(159, 21);
+            this.comboBox4.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 213);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Characters DB";
             // 
             // Main_Form
             // 
@@ -1300,6 +1322,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
 

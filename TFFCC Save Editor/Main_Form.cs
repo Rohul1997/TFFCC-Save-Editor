@@ -14,7 +14,10 @@ namespace TFFCC_Save_Editor
 
             //Set the combobox items from the monsters database
             comboBox1.DataSource = Databases.monsters;
-            
+
+            //Set the combobox items from the characters database
+            comboBox4.DataSource = Databases.characters;
+
             //store the original items database
             var oldItems = Databases.items.ToArray();
 

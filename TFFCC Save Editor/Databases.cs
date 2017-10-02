@@ -3,7 +3,7 @@ namespace TFFCC_Save_Editor
 {
     public class Databases
     {
-        
+
         public static string[] monsters = new string[]
         {
             "Disabled",
@@ -735,6 +735,81 @@ namespace TFFCC_Save_Editor
             "Golden Shard",
             "Silver Shard",
             "Black Shard"
+        };
+
+        public static string[] characters = new string[]
+        {
+            "Warrior of Light",
+            "Firion",
+            "Onion Knight",
+            "Cecil",
+            "Kain",
+            "Bartz",
+            "Terra",
+            "Cloud",
+            "Sephiroth",
+            "Squall",
+            "Zidane",
+            "Tidus",
+            "Shantotto",
+            "Vaan",
+            "Lightning",
+            "Princess Sarah",
+            "Minwu",
+            "Cid",
+            "Rydia",
+            "Faris",
+            "Locke",
+            "Aerith",
+            "Seifer",
+            "Vivi",
+            "Yuna",
+            "Prishe",
+            "Ashe",
+            "Snow",
+            "Cosmos",
+            "Edge",
+            "Lenna",
+            "Galuf",
+            "Celes",
+            "Edgar",
+            "Tifa",
+            "Barret",
+            "Rinoa",
+            "Laguna",
+            "Garnet",
+            "Eiko",
+            "Auron",
+            "Jecht",
+            "Aphmau",
+            "Lilisette",
+            "Balthier",
+            "Fran",
+            "Hope",
+            "Vanille",
+            "Y'shtola",
+            "Chaos",
+            "Ace",
+            "Machina",
+            "Rem",
+            "Ramza",
+            "Agrias",
+            "Benjamin",
+            "Ciaran",
+            "Yuna #2",
+            "Rikku",
+            "Paine",
+            "Serah",
+            "Noel",
+            "Lightning #2",
+            "Tifa #2",
+            "Zack",
+            "Yuffie",
+            "Rosa",
+            "Cloud #2",
+            "Orlandeau",
+            "Auron #2",
+            "Vincent"
         };
     }
 }
