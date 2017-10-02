@@ -6,7 +6,7 @@ namespace TFFCC_Save_Editor
 
         public static string[] monsters = new string[]
         {
-            "Disabled",
+            "Goblin (Small)",
             "Lich",
             "Behemoth",
             "Iron Giant (Original Blue)",
@@ -51,7 +51,7 @@ namespace TFFCC_Save_Editor
             "Anima",
             "Seymour Natus",
             "Braska's Final Aeon",
-            "Goblin",
+            "Goblin (Big)",
             "Gigas",
             "The Shadow Lord",
             "Goobbue",
