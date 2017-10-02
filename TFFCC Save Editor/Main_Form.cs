@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,6 +11,35 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
+
+            //Set the combobox items from the monsters database
+            comboBox1.DataSource = Databases.monsters;
+            
+            //store the original items database
+            var oldItems = Databases.items.ToArray();
+
+            //Find N and R cards from the items database
+            var itemN = Databases.items.FindAll(i => i.Substring(4).StartsWith(" [N]"));
+            var itemR = Databases.items.FindAll(i => i.Substring(4).StartsWith(" [R]"));
+
+            //Remove N and R cards from the items database
+            foreach (string i in itemN)
+            {
+                Databases.items.Remove(i);
+            }
+            foreach (string i in itemR)
+            {
+                Databases.items.Remove(i);
+            }
+
+            //Set the combobox items from the items database with the N and R cards removed
+            comboBox2.DataSource = Databases.items;
+
+            //Set the combobox items from the items database without anything removed
+            comboBox3.DataSource = oldItems;
+
+            //This would be to check what is the current item selected on the items combobox and then get the index for its position on the original database
+            Console.WriteLine(Array.FindIndex(oldItems, i => i.Equals("#001 [N] CollectaCard")));
         }
 
         OpenFileDialog open = new OpenFileDialog();

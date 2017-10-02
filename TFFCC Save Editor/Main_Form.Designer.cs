@@ -30,6 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main_tabPage = new System.Windows.Forms.TabPage();
             this.Total_playtime_seconds_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -98,20 +106,19 @@
             this.Rhythmia_label = new System.Windows.Forms.Label();
             this.Player_name_label = new System.Windows.Forms.Label();
             this.Songs_tabPage = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -147,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Songs_played_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,10 +191,67 @@
             this.Songs_dataGridView.Size = new System.Drawing.Size(509, 395);
             this.Songs_dataGridView.TabIndex = 2;
             // 
+            // Level_name
+            // 
+            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Level_name.HeaderText = "Level Name";
+            this.Level_name.Name = "Level_name";
+            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Score
+            // 
+            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Score.HeaderText = "Score";
+            this.Score.Name = "Score";
+            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Chain
+            // 
+            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Chain.HeaderText = "Chain";
+            this.Chain.Name = "Chain";
+            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Play_style
+            // 
+            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Play_style.HeaderText = "Play Style";
+            this.Play_style.Name = "Play_style";
+            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_played
+            // 
+            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_played.HeaderText = "Times Played";
+            this.Times_played.Name = "Times_played";
+            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_cleared
+            // 
+            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_cleared.HeaderText = "Times Cleared";
+            this.Times_cleared.Name = "Times_cleared";
+            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Main_tabPage);
             this.tabControl1.Controls.Add(this.Songs_tabPage);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
@@ -962,6 +1027,76 @@
             this.Songs_tabPage.TabIndex = 1;
             this.Songs_tabPage.Text = "Songs";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(257, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Total Songs Found: 0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(131, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DLC Songs Found: 0";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.comboBox3);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(515, 419);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Database Testing";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Items DB (N and R cards removed)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Monsters DB";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.Location = new System.Drawing.Point(8, 172);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(159, 21);
+            this.comboBox2.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.Location = new System.Drawing.Point(8, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(159, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -996,79 +1131,23 @@
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
             // 
-            // label2
+            // comboBox3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DLC Songs Found: 0";
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox3.Location = new System.Drawing.Point(7, 109);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(159, 21);
+            this.comboBox3.TabIndex = 0;
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(257, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Total Songs Found: 0";
-            // 
-            // Level_name
-            // 
-            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Level_name.HeaderText = "Level Name";
-            this.Level_name.Name = "Level_name";
-            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Score
-            // 
-            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Score.HeaderText = "Score";
-            this.Score.Name = "Score";
-            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Chain
-            // 
-            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Chain.HeaderText = "Chain";
-            this.Chain.Name = "Chain";
-            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Play_style
-            // 
-            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Play_style.HeaderText = "Play Style";
-            this.Play_style.Name = "Play_style";
-            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_played
-            // 
-            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_played.HeaderText = "Times Played";
-            this.Times_played.Name = "Times_played";
-            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_cleared
-            // 
-            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_cleared.HeaderText = "Times Cleared";
-            this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 93);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Items";
             // 
             // Main_Form
             // 
@@ -1120,6 +1199,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
             this.Songs_tabPage.ResumeLayout(false);
             this.Songs_tabPage.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1212,6 +1293,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
 
