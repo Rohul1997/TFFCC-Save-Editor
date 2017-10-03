@@ -235,6 +235,7 @@ namespace TFFCC_Save_Editor
                 {
                     BinaryReader br = new BinaryReader(File.OpenRead(open_main.FileName));
 
+                    //Items
                     int Item_count = 0;
                     for (int i = 0xCA0; i < 0xCFC; i++)
                     {
@@ -248,6 +249,23 @@ namespace TFFCC_Save_Editor
                         ++Item_count;
                     }
                     label8.Text = $"Items Found: {Item_count}";
+
+                    //CollectaCards
+                    int Card_count = 0;
+                    for (int i = 0x3497; i < 0x367D; i++)
+                    {
+                        var index = Cards_dataGridView.Rows.Add();
+                        Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Temp";
+
+                        Cards_dataGridView.Rows[index].Cells["Card_name"].Value = "Temp";
+
+                        //Read card quantity
+                        br.BaseStream.Position = i;
+                        Cards_dataGridView.Rows[index].Cells["Card_quantity"].Value = br.ReadByte() - 0x80;
+
+                        ++Card_count;
+                    }
+                    label9.Text = $"Cards Found: {Card_count}";
 
                     //Read player name
                     br.BaseStream.Position = 0x12;
