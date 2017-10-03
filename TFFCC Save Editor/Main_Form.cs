@@ -283,7 +283,7 @@ namespace TFFCC_Save_Editor
                     Total_songs_cleared_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                     //Read basic scores cleared
-                    br.BaseStream.Position = 0x37AC;
+                    br.BaseStream.Position = 0x3784;
                     Basic_scores_cleared_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                     //Read expert scores cleared
