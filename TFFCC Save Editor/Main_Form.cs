@@ -11,38 +11,6 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
-
-            //Set the combobox items from the monsters database
-            comboBox1.DataSource = Databases.monsters;
-
-            //Set the combobox items from the characters database
-            comboBox4.DataSource = Databases.characters;
-
-            //store the original items database
-            var oldItems = Databases.items.ToArray();
-
-            //Find N and R cards from the items database
-            var itemN = Databases.items.FindAll(i => i.Substring(4).StartsWith(" [N]"));
-            var itemR = Databases.items.FindAll(i => i.Substring(4).StartsWith(" [R]"));
-
-            //Remove N and R cards from the items database
-            foreach (string i in itemN)
-            {
-                Databases.items.Remove(i);
-            }
-            foreach (string i in itemR)
-            {
-                Databases.items.Remove(i);
-            }
-
-            //Set the combobox items from the items database with the N and R cards removed
-            comboBox2.DataSource = Databases.items;
-
-            //Set the combobox items from the items database without anything removed
-            comboBox3.DataSource = oldItems;
-
-            //This would be to check what is the current item selected on the items combobox and then get the index for its position on the original database
-            Console.WriteLine(Array.FindIndex(oldItems, i => i.Equals("#001 [N] CollectaCard")));
         }
 
         OpenFileDialog open = new OpenFileDialog();
@@ -228,12 +196,58 @@ namespace TFFCC_Save_Editor
 
         private void Open_main_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Set the combobox items from the monsters database
+            comboBox1.DataSource = Databases.monsters;
+
+            //Set the combobox items from the characters database
+            comboBox4.DataSource = Databases.characters;
+
+            //create list from items remove cards.
+            List<string> ItemsCardsRemoved = new List<string>(Databases.items);
+
+            //Find N and R cards from the items database
+            var itemN = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [N]"));
+            var itemR = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [R]"));
+
+            //Remove N and R cards from the items database
+            foreach (string i in itemN)
+            {
+                ItemsCardsRemoved.Remove(i);
+            }
+            foreach (string i in itemR)
+            {
+                ItemsCardsRemoved.Remove(i);
+            }
+
+            //Set the combobox items from the items database with the N and R cards removed
+            comboBox2.DataSource = ItemsCardsRemoved;
+
+            //Set the combobox items from the items database without anything removed
+            comboBox3.DataSource = Databases.items;
+
+            //This would be to check what is the current item selected on the items combobox and then get the index for its position on the original database
+            Console.WriteLine(Databases.items.FindIndex(i => i.Equals("#001 [N] CollectaCard")));
+
             try
             {
                 open_main.Filter = " savedata.bk Files |savedata.bk|All Files (*.*)|*.*";
                 if (open_main.ShowDialog() == DialogResult.OK)
                 {
                     BinaryReader br = new BinaryReader(File.OpenRead(open_main.FileName));
+
+                    int Item_count = 0;
+                    for (int i = 0xCA0; i < 0xCFC; i++)
+                    {
+                        var index = Items_dataGridView.Rows.Add();
+                        Items_dataGridView.Rows[index].Cells["Item"].Value = Databases.items[index];
+
+                        //Read item quantity
+                        br.BaseStream.Position = i;
+                        Items_dataGridView.Rows[index].Cells["Quantity"].Value = br.ReadByte() - 0x80;
+
+                        ++Item_count;
+                    }
+                    label8.Text = $"Items Found: {Item_count}";
 
                     //Read player name
                     br.BaseStream.Position = 0x12;

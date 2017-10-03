@@ -31,14 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main_tabPage = new System.Windows.Forms.TabPage();
             this.Total_playtime_seconds_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -110,18 +102,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Itens_tabPage = new System.Windows.Forms.TabPage();
+            this.Items_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -159,6 +164,8 @@
             this.Songs_tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.Itens_tabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -194,66 +201,11 @@
             this.Songs_dataGridView.Size = new System.Drawing.Size(509, 395);
             this.Songs_dataGridView.TabIndex = 2;
             // 
-            // Level_name
-            // 
-            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Level_name.HeaderText = "Level Name";
-            this.Level_name.Name = "Level_name";
-            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Score
-            // 
-            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Score.HeaderText = "Score";
-            this.Score.Name = "Score";
-            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Chain
-            // 
-            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Chain.HeaderText = "Chain";
-            this.Chain.Name = "Chain";
-            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Play_style
-            // 
-            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Play_style.HeaderText = "Play Style";
-            this.Play_style.Name = "Play_style";
-            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_played
-            // 
-            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_played.HeaderText = "Times Played";
-            this.Times_played.Name = "Times_played";
-            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Times_cleared
-            // 
-            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Times_cleared.HeaderText = "Times Cleared";
-            this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Main_tabPage);
             this.tabControl1.Controls.Add(this.Songs_tabPage);
+            this.tabControl1.Controls.Add(this.Itens_tabPage);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
@@ -1066,6 +1018,24 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Database Testing";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 93);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Items";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 213);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Characters DB";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1075,6 +1045,15 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Items DB (N and R cards removed)";
             // 
+            // comboBox3
+            // 
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox3.Location = new System.Drawing.Point(7, 109);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(159, 21);
+            this.comboBox3.TabIndex = 0;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1083,6 +1062,15 @@
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Monsters DB";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox4.Location = new System.Drawing.Point(8, 229);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(159, 21);
+            this.comboBox4.TabIndex = 0;
             // 
             // comboBox2
             // 
@@ -1136,41 +1124,113 @@
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
             // 
-            // comboBox3
+            // Itens_tabPage
             // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.Location = new System.Drawing.Point(7, 109);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 21);
-            this.comboBox3.TabIndex = 0;
+            this.Itens_tabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.Itens_tabPage.Controls.Add(this.label8);
+            this.Itens_tabPage.Controls.Add(this.Items_dataGridView);
+            this.Itens_tabPage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Itens_tabPage.Location = new System.Drawing.Point(4, 22);
+            this.Itens_tabPage.Name = "Itens_tabPage";
+            this.Itens_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.Itens_tabPage.Size = new System.Drawing.Size(515, 419);
+            this.Itens_tabPage.TabIndex = 3;
+            this.Itens_tabPage.Text = "Items";
             // 
-            // label6
+            // Items_dataGridView
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 93);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Items";
+            this.Items_dataGridView.AllowUserToAddRows = false;
+            this.Items_dataGridView.AllowUserToDeleteRows = false;
+            this.Items_dataGridView.AllowUserToResizeRows = false;
+            this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item,
+            this.Quantity});
+            this.Items_dataGridView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.Items_dataGridView.Location = new System.Drawing.Point(3, 3);
+            this.Items_dataGridView.Name = "Items_dataGridView";
+            this.Items_dataGridView.RowHeadersVisible = false;
+            this.Items_dataGridView.Size = new System.Drawing.Size(242, 413);
+            this.Items_dataGridView.TabIndex = 3;
             // 
-            // comboBox4
+            // Date
             // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.Location = new System.Drawing.Point(8, 229);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(159, 21);
-            this.comboBox4.TabIndex = 0;
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // label7
+            // Times_cleared
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 213);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Characters DB";
+            this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_cleared.HeaderText = "Times Cleared";
+            this.Times_cleared.Name = "Times_cleared";
+            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Times_played
+            // 
+            this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Times_played.HeaderText = "Times Played";
+            this.Times_played.Name = "Times_played";
+            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Play_style
+            // 
+            this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Play_style.HeaderText = "Play Style";
+            this.Play_style.Name = "Play_style";
+            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Chain
+            // 
+            this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Chain.HeaderText = "Chain";
+            this.Chain.Name = "Chain";
+            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Score
+            // 
+            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Score.HeaderText = "Score";
+            this.Score.Name = "Score";
+            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Level_name
+            // 
+            this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Level_name.HeaderText = "Level Name";
+            this.Level_name.Name = "Level_name";
+            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Item
+            // 
+            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(263, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Items Found:";
             // 
             // Main_Form
             // 
@@ -1227,6 +1287,9 @@
             this.tabPage1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.Itens_tabPage.ResumeLayout(false);
+            this.Itens_tabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1309,14 +1372,6 @@
         private System.Windows.Forms.Label EX_bursts_used_label;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Level_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Score;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Chain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Play_style;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1326,6 +1381,19 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TabPage Itens_tabPage;
+        private System.Windows.Forms.DataGridView Items_dataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Level_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Score;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Chain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Play_style;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.Label label8;
     }
 }
 
