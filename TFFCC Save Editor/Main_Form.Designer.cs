@@ -110,7 +110,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Itens_tabPage = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.Cards_dataGridView = new System.Windows.Forms.DataGridView();
             this.Items_dataGridView = new System.Windows.Forms.DataGridView();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,11 +129,9 @@
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Cards_dataGridView = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Rarity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rarity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -168,10 +168,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.Itens_tabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -1077,6 +1077,15 @@
             this.Itens_tabPage.TabIndex = 3;
             this.Itens_tabPage.Text = "Items";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(200, 4);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "CollectaCards Found:";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -1085,6 +1094,24 @@
             this.label8.Size = new System.Drawing.Size(68, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Items Found:";
+            // 
+            // Cards_dataGridView
+            // 
+            this.Cards_dataGridView.AllowUserToAddRows = false;
+            this.Cards_dataGridView.AllowUserToDeleteRows = false;
+            this.Cards_dataGridView.AllowUserToResizeRows = false;
+            this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Rarity,
+            this.Card_name,
+            this.Card_quantity});
+            this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.Cards_dataGridView.Location = new System.Drawing.Point(194, 20);
+            this.Cards_dataGridView.Name = "Cards_dataGridView";
+            this.Cards_dataGridView.RowHeadersVisible = false;
+            this.Cards_dataGridView.Size = new System.Drawing.Size(318, 396);
+            this.Cards_dataGridView.TabIndex = 3;
             // 
             // Items_dataGridView
             // 
@@ -1100,7 +1127,7 @@
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 20);
             this.Items_dataGridView.Name = "Items_dataGridView";
             this.Items_dataGridView.RowHeadersVisible = false;
-            this.Items_dataGridView.Size = new System.Drawing.Size(191, 396);
+            this.Items_dataGridView.Size = new System.Drawing.Size(185, 396);
             this.Items_dataGridView.TabIndex = 3;
             // 
             // Item
@@ -1239,49 +1266,23 @@
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
             // 
-            // Cards_dataGridView
+            // Card_quantity
             // 
-            this.Cards_dataGridView.AllowUserToAddRows = false;
-            this.Cards_dataGridView.AllowUserToDeleteRows = false;
-            this.Cards_dataGridView.AllowUserToResizeRows = false;
-            this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Rarity,
-            this.Card_name,
-            this.Card_quantity});
-            this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.Cards_dataGridView.Location = new System.Drawing.Point(194, 20);
-            this.Cards_dataGridView.Name = "Cards_dataGridView";
-            this.Cards_dataGridView.RowHeadersVisible = false;
-            this.Cards_dataGridView.Size = new System.Drawing.Size(318, 396);
-            this.Cards_dataGridView.TabIndex = 3;
+            this.Card_quantity.HeaderText = "Quantity";
+            this.Card_quantity.Name = "Card_quantity";
             // 
-            // label9
+            // Card_name
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(200, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "CollectaCards Found:";
+            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_name.FillWeight = 200F;
+            this.Card_name.HeaderText = "Name";
+            this.Card_name.Name = "Card_name";
             // 
             // Rarity
             // 
             this.Rarity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Rarity.HeaderText = "Rarity";
             this.Rarity.Name = "Rarity";
-            // 
-            // Card_name
-            // 
-            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_name.HeaderText = "Name";
-            this.Card_name.Name = "Card_name";
-            // 
-            // Card_quantity
-            // 
-            this.Card_quantity.HeaderText = "Quantity";
-            this.Card_quantity.Name = "Card_quantity";
             // 
             // Main_Form
             // 
@@ -1336,12 +1337,12 @@
             this.Songs_tabPage.PerformLayout();
             this.Itens_tabPage.ResumeLayout(false);
             this.Itens_tabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

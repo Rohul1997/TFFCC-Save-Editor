@@ -255,9 +255,20 @@ namespace TFFCC_Save_Editor
                     for (int i = 0x3497; i < 0x367D; i++)
                     {
                         var index = Cards_dataGridView.Rows.Add();
-                        Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Temp";
+                        Cards_dataGridView.Rows[index].Cells["Card_name"].Value = Databases.collectacards[index];
 
-                        Cards_dataGridView.Rows[index].Cells["Card_name"].Value = "Temp";
+                        if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[N]"))
+                        {
+                            Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Normal";
+                        }
+                        else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[R]"))
+                        {
+                            Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Rare";
+                        }
+                        else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[P]"))
+                        {
+                            Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Premium";
+                        }
 
                         //Read card quantity
                         br.BaseStream.Position = i;
