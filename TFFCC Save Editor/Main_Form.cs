@@ -41,23 +41,31 @@ namespace TFFCC_Save_Editor
                         Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                         //Read status value for song
-                        br.BaseStream.Position = i + 0x09;
-                        var status = br.ReadByte();
-                        if (status == 0x00)
+                        br.BaseStream.Position = i + 0x08;
+                        var status = br.ReadBytes(0x04);
+                        if (status[0] == 0x00 && status[1] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
                         }
-                        else if (status == 0x01)
+                        else if (status[0] == 0x00 && status[1] == 0x01)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
                         }
-                        else if (status == 0x02)
+                        else if (status[0] == 0x00 && status[1] == 0x02)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
                         }
+                        else if (status[0] == 0x00 && status[1] == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Failed";
+                        }
+                        else if (status[0] == 0x08 && status[1] == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed";
+                        }
                         else
                         {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed/Unknown";
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unknown";
                         }
 
                         //Read playstyle value for song
@@ -81,7 +89,7 @@ namespace TFFCC_Save_Editor
                         }
                         else
                         {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed/Unknown";
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed";
                         }
 
                         //Read times played value for song
@@ -121,23 +129,31 @@ namespace TFFCC_Save_Editor
                         Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                         //Read status value for song
-                        br.BaseStream.Position = i + 0x09;
-                        var status = br.ReadByte();
-                        if (status == 0x00)
+                        br.BaseStream.Position = i + 0x08;
+                        var status = br.ReadBytes(0x04);
+                        if (status[0] == 0x00 && status[1] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
                         }
-                        else if (status == 0x01)
+                        else if (status[0] == 0x00 && status[1] == 0x01)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
                         }
-                        else if (status == 0x02)
+                        else if (status[0] == 0x00 && status[1] == 0x02)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
                         }
+                        else if (status[0] == 0x00 && status[1] == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Failed";
+                        }
+                        else if (status[0] == 0x08 && status[1] == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed";
+                        }
                         else
                         {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed/Unknown";
+                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unknown";
                         }
 
                         //Read playstyle value for song
@@ -161,7 +177,7 @@ namespace TFFCC_Save_Editor
                         }
                         else
                         {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed/Unknown";
+                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed";
                         }
 
                         //Read times played value for song

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
@@ -129,9 +130,9 @@
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Card_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rarity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -1266,23 +1267,26 @@
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
             // 
-            // Card_quantity
-            // 
-            this.Card_quantity.HeaderText = "Quantity";
-            this.Card_quantity.Name = "Card_quantity";
-            // 
-            // Card_name
-            // 
-            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_name.FillWeight = 200F;
-            this.Card_name.HeaderText = "Name";
-            this.Card_name.Name = "Card_name";
-            // 
             // Rarity
             // 
             this.Rarity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Rarity.HeaderText = "Rarity";
             this.Rarity.Name = "Rarity";
+            // 
+            // Card_name
+            // 
+            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Card_name.FillWeight = 200F;
+            this.Card_name.HeaderText = "Name";
+            this.Card_name.Name = "Card_name";
+            // 
+            // Card_quantity
+            // 
+            this.Card_quantity.HeaderText = "Quantity";
+            this.Card_quantity.Name = "Card_quantity";
             // 
             // Main_Form
             // 
