@@ -42,7 +42,7 @@ namespace TFFCC_Save_Editor
 
                         //Read status value for song
                         br.BaseStream.Position = i + 0x08;
-                        var status = br.ReadBytes(0x04);
+                        var status = br.ReadBytes(0x02);
                         if (status[0] == 0x00 && status[1] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
@@ -130,7 +130,7 @@ namespace TFFCC_Save_Editor
 
                         //Read status value for song
                         br.BaseStream.Position = i + 0x08;
-                        var status = br.ReadBytes(0x04);
+                        var status = br.ReadBytes(0x02);
                         if (status[0] == 0x00 && status[1] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
