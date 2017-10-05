@@ -125,6 +125,8 @@
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,8 +136,6 @@
             this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -182,7 +182,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 38);
+            this.label1.Size = new System.Drawing.Size(120, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Main Songs Found: 0";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +209,7 @@
             this.Songs_dataGridView.Location = new System.Drawing.Point(3, 46);
             this.Songs_dataGridView.Name = "Songs_dataGridView";
             this.Songs_dataGridView.RowHeadersVisible = false;
-            this.Songs_dataGridView.Size = new System.Drawing.Size(509, 370);
+            this.Songs_dataGridView.Size = new System.Drawing.Size(808, 370);
             this.Songs_dataGridView.TabIndex = 2;
             // 
             // tabControl1
@@ -222,7 +222,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(523, 445);
+            this.tabControl1.Size = new System.Drawing.Size(822, 445);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 3;
             // 
@@ -297,7 +297,7 @@
             this.Main_tabPage.Location = new System.Drawing.Point(4, 22);
             this.Main_tabPage.Name = "Main_tabPage";
             this.Main_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Main_tabPage.Size = new System.Drawing.Size(515, 419);
+            this.Main_tabPage.Size = new System.Drawing.Size(814, 419);
             this.Main_tabPage.TabIndex = 0;
             this.Main_tabPage.Text = "Main";
             // 
@@ -991,24 +991,24 @@
             this.Songs_tabPage.Location = new System.Drawing.Point(4, 22);
             this.Songs_tabPage.Name = "Songs_tabPage";
             this.Songs_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Songs_tabPage.Size = new System.Drawing.Size(515, 419);
+            this.Songs_tabPage.Size = new System.Drawing.Size(814, 419);
             this.Songs_tabPage.TabIndex = 1;
             this.Songs_tabPage.Text = "Songs";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(210, 5);
+            this.label3.Location = new System.Drawing.Point(332, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 38);
+            this.label3.Size = new System.Drawing.Size(149, 38);
             this.label3.TabIndex = 1;
             this.label3.Text = "Total Songs Found: 0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(114, 5);
+            this.label2.Location = new System.Drawing.Point(161, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 38);
+            this.label2.Size = new System.Drawing.Size(165, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "DLC Songs Found: 0";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1024,14 +1024,14 @@
             this.Itens_tabPage.Location = new System.Drawing.Point(4, 22);
             this.Itens_tabPage.Name = "Itens_tabPage";
             this.Itens_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Itens_tabPage.Size = new System.Drawing.Size(515, 419);
+            this.Itens_tabPage.Size = new System.Drawing.Size(814, 419);
             this.Itens_tabPage.TabIndex = 3;
             this.Itens_tabPage.Text = "Items";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(200, 4);
+            this.label9.Location = new System.Drawing.Point(369, 4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 13);
             this.label9.TabIndex = 4;
@@ -1058,10 +1058,10 @@
             this.Card_name,
             this.Card_quantity});
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.Cards_dataGridView.Location = new System.Drawing.Point(194, 20);
+            this.Cards_dataGridView.Location = new System.Drawing.Point(362, 20);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
             this.Cards_dataGridView.RowHeadersVisible = false;
-            this.Cards_dataGridView.Size = new System.Drawing.Size(318, 396);
+            this.Cards_dataGridView.Size = new System.Drawing.Size(452, 399);
             this.Cards_dataGridView.TabIndex = 3;
             // 
             // Rarity
@@ -1099,7 +1099,7 @@
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 20);
             this.Items_dataGridView.Name = "Items_dataGridView";
             this.Items_dataGridView.RowHeadersVisible = false;
-            this.Items_dataGridView.Size = new System.Drawing.Size(185, 396);
+            this.Items_dataGridView.Size = new System.Drawing.Size(353, 399);
             this.Items_dataGridView.TabIndex = 3;
             // 
             // Item
@@ -1238,26 +1238,41 @@
             this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
             this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
             // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(487, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(166, 38);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Total Times Cleared: 0";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(659, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 38);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Total TImes Played: 0";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Level_name
             // 
             this.Level_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Level_name.HeaderText = "Level Name";
             this.Level_name.Name = "Level_name";
-            this.Level_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Score
             // 
             this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Score.HeaderText = "Score";
             this.Score.Name = "Score";
-            this.Score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Chain
             // 
             this.Chain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Chain.HeaderText = "Chain";
             this.Chain.Name = "Chain";
-            this.Chain.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Rank
             // 
@@ -1270,59 +1285,36 @@
             this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Play_style
             // 
             this.Play_style.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Play_style.HeaderText = "Play Style";
             this.Play_style.Name = "Play_style";
-            this.Play_style.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Times_played
             // 
             this.Times_played.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Times_played.HeaderText = "Times Played";
             this.Times_played.Name = "Times_played";
-            this.Times_played.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Times_cleared
             // 
             this.Times_cleared.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Times_cleared.HeaderText = "Times Cleared";
             this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Date
             // 
             this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
-            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(309, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 38);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Total Times Cleared: 0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(419, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 38);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Total TImes Played: 0";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 472);
+            this.ClientSize = new System.Drawing.Size(822, 472);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1477,6 +1469,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Rarity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Card_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Card_quantity;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chain;
@@ -1486,8 +1480,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
     }
 }
 
