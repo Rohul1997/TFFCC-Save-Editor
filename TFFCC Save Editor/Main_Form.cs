@@ -40,26 +40,74 @@ namespace TFFCC_Save_Editor
                         br.BaseStream.Position = i + 0x04;
                         Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
-                        //Read status value for song
+                        //Read rank value for song
                         br.BaseStream.Position = i + 0x08;
-                        var status = br.ReadBytes(0x02);
-                        if (status[0] == 0x00 && status[1] == 0x00)
+                        var rank = br.ReadBytes(0x05);
+                        if (rank[0] == 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SSS";
+                        }
+                        else if (rank[0] == 0x01)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SS";
+                        }
+                        else if (rank[0] == 0x02)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "S";
+                        }
+                        else if (rank[0] == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "A";
+                        }
+                        else if (rank[0] == 0x04)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "B";
+                        }
+                        else if (rank[0] == 0x05)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "C";
+                        }
+                        else if (rank[0] == 0x06)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "D";
+                        }
+                        else if (rank[0] == 0x07)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "E";
+                        }
+                        else if (rank[0] == 0x08 && rank[4] != 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "F";
+                        }
+                        else if (rank[0] == 0x08 && rank[4] == 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unplayed";
+                        }
+                        else
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unknown";
+                        }
+
+                        //Read status value for song
+                        br.BaseStream.Position = i + 0x09;
+                        var status = br.ReadBytes(0x04);
+                        if (status[0] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
                         }
-                        else if (status[0] == 0x00 && status[1] == 0x01)
+                        else if (status[0] == 0x01)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
                         }
-                        else if (status[0] == 0x00 && status[1] == 0x02)
+                        else if (status[0] == 0x02)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
                         }
-                        else if (status[0] == 0x00 && status[1] == 0x03)
+                        else if (status[0] == 0x03 && status[3] != 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Failed";
                         }
-                        else if (status[0] == 0x08 && status[1] == 0x03)
+                        else if (status[0] == 0x03 && status[3] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed";
                         }
@@ -128,26 +176,74 @@ namespace TFFCC_Save_Editor
                         br.BaseStream.Position = i + 0x04;
                         Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
-                        //Read status value for song
+                        //Read rank value for song
                         br.BaseStream.Position = i + 0x08;
-                        var status = br.ReadBytes(0x02);
-                        if (status[0] == 0x00 && status[1] == 0x00)
+                        var rank = br.ReadBytes(0x05);
+                        if (rank[0] == 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SSS";
+                        }
+                        else if (rank[0] == 0x01)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SS";
+                        }
+                        else if (rank[0] == 0x02)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "S";
+                        }
+                        else if (rank[0] == 0x03)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "A";
+                        }
+                        else if (rank[0] == 0x04)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "B";
+                        }
+                        else if (rank[0] == 0x05)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "C";
+                        }
+                        else if (rank[0] == 0x06)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "D";
+                        }
+                        else if (rank[0] == 0x07)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "E";
+                        }
+                        else if (rank[0] == 0x08 && rank[4] != 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "F";
+                        }
+                        else if (rank[0] == 0x08 && rank[4] == 0x00)
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unplayed";
+                        }
+                        else
+                        {
+                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unknown";
+                        }
+
+                        //Read status value for song
+                        br.BaseStream.Position = i + 0x09;
+                        var status = br.ReadBytes(0x04);
+                        if (status[0] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
                         }
-                        else if (status[0] == 0x00 && status[1] == 0x01)
+                        else if (status[0] == 0x01)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
                         }
-                        else if (status[0] == 0x00 && status[1] == 0x02)
+                        else if (status[0] == 0x02)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
                         }
-                        else if (status[0] == 0x00 && status[1] == 0x03)
+                        else if (status[0] == 0x03 && status[3] != 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Failed";
                         }
-                        else if (status[0] == 0x08 && status[1] == 0x03)
+                        else if (status[0] == 0x03 && status[3] == 0x00)
                         {
                             Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed";
                         }
