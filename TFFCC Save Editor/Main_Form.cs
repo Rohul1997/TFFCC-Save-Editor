@@ -26,6 +26,8 @@ namespace TFFCC_Save_Editor
                     BinaryReader br = new BinaryReader(File.OpenRead(open.FileName));
 
                     //Main songs
+                    int Total_cleared = 0;
+                    int Total_played = 0;
                     int Main_count = 0;
                     for (int i = 0x5FD54; i < 0x66F48; i += 0x2C)
                     {
@@ -157,9 +159,11 @@ namespace TFFCC_Save_Editor
                         var day = br.ReadByte();
                         Songs_dataGridView.Rows[index].Cells["Date"].Value = $"{day}.{month}.{year}";
 
+                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_played"].Value);
+                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value);
                         ++Main_count;
                     }
-                    label1.Text = $"Songs Found: {Main_count}";
+                    label1.Text = $"Main Songs Found: {Main_count}";
 
                     //DLC songs
                     int DLC_count = 0;
@@ -293,10 +297,14 @@ namespace TFFCC_Save_Editor
                         var day = br.ReadByte();
                         Songs_dataGridView.Rows[index].Cells["Date"].Value = $"{day}.{month}.{year}";
 
+                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_played"].Value);
+                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value);
                         ++DLC_count;
                     }
                     label2.Text = $"DLC Songs Found: {DLC_count}";
                     label3.Text = $"Total Songs Found: {Main_count + DLC_count}";
+                    label10.Text = $"Total Times Played: {Total_played}";
+                    label11.Text = $"Total Times Cleared: {Total_cleared}";
                     br.Close();
                 }
             }

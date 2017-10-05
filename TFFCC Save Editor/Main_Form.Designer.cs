@@ -134,6 +134,8 @@
             this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Main_tabPage.SuspendLayout();
@@ -178,12 +180,12 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.Size = new System.Drawing.Size(93, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Main Songs Found: 0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Songs_dataGridView
             // 
@@ -204,10 +206,10 @@
             this.Date});
             this.Songs_dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Songs_dataGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.Songs_dataGridView.Location = new System.Drawing.Point(3, 21);
+            this.Songs_dataGridView.Location = new System.Drawing.Point(3, 46);
             this.Songs_dataGridView.Name = "Songs_dataGridView";
             this.Songs_dataGridView.RowHeadersVisible = false;
-            this.Songs_dataGridView.Size = new System.Drawing.Size(509, 395);
+            this.Songs_dataGridView.Size = new System.Drawing.Size(509, 370);
             this.Songs_dataGridView.TabIndex = 2;
             // 
             // tabControl1
@@ -980,6 +982,8 @@
             // Songs_tabPage
             // 
             this.Songs_tabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.Songs_tabPage.Controls.Add(this.label11);
+            this.Songs_tabPage.Controls.Add(this.label10);
             this.Songs_tabPage.Controls.Add(this.label3);
             this.Songs_tabPage.Controls.Add(this.label2);
             this.Songs_tabPage.Controls.Add(this.label1);
@@ -993,21 +997,21 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(257, 5);
+            this.label3.Location = new System.Drawing.Point(210, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.Size = new System.Drawing.Size(93, 38);
             this.label3.TabIndex = 1;
             this.label3.Text = "Total Songs Found: 0";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 5);
+            this.label2.Location = new System.Drawing.Point(114, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.Size = new System.Drawing.Size(90, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "DLC Songs Found: 0";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Itens_tabPage
             // 
@@ -1296,6 +1300,24 @@
             this.Date.Name = "Date";
             this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(309, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 38);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Total Times Cleared: 0";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(419, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 38);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Total TImes Played: 0";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1346,7 +1368,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Songs_played_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
             this.Songs_tabPage.ResumeLayout(false);
-            this.Songs_tabPage.PerformLayout();
             this.Itens_tabPage.ResumeLayout(false);
             this.Itens_tabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).EndInit();
@@ -1465,6 +1486,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
 
