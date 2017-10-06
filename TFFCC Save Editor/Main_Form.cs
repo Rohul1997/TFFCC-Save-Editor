@@ -443,7 +443,7 @@ namespace TFFCC_Save_Editor
 
                     //Read total songs
                     br.BaseStream.Position = 0x3780;
-                    Total_songs_cleared_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                    Total_songs_cleared_textBox.Text = BitConverter.ToInt32(br.ReadBytes(0x04), 0).ToString();
 
                     //Read basic scores cleared
                     br.BaseStream.Position = 0x3784;
@@ -473,10 +473,6 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x379C;
                     SSS_ranks_received_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
-                    //Read total quests cleared
-                    br.BaseStream.Position = 0x37B4;
-                    Total_quests_cleared_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
                     //Read short quests cleared
                     br.BaseStream.Position = 0x37B8;
                     Short_quests_cleared_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
@@ -493,6 +489,9 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x37BE;
                     Inherited_quests_cleared_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
 
+                    //Read total quests cleared
+                    Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
+
                     //Read bosses conquered
                     br.BaseStream.Position = 0x37C0;
                     Bosses_conquered_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
@@ -507,15 +506,15 @@ namespace TFFCC_Save_Editor
 
                     //Read ai battle victories
                     br.BaseStream.Position = 0x37F6;
-                    AI_battle_victories_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                    AI_battle_victories_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
 
                     //Read scores played basic
                     br.BaseStream.Position = 0x272A;
-                    Scores_played_basic_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                    Scores_played_online_basic_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                     //Read scores played expert
                     br.BaseStream.Position = 0x3750;
-                    Scores_played_expert_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                    Scores_played_online_expert_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                     //Read ex bursts used
                     br.BaseStream.Position = 0x3810;
