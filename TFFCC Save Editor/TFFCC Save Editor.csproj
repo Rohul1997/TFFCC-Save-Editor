@@ -91,6 +91,7 @@
     <None Include="Resources\Star Empty.png" />
     <None Include="Resources\Star Half.png" />
     <None Include="Resources\Star.png" />
+    <None Include="Resources\Star Shiny.png" />
     <Content Include="TTFFCC Save Editor Icon.ico" />
   </ItemGroup>
   <ItemGroup />
