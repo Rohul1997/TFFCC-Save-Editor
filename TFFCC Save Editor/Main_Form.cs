@@ -398,6 +398,7 @@ namespace TFFCC_Save_Editor
                     }
                     label9.Text = $"Cards Found: {Card_count}";
 
+                    //Profile
                     //Read player name
                     br.BaseStream.Position = 0x12;
                     Player_name_textBox.Text = Encoding.Unicode.GetString(br.ReadBytes(0x0C));
@@ -406,6 +407,111 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x2C;
                     Rhythmia_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
+                    //Read Progress
+                    br.BaseStream.Position = 0x40;
+                    var star = br.ReadByte();
+                    if (star == 0x00)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x01)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star_Half;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x02)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x03)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star_Half;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x04)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x05)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Half;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x06)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Empty;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x07)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Half;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x08)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Empty;
+                    }
+                    else if (star == 0x09)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Half;
+                    }
+                    else if (star == 0x0A)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star;
+                    }
+                    else if (star == 0x0B)
+                    {
+                        Progress_star1_pictureBox.Image = Properties.Resources.Star_Shiny;
+                        Progress_star2_pictureBox.Image = Properties.Resources.Star_Shiny;
+                        Progress_star3_pictureBox.Image = Properties.Resources.Star_Shiny;
+                        Progress_star4_pictureBox.Image = Properties.Resources.Star_Shiny;
+                        Progress_star5_pictureBox.Image = Properties.Resources.Star_Shiny;
+                    }
+
+                    //Read Trophies
+                    br.BaseStream.Position = 0x3962;
+                    Trophies_textBox.Text = br.ReadByte().ToString() + "/96";
+
+                    //Total Counts
                     //Read total playtime
                     br.BaseStream.Position = 0x38;
                     TimeSpan time = TimeSpan.FromSeconds(BitConverter.ToInt32(br.ReadBytes(0x04), 0));
@@ -441,9 +547,10 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x3754;
                     StreetPasses_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
 
+                    //Music Stages
                     //Read total songs
                     br.BaseStream.Position = 0x3780;
-                    Total_songs_cleared_textBox.Text = BitConverter.ToInt32(br.ReadBytes(0x04), 0).ToString();
+                    Total_songs_cleared_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                     //Read basic scores cleared
                     br.BaseStream.Position = 0x3784;
@@ -473,6 +580,7 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x379C;
                     SSS_ranks_received_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
+                    //Quest Medleys
                     //Read short quests cleared
                     br.BaseStream.Position = 0x37B8;
                     Short_quests_cleared_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
@@ -504,27 +612,347 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x37C8;
                     Keys_used_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
+                    //Versus Mode
+                    //Read online battle rating score
+                    br.BaseStream.Position = 0x56;
+                    Online_battle_rating_score_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read online battle rating wins
+                    br.BaseStream.Position = 0x37E6;
+                    Online_battle_rating_wins_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read online battle rating losses
+                    br.BaseStream.Position = 0x37E8;
+                    Online_battle_rating_losses_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read online battle rating ties
+                    br.BaseStream.Position = 0x37EA;
+                    Online_battle_rating_ties_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read local battle rating score
+                    br.BaseStream.Position = 0x54;
+                    Local_battle_rating_score_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read local battle rating wins
+                    br.BaseStream.Position = 0x37EE;
+                    Local_battle_rating_wins_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read local battle rating losses
+                    br.BaseStream.Position = 0x37F0;
+                    Local_battle_rating_losses_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read local battle rating ties
+                    br.BaseStream.Position = 0x37F2;
+                    Local_battle_rating_ties_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //set total rating score
+                    Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
+
+                    //set total rating wins
+                    Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
+
+                    //set total rating losses
+                    Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
+
+                    //set total rating ties
+                    Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
+
                     //Read ai battle victories
                     br.BaseStream.Position = 0x37F6;
                     AI_battle_victories_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
 
-                    //Read scores played basic
-                    br.BaseStream.Position = 0x272A;
-                    Scores_played_online_basic_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                    //Read highest rank
+                    br.BaseStream.Position = 0x37FA;
+                    var rank = br.ReadBytes(0x03);
+                    if (rank[0] == 0x00)
+                    {
+                        Highest_rank_comboBox.SelectedIndex = 0;
+                    }
+                    else if (rank[0] == 0x01)
+                    {
+                        Highest_rank_comboBox.SelectedIndex = 1;
+                    }
+                    else if (rank[0] == 0x02)
+                    {
+                        Highest_rank_comboBox.SelectedIndex = 2;
+                    }
+                    else if (rank[0] == 0x03)
+                    {
+                        Highest_rank_comboBox.SelectedIndex = 3;
+                    }
 
-                    //Read scores played expert
-                    br.BaseStream.Position = 0x3750;
-                    Scores_played_online_expert_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                    //Read highest rank calss
+                    if (rank[2] == 0x01)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 0;
+                    }
+                    else if (rank[2] == 0x02)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 1;
+                    }
+                    else if (rank[2] == 0x03)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 2;
+                    }
+                    else if (rank[2] == 0x04)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 3;
+                    }
+                    else if (rank[2] == 0x05)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 4;
+                    }
+                    else if (rank[2] == 0x06)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 5;
+                    }
+                    else if (rank[2] == 0x07)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 6;
+                    }
+                    else if (rank[2] == 0x08)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 7;
+                    }
+                    else if (rank[2] == 0x09)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 8;
+                    }
+                    else if (rank[2] == 0x0A)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 9;
+                    }
+                    else if (rank[2] == 0x0B)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 10;
+                    }
+                    else if (rank[2] == 0x0C)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 11;
+                    }
+                    else if (rank[2] == 0x0E)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 12;
+                    }
+                    else if (rank[2] == 0x0F)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 13;
+                    }
+                    else if (rank[2] == 010)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 14;
+                    }
+                    else if (rank[2] == 0x11)
+                    {
+                        Highest_rank_class_comboBox.SelectedIndex = 15;
+                    }
+
+                    //Read scores played online basic
+                    br.BaseStream.Position = 0x37FE;
+                    Scores_played_online_basic_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played online expert
+                    br.BaseStream.Position = 0x3800;
+                    Scores_played_online_expert_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played online ultimate
+                    br.BaseStream.Position = 0x3802;
+                    Scores_played_online_ultimate_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played online ultimate no-ex
+                    br.BaseStream.Position = 0x3804;
+                    Scores_played_online_ultimatenex_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played local basic
+                    br.BaseStream.Position = 0x3806;
+                    Scores_played_local_basic_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played local expert
+                    br.BaseStream.Position = 0x3808;
+                    Scores_played_local_expert_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played local ultimate
+                    br.BaseStream.Position = 0x380A;
+                    Scores_played_local_ultimate_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Read scores played local ultimate no-ex
+                    br.BaseStream.Position = 0x380C;
+                    Scores_played_local_ultimatenex_numericUpDown.Value = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
+
+                    //Set scores played total basic
+                    Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
+
+                    //Set scores played total expert
+                    Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
+
+                    //Set scores played total ultimate
+                    Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
+
+                    //Set scores played total ultimate no-ex
+                    Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
 
                     //Read ex bursts used
                     br.BaseStream.Position = 0x3810;
                     EX_bursts_used_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Battle Party
+                    //Read levels reset
+                    br.BaseStream.Position = 0x3820;
+                    Levels_reset_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read collectacards obtained
+                    br.BaseStream.Position = 0x3824;
+                    Collectacards_obtained_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read parameter boosts performed
+                    br.BaseStream.Position = 0x3828;
+                    Parameter_boosts_performed_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read critical boosts achieved
+                    br.BaseStream.Position = 0x382C;
+                    Critical_boosts_achieved_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read items used
+                    br.BaseStream.Position = 0x3830;
+                    Items_used_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read abilities triggered
+                    br.BaseStream.Position = 0x3834;
+                    Abilities_triggered_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read fat chocobo encounters
+                    br.BaseStream.Position = 0x3838;
+                    Fat_chocobo_encounters_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                    //Read treasure chests earned
+                    br.BaseStream.Position = 0x383C;
+                    Treasure_chests_earned_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
                 }
             }
             catch
             {
                 MessageBox.Show("Invalid savedata.bk", "Failed to open the file");
             }
+        }
+
+        private void Short_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Read total quests cleared
+            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
+        }
+
+        private void Medium_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Read total quests cleared
+            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
+        }
+
+        private void Long_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Read total quests cleared
+            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
+        }
+
+        private void Inherited_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Read total quests cleared
+            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
+        }
+
+        private void Online_battle_rating_score_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating score
+            Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
+        }
+
+        private void Local_battle_rating_score_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating score
+            Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
+        }
+
+        private void Online_battle_rating_wins_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating wins
+            Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
+        }
+
+        private void Local_battle_rating_wins_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating wins
+            Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
+        }
+
+        private void Online_battle_rating_losses_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating losses
+            Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
+        }
+
+        private void Local_battle_rating_losses_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating losses
+            Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
+        }
+
+        private void Online_battle_rating_ties_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating ties
+            Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
+        }
+
+        private void Local_battle_rating_ties_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //set total rating ties
+            Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_online_basic_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total basic
+            Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_local_basic_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total basic
+            Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_online_expert_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total expert
+            Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_local_expert_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total expert
+            Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_online_ultimate_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total ultimate
+            Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_local_ultimate_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total ultimate
+            Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_online_ultimatenex_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total ultimate no-ex
+            Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
+        }
+
+        private void Scores_played_local_ultimatenex_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Set scores played total ultimate no-ex
+            Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
         }
     }
 }

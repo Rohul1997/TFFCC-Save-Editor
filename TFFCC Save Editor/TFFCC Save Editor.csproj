@@ -7,7 +7,7 @@
     <ProjectGuid>{0349B4D9-19C6-4FF8-994B-09C37DCF8CB2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TFFCC Save Editor</RootNamespace>
+    <RootNamespace>TFFCC_Save_Editor</RootNamespace>
     <AssemblyName>TFFCC Save Editor</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -61,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\TFFCC_Save_Editor.Databases.datasource" />
     <None Include="Properties\Settings.settings">
@@ -86,8 +88,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Star Shiny1.png" />
+    <None Include="Resources\Star Empty.png" />
+    <None Include="Resources\Star Half.png" />
+    <None Include="Resources\Star.png" />
     <Content Include="TTFFCC Save Editor Icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
