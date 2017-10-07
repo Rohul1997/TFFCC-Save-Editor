@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Star Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Star_Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star Half" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Star_Half" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star Half.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star Shiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Star_Shiny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star Shiny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

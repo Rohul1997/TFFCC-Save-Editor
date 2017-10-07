@@ -75,7 +75,7 @@ namespace TFFCC_Save_Editor.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Empty {
             get {
-                object obj = ResourceManager.GetObject("Star Empty", resourceCulture);
+                object obj = ResourceManager.GetObject("Star_Empty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace TFFCC_Save_Editor.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Half {
             get {
-                object obj = ResourceManager.GetObject("Star Half", resourceCulture);
+                object obj = ResourceManager.GetObject("Star_Half", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace TFFCC_Save_Editor.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Shiny {
             get {
-                object obj = ResourceManager.GetObject("Star Shiny", resourceCulture);
+                object obj = ResourceManager.GetObject("Star_Shiny", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

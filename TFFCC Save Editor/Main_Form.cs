@@ -11,6 +11,40 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
+
+            //intitalise songs datagrid
+            for (int i = 0; i < 963; i++)
+            {
+                var index = Songs_dataGridView.Rows.Add();
+                Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
+            }
+
+            //initialise items datagrid
+            for (int i = 0; i < 92; i++)
+            {
+                var index = Items_dataGridView.Rows.Add();
+                Items_dataGridView.Rows[index].Cells["Item"].Value = Databases.items[index];
+            }
+
+            //initialise cards datagrid
+            for (int i = 0; i < 486; i++)
+            {
+                var index = Cards_dataGridView.Rows.Add();
+                Cards_dataGridView.Rows[index].Cells["Card_name"].Value = Databases.collectacards[index];
+
+                if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[N]"))
+                {
+                    Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Normal";
+                }
+                else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[R]"))
+                {
+                    Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Rare";
+                }
+                else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[P]"))
+                {
+                    Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Premium";
+                }
+            }
         }
 
         OpenFileDialog open = new OpenFileDialog();
@@ -29,11 +63,9 @@ namespace TFFCC_Save_Editor
                     int Total_cleared = 0;
                     int Total_played = 0;
                     int Main_count = 0;
+                    int index = 0;
                     for (int i = 0x5FD54; i < 0x66F48; i += 0x2C)
                     {
-                        var index = Songs_dataGridView.Rows.Add();
-                        Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
-
                         //Read Score value for song
                         br.BaseStream.Position = i;
                         Songs_dataGridView.Rows[index].Cells["Score"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
@@ -161,6 +193,7 @@ namespace TFFCC_Save_Editor
 
                         Total_played += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_played"].Value);
                         Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value);
+                        index++;
                         ++Main_count;
                     }
                     label1.Text = $"Main Songs Found: {Main_count}";
@@ -169,7 +202,6 @@ namespace TFFCC_Save_Editor
                     int DLC_count = 0;
                     for (int i = 0x670D4; i < 0x6A464; i += 0x2C)
                     {
-                        var index = Songs_dataGridView.Rows.Add();
                         Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
 
                         //Read Score value for song
@@ -299,6 +331,7 @@ namespace TFFCC_Save_Editor
 
                         Total_played += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_played"].Value);
                         Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value);
+                        index++;
                         ++DLC_count;
                     }
                     label2.Text = $"DLC Songs Found: {DLC_count}";
@@ -316,37 +349,37 @@ namespace TFFCC_Save_Editor
 
         private void Open_main_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Set the combobox items from the monsters database
-            comboBox1.DataSource = Databases.monsters;
+            ////Set the combobox items from the monsters database
+            //comboBox1.DataSource = Databases.monsters;
 
-            //Set the combobox items from the characters database
-            comboBox4.DataSource = Databases.characters;
+            ////Set the combobox items from the characters database
+            //comboBox4.DataSource = Databases.characters;
 
-            //create list from items remove cards.
-            List<string> ItemsCardsRemoved = new List<string>(Databases.items);
+            ////create list from items remove cards.
+            //List<string> ItemsCardsRemoved = new List<string>(Databases.items);
 
-            //Find N and R cards from the items database
-            var itemN = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [N]"));
-            var itemR = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [R]"));
+            ////Find N and R cards from the items database
+            //var itemN = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [N]"));
+            //var itemR = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [R]"));
 
-            //Remove N and R cards from the items database
-            foreach (string i in itemN)
-            {
-                ItemsCardsRemoved.Remove(i);
-            }
-            foreach (string i in itemR)
-            {
-                ItemsCardsRemoved.Remove(i);
-            }
+            ////Remove N and R cards from the items database
+            //foreach (string i in itemN)
+            //{
+            //    ItemsCardsRemoved.Remove(i);
+            //}
+            //foreach (string i in itemR)
+            //{
+            //    ItemsCardsRemoved.Remove(i);
+            //}
 
-            //Set the combobox items from the items database with the N and R cards removed
-            comboBox2.DataSource = ItemsCardsRemoved;
+            ////Set the combobox items from the items database with the N and R cards removed
+            //comboBox2.DataSource = ItemsCardsRemoved;
 
-            //Set the combobox items from the items database without anything removed
-            comboBox3.DataSource = Databases.items;
+            ////Set the combobox items from the items database without anything removed
+            //comboBox3.DataSource = Databases.items;
 
-            //This would be to check what is the current item selected on the items combobox and then get the index for its position on the original database
-            Console.WriteLine(Databases.items.FindIndex(i => i.Equals("#001 [N] CollectaCard")));
+            ////This would be to check what is the current item selected on the items combobox and then get the index for its position on the original database
+            //Console.WriteLine(Databases.items.FindIndex(i => i.Equals("#001 [N] CollectaCard")));
 
             try
             {
@@ -357,43 +390,26 @@ namespace TFFCC_Save_Editor
 
                     //Items
                     int Item_count = 0;
+                    int index = 0;
                     for (int i = 0xCA0; i < 0xCFC; i++)
                     {
-                        var index = Items_dataGridView.Rows.Add();
-                        Items_dataGridView.Rows[index].Cells["Item"].Value = Databases.items[index];
-
                         //Read item quantity
                         br.BaseStream.Position = i;
                         Items_dataGridView.Rows[index].Cells["Quantity"].Value = br.ReadByte() - 0x80;
-
+                        index++;
                         ++Item_count;
                     }
                     label8.Text = $"Items Found: {Item_count}";
 
                     //CollectaCards
                     int Card_count = 0;
+                    index = 0;
                     for (int i = 0x3497; i < 0x367D; i++)
                     {
-                        var index = Cards_dataGridView.Rows.Add();
-                        Cards_dataGridView.Rows[index].Cells["Card_name"].Value = Databases.collectacards[index];
-
-                        if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[N]"))
-                        {
-                            Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Normal";
-                        }
-                        else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[R]"))
-                        {
-                            Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Rare";
-                        }
-                        else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[P]"))
-                        {
-                            Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Premium";
-                        }
-
                         //Read card quantity
                         br.BaseStream.Position = i;
                         Cards_dataGridView.Rows[index].Cells["Card_quantity"].Value = br.ReadByte() - 0x80;
-
+                        index++;
                         ++Card_count;
                     }
                     label9.Text = $"Cards Found: {Card_count}";
