@@ -16,7 +16,10 @@ namespace TFFCC_Save_Editor
             for (int i = 0; i < 963; i++)
             {
                 var index = Songs_dataGridView.Rows.Add();
-                Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
+                Songs_dataGridView.Rows[index].Cells["Series"].Value = Databases.songs_series[index];
+                Songs_dataGridView.Rows[index].Cells["Type"].Value = Databases.songs_type[index];
+                Songs_dataGridView.Rows[index].Cells["Level_name"].Value = Databases.songs_level_name[index];
+                Songs_dataGridView.Rows[index].Cells["Difficulty"].Value = Databases.songs_difficulty[index];
             }
 
             //initialise items datagrid
@@ -202,8 +205,6 @@ namespace TFFCC_Save_Editor
                     int DLC_count = 0;
                     for (int i = 0x670D4; i < 0x6A464; i += 0x2C)
                     {
-                        Songs_dataGridView.Rows[index].Cells["Level_name"].Value = "Unknown";
-
                         //Read Score value for song
                         br.BaseStream.Position = i;
                         Songs_dataGridView.Rows[index].Cells["Score"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
