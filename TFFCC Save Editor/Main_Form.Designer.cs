@@ -55,8 +55,8 @@ namespace TFFCC_Save_Editor
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
@@ -71,6 +71,18 @@ namespace TFFCC_Save_Editor
             this.Trophies_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main_tabPage = new System.Windows.Forms.TabPage();
             this.Battle_party_groupBox = new System.Windows.Forms.GroupBox();
@@ -220,20 +232,12 @@ namespace TFFCC_Save_Editor
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Open_main_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Open_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Open_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Open_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -425,6 +429,7 @@ namespace TFFCC_Save_Editor
             this.Player_name_textBox.Location = new System.Drawing.Point(138, 13);
             this.Player_name_textBox.MaxLength = 6;
             this.Player_name_textBox.Name = "Player_name_textBox";
+            this.Player_name_textBox.ReadOnly = true;
             this.Player_name_textBox.Size = new System.Drawing.Size(83, 20);
             this.Player_name_textBox.TabIndex = 1;
             // 
@@ -485,6 +490,84 @@ namespace TFFCC_Save_Editor
             this.Songs_dataGridView.RowHeadersVisible = false;
             this.Songs_dataGridView.Size = new System.Drawing.Size(818, 419);
             this.Songs_dataGridView.TabIndex = 2;
+            // 
+            // Series
+            // 
+            this.Series.HeaderText = "Series";
+            this.Series.Name = "Series";
+            this.Series.ReadOnly = true;
+            this.Series.Width = 68;
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Width = 68;
+            // 
+            // Level_name
+            // 
+            this.Level_name.HeaderText = "Level Name";
+            this.Level_name.Name = "Level_name";
+            this.Level_name.ReadOnly = true;
+            this.Level_name.Width = 68;
+            // 
+            // Difficulty
+            // 
+            this.Difficulty.HeaderText = "Difficulty";
+            this.Difficulty.Name = "Difficulty";
+            this.Difficulty.ReadOnly = true;
+            this.Difficulty.Width = 68;
+            // 
+            // Score
+            // 
+            this.Score.HeaderText = "Score";
+            this.Score.Name = "Score";
+            this.Score.Width = 68;
+            // 
+            // Chain
+            // 
+            this.Chain.HeaderText = "Chain";
+            this.Chain.Name = "Chain";
+            this.Chain.Width = 67;
+            // 
+            // Rank
+            // 
+            this.Rank.HeaderText = "Rank";
+            this.Rank.Name = "Rank";
+            this.Rank.Width = 68;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.Width = 68;
+            // 
+            // Play_style
+            // 
+            this.Play_style.HeaderText = "Play Style";
+            this.Play_style.Name = "Play_style";
+            this.Play_style.Width = 68;
+            // 
+            // Times_played
+            // 
+            this.Times_played.HeaderText = "Times Played";
+            this.Times_played.Name = "Times_played";
+            this.Times_played.Width = 68;
+            // 
+            // Times_cleared
+            // 
+            this.Times_cleared.HeaderText = "Times Cleared";
+            this.Times_cleared.Name = "Times_cleared";
+            this.Times_cleared.Width = 68;
+            // 
+            // Date
+            // 
+            dataGridViewCellStyle1.NullValue = null;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.Width = 68;
             // 
             // tabControl1
             // 
@@ -2179,103 +2262,56 @@ namespace TFFCC_Save_Editor
             // File_ToolStripMenuItem
             // 
             this.File_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Open_ToolStripMenuItem,
-            this.Open_main_ToolStripMenuItem});
+            this.Open_file_ToolStripMenuItem,
+            this.Save_file_ToolStripMenuItem});
             this.File_ToolStripMenuItem.Name = "File_ToolStripMenuItem";
             this.File_ToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.File_ToolStripMenuItem.Text = "File";
             // 
-            // Open_ToolStripMenuItem
+            // Open_file_ToolStripMenuItem
             // 
-            this.Open_ToolStripMenuItem.Name = "Open_ToolStripMenuItem";
-            this.Open_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.Open_ToolStripMenuItem.Text = "Open extsavedata.bk";
-            this.Open_ToolStripMenuItem.Click += new System.EventHandler(this.Open_ToolStripMenuItem_Click);
+            this.Open_file_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Open_savedata_ToolStripMenuItem,
+            this.Open_extsavedata_ToolStripMenuItem});
+            this.Open_file_ToolStripMenuItem.Name = "Open_file_ToolStripMenuItem";
+            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.Open_file_ToolStripMenuItem.Text = "Open File";
             // 
-            // Open_main_ToolStripMenuItem
+            // Open_savedata_ToolStripMenuItem
             // 
-            this.Open_main_ToolStripMenuItem.Name = "Open_main_ToolStripMenuItem";
-            this.Open_main_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.Open_main_ToolStripMenuItem.Text = "Open savedata.bk";
-            this.Open_main_ToolStripMenuItem.Click += new System.EventHandler(this.Open_main_ToolStripMenuItem_Click);
+            this.Open_savedata_ToolStripMenuItem.Name = "Open_savedata_ToolStripMenuItem";
+            this.Open_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.Open_savedata_ToolStripMenuItem.Text = "Open savedata.bk";
+            this.Open_savedata_ToolStripMenuItem.Click += new System.EventHandler(this.Open_savedata_ToolStripMenuItem_Click);
             // 
-            // Series
+            // Open_extsavedata_ToolStripMenuItem
             // 
-            this.Series.HeaderText = "Series";
-            this.Series.Name = "Series";
-            this.Series.ReadOnly = true;
-            this.Series.Width = 68;
+            this.Open_extsavedata_ToolStripMenuItem.Name = "Open_extsavedata_ToolStripMenuItem";
+            this.Open_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.Open_extsavedata_ToolStripMenuItem.Text = "Open extsavedata.bk";
+            this.Open_extsavedata_ToolStripMenuItem.Click += new System.EventHandler(this.Open_extsavedata_ToolStripMenuItem_Click);
             // 
-            // Type
+            // Save_file_ToolStripMenuItem
             // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Width = 68;
+            this.Save_file_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Save_savedata_ToolStripMenuItem,
+            this.Save_extsavedata_ToolStripMenuItem});
+            this.Save_file_ToolStripMenuItem.Name = "Save_file_ToolStripMenuItem";
+            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.Save_file_ToolStripMenuItem.Text = "Save File";
             // 
-            // Level_name
+            // Save_savedata_ToolStripMenuItem
             // 
-            this.Level_name.HeaderText = "Level Name";
-            this.Level_name.Name = "Level_name";
-            this.Level_name.ReadOnly = true;
-            this.Level_name.Width = 68;
+            this.Save_savedata_ToolStripMenuItem.Name = "Save_savedata_ToolStripMenuItem";
+            this.Save_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.Save_savedata_ToolStripMenuItem.Text = "Save savedata.bk";
+            this.Save_savedata_ToolStripMenuItem.Click += new System.EventHandler(this.Save_savedata_ToolStripMenuItem_Click);
             // 
-            // Difficulty
+            // Save_extsavedata_ToolStripMenuItem
             // 
-            this.Difficulty.HeaderText = "Difficulty";
-            this.Difficulty.Name = "Difficulty";
-            this.Difficulty.ReadOnly = true;
-            this.Difficulty.Width = 68;
-            // 
-            // Score
-            // 
-            this.Score.HeaderText = "Score";
-            this.Score.Name = "Score";
-            this.Score.Width = 68;
-            // 
-            // Chain
-            // 
-            this.Chain.HeaderText = "Chain";
-            this.Chain.Name = "Chain";
-            this.Chain.Width = 67;
-            // 
-            // Rank
-            // 
-            this.Rank.HeaderText = "Rank";
-            this.Rank.Name = "Rank";
-            this.Rank.Width = 68;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Width = 68;
-            // 
-            // Play_style
-            // 
-            this.Play_style.HeaderText = "Play Style";
-            this.Play_style.Name = "Play_style";
-            this.Play_style.Width = 68;
-            // 
-            // Times_played
-            // 
-            this.Times_played.HeaderText = "Times Played";
-            this.Times_played.Name = "Times_played";
-            this.Times_played.Width = 68;
-            // 
-            // Times_cleared
-            // 
-            this.Times_cleared.HeaderText = "Times Cleared";
-            this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.Width = 68;
-            // 
-            // Date
-            // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.Width = 68;
+            this.Save_extsavedata_ToolStripMenuItem.Name = "Save_extsavedata_ToolStripMenuItem";
+            this.Save_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.Save_extsavedata_ToolStripMenuItem.Text = "Save extsavedata.bk";
             // 
             // Main_Form
             // 
@@ -2390,8 +2426,9 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.TabPage Songs_tabPage;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem File_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Open_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Open_main_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Open_file_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Open_extsavedata_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Open_savedata_ToolStripMenuItem;
         private System.Windows.Forms.TextBox Player_name_textBox;
         private System.Windows.Forms.Label Player_name_label;
         private System.Windows.Forms.Label Rhythmia_label;
@@ -2560,6 +2597,9 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.ToolStripMenuItem Save_file_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Save_savedata_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_ToolStripMenuItem;
     }
 }
 
