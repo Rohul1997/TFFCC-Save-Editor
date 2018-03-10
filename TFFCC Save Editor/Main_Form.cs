@@ -28,6 +28,8 @@ using System.Text;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using System.Web.Script.Serialization;
+using System.Linq;
 
 namespace TFFCC_Save_Editor
 {
@@ -36,377 +38,106 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
-
-            //intitalise songs datagrid
-            for (int i = 0; i < 963; i++)
-            {
-                var index = Songs_dataGridView.Rows.Add();
-                Songs_dataGridView.Rows[index].Cells["Series"].Value = Databases.songs_series[index];
-                Songs_dataGridView.Rows[index].Cells["Type"].Value = Databases.songs_type[index];
-                Songs_dataGridView.Rows[index].Cells["Level_name"].Value = Databases.songs_level_name[index];
-                Songs_dataGridView.Rows[index].Cells["Difficulty"].Value = Databases.songs_difficulty[index];
-            }
-
-            //initialise items datagrid
-            for (int i = 0; i < 92; i++)
-            {
-                var index = Items_dataGridView.Rows.Add();
-                Items_dataGridView.Rows[index].Cells["Item"].Value = Databases.items[index];
-            }
-
-            //initialise cards datagrid
-            for (int i = 0; i < 486; i++)
-            {
-                var index = Cards_dataGridView.Rows.Add();
-                Cards_dataGridView.Rows[index].Cells["Card_name"].Value = Databases.collectacards[index];
-
-                if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[N]"))
-                {
-                    Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Normal";
-                }
-                else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[R]"))
-                {
-                    Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Rare";
-                }
-                else if (Cards_dataGridView.Rows[index].Cells["Card_name"].Value.ToString().Contains("[P]"))
-                {
-                    Cards_dataGridView.Rows[index].Cells["Rarity"].Value = "Premium";
-                }
-            }
         }
 
         OpenFileDialog open_extsavedata = new OpenFileDialog();
         OpenFileDialog open_savedata = new OpenFileDialog();
 
-        private void Open_extsavedata_ToolStripMenuItem_Click(object sender, EventArgs e)
+        public dynamic dbJson(string type)
         {
-            try
+            dynamic json = new JavaScriptSerializer().DeserializeObject((new StreamReader(new MemoryStream(Properties.Resources.Databases))).ReadToEnd());
+            switch (type)
             {
-                open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
-                if (open_extsavedata.ShowDialog() == DialogResult.OK)
-                {
-                    BinaryReader br = new BinaryReader(File.OpenRead(open_extsavedata.FileName));
-
-                    //Main songs
-                    int Total_cleared = 0;
-                    int Total_played = 0;
-                    int Main_count = 0;
-                    int index = 0;
-                    for (int i = 0x5FD54; i < 0x66F48; i += 0x2C)
-                    {
-                        //Read Score value for song
-                        br.BaseStream.Position = i;
-                        Songs_dataGridView.Rows[index].Cells["Score"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read chain value for song
-                        br.BaseStream.Position = i + 0x04;
-                        Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read rank value for song
-                        br.BaseStream.Position = i + 0x08;
-                        var rank = br.ReadBytes(0x05);
-                        if (rank[0] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SSS";
-                        }
-                        else if (rank[0] == 0x01)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SS";
-                        }
-                        else if (rank[0] == 0x02)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "S";
-                        }
-                        else if (rank[0] == 0x03)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "A";
-                        }
-                        else if (rank[0] == 0x04)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "B";
-                        }
-                        else if (rank[0] == 0x05)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "C";
-                        }
-                        else if (rank[0] == 0x06)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "D";
-                        }
-                        else if (rank[0] == 0x07)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "E";
-                        }
-                        else if (rank[0] == 0x08 && rank[4] != 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "F";
-                        }
-                        else if (rank[0] == 0x08 && rank[4] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unplayed";
-                        }
-                        else
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unknown";
-                        }
-
-                        //Read status value for song
-                        br.BaseStream.Position = i + 0x09;
-                        var status = br.ReadBytes(0x04);
-                        if (status[0] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
-                        }
-                        else if (status[0] == 0x01)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
-                        }
-                        else if (status[0] == 0x02)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
-                        }
-                        else if (status[0] == 0x03 && status[3] != 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Failed";
-                        }
-                        else if (status[0] == 0x03 && status[3] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed";
-                        }
-                        else
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unknown";
-                        }
-
-                        //Read playstyle value for song
-                        br.BaseStream.Position = i + 0x0A;
-                        var playstyle = br.ReadByte();
-                        if (playstyle == 0x01)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Stylus";
-                        }
-                        else if (playstyle == 0x02)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Button";
-                        }
-                        else if (playstyle == 0x03)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Hybrid";
-                        }
-                        else if (playstyle == 0x04)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "One-Handed";
-                        }
-                        else
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed";
-                        }
-
-                        //Read times played value for song
-                        br.BaseStream.Position = i + 0x0C;
-                        Songs_dataGridView.Rows[index].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read times cleared value for song
-                        br.BaseStream.Position = i + 0x10;
-                        Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read date value for song
-                        br.BaseStream.Position = i + 0x26;
-                        var year = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
-                        br.BaseStream.Position = i + 0x28;
-                        var month = br.ReadByte();
-                        br.BaseStream.Position = i + 0x29;
-                        var day = br.ReadByte();
-                        Songs_dataGridView.Rows[index].Cells["Date"].Value = $"{day}.{month}.{year}";
-
-                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_played"].Value);
-                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value);
-                        index++;
-                        ++Main_count;
-                    }
-                    label1.Text = $"Main Songs Found: {Main_count}";
-
-                    //DLC songs
-                    int DLC_count = 0;
-                    for (int i = 0x670D4; i < 0x6A464; i += 0x2C)
-                    {
-                        //Read Score value for song
-                        br.BaseStream.Position = i;
-                        Songs_dataGridView.Rows[index].Cells["Score"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read chain value for song
-                        br.BaseStream.Position = i + 0x04;
-                        Songs_dataGridView.Rows[index].Cells["Chain"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read rank value for song
-                        br.BaseStream.Position = i + 0x08;
-                        var rank = br.ReadBytes(0x05);
-                        if (rank[0] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SSS";
-                        }
-                        else if (rank[0] == 0x01)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "SS";
-                        }
-                        else if (rank[0] == 0x02)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "S";
-                        }
-                        else if (rank[0] == 0x03)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "A";
-                        }
-                        else if (rank[0] == 0x04)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "B";
-                        }
-                        else if (rank[0] == 0x05)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "C";
-                        }
-                        else if (rank[0] == 0x06)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "D";
-                        }
-                        else if (rank[0] == 0x07)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "E";
-                        }
-                        else if (rank[0] == 0x08 && rank[4] != 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "F";
-                        }
-                        else if (rank[0] == 0x08 && rank[4] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unplayed";
-                        }
-                        else
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Rank"].Value = "Unknown";
-                        }
-
-                        //Read status value for song
-                        br.BaseStream.Position = i + 0x09;
-                        var status = br.ReadBytes(0x04);
-                        if (status[0] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "All-Critical";
-                        }
-                        else if (status[0] == 0x01)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Perfect Chain";
-                        }
-                        else if (status[0] == 0x02)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Clear";
-                        }
-                        else if (status[0] == 0x03 && status[3] != 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Failed";
-                        }
-                        else if (status[0] == 0x03 && status[3] == 0x00)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unplayed";
-                        }
-                        else
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Status"].Value = "Unknown";
-                        }
-
-                        //Read playstyle value for song
-                        br.BaseStream.Position = i + 0x0A;
-                        var playstyle = br.ReadByte();
-                        if (playstyle == 0x01)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Stylus";
-                        }
-                        else if (playstyle == 0x02)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Button";
-                        }
-                        else if (playstyle == 0x03)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Hybrid";
-                        }
-                        else if (playstyle == 0x04)
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "One-Handed";
-                        }
-                        else
-                        {
-                            Songs_dataGridView.Rows[index].Cells["Play_style"].Value = "Unplayed";
-                        }
-
-                        //Read times played value for song
-                        br.BaseStream.Position = i + 0x0C;
-                        Songs_dataGridView.Rows[index].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read times cleared value for song
-                        br.BaseStream.Position = i + 0x10;
-                        Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
-
-                        //Read date value for song
-                        br.BaseStream.Position = i + 0x26;
-                        var year = BitConverter.ToInt16(br.ReadBytes(0x02), 0);
-                        br.BaseStream.Position = i + 0x28;
-                        var month = br.ReadByte();
-                        br.BaseStream.Position = i + 0x29;
-                        var day = br.ReadByte();
-                        Songs_dataGridView.Rows[index].Cells["Date"].Value = $"{day}.{month}.{year}";
-
-                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_played"].Value);
-                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[index].Cells["Times_cleared"].Value);
-                        index++;
-                        ++DLC_count;
-                    }
-                    label2.Text = $"DLC Songs Found: {DLC_count}";
-                    label3.Text = $"Total Songs Found: {Main_count + DLC_count}";
-                    label10.Text = $"Total Times Played: {Total_played}";
-                    label11.Text = $"Total Times Cleared: {Total_cleared}";
-                    br.Close();
-                }
+                case "items":
+                    return json["items"];
+                case "characters":
+                    return json["characters"];
+                case "abilities":
+                    return json["abilities"];
+                case "monsters":
+                    return json["monsters"];
+                case "songs":
+                    return json["songs"];
+                default:
+                    return null;
             }
-            catch
+        }
+
+        public string rank(byte[] rank)
+        {
+            switch (rank[0])
             {
-                MessageBox.Show("Invalid extsavedata.bk", "Failed to open the file");
+                case 0x00:
+                    return "SSS";
+                case 0x01:
+                    return "SS";
+                case 0x02:
+                    return "S";
+                case 0x03:
+                    return "A";
+                case 0x04:
+                    return "B";
+                case 0x05:
+                    return "C";
+                case 0x06:
+                    return "D";
+                case 0x07:
+                    return "E";
+                case 0x08:
+                    switch (rank[4])
+                    {
+                        case 0x00:
+                            return "Unplayed";
+                        default:
+                            return "F";
+                    }
+                default:
+                    return "Unknown";
+            }
+        }
+
+        public string status(byte[] status)
+        {
+            switch (status[0])
+            {
+                case 0x00:
+                    return "All-Critical";
+                case 0x01:
+                    return "Perfect Chain";
+                case 0x02:
+                    return "Clear";
+                case 0x03:
+                    switch (status[3])
+                    {
+                        case 0x00:
+                            return "Unplayed";
+                        default:
+                            return "Failed";
+                    }
+                default:
+                    return "Unknown";
+            }
+        }
+
+        public string playstyle(byte playstyle)
+        {
+            switch (playstyle)
+            {
+                case 0x01:
+                    return "Stylus";
+                case 0x02:
+                    return "Button";
+                case 0x03:
+                    return "Hybrid";
+                case 0x04:
+                    return "One-Handed";
+                default:
+                    return "Unplayed";
             }
         }
 
         private void Open_savedata_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ////Set the combobox items from the monsters database
-            //comboBox1.DataSource = Databases.monsters;
-
-            ////Set the combobox items from the characters database
-            //comboBox4.DataSource = Databases.characters;
-
-            ////create list from items remove cards.
-            //List<string> ItemsCardsRemoved = new List<string>(Databases.items);
-
-            ////Find N and R cards from the items database
-            //var itemN = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [N]"));
-            //var itemR = ItemsCardsRemoved.FindAll(i => i.Substring(4).StartsWith(" [R]"));
-
-            ////Remove N and R cards from the items database
-            //foreach (string i in itemN)
-            //{
-            //    ItemsCardsRemoved.Remove(i);
-            //}
-            //foreach (string i in itemR)
-            //{
-            //    ItemsCardsRemoved.Remove(i);
-            //}
-
-            ////Set the combobox items from the items database with the N and R cards removed
-            //comboBox2.DataSource = ItemsCardsRemoved;
-
-            ////Set the combobox items from the items database without anything removed
-            //comboBox3.DataSource = Databases.items;
-
-            ////This would be to check what is the current item selected on the items combobox and then get the index for its position on the original database
-            //Console.WriteLine(Databases.items.FindIndex(i => i.Equals("#001 [N] CollectaCard")));
-
             try
             {
                 open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
@@ -414,32 +145,7 @@ namespace TFFCC_Save_Editor
                 {
                     BinaryReader br = new BinaryReader(File.OpenRead(open_savedata.FileName));
 
-                    //Items
-                    int Item_count = 0;
-                    int index = 0;
-                    for (int i = 0xCA0; i < 0xCFC; i++)
-                    {
-                        //Read item quantity
-                        br.BaseStream.Position = i;
-                        Items_dataGridView.Rows[index].Cells["Quantity"].Value = br.ReadByte() - 0x80;
-                        index++;
-                        ++Item_count;
-                    }
-                    label8.Text = $"Items Found: {Item_count}";
-
-                    //CollectaCards
-                    int Card_count = 0;
-                    index = 0;
-                    for (int i = 0x3497; i < 0x367D; i++)
-                    {
-                        //Read card quantity
-                        br.BaseStream.Position = i;
-                        Cards_dataGridView.Rows[index].Cells["Card_quantity"].Value = br.ReadByte() - 0x80;
-                        index++;
-                        ++Card_count;
-                    }
-                    label9.Text = $"Cards Found: {Card_count}";
-
+                    //Main tab
                     //Profile
                     //Read player name
                     br.BaseStream.Position = 0x12;
@@ -874,12 +580,206 @@ namespace TFFCC_Save_Editor
                     br.BaseStream.Position = 0x383C;
                     Treasure_chests_earned_numericUpDown.Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
+
+                    //Items tab
+                    Items_dataGridView.Rows.Clear();
+                    Cards_dataGridView.Rows.Clear();
+                    var dbItemsJSON = dbJson("items");
+
+                    if (dbItemsJSON == null)
+                    {
+                        MessageBox.Show("Failed loading database", "Error");
+                        return;
+                    }
+
+                    //Read and initialise Items datagrid
+                    for (int i = 0; i < 92; i++)
+                    {
+                        var item = ((Dictionary<string, object>)dbItemsJSON).ToList()[i].Key;
+                        Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = item;
+
+                        br.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[item]["offset"], 16);
+                        Items_dataGridView.Rows[i].Cells["Quantity"].Value = br.ReadByte() - 0x80;
+                        Items_dataGridView.Rows[i].Cells["Quantity"].Value = (int)Items_dataGridView.Rows[i].Cells["Quantity"].Value < 0 ? 0 : Items_dataGridView.Rows[i].Cells["Quantity"].Value;
+                    }
+
+                    //Read and initialise CollectaCards datagrid
+                    for (int i = 0; i < 162; i++)
+                    {
+                        var card = ((Dictionary<string, object>)dbItemsJSON).ToList()[i + 92].Key;
+                        Cards_dataGridView.Rows[Cards_dataGridView.Rows.Add()].Cells["Card_name"].Value = card;
+
+                        br.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[card]["normal offset"], 16);
+                        Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = br.ReadByte() - 0x80;
+                        Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_normal"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_normal"].Value;
+
+                        br.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[card]["rare offset"], 16);
+                        Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = br.ReadByte() - 0x80;
+                        Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_rare"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_rare"].Value;
+
+
+                        br.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[card]["premium offset"], 16);
+                        Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = br.ReadByte() - 0x80;
+                        Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_premium"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_premium"].Value;
+                    }
+
                     br.Close();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid savedata.bk", "Failed to open the file");
+                Console.WriteLine(ex);
+                MessageBox.Show($"Invalid savedata.bk\n{ex}", "Failed to open the file");
+            }
+        }
+
+        private void Open_extsavedata_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
+                if (open_extsavedata.ShowDialog() == DialogResult.OK)
+                {
+                    BinaryReader br = new BinaryReader(File.OpenRead(open_extsavedata.FileName));
+
+                    //Songs tab
+                    Songs_dataGridView.Rows.Clear();
+                    var dbSongsJSON = dbJson("songs");
+
+                    if (dbSongsJSON == null)
+                    {
+                        MessageBox.Show("Failed loading database", "Error");
+                        return;
+                    }
+
+                    //Read and intitalise songs datagrid
+                    int songIndex = 0;
+                    int Total_cleared = 0;
+                    int Total_played = 0;
+                    int Total_basic_all_criticals = 0;
+                    int Total_expert_all_criticals = 0;
+                    int Total_ultimate_all_criticals = 0;
+                    foreach (KeyValuePair<string, object> series in dbSongsJSON)
+                    {
+                        foreach (KeyValuePair<string, object> songName in (Dictionary<string, object>)series.Value)
+                        {
+                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["Difficulty"].Value = "Basic";
+                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["Difficulty"].Value = "Expert";
+                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["Difficulty"].Value = "Ultimate";
+
+                            Songs_dataGridView.Rows[songIndex].Cells["Series"].Value = series.Key;
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Series"].Value = series.Key;
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Series"].Value = series.Key;
+
+                            Songs_dataGridView.Rows[songIndex].Cells["Level_name"].Value = songName.Key;
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Level_name"].Value = songName.Key;
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Level_name"].Value = songName.Key;
+
+                            Songs_dataGridView.Rows[songIndex].Cells["Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+
+                            //Read Score value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic score"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert score"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate score"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+
+                            //Read chain value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic chain"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert chain"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate chain"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+
+                            //Read rank value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic rank"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Rank"].Value = rank(br.ReadBytes(0x05));
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert rank"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Rank"].Value = rank(br.ReadBytes(0x05));
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate rank"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Rank"].Value = rank(br.ReadBytes(0x05));
+
+                            //Read status value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic status"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Status"].Value = status(br.ReadBytes(0x04));
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert status"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value = status(br.ReadBytes(0x04));
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate status"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value = status(br.ReadBytes(0x04));
+
+                            //Read playstyle value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic play style"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Play_style"].Value = playstyle(br.ReadByte());
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert play style"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Play_style"].Value = playstyle(br.ReadByte());
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate play style"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Play_style"].Value = playstyle(br.ReadByte());
+
+                            //Read times played value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic times played"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert times played"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate times played"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                            //Read times cleared value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic times cleared"], 16);
+                            Songs_dataGridView.Rows[songIndex].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert times cleared"], 16);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate times cleared"], 16);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+
+                            //Read date value for song
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic date"], 16);
+                            var date = br.ReadBytes(0x04);
+                            Songs_dataGridView.Rows[songIndex].Cells["Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert date"], 16);
+                            date = br.ReadBytes(0x04);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
+                            br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate date"], 16);
+                            date = br.ReadBytes(0x04);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
+
+                            //Add cleared and played values
+                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["Times_played"].Value);
+                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["Times_played"].Value);
+                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["Times_played"].Value);
+                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["Times_cleared"].Value);
+                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["Times_cleared"].Value);
+                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["Times_cleared"].Value);
+
+                            //Add total All-Critical values
+                            if (Songs_dataGridView.Rows[songIndex].Cells["Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex].Cells["Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex].Cells["Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex].Cells["Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex].Cells["Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex].Cells["Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+
+                            label1.Text = $"Total Basic All-Criticals: {Total_basic_all_criticals}";
+                            label2.Text = $"Total Expert All-Criticals: {Total_expert_all_criticals}";
+                            label3.Text = $"Total Ultimate All-Criticals: {Total_ultimate_all_criticals}";
+                            label11.Text = $"Total Times Played: {Total_played}";
+                            label10.Text = $"Total Times Cleared: {Total_cleared}";
+
+                            songIndex += 3;
+                        }
+                    }
+                    br.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Invalid extsavedata.bk\n{ex}", "Failed to open the file");
             }
         }
 
@@ -892,7 +792,7 @@ namespace TFFCC_Save_Editor
                 bw.BaseStream.Position = 0x2C;
                 bw.Write((uint)Rhythmia_numericUpDown.Value);
 
-                ////Total Counts
+                //Total Counts
                 //write total playtime
                 bw.BaseStream.Position = 0x38;
                 bw.Write((uint)(TimeSpan.FromHours((ushort)Total_playtime_hours_numericUpDown.Value).TotalSeconds + TimeSpan.FromMinutes((byte)Total_playtime_minutes_numericUpDown.Value).TotalSeconds + (byte)Total_playtime_seconds_numericUpDown.Value));
@@ -1187,12 +1087,13 @@ namespace TFFCC_Save_Editor
 
                 MessageBox.Show("Successfully saved to savedata.bk", "Successfully saved the file");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to save to savedata.bk", "Failed to save the file");
+                MessageBox.Show($"Failed to save to savedata.bk\n{ex}", "Failed to save the file");
             }
         }
 
+        //Real time changes stuff
         private void Short_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             //Read total quests cleared
