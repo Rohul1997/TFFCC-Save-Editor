@@ -38,6 +38,7 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
+            controls(this);
         }
 
         OpenFileDialog open_extsavedata = new OpenFileDialog();
@@ -663,107 +664,107 @@ namespace TFFCC_Save_Editor
                     {
                         foreach (KeyValuePair<string, object> songName in (Dictionary<string, object>)series.Value)
                         {
-                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["Difficulty"].Value = "Basic";
-                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["Difficulty"].Value = "Expert";
-                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["Difficulty"].Value = "Ultimate";
+                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Basic";
+                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Expert";
+                            Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Ultimate";
 
-                            Songs_dataGridView.Rows[songIndex].Cells["Series"].Value = series.Key;
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Series"].Value = series.Key;
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Series"].Value = series.Key;
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Value = series.Key;
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Value = series.Key;
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Value = series.Key;
 
-                            Songs_dataGridView.Rows[songIndex].Cells["Level_name"].Value = songName.Key;
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Level_name"].Value = songName.Key;
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Level_name"].Value = songName.Key;
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Song_name"].Value = songName.Key;
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Song_name"].Value = songName.Key;
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Song_name"].Value = songName.Key;
 
-                            Songs_dataGridView.Rows[songIndex].Cells["Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
 
                             //Read Score value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic score"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert score"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate score"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Score"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
 
                             //Read chain value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic chain"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert chain"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate chain"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Chain"].Value = BitConverter.ToUInt32(br.ReadBytes(0x04), 0);
 
                             //Read rank value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic rank"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Rank"].Value = rank(br.ReadBytes(0x05));
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Rank"].Value = rank(br.ReadBytes(0x05));
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert rank"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Rank"].Value = rank(br.ReadBytes(0x05));
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Rank"].Value = rank(br.ReadBytes(0x05));
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate rank"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Rank"].Value = rank(br.ReadBytes(0x05));
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Rank"].Value = rank(br.ReadBytes(0x05));
 
                             //Read status value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic status"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Status"].Value = status(br.ReadBytes(0x04));
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value = status(br.ReadBytes(0x04));
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert status"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value = status(br.ReadBytes(0x04));
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value = status(br.ReadBytes(0x04));
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate status"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value = status(br.ReadBytes(0x04));
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value = status(br.ReadBytes(0x04));
 
                             //Read playstyle value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic play style"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Play_style"].Value = playstyle(br.ReadByte());
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Play_style"].Value = playstyle(br.ReadByte());
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert play style"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Play_style"].Value = playstyle(br.ReadByte());
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Play_style"].Value = playstyle(br.ReadByte());
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate play style"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Play_style"].Value = playstyle(br.ReadByte());
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Play_style"].Value = playstyle(br.ReadByte());
 
                             //Read times played value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic times played"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert times played"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate times played"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                             //Read times cleared value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic times cleared"], 16);
-                            Songs_dataGridView.Rows[songIndex].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert times cleared"], 16);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate times cleared"], 16);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Times_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value = BitConverter.ToInt32(br.ReadBytes(0x04), 0);
 
                             //Read date value for song
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["basic date"], 16);
                             var date = br.ReadBytes(0x04);
-                            Songs_dataGridView.Rows[songIndex].Cells["Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
+                            Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["expert date"], 16);
                             date = br.ReadBytes(0x04);
-                            Songs_dataGridView.Rows[songIndex + 1].Cells["Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
+                            Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
                             br.BaseStream.Position = Convert.ToUInt32(dbSongsJSON[series.Key][songName.Key]["ultimate date"], 16);
                             date = br.ReadBytes(0x04);
-                            Songs_dataGridView.Rows[songIndex + 2].Cells["Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
+                            Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{date[3]}.{date[2]}.{BitConverter.ToInt16(date, 0)}";
 
                             //Add cleared and played values
-                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["Times_played"].Value);
-                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["Times_played"].Value);
-                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["Times_played"].Value);
-                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["Times_cleared"].Value);
-                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["Times_cleared"].Value);
-                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["Times_cleared"].Value);
+                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value);
+                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value);
+                            Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value);
+                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value);
+                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value);
+                            Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value);
 
                             //Add total All-Critical values
-                            if (Songs_dataGridView.Rows[songIndex].Cells["Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex].Cells["Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex].Cells["Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex].Cells["Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex].Cells["Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex].Cells["Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 1].Cells["Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
-                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 2].Cells["Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                            if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
 
                             label1.Text = $"Total Basic All-Criticals: {Total_basic_all_criticals}";
                             label2.Text = $"Total Expert All-Criticals: {Total_expert_all_criticals}";
@@ -1094,122 +1095,54 @@ namespace TFFCC_Save_Editor
         }
 
         //Real time changes stuff
-        private void Short_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
+        private void controls(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                control.TextChanged += change;
+                controls(control);
+            }
+        }
+        private void change(object sender, EventArgs e)
         {
             //Read total quests cleared
             Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-        }
-
-        private void Medium_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Read total quests cleared
             Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-        }
-
-        private void Long_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Read total quests cleared
             Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-        }
-
-        private void Inherited_quests_cleared_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Read total quests cleared
             Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-        }
-
-        private void Online_battle_rating_score_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating score
             Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
-        }
-
-        private void Local_battle_rating_score_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating score
             Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
-        }
-
-        private void Online_battle_rating_wins_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating wins
             Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
-        }
-
-        private void Local_battle_rating_wins_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating wins
             Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
-        }
-
-        private void Online_battle_rating_losses_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating losses
             Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
-        }
-
-        private void Local_battle_rating_losses_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating losses
             Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
-        }
-
-        private void Online_battle_rating_ties_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating ties
             Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
-        }
-
-        private void Local_battle_rating_ties_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //set total rating ties
             Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_online_basic_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total basic
             Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_local_basic_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total basic
             Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_online_expert_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total expert
             Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_local_expert_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total expert
             Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_online_ultimate_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total ultimate
             Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_local_ultimate_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total ultimate
             Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_online_ultimatenex_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total ultimate no-ex
             Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
-        }
-
-        private void Scores_played_local_ultimatenex_numericUpDown_ValueChanged(object sender, EventArgs e)
-        {
             //Set scores played total ultimate no-ex
             Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
         }

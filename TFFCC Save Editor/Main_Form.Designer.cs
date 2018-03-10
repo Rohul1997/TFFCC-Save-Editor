@@ -54,9 +54,14 @@ namespace TFFCC_Save_Editor
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
+            this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star1_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star2_pictureBox = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Progress_label = new System.Windows.Forms.Label();
             this.Player_name_label = new System.Windows.Forms.Label();
@@ -65,18 +70,18 @@ namespace TFFCC_Save_Editor
             this.Rhythmia_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Trophies_textBox = new System.Windows.Forms.TextBox();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Times_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Song_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_TImes_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main_tabPage = new System.Windows.Forms.TabPage();
             this.Battle_party_groupBox = new System.Windows.Forms.GroupBox();
@@ -100,9 +105,13 @@ namespace TFFCC_Save_Editor
             this.Highest_rank_class_comboBox = new System.Windows.Forms.ComboBox();
             this.Highest_rank_comboBox = new System.Windows.Forms.ComboBox();
             this.Local_battle_rating_ties_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
             this.Online_battle_rating_ties_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
             this.Local_battle_rating_losses_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_expert_pictureBox = new System.Windows.Forms.PictureBox();
             this.Online_battle_rating_losses_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_basic_pictureBox = new System.Windows.Forms.PictureBox();
             this.Local_battle_rating_wins_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Online_battle_rating_wins_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Local_battle_rating_score_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -207,6 +216,9 @@ namespace TFFCC_Save_Editor
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Songs_tabPage = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -225,20 +237,13 @@ namespace TFFCC_Save_Editor
             this.Save_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_expert_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_basic_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star1_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star2_pictureBox = new System.Windows.Forms.PictureBox();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -254,9 +259,13 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Levels_reset_numericUpDown)).BeginInit();
             this.Versus_mode_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_ties_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_ties_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_losses_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_losses_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_wins_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_wins_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_score_numericUpDown)).BeginInit();
@@ -305,15 +314,6 @@ namespace TFFCC_Save_Editor
             this.Songs_tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -336,6 +336,56 @@ namespace TFFCC_Save_Editor
             Profile_groupBox.TabIndex = 6;
             Profile_groupBox.TabStop = false;
             Profile_groupBox.Text = "Profile";
+            // 
+            // Progress_star5_pictureBox
+            // 
+            this.Progress_star5_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star5_pictureBox.Image")));
+            this.Progress_star5_pictureBox.Location = new System.Drawing.Point(193, 93);
+            this.Progress_star5_pictureBox.Name = "Progress_star5_pictureBox";
+            this.Progress_star5_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star5_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star5_pictureBox.TabIndex = 3;
+            this.Progress_star5_pictureBox.TabStop = false;
+            // 
+            // Progress_star4_pictureBox
+            // 
+            this.Progress_star4_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star4_pictureBox.Image")));
+            this.Progress_star4_pictureBox.Location = new System.Drawing.Point(166, 93);
+            this.Progress_star4_pictureBox.Name = "Progress_star4_pictureBox";
+            this.Progress_star4_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star4_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star4_pictureBox.TabIndex = 3;
+            this.Progress_star4_pictureBox.TabStop = false;
+            // 
+            // Progress_star3_pictureBox
+            // 
+            this.Progress_star3_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star3_pictureBox.Image")));
+            this.Progress_star3_pictureBox.Location = new System.Drawing.Point(139, 93);
+            this.Progress_star3_pictureBox.Name = "Progress_star3_pictureBox";
+            this.Progress_star3_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star3_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star3_pictureBox.TabIndex = 3;
+            this.Progress_star3_pictureBox.TabStop = false;
+            // 
+            // Progress_star1_pictureBox
+            // 
+            this.Progress_star1_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star1_pictureBox.Image")));
+            this.Progress_star1_pictureBox.Location = new System.Drawing.Point(85, 93);
+            this.Progress_star1_pictureBox.Name = "Progress_star1_pictureBox";
+            this.Progress_star1_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star1_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star1_pictureBox.TabIndex = 3;
+            this.Progress_star1_pictureBox.TabStop = false;
+            // 
+            // Progress_star2_pictureBox
+            // 
+            this.Progress_star2_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star2_pictureBox.Image")));
+            this.Progress_star2_pictureBox.Location = new System.Drawing.Point(112, 93);
+            this.Progress_star2_pictureBox.Name = "Progress_star2_pictureBox";
+            this.Progress_star2_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star2_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star2_pictureBox.TabIndex = 3;
+            this.Progress_star2_pictureBox.TabStop = false;
             // 
             // label12
             // 
@@ -411,18 +461,18 @@ namespace TFFCC_Save_Editor
             this.Songs_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.Songs_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Songs_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Series,
-            this.Type,
-            this.Level_name,
-            this.Difficulty,
-            this.Score,
-            this.Chain,
-            this.Rank,
-            this.Status,
-            this.Play_style,
-            this.Times_played,
-            this.Times_cleared,
-            this.Date});
+            this.songs_Series,
+            this.songs_Type,
+            this.songs_Song_name,
+            this.songs_Difficulty,
+            this.songs_Score,
+            this.songs_Chain,
+            this.songs_Rank,
+            this.songs_Status,
+            this.songs_Play_style,
+            this.songs_Times_played,
+            this.songs_TImes_cleared,
+            this.songs_Date});
             this.Songs_dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Songs_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Songs_dataGridView.Location = new System.Drawing.Point(3, 21);
@@ -431,83 +481,83 @@ namespace TFFCC_Save_Editor
             this.Songs_dataGridView.Size = new System.Drawing.Size(818, 419);
             this.Songs_dataGridView.TabIndex = 2;
             // 
-            // Series
+            // songs_Series
             // 
-            this.Series.HeaderText = "Series";
-            this.Series.Name = "Series";
-            this.Series.ReadOnly = true;
-            this.Series.Width = 68;
+            this.songs_Series.HeaderText = "Series";
+            this.songs_Series.Name = "songs_Series";
+            this.songs_Series.ReadOnly = true;
+            this.songs_Series.Width = 68;
             // 
-            // Type
+            // songs_Type
             // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Width = 68;
+            this.songs_Type.HeaderText = "Type";
+            this.songs_Type.Name = "songs_Type";
+            this.songs_Type.ReadOnly = true;
+            this.songs_Type.Width = 68;
             // 
-            // Level_name
+            // songs_Song_name
             // 
-            this.Level_name.HeaderText = "Level Name";
-            this.Level_name.Name = "Level_name";
-            this.Level_name.ReadOnly = true;
-            this.Level_name.Width = 68;
+            this.songs_Song_name.HeaderText = "Song Name";
+            this.songs_Song_name.Name = "songs_Song_name";
+            this.songs_Song_name.ReadOnly = true;
+            this.songs_Song_name.Width = 68;
             // 
-            // Difficulty
+            // songs_Difficulty
             // 
-            this.Difficulty.HeaderText = "Difficulty";
-            this.Difficulty.Name = "Difficulty";
-            this.Difficulty.ReadOnly = true;
-            this.Difficulty.Width = 68;
+            this.songs_Difficulty.HeaderText = "Difficulty";
+            this.songs_Difficulty.Name = "songs_Difficulty";
+            this.songs_Difficulty.ReadOnly = true;
+            this.songs_Difficulty.Width = 68;
             // 
-            // Score
+            // songs_Score
             // 
-            this.Score.HeaderText = "Score";
-            this.Score.Name = "Score";
-            this.Score.Width = 68;
+            this.songs_Score.HeaderText = "Score";
+            this.songs_Score.Name = "songs_Score";
+            this.songs_Score.Width = 68;
             // 
-            // Chain
+            // songs_Chain
             // 
-            this.Chain.HeaderText = "Chain";
-            this.Chain.Name = "Chain";
-            this.Chain.Width = 67;
+            this.songs_Chain.HeaderText = "Chain";
+            this.songs_Chain.Name = "songs_Chain";
+            this.songs_Chain.Width = 67;
             // 
-            // Rank
+            // songs_Rank
             // 
-            this.Rank.HeaderText = "Rank";
-            this.Rank.Name = "Rank";
-            this.Rank.Width = 68;
+            this.songs_Rank.HeaderText = "Rank";
+            this.songs_Rank.Name = "songs_Rank";
+            this.songs_Rank.Width = 68;
             // 
-            // Status
+            // songs_Status
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Width = 68;
+            this.songs_Status.HeaderText = "Status";
+            this.songs_Status.Name = "songs_Status";
+            this.songs_Status.Width = 68;
             // 
-            // Play_style
+            // songs_Play_style
             // 
-            this.Play_style.HeaderText = "Play Style";
-            this.Play_style.Name = "Play_style";
-            this.Play_style.Width = 68;
+            this.songs_Play_style.HeaderText = "Play Style";
+            this.songs_Play_style.Name = "songs_Play_style";
+            this.songs_Play_style.Width = 68;
             // 
-            // Times_played
+            // songs_Times_played
             // 
-            this.Times_played.HeaderText = "Times Played";
-            this.Times_played.Name = "Times_played";
-            this.Times_played.Width = 68;
+            this.songs_Times_played.HeaderText = "Times Played";
+            this.songs_Times_played.Name = "songs_Times_played";
+            this.songs_Times_played.Width = 68;
             // 
-            // Times_cleared
+            // songs_TImes_cleared
             // 
-            this.Times_cleared.HeaderText = "Times Cleared";
-            this.Times_cleared.Name = "Times_cleared";
-            this.Times_cleared.Width = 68;
+            this.songs_TImes_cleared.HeaderText = "Times Cleared";
+            this.songs_TImes_cleared.Name = "songs_TImes_cleared";
+            this.songs_TImes_cleared.Width = 68;
             // 
-            // Date
+            // songs_Date
             // 
             dataGridViewCellStyle1.NullValue = null;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.Width = 68;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle1;
+            this.songs_Date.HeaderText = "Date";
+            this.songs_Date.Name = "songs_Date";
+            this.songs_Date.Width = 68;
             // 
             // tabControl1
             // 
@@ -836,7 +886,16 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_ties_numericUpDown.Name = "Local_battle_rating_ties_numericUpDown";
             this.Local_battle_rating_ties_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Local_battle_rating_ties_numericUpDown.TabIndex = 3;
-            this.Local_battle_rating_ties_numericUpDown.ValueChanged += new System.EventHandler(this.Local_battle_rating_ties_numericUpDown_ValueChanged);
+            // 
+            // Song_icon_ultimatenex_pictureBox
+            // 
+            this.Song_icon_ultimatenex_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimatenex_pictureBox.Image")));
+            this.Song_icon_ultimatenex_pictureBox.Location = new System.Drawing.Point(309, 166);
+            this.Song_icon_ultimatenex_pictureBox.Name = "Song_icon_ultimatenex_pictureBox";
+            this.Song_icon_ultimatenex_pictureBox.Size = new System.Drawing.Size(44, 28);
+            this.Song_icon_ultimatenex_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_ultimatenex_pictureBox.TabIndex = 3;
+            this.Song_icon_ultimatenex_pictureBox.TabStop = false;
             // 
             // Online_battle_rating_ties_numericUpDown
             // 
@@ -849,7 +908,16 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_ties_numericUpDown.Name = "Online_battle_rating_ties_numericUpDown";
             this.Online_battle_rating_ties_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_ties_numericUpDown.TabIndex = 3;
-            this.Online_battle_rating_ties_numericUpDown.ValueChanged += new System.EventHandler(this.Online_battle_rating_ties_numericUpDown_ValueChanged);
+            // 
+            // Song_icon_ultimate_pictureBox
+            // 
+            this.Song_icon_ultimate_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimate_pictureBox.Image")));
+            this.Song_icon_ultimate_pictureBox.Location = new System.Drawing.Point(259, 166);
+            this.Song_icon_ultimate_pictureBox.Name = "Song_icon_ultimate_pictureBox";
+            this.Song_icon_ultimate_pictureBox.Size = new System.Drawing.Size(25, 28);
+            this.Song_icon_ultimate_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_ultimate_pictureBox.TabIndex = 3;
+            this.Song_icon_ultimate_pictureBox.TabStop = false;
             // 
             // Local_battle_rating_losses_numericUpDown
             // 
@@ -862,7 +930,16 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_losses_numericUpDown.Name = "Local_battle_rating_losses_numericUpDown";
             this.Local_battle_rating_losses_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Local_battle_rating_losses_numericUpDown.TabIndex = 4;
-            this.Local_battle_rating_losses_numericUpDown.ValueChanged += new System.EventHandler(this.Local_battle_rating_losses_numericUpDown_ValueChanged);
+            // 
+            // Song_icon_expert_pictureBox
+            // 
+            this.Song_icon_expert_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_expert_pictureBox.Image")));
+            this.Song_icon_expert_pictureBox.Location = new System.Drawing.Point(201, 166);
+            this.Song_icon_expert_pictureBox.Name = "Song_icon_expert_pictureBox";
+            this.Song_icon_expert_pictureBox.Size = new System.Drawing.Size(25, 28);
+            this.Song_icon_expert_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_expert_pictureBox.TabIndex = 3;
+            this.Song_icon_expert_pictureBox.TabStop = false;
             // 
             // Online_battle_rating_losses_numericUpDown
             // 
@@ -875,7 +952,16 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_losses_numericUpDown.Name = "Online_battle_rating_losses_numericUpDown";
             this.Online_battle_rating_losses_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_losses_numericUpDown.TabIndex = 4;
-            this.Online_battle_rating_losses_numericUpDown.ValueChanged += new System.EventHandler(this.Online_battle_rating_losses_numericUpDown_ValueChanged);
+            // 
+            // Song_icon_basic_pictureBox
+            // 
+            this.Song_icon_basic_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_basic_pictureBox.Image")));
+            this.Song_icon_basic_pictureBox.Location = new System.Drawing.Point(141, 166);
+            this.Song_icon_basic_pictureBox.Name = "Song_icon_basic_pictureBox";
+            this.Song_icon_basic_pictureBox.Size = new System.Drawing.Size(25, 28);
+            this.Song_icon_basic_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_basic_pictureBox.TabIndex = 3;
+            this.Song_icon_basic_pictureBox.TabStop = false;
             // 
             // Local_battle_rating_wins_numericUpDown
             // 
@@ -888,7 +974,6 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_wins_numericUpDown.Name = "Local_battle_rating_wins_numericUpDown";
             this.Local_battle_rating_wins_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Local_battle_rating_wins_numericUpDown.TabIndex = 5;
-            this.Local_battle_rating_wins_numericUpDown.ValueChanged += new System.EventHandler(this.Local_battle_rating_wins_numericUpDown_ValueChanged);
             // 
             // Online_battle_rating_wins_numericUpDown
             // 
@@ -901,7 +986,6 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_wins_numericUpDown.Name = "Online_battle_rating_wins_numericUpDown";
             this.Online_battle_rating_wins_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_wins_numericUpDown.TabIndex = 5;
-            this.Online_battle_rating_wins_numericUpDown.ValueChanged += new System.EventHandler(this.Online_battle_rating_wins_numericUpDown_ValueChanged);
             // 
             // Local_battle_rating_score_numericUpDown
             // 
@@ -914,7 +998,6 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_score_numericUpDown.Name = "Local_battle_rating_score_numericUpDown";
             this.Local_battle_rating_score_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Local_battle_rating_score_numericUpDown.TabIndex = 6;
-            this.Local_battle_rating_score_numericUpDown.ValueChanged += new System.EventHandler(this.Local_battle_rating_score_numericUpDown_ValueChanged);
             // 
             // Online_battle_rating_score_numericUpDown
             // 
@@ -927,7 +1010,6 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_score_numericUpDown.Name = "Online_battle_rating_score_numericUpDown";
             this.Online_battle_rating_score_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_score_numericUpDown.TabIndex = 6;
-            this.Online_battle_rating_score_numericUpDown.ValueChanged += new System.EventHandler(this.Online_battle_rating_score_numericUpDown_ValueChanged);
             // 
             // AI_battle_victories_numericUpDown
             // 
@@ -1162,7 +1244,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_local_ultimatenex_numericUpDown.Name = "Scores_played_local_ultimatenex_numericUpDown";
             this.Scores_played_local_ultimatenex_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_local_ultimatenex_numericUpDown.TabIndex = 2;
-            this.Scores_played_local_ultimatenex_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_local_ultimatenex_numericUpDown_ValueChanged);
             // 
             // Scores_played_online_ultimatenex_numericUpDown
             // 
@@ -1175,7 +1256,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_online_ultimatenex_numericUpDown.Name = "Scores_played_online_ultimatenex_numericUpDown";
             this.Scores_played_online_ultimatenex_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_online_ultimatenex_numericUpDown.TabIndex = 2;
-            this.Scores_played_online_ultimatenex_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_online_ultimatenex_numericUpDown_ValueChanged);
             // 
             // Scores_played_local_ultimate_numericUpDown
             // 
@@ -1188,7 +1268,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_local_ultimate_numericUpDown.Name = "Scores_played_local_ultimate_numericUpDown";
             this.Scores_played_local_ultimate_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_local_ultimate_numericUpDown.TabIndex = 2;
-            this.Scores_played_local_ultimate_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_local_ultimate_numericUpDown_ValueChanged);
             // 
             // EX_bursts_used_numericUpDown
             // 
@@ -1213,7 +1292,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_local_expert_numericUpDown.Name = "Scores_played_local_expert_numericUpDown";
             this.Scores_played_local_expert_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_local_expert_numericUpDown.TabIndex = 2;
-            this.Scores_played_local_expert_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_local_expert_numericUpDown_ValueChanged);
             // 
             // Scores_played_online_ultimate_numericUpDown
             // 
@@ -1226,7 +1304,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_online_ultimate_numericUpDown.Name = "Scores_played_online_ultimate_numericUpDown";
             this.Scores_played_online_ultimate_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_online_ultimate_numericUpDown.TabIndex = 2;
-            this.Scores_played_online_ultimate_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_online_ultimate_numericUpDown_ValueChanged);
             // 
             // Scores_played_local_basic_numericUpDown
             // 
@@ -1239,7 +1316,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_local_basic_numericUpDown.Name = "Scores_played_local_basic_numericUpDown";
             this.Scores_played_local_basic_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_local_basic_numericUpDown.TabIndex = 2;
-            this.Scores_played_local_basic_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_local_basic_numericUpDown_ValueChanged);
             // 
             // Scores_played_online_expert_numericUpDown
             // 
@@ -1252,7 +1328,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_online_expert_numericUpDown.Name = "Scores_played_online_expert_numericUpDown";
             this.Scores_played_online_expert_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_online_expert_numericUpDown.TabIndex = 2;
-            this.Scores_played_online_expert_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_online_expert_numericUpDown_ValueChanged);
             // 
             // Scores_played_online_basic_numericUpDown
             // 
@@ -1265,7 +1340,6 @@ namespace TFFCC_Save_Editor
             this.Scores_played_online_basic_numericUpDown.Name = "Scores_played_online_basic_numericUpDown";
             this.Scores_played_online_basic_numericUpDown.Size = new System.Drawing.Size(51, 20);
             this.Scores_played_online_basic_numericUpDown.TabIndex = 2;
-            this.Scores_played_online_basic_numericUpDown.ValueChanged += new System.EventHandler(this.Scores_played_online_basic_numericUpDown_ValueChanged);
             // 
             // Quest_medleys_groupBox
             // 
@@ -1402,7 +1476,6 @@ namespace TFFCC_Save_Editor
             this.Short_quests_cleared_numericUpDown.Name = "Short_quests_cleared_numericUpDown";
             this.Short_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Short_quests_cleared_numericUpDown.TabIndex = 2;
-            this.Short_quests_cleared_numericUpDown.ValueChanged += new System.EventHandler(this.Short_quests_cleared_numericUpDown_ValueChanged);
             // 
             // Keys_used_label
             // 
@@ -1424,7 +1497,6 @@ namespace TFFCC_Save_Editor
             this.Inherited_quests_cleared_numericUpDown.Name = "Inherited_quests_cleared_numericUpDown";
             this.Inherited_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Inherited_quests_cleared_numericUpDown.TabIndex = 2;
-            this.Inherited_quests_cleared_numericUpDown.ValueChanged += new System.EventHandler(this.Inherited_quests_cleared_numericUpDown_ValueChanged);
             // 
             // Medium_quests_cleared_numericUpDown
             // 
@@ -1437,7 +1509,6 @@ namespace TFFCC_Save_Editor
             this.Medium_quests_cleared_numericUpDown.Name = "Medium_quests_cleared_numericUpDown";
             this.Medium_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Medium_quests_cleared_numericUpDown.TabIndex = 2;
-            this.Medium_quests_cleared_numericUpDown.ValueChanged += new System.EventHandler(this.Medium_quests_cleared_numericUpDown_ValueChanged);
             // 
             // Long_quests_cleared_numericUpDown
             // 
@@ -1450,7 +1521,6 @@ namespace TFFCC_Save_Editor
             this.Long_quests_cleared_numericUpDown.Name = "Long_quests_cleared_numericUpDown";
             this.Long_quests_cleared_numericUpDown.Size = new System.Drawing.Size(83, 20);
             this.Long_quests_cleared_numericUpDown.TabIndex = 2;
-            this.Long_quests_cleared_numericUpDown.ValueChanged += new System.EventHandler(this.Long_quests_cleared_numericUpDown_ValueChanged);
             // 
             // Total_quests_cleared_textBox
             // 
@@ -2015,9 +2085,36 @@ namespace TFFCC_Save_Editor
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(516, 5);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 13);
+            this.label11.Size = new System.Drawing.Size(109, 13);
             this.label11.TabIndex = 1;
-            this.label11.Text = "Total TImes Played: 0";
+            this.label11.Text = "Total Times Played: 0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(338, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Total Ultimate All-Criticals: 0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(172, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Total Expert All-Criticals: 0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total Basic All-Criticals: 0";
             // 
             // label10
             // 
@@ -2183,123 +2280,6 @@ namespace TFFCC_Save_Editor
             this.Save_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.Save_extsavedata_ToolStripMenuItem.Text = "Save extsavedata.bk";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Total Basic All-Criticals: 0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Total Expert All-Criticals: 0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(338, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Total Ultimate All-Criticals: 0";
-            // 
-            // Song_icon_ultimatenex_pictureBox
-            // 
-            this.Song_icon_ultimatenex_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimatenex_pictureBox.Image")));
-            this.Song_icon_ultimatenex_pictureBox.Location = new System.Drawing.Point(309, 166);
-            this.Song_icon_ultimatenex_pictureBox.Name = "Song_icon_ultimatenex_pictureBox";
-            this.Song_icon_ultimatenex_pictureBox.Size = new System.Drawing.Size(44, 28);
-            this.Song_icon_ultimatenex_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_ultimatenex_pictureBox.TabIndex = 3;
-            this.Song_icon_ultimatenex_pictureBox.TabStop = false;
-            // 
-            // Song_icon_ultimate_pictureBox
-            // 
-            this.Song_icon_ultimate_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimate_pictureBox.Image")));
-            this.Song_icon_ultimate_pictureBox.Location = new System.Drawing.Point(259, 166);
-            this.Song_icon_ultimate_pictureBox.Name = "Song_icon_ultimate_pictureBox";
-            this.Song_icon_ultimate_pictureBox.Size = new System.Drawing.Size(25, 28);
-            this.Song_icon_ultimate_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_ultimate_pictureBox.TabIndex = 3;
-            this.Song_icon_ultimate_pictureBox.TabStop = false;
-            // 
-            // Song_icon_expert_pictureBox
-            // 
-            this.Song_icon_expert_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_expert_pictureBox.Image")));
-            this.Song_icon_expert_pictureBox.Location = new System.Drawing.Point(201, 166);
-            this.Song_icon_expert_pictureBox.Name = "Song_icon_expert_pictureBox";
-            this.Song_icon_expert_pictureBox.Size = new System.Drawing.Size(25, 28);
-            this.Song_icon_expert_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_expert_pictureBox.TabIndex = 3;
-            this.Song_icon_expert_pictureBox.TabStop = false;
-            // 
-            // Song_icon_basic_pictureBox
-            // 
-            this.Song_icon_basic_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_basic_pictureBox.Image")));
-            this.Song_icon_basic_pictureBox.Location = new System.Drawing.Point(141, 166);
-            this.Song_icon_basic_pictureBox.Name = "Song_icon_basic_pictureBox";
-            this.Song_icon_basic_pictureBox.Size = new System.Drawing.Size(25, 28);
-            this.Song_icon_basic_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_basic_pictureBox.TabIndex = 3;
-            this.Song_icon_basic_pictureBox.TabStop = false;
-            // 
-            // Progress_star5_pictureBox
-            // 
-            this.Progress_star5_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star5_pictureBox.Image")));
-            this.Progress_star5_pictureBox.Location = new System.Drawing.Point(193, 93);
-            this.Progress_star5_pictureBox.Name = "Progress_star5_pictureBox";
-            this.Progress_star5_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star5_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star5_pictureBox.TabIndex = 3;
-            this.Progress_star5_pictureBox.TabStop = false;
-            // 
-            // Progress_star4_pictureBox
-            // 
-            this.Progress_star4_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star4_pictureBox.Image")));
-            this.Progress_star4_pictureBox.Location = new System.Drawing.Point(166, 93);
-            this.Progress_star4_pictureBox.Name = "Progress_star4_pictureBox";
-            this.Progress_star4_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star4_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star4_pictureBox.TabIndex = 3;
-            this.Progress_star4_pictureBox.TabStop = false;
-            // 
-            // Progress_star3_pictureBox
-            // 
-            this.Progress_star3_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star3_pictureBox.Image")));
-            this.Progress_star3_pictureBox.Location = new System.Drawing.Point(139, 93);
-            this.Progress_star3_pictureBox.Name = "Progress_star3_pictureBox";
-            this.Progress_star3_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star3_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star3_pictureBox.TabIndex = 3;
-            this.Progress_star3_pictureBox.TabStop = false;
-            // 
-            // Progress_star1_pictureBox
-            // 
-            this.Progress_star1_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star1_pictureBox.Image")));
-            this.Progress_star1_pictureBox.Location = new System.Drawing.Point(85, 93);
-            this.Progress_star1_pictureBox.Name = "Progress_star1_pictureBox";
-            this.Progress_star1_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star1_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star1_pictureBox.TabIndex = 3;
-            this.Progress_star1_pictureBox.TabStop = false;
-            // 
-            // Progress_star2_pictureBox
-            // 
-            this.Progress_star2_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star2_pictureBox.Image")));
-            this.Progress_star2_pictureBox.Location = new System.Drawing.Point(112, 93);
-            this.Progress_star2_pictureBox.Name = "Progress_star2_pictureBox";
-            this.Progress_star2_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star2_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star2_pictureBox.TabIndex = 3;
-            this.Progress_star2_pictureBox.TabStop = false;
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2316,6 +2296,11 @@ namespace TFFCC_Save_Editor
             this.Text = "TFFCC Save Editor";
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -2333,9 +2318,13 @@ namespace TFFCC_Save_Editor
             this.Versus_mode_groupBox.ResumeLayout(false);
             this.Versus_mode_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_ties_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_ties_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_losses_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_losses_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_wins_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_wins_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_score_numericUpDown)).EndInit();
@@ -2390,15 +2379,6 @@ namespace TFFCC_Save_Editor
             this.tabPage1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2563,18 +2543,6 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.TextBox Scores_played_total_ultimate_textBox;
         private System.Windows.Forms.TextBox Scores_played_total_expert_textBox;
         private System.Windows.Forms.TextBox Scores_played_total_basic_textBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Series;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Level_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Difficulty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Score;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Chain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Play_style;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Times_played;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Times_cleared;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.ToolStripMenuItem Save_file_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Save_savedata_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_ToolStripMenuItem;
@@ -2585,6 +2553,18 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Series;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Song_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Difficulty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Score;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Chain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Rank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Play_style;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Times_played;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_TImes_cleared;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Date;
     }
 }
 
