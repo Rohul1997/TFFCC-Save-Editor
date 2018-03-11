@@ -625,6 +625,7 @@ namespace TFFCC_Save_Editor
                     }
 
                     br.Close();
+                    Save_savedata_ToolStripMenuItem.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -776,6 +777,7 @@ namespace TFFCC_Save_Editor
                         }
                     }
                     br.Close();
+                    Save_extsavedata_ToolStripMenuItem.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -1094,7 +1096,7 @@ namespace TFFCC_Save_Editor
             }
         }
 
-        //Real time changes stuff
+        //Real time changes and checks
         private void controls(Control parent)
         {
             foreach (Control control in parent.Controls)
@@ -1145,6 +1147,30 @@ namespace TFFCC_Save_Editor
             Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
             //Set scores played total ultimate no-ex
             Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
+        }
+        private void dataGridView_integer_check(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            TextBox tb = e.Control as TextBox;
+            tb.KeyPress -= new KeyPressEventHandler(notInteger);
+            if (((DataGridView)sender).CurrentCell.ColumnIndex > 0)
+            {
+                if (tb != null) tb.KeyPress += new KeyPressEventHandler(notInteger);
+            }
+        }
+        private void notInteger(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+        }
+        private void cellCheck(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex > 0 && e.RowIndex >= 0)
+            {
+                uint i;
+                if (((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value == null || !uint.TryParse(((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value.ToString(), out i))
+                {
+                    ((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value = 0;
+                }
+            }
         }
     }
 }

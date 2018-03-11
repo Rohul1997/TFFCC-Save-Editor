@@ -57,6 +57,12 @@ namespace TFFCC_Save_Editor
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
@@ -83,7 +89,7 @@ namespace TFFCC_Save_Editor
             this.songs_TImes_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.songs_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Main_tabPage = new System.Windows.Forms.TabPage();
+            this.Records_tabPage = new System.Windows.Forms.TabPage();
             this.Battle_party_groupBox = new System.Windows.Forms.GroupBox();
             this.Levels_resets_label = new System.Windows.Forms.Label();
             this.Collectacards_obtained_label = new System.Windows.Forms.Label();
@@ -206,29 +212,19 @@ namespace TFFCC_Save_Editor
             this.ProfiCards_received_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.StreetPasses_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Items_tabPage = new System.Windows.Forms.TabPage();
+            this.Items_dataGridView = new System.Windows.Forms.DataGridView();
+            this.CollectaCards_tabPage = new System.Windows.Forms.TabPage();
             this.Cards_dataGridView = new System.Windows.Forms.DataGridView();
             this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_normal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_rare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Items_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Songs_tabPage = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Open_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -237,6 +233,8 @@ namespace TFFCC_Save_Editor
             this.Save_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -247,7 +245,7 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.Main_tabPage.SuspendLayout();
+            this.Records_tabPage.SuspendLayout();
             this.Battle_party_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Critical_boosts_achieved_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Parameter_boosts_performed_numericUpDown)).BeginInit();
@@ -309,10 +307,10 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.ProfiCards_received_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StreetPasses_numericUpDown)).BeginInit();
             this.Items_tabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
+            this.CollectaCards_tabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -561,10 +559,10 @@ namespace TFFCC_Save_Editor
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.Main_tabPage);
+            this.tabControl1.Controls.Add(this.Records_tabPage);
             this.tabControl1.Controls.Add(this.Items_tabPage);
+            this.tabControl1.Controls.Add(this.CollectaCards_tabPage);
             this.tabControl1.Controls.Add(this.Songs_tabPage);
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
@@ -573,21 +571,21 @@ namespace TFFCC_Save_Editor
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 3;
             // 
-            // Main_tabPage
+            // Records_tabPage
             // 
-            this.Main_tabPage.BackColor = System.Drawing.SystemColors.Control;
-            this.Main_tabPage.Controls.Add(this.Battle_party_groupBox);
-            this.Main_tabPage.Controls.Add(this.Versus_mode_groupBox);
-            this.Main_tabPage.Controls.Add(Profile_groupBox);
-            this.Main_tabPage.Controls.Add(this.Quest_medleys_groupBox);
-            this.Main_tabPage.Controls.Add(this.Music_stages_groupBox);
-            this.Main_tabPage.Controls.Add(this.Total_counts_groupBox);
-            this.Main_tabPage.Location = new System.Drawing.Point(4, 22);
-            this.Main_tabPage.Name = "Main_tabPage";
-            this.Main_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Main_tabPage.Size = new System.Drawing.Size(824, 443);
-            this.Main_tabPage.TabIndex = 0;
-            this.Main_tabPage.Text = "Main";
+            this.Records_tabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.Records_tabPage.Controls.Add(this.Battle_party_groupBox);
+            this.Records_tabPage.Controls.Add(this.Versus_mode_groupBox);
+            this.Records_tabPage.Controls.Add(Profile_groupBox);
+            this.Records_tabPage.Controls.Add(this.Quest_medleys_groupBox);
+            this.Records_tabPage.Controls.Add(this.Music_stages_groupBox);
+            this.Records_tabPage.Controls.Add(this.Total_counts_groupBox);
+            this.Records_tabPage.Location = new System.Drawing.Point(4, 22);
+            this.Records_tabPage.Name = "Records_tabPage";
+            this.Records_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.Records_tabPage.Size = new System.Drawing.Size(824, 443);
+            this.Records_tabPage.TabIndex = 0;
+            this.Records_tabPage.Text = "Records";
             // 
             // Battle_party_groupBox
             // 
@@ -1978,7 +1976,6 @@ namespace TFFCC_Save_Editor
             // Items_tabPage
             // 
             this.Items_tabPage.BackColor = System.Drawing.SystemColors.Control;
-            this.Items_tabPage.Controls.Add(this.Cards_dataGridView);
             this.Items_tabPage.Controls.Add(this.Items_dataGridView);
             this.Items_tabPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Items_tabPage.Location = new System.Drawing.Point(4, 22);
@@ -1988,81 +1985,136 @@ namespace TFFCC_Save_Editor
             this.Items_tabPage.TabIndex = 3;
             this.Items_tabPage.Text = "Items";
             // 
-            // Cards_dataGridView
-            // 
-            this.Cards_dataGridView.AllowUserToAddRows = false;
-            this.Cards_dataGridView.AllowUserToDeleteRows = false;
-            this.Cards_dataGridView.AllowUserToResizeRows = false;
-            this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Card_name,
-            this.Card_normal,
-            this.Card_rare,
-            this.Card_premium});
-            this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.Cards_dataGridView.Location = new System.Drawing.Point(362, 3);
-            this.Cards_dataGridView.Name = "Cards_dataGridView";
-            this.Cards_dataGridView.RowHeadersVisible = false;
-            this.Cards_dataGridView.Size = new System.Drawing.Size(459, 437);
-            this.Cards_dataGridView.TabIndex = 3;
-            // 
-            // Card_name
-            // 
-            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Card_name.FillWeight = 200F;
-            this.Card_name.HeaderText = "Name";
-            this.Card_name.Name = "Card_name";
-            // 
-            // Card_normal
-            // 
-            this.Card_normal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_normal.HeaderText = "Normal";
-            this.Card_normal.Name = "Card_normal";
-            // 
-            // Card_rare
-            // 
-            this.Card_rare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_rare.HeaderText = "Rare";
-            this.Card_rare.Name = "Card_rare";
-            // 
-            // Card_premium
-            // 
-            this.Card_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_premium.HeaderText = "Premium";
-            this.Card_premium.Name = "Card_premium";
-            // 
             // Items_dataGridView
             // 
             this.Items_dataGridView.AllowUserToAddRows = false;
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 3);
             this.Items_dataGridView.Name = "Items_dataGridView";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Items_dataGridView.RowHeadersVisible = false;
-            this.Items_dataGridView.Size = new System.Drawing.Size(353, 437);
+            this.Items_dataGridView.Size = new System.Drawing.Size(818, 437);
             this.Items_dataGridView.TabIndex = 3;
+            this.Items_dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellCheck);
+            this.Items_dataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_integer_check);
             // 
-            // Item
+            // CollectaCards_tabPage
             // 
-            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Item.HeaderText = "Item";
-            this.Item.Name = "Item";
+            this.CollectaCards_tabPage.BackColor = System.Drawing.SystemColors.Control;
+            this.CollectaCards_tabPage.Controls.Add(this.Cards_dataGridView);
+            this.CollectaCards_tabPage.Location = new System.Drawing.Point(4, 22);
+            this.CollectaCards_tabPage.Name = "CollectaCards_tabPage";
+            this.CollectaCards_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.CollectaCards_tabPage.Size = new System.Drawing.Size(824, 443);
+            this.CollectaCards_tabPage.TabIndex = 2;
+            this.CollectaCards_tabPage.Text = "CollectaCards";
             // 
-            // Quantity
+            // Cards_dataGridView
             // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
+            this.Cards_dataGridView.AllowUserToAddRows = false;
+            this.Cards_dataGridView.AllowUserToDeleteRows = false;
+            this.Cards_dataGridView.AllowUserToResizeRows = false;
+            this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Card_name,
+            this.Card_normal,
+            this.Card_rare,
+            this.Card_premium});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.Cards_dataGridView.Location = new System.Drawing.Point(3, 3);
+            this.Cards_dataGridView.Name = "Cards_dataGridView";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.Cards_dataGridView.RowHeadersVisible = false;
+            this.Cards_dataGridView.Size = new System.Drawing.Size(818, 437);
+            this.Cards_dataGridView.TabIndex = 4;
+            this.Cards_dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellCheck);
+            this.Cards_dataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_integer_check);
+            // 
+            // Card_name
+            // 
+            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.Format = "N0";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Card_name.FillWeight = 200F;
+            this.Card_name.HeaderText = "Name";
+            this.Card_name.Name = "Card_name";
+            this.Card_name.ReadOnly = true;
+            // 
+            // Card_normal
+            // 
+            this.Card_normal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_normal.HeaderText = "Normal";
+            this.Card_normal.MaxInputLength = 2;
+            this.Card_normal.Name = "Card_normal";
+            // 
+            // Card_rare
+            // 
+            this.Card_rare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_rare.HeaderText = "Rare";
+            this.Card_rare.MaxInputLength = 2;
+            this.Card_rare.Name = "Card_rare";
+            // 
+            // Card_premium
+            // 
+            this.Card_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_premium.HeaderText = "Premium";
+            this.Card_premium.MaxInputLength = 2;
+            this.Card_premium.Name = "Card_premium";
             // 
             // Songs_tabPage
             // 
@@ -2125,96 +2177,6 @@ namespace TFFCC_Save_Editor
             this.label10.TabIndex = 1;
             this.label10.Text = "Total Times Cleared: 0";
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.comboBox3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.comboBox4);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(824, 443);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Database Testing";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 93);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Items";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 213);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Characters DB";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Items DB (N and R cards removed)";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.Location = new System.Drawing.Point(7, 109);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 21);
-            this.comboBox3.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Monsters DB";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.Location = new System.Drawing.Point(8, 229);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(159, 21);
-            this.comboBox4.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox2.Location = new System.Drawing.Point(8, 172);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 21);
-            this.comboBox2.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.Location = new System.Drawing.Point(8, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -2241,21 +2203,21 @@ namespace TFFCC_Save_Editor
             this.Open_savedata_ToolStripMenuItem,
             this.Open_extsavedata_ToolStripMenuItem});
             this.Open_file_ToolStripMenuItem.Name = "Open_file_ToolStripMenuItem";
-            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.Open_file_ToolStripMenuItem.Text = "Open File";
             // 
             // Open_savedata_ToolStripMenuItem
             // 
             this.Open_savedata_ToolStripMenuItem.Name = "Open_savedata_ToolStripMenuItem";
-            this.Open_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.Open_savedata_ToolStripMenuItem.Text = "Open savedata.bk";
+            this.Open_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.Open_savedata_ToolStripMenuItem.Text = "Open savedata.bk...";
             this.Open_savedata_ToolStripMenuItem.Click += new System.EventHandler(this.Open_savedata_ToolStripMenuItem_Click);
             // 
             // Open_extsavedata_ToolStripMenuItem
             // 
             this.Open_extsavedata_ToolStripMenuItem.Name = "Open_extsavedata_ToolStripMenuItem";
-            this.Open_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.Open_extsavedata_ToolStripMenuItem.Text = "Open extsavedata.bk";
+            this.Open_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.Open_extsavedata_ToolStripMenuItem.Text = "Open extsavedata.bk...";
             this.Open_extsavedata_ToolStripMenuItem.Click += new System.EventHandler(this.Open_extsavedata_ToolStripMenuItem_Click);
             // 
             // Save_file_ToolStripMenuItem
@@ -2264,11 +2226,12 @@ namespace TFFCC_Save_Editor
             this.Save_savedata_ToolStripMenuItem,
             this.Save_extsavedata_ToolStripMenuItem});
             this.Save_file_ToolStripMenuItem.Name = "Save_file_ToolStripMenuItem";
-            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.Save_file_ToolStripMenuItem.Text = "Save File";
             // 
             // Save_savedata_ToolStripMenuItem
             // 
+            this.Save_savedata_ToolStripMenuItem.Enabled = false;
             this.Save_savedata_ToolStripMenuItem.Name = "Save_savedata_ToolStripMenuItem";
             this.Save_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.Save_savedata_ToolStripMenuItem.Text = "Save savedata.bk";
@@ -2276,9 +2239,24 @@ namespace TFFCC_Save_Editor
             // 
             // Save_extsavedata_ToolStripMenuItem
             // 
+            this.Save_extsavedata_ToolStripMenuItem.Enabled = false;
             this.Save_extsavedata_ToolStripMenuItem.Name = "Save_extsavedata_ToolStripMenuItem";
             this.Save_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.Save_extsavedata_ToolStripMenuItem.Text = "Save extsavedata.bk";
+            // 
+            // Item
+            // 
+            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MaxInputLength = 2;
+            this.Quantity.Name = "Quantity";
             // 
             // Main_Form
             // 
@@ -2304,7 +2282,7 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.Main_tabPage.ResumeLayout(false);
+            this.Records_tabPage.ResumeLayout(false);
             this.Battle_party_groupBox.ResumeLayout(false);
             this.Battle_party_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Critical_boosts_achieved_numericUpDown)).EndInit();
@@ -2371,12 +2349,11 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.ProfiCards_received_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StreetPasses_numericUpDown)).EndInit();
             this.Items_tabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
+            this.CollectaCards_tabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).EndInit();
             this.Songs_tabPage.ResumeLayout(false);
             this.Songs_tabPage.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2387,7 +2364,7 @@ namespace TFFCC_Save_Editor
         #endregion
         private System.Windows.Forms.DataGridView Songs_dataGridView;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage Main_tabPage;
+        private System.Windows.Forms.TabPage Records_tabPage;
         private System.Windows.Forms.TabPage Songs_tabPage;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem File_ToolStripMenuItem;
@@ -2435,20 +2412,9 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.Label Stages_cleared_label;
         private System.Windows.Forms.Label Bosses_conquered_label;
         private System.Windows.Forms.Label EX_bursts_used_label;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TabPage CollectaCards_tabPage;
         private System.Windows.Forms.TabPage Items_tabPage;
         private System.Windows.Forms.DataGridView Items_dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridView Cards_dataGridView;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox Quest_medleys_groupBox;
@@ -2546,10 +2512,6 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.ToolStripMenuItem Save_file_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Save_savedata_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_ToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Card_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Card_normal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Card_rare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Card_premium;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -2565,6 +2527,13 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.DataGridViewTextBoxColumn songs_Times_played;
         private System.Windows.Forms.DataGridViewTextBoxColumn songs_TImes_cleared;
         private System.Windows.Forms.DataGridViewTextBoxColumn songs_Date;
+        private System.Windows.Forms.DataGridView Cards_dataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Card_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Card_normal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Card_rare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Card_premium;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }
 
