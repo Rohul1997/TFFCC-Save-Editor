@@ -1105,6 +1105,22 @@ namespace TFFCC_Save_Editor
                     bw.Write((byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80));
                 }
 
+
+                //CollectaCards tab
+                //Write CollectaCards
+                Console.WriteLine(Cards_dataGridView.RowCount);
+                for (int i = 0; i < Cards_dataGridView.RowCount; i++)
+                {
+                    bw.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["normal offset"], 16);
+                    bw.Write((byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_normal"].Value) + 0x80));
+
+                    bw.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["rare offset"], 16);
+                    bw.Write((byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_rare"].Value) + 0x80));
+
+                    bw.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["premium offset"], 16);
+                    bw.Write((byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_premium"].Value) + 0x80));
+                }
+
                 bw.Close();
 
                 MessageBox.Show("Successfully saved to savedata.bk", "Successfully saved the file");
