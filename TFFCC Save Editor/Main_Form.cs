@@ -604,6 +604,8 @@ namespace TFFCC_Save_Editor
                         Items_dataGridView.Rows[i].Cells["Quantity"].Value = (int)Items_dataGridView.Rows[i].Cells["Quantity"].Value < 0 ? 0 : Items_dataGridView.Rows[i].Cells["Quantity"].Value;
                     }
 
+
+                    //CollectaCards tab
                     //Read and initialise CollectaCards datagrid
                     for (int i = 0; i < 162; i++)
                     {
@@ -1086,6 +1088,23 @@ namespace TFFCC_Save_Editor
                 bw.BaseStream.Position = 0x383C;
                 bw.Write((uint)Treasure_chests_earned_numericUpDown.Value);
 
+
+                //Items tab
+                var dbItemsJSON = dbJson("items");
+
+                if (dbItemsJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                //Write Items
+                for (int i = 0; i < Items_dataGridView.RowCount; i++)
+                {
+                    bw.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[Items_dataGridView.Rows[i].Cells["Item"].Value.ToString()]["offset"], 16);
+                    bw.Write((byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80));
+                }
+
                 bw.Close();
 
                 MessageBox.Show("Successfully saved to savedata.bk", "Successfully saved the file");
@@ -1169,6 +1188,10 @@ namespace TFFCC_Save_Editor
                 if (((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value == null || !uint.TryParse(((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value.ToString(), out i))
                 {
                     ((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value = 0;
+                }
+                else
+                {
+                    ((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value = (int)i;
                 }
             }
         }
