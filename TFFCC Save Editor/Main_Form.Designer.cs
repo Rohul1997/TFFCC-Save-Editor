@@ -237,10 +237,10 @@ namespace TFFCC_Save_Editor
             this.Save_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_rare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_normal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_normal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_rare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -2066,7 +2066,7 @@ namespace TFFCC_Save_Editor
             this.max_all_cards_button.Enabled = false;
             this.max_all_cards_button.Location = new System.Drawing.Point(45, 3);
             this.max_all_cards_button.Name = "max_all_cards_button";
-            this.max_all_cards_button.Size = new System.Drawing.Size(122, 23);
+            this.max_all_cards_button.Size = new System.Drawing.Size(124, 23);
             this.max_all_cards_button.TabIndex = 2;
             this.max_all_cards_button.Text = "Max All Cards";
             this.max_all_cards_button.UseVisualStyleBackColor = true;
@@ -2075,33 +2075,33 @@ namespace TFFCC_Save_Editor
             // max_premium_cards_button
             // 
             this.max_premium_cards_button.Enabled = false;
-            this.max_premium_cards_button.Location = new System.Drawing.Point(447, 3);
+            this.max_premium_cards_button.Location = new System.Drawing.Point(649, 3);
             this.max_premium_cards_button.Name = "max_premium_cards_button";
-            this.max_premium_cards_button.Size = new System.Drawing.Size(122, 23);
+            this.max_premium_cards_button.Size = new System.Drawing.Size(124, 23);
             this.max_premium_cards_button.TabIndex = 4;
-            this.max_premium_cards_button.Text = "Max All Premium Cards";
+            this.max_premium_cards_button.Text = "Max [P] Premium Cards";
             this.max_premium_cards_button.UseVisualStyleBackColor = true;
             this.max_premium_cards_button.Click += new System.EventHandler(this.max_premium_cards_button_Click);
             // 
             // max_rare_cards_button
             // 
             this.max_rare_cards_button.Enabled = false;
-            this.max_rare_cards_button.Location = new System.Drawing.Point(250, 3);
+            this.max_rare_cards_button.Location = new System.Drawing.Point(447, 3);
             this.max_rare_cards_button.Name = "max_rare_cards_button";
-            this.max_rare_cards_button.Size = new System.Drawing.Size(122, 23);
+            this.max_rare_cards_button.Size = new System.Drawing.Size(124, 23);
             this.max_rare_cards_button.TabIndex = 3;
-            this.max_rare_cards_button.Text = "Max All Rare Cards";
+            this.max_rare_cards_button.Text = "Max [R] Rare Cards";
             this.max_rare_cards_button.UseVisualStyleBackColor = true;
             this.max_rare_cards_button.Click += new System.EventHandler(this.max_rare_cards_button_Click);
             // 
             // max_normal_cards_button
             // 
             this.max_normal_cards_button.Enabled = false;
-            this.max_normal_cards_button.Location = new System.Drawing.Point(649, 3);
+            this.max_normal_cards_button.Location = new System.Drawing.Point(250, 3);
             this.max_normal_cards_button.Name = "max_normal_cards_button";
-            this.max_normal_cards_button.Size = new System.Drawing.Size(122, 23);
+            this.max_normal_cards_button.Size = new System.Drawing.Size(124, 23);
             this.max_normal_cards_button.TabIndex = 5;
-            this.max_normal_cards_button.Text = "Max All Normal Cards";
+            this.max_normal_cards_button.Text = "Max [N] Normal Cards";
             this.max_normal_cards_button.UseVisualStyleBackColor = true;
             this.max_normal_cards_button.Click += new System.EventHandler(this.max_normal_cards_button_Click);
             // 
@@ -2295,27 +2295,6 @@ namespace TFFCC_Save_Editor
             this.Quantity.MaxInputLength = 2;
             this.Quantity.Name = "Quantity";
             // 
-            // Card_premium
-            // 
-            this.Card_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_premium.HeaderText = "Premium";
-            this.Card_premium.MaxInputLength = 2;
-            this.Card_premium.Name = "Card_premium";
-            // 
-            // Card_rare
-            // 
-            this.Card_rare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_rare.HeaderText = "Rare";
-            this.Card_rare.MaxInputLength = 2;
-            this.Card_rare.Name = "Card_rare";
-            // 
-            // Card_normal
-            // 
-            this.Card_normal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_normal.HeaderText = "Normal";
-            this.Card_normal.MaxInputLength = 2;
-            this.Card_normal.Name = "Card_normal";
-            // 
             // Card_name
             // 
             this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -2327,6 +2306,27 @@ namespace TFFCC_Save_Editor
             this.Card_name.HeaderText = "Card Name";
             this.Card_name.Name = "Card_name";
             this.Card_name.ReadOnly = true;
+            // 
+            // Card_normal
+            // 
+            this.Card_normal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_normal.HeaderText = "[N] Normal";
+            this.Card_normal.MaxInputLength = 2;
+            this.Card_normal.Name = "Card_normal";
+            // 
+            // Card_rare
+            // 
+            this.Card_rare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_rare.HeaderText = "[R] Rare";
+            this.Card_rare.MaxInputLength = 2;
+            this.Card_rare.Name = "Card_rare";
+            // 
+            // Card_premium
+            // 
+            this.Card_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_premium.HeaderText = "[P] Premium";
+            this.Card_premium.MaxInputLength = 2;
+            this.Card_premium.Name = "Card_premium";
             // 
             // Main_Form
             // 
@@ -2341,7 +2341,7 @@ namespace TFFCC_Save_Editor
             this.MaximizeBox = false;
             this.Name = "Main_Form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "TFFCC Save Editor";
+            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save editor";
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
