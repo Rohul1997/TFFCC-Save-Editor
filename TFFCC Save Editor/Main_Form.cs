@@ -628,6 +628,11 @@ namespace TFFCC_Save_Editor
 
                     br.Close();
                     Save_savedata_ToolStripMenuItem.Enabled = true;
+                    max_items_button.Enabled = true;
+                    max_normal_cards_button.Enabled = true;
+                    max_rare_cards_button.Enabled = true;
+                    max_premium_cards_button.Enabled = true;
+                    max_all_cards_button.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -1108,7 +1113,6 @@ namespace TFFCC_Save_Editor
 
                 //CollectaCards tab
                 //Write CollectaCards
-                Console.WriteLine(Cards_dataGridView.RowCount);
                 for (int i = 0; i < Cards_dataGridView.RowCount; i++)
                 {
                     bw.BaseStream.Position = Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["normal offset"], 16);
@@ -1128,6 +1132,51 @@ namespace TFFCC_Save_Editor
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to save to savedata.bk\n{ex}", "Failed to save the file");
+            }
+        }
+
+
+        //Max all items
+        private void max_items_button_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Items_dataGridView.RowCount; i++)
+            {
+                Items_dataGridView.Rows[i].Cells["Quantity"].Value = 99;
+            }
+        }
+        //max all normal cards
+        private void max_normal_cards_button_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("ok");
+            for (int i = 0; i < Cards_dataGridView.RowCount; i++)
+            {
+                Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = 90;
+            }
+        }
+        //max all rare cards
+        private void max_rare_cards_button_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Cards_dataGridView.RowCount; i++)
+            {
+                Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = 91;
+            }
+        }
+        //max all premium cards
+        private void max_premium_cards_button_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Cards_dataGridView.RowCount; i++)
+            {
+                Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = 92;
+            }
+        }
+        //max all cards
+        private void max_all_cards_button_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Cards_dataGridView.RowCount; i++)
+            {
+                Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = 99;
+                Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = 99;
+                Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = 99;
             }
         }
 
