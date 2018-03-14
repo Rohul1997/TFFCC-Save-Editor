@@ -1150,7 +1150,7 @@ namespace TFFCC_Save_Editor
             Console.WriteLine("ok");
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
-                Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = 90;
+                Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = 99;
             }
         }
         //max all rare cards
@@ -1158,7 +1158,7 @@ namespace TFFCC_Save_Editor
         {
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
-                Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = 91;
+                Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = 99;
             }
         }
         //max all premium cards
@@ -1166,7 +1166,7 @@ namespace TFFCC_Save_Editor
         {
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
-                Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = 92;
+                Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = 99;
             }
         }
         //max all cards
