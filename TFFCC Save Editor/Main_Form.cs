@@ -42,6 +42,7 @@ namespace TFFCC_Save_Editor
 
         OpenFileDialog open_extsavedata = new OpenFileDialog();
         OpenFileDialog open_savedata = new OpenFileDialog();
+        SaveFileDialog save_savedata = new SaveFileDialog();
 
         public dynamic dbJson(string type)
         {
@@ -70,7 +71,7 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                Save_savedata_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = false;
+                Save_savedata_ToolStripMenuItem.Enabled = Save_savedata_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = false;
                 open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
                 if (open_savedata.ShowDialog() != DialogResult.OK) return;
 
@@ -81,7 +82,7 @@ namespace TFFCC_Save_Editor
                 Read_records(null, null);
                 Read_items(null, null);
                 Read_collectacards(null, null);
-                Save_savedata_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = true;
+                Save_savedata_ToolStripMenuItem.Enabled = Save_savedata_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = true;
             }
             catch (Exception ex)
             {
@@ -95,11 +96,28 @@ namespace TFFCC_Save_Editor
             try
             {
                 File.WriteAllBytes(open_savedata.FileName, savedata);
-                MessageBox.Show("Successfully saved to savedata.bk", "Successfully saved the file");
+                MessageBox.Show($"Successfully saved to {open_savedata.FileName}", "Successfully saved the file");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to save to savedata.bk\n{ex}", "Failed to save the file");
+                MessageBox.Show($"Failed to save to {open_savedata.FileName}\n{ex}", "Failed to save the file");
+            }
+        }
+
+        //Save to savadata.bk as
+        private void Save_savedata_as_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                save_savedata.Filter = "savedata.bk Files | *.bk";
+                if (save_savedata.ShowDialog() != DialogResult.OK) return;
+                open_savedata.FileName = save_savedata.FileName;
+                File.WriteAllBytes(save_savedata.FileName, savedata);
+                MessageBox.Show($"Successfully saved to {save_savedata.FileName}", "Successfully saved the file");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to save to {save_savedata.FileName}\n{ex}", "Failed to save the file");
             }
         }
 
@@ -952,14 +970,14 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                Save_extsavedata_ToolStripMenuItem.Enabled = extsavedata_loaded = false;
+                Save_extsavedata_ToolStripMenuItem.Enabled = Save_extsavedata_as_ToolStripMenuItem.Enabled = extsavedata_loaded = false;
                 open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
                 if (open_extsavedata.ShowDialog() != DialogResult.OK) return;
 
                 extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
                 Songs_dataGridView.Rows.Clear();
                 Read_songs(null, null);
-                Save_extsavedata_ToolStripMenuItem.Enabled = extsavedata_loaded = true;
+                Save_extsavedata_ToolStripMenuItem.Enabled = Save_extsavedata_as_ToolStripMenuItem.Enabled = extsavedata_loaded = true;
             }
             catch (Exception ex)
             {
@@ -1115,5 +1133,6 @@ namespace TFFCC_Save_Editor
             Write_items(null, null);
             Write_collectacards(null, null);
         }
+
     }
 }

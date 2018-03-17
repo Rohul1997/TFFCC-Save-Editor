@@ -242,6 +242,9 @@ namespace TFFCC_Save_Editor
             this.Save_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_file_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_savedata_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_extsavedata_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -2333,7 +2336,7 @@ namespace TFFCC_Save_Editor
             this.File_ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(4, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(45, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(165, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -2341,7 +2344,8 @@ namespace TFFCC_Save_Editor
             // 
             this.File_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Open_file_ToolStripMenuItem,
-            this.Save_file_ToolStripMenuItem});
+            this.Save_file_ToolStripMenuItem,
+            this.Save_file_as_ToolStripMenuItem});
             this.File_ToolStripMenuItem.Name = "File_ToolStripMenuItem";
             this.File_ToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.File_ToolStripMenuItem.Text = "File";
@@ -2352,7 +2356,7 @@ namespace TFFCC_Save_Editor
             this.Open_savedata_ToolStripMenuItem,
             this.Open_extsavedata_ToolStripMenuItem});
             this.Open_file_ToolStripMenuItem.Name = "Open_file_ToolStripMenuItem";
-            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.Open_file_ToolStripMenuItem.Text = "Open File";
             // 
             // Open_savedata_ToolStripMenuItem
@@ -2375,7 +2379,7 @@ namespace TFFCC_Save_Editor
             this.Save_savedata_ToolStripMenuItem,
             this.Save_extsavedata_ToolStripMenuItem});
             this.Save_file_ToolStripMenuItem.Name = "Save_file_ToolStripMenuItem";
-            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.Save_file_ToolStripMenuItem.Text = "Save File";
             // 
             // Save_savedata_ToolStripMenuItem
@@ -2392,6 +2396,30 @@ namespace TFFCC_Save_Editor
             this.Save_extsavedata_ToolStripMenuItem.Name = "Save_extsavedata_ToolStripMenuItem";
             this.Save_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.Save_extsavedata_ToolStripMenuItem.Text = "Save extsavedata.bk";
+            // 
+            // Save_file_as_ToolStripMenuItem
+            // 
+            this.Save_file_as_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Save_savedata_as_ToolStripMenuItem,
+            this.Save_extsavedata_as_ToolStripMenuItem});
+            this.Save_file_as_ToolStripMenuItem.Name = "Save_file_as_ToolStripMenuItem";
+            this.Save_file_as_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_file_as_ToolStripMenuItem.Text = "Save File As";
+            // 
+            // Save_savedata_as_ToolStripMenuItem
+            // 
+            this.Save_savedata_as_ToolStripMenuItem.Enabled = false;
+            this.Save_savedata_as_ToolStripMenuItem.Name = "Save_savedata_as_ToolStripMenuItem";
+            this.Save_savedata_as_ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.Save_savedata_as_ToolStripMenuItem.Text = "Save savedata.bk As...";
+            this.Save_savedata_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_savedata_as_ToolStripMenuItem_Click);
+            // 
+            // Save_extsavedata_as_ToolStripMenuItem
+            // 
+            this.Save_extsavedata_as_ToolStripMenuItem.Enabled = false;
+            this.Save_extsavedata_as_ToolStripMenuItem.Name = "Save_extsavedata_as_ToolStripMenuItem";
+            this.Save_extsavedata_as_ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.Save_extsavedata_as_ToolStripMenuItem.Text = "Save extsavedata.bk As...";
             // 
             // Main_Form
             // 
@@ -2675,6 +2703,9 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.DataGridViewTextBoxColumn Card_rare;
         private System.Windows.Forms.DataGridViewTextBoxColumn Card_premium;
         private System.Windows.Forms.TabPage Characters_tabPage;
+        private System.Windows.Forms.ToolStripMenuItem Save_file_as_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Save_savedata_as_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_as_ToolStripMenuItem;
     }
 }
 
