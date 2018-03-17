@@ -38,7 +38,6 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
-            controls(this);
         }
 
         OpenFileDialog open_extsavedata = new OpenFileDialog();
@@ -64,25 +63,25 @@ namespace TFFCC_Save_Editor
             }
         }
 
+        bool savedata_loaded;
         byte[] savedata;
         //Open savedata.bk file and store as savadata byte array
         private void Open_savedata_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
+                Save_savedata_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = false;
                 open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
                 if (open_savedata.ShowDialog() != DialogResult.OK) return;
 
                 savedata = File.ReadAllBytes(open_savedata.FileName);
-                Save_savedata_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = true;
-
                 Items_dataGridView.Rows.Clear();
                 Cards_dataGridView.Rows.Clear();
 
                 Read_records(null, null);
                 Read_items(null, null);
                 Read_collectacards(null, null);
-                Read_characters(null, null);
+                Save_savedata_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = true;
             }
             catch (Exception ex)
             {
@@ -95,9 +94,6 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                Write_records(null, null);
-                Write_items(null, null);
-                Write_collectacards(null, null);
                 File.WriteAllBytes(open_savedata.FileName, savedata);
                 MessageBox.Show("Successfully saved to savedata.bk", "Successfully saved the file");
             }
@@ -477,7 +473,6 @@ namespace TFFCC_Save_Editor
             try
             {
                 var dbItemsJSON = dbJson("items");
-
                 if (dbItemsJSON == null)
                 {
                     MessageBox.Show("Failed loading database", "Error");
@@ -505,7 +500,6 @@ namespace TFFCC_Save_Editor
             try
             {
                 var dbItemsJSON = dbJson("items");
-
                 //Read and initialise CollectaCards datagrid
                 for (int i = 0; i < 162; i++)
                 {
@@ -532,6 +526,7 @@ namespace TFFCC_Save_Editor
         //Write Records tab
         private void Write_records(object sender, EventArgs e)
         {
+            if (!savedata_loaded) return;
             try
             {
                 //Write rhythmia
@@ -735,7 +730,7 @@ namespace TFFCC_Save_Editor
                 Array.Copy(BitConverter.GetBytes((ushort)Scores_played_local_ultimatenex_numericUpDown.Value), 0, savedata, 0x380C, 2);
 
                 //Write ex bursts used
-                Array.Copy(BitConverter.GetBytes((ushort)EX_bursts_used_numericUpDown.Value), 0, savedata, 0x3810, 2);
+                Array.Copy(BitConverter.GetBytes((uint)EX_bursts_used_numericUpDown.Value), 0, savedata, 0x3810, 4);
 
                 //Battle Party
                 //Write levels reset
@@ -772,10 +767,10 @@ namespace TFFCC_Save_Editor
         //Write Items tab
         private void Write_items(object sender, EventArgs e)
         {
+            if (!savedata_loaded) return;
             try
             {
                 var dbItemsJSON = dbJson("items");
-
                 if (dbItemsJSON == null)
                 {
                     MessageBox.Show("Failed loading database", "Error");
@@ -786,8 +781,6 @@ namespace TFFCC_Save_Editor
                 {
                     savedata[Convert.ToUInt16(dbItemsJSON[Items_dataGridView.Rows[i].Cells["Item"].Value.ToString()]["offset"], 16)] = (byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80);
                 }
-
-                Read_items(null, null);
             }
             catch (Exception ex)
             {
@@ -797,10 +790,10 @@ namespace TFFCC_Save_Editor
         //Write CollectaCards tab
         private void Write_collectacards(object sender, EventArgs e)
         {
+            if (!savedata_loaded) return;
             try
             {
                 var dbItemsJSON = dbJson("items");
-
                 if (dbItemsJSON == null)
                 {
                     MessageBox.Show("Failed loading database", "Error");
@@ -815,8 +808,6 @@ namespace TFFCC_Save_Editor
                     savedata[Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["rare offset"], 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_rare"].Value) + 0x80);
                     savedata[Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["premium offset"], 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_premium"].Value) + 0x80);
                 }
-
-                Read_collectacards(null, null);
             }
             catch (Exception ex)
             {
@@ -824,56 +815,67 @@ namespace TFFCC_Save_Editor
             }
         }
 
+        bool max_button_pressed;
         //Max all items
         private void max_items_button_Click(object sender, EventArgs e)
         {
+            max_button_pressed = true;
             for (int i = 0; i < Items_dataGridView.RowCount; i++)
             {
                 Items_dataGridView.Rows[i].Cells["Quantity"].Value = 99;
             }
-            Read_items(null, null);
+            Write_items(null, null);
+            max_button_pressed = false;
         }
         //Max all normal cards
         private void max_normal_cards_button_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("ok");
+            max_button_pressed = true;
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
                 Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = 99;
             }
-            Read_items(null, null);
+            Write_collectacards(null, null);
+            max_button_pressed = false;
         }
         //Max all rare cards
         private void max_rare_cards_button_Click(object sender, EventArgs e)
         {
+            max_button_pressed = true;
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
                 Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = 99;
             }
-            Read_items(null, null);
+            Write_collectacards(null, null);
+            max_button_pressed = false;
         }
         //Max all premium cards
         private void max_premium_cards_button_Click(object sender, EventArgs e)
         {
+            max_button_pressed = true;
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
                 Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = 99;
             }
-            Read_items(null, null);
+            Write_collectacards(null, null);
+            max_button_pressed = false;
         }
         //Max all cards
         private void max_all_cards_button_Click(object sender, EventArgs e)
         {
+            max_button_pressed = true;
             for (int i = 0; i < Cards_dataGridView.RowCount; i++)
             {
                 Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = 99;
                 Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = 99;
                 Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = 99;
             }
-            Read_items(null, null);
+            Write_collectacards(null, null);
+            max_button_pressed = false;
         }
 
 
+        bool extsavedata_loaded;
         public string rank(byte[] rank)
         {
             switch (rank[0])
@@ -950,14 +952,14 @@ namespace TFFCC_Save_Editor
         {
             try
             {
+                Save_extsavedata_ToolStripMenuItem.Enabled = extsavedata_loaded = false;
                 open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
                 if (open_extsavedata.ShowDialog() != DialogResult.OK) return;
 
                 extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
-                Save_extsavedata_ToolStripMenuItem.Enabled = true;
-
                 Songs_dataGridView.Rows.Clear();
                 Read_songs(null, null);
+                Save_extsavedata_ToolStripMenuItem.Enabled = extsavedata_loaded = true;
             }
             catch (Exception ex)
             {
@@ -972,7 +974,6 @@ namespace TFFCC_Save_Editor
             {
                 //Songs tab
                 var dbSongsJSON = dbJson("songs");
-
                 if (dbSongsJSON == null)
                 {
                     MessageBox.Show("Failed loading database", "Error");
@@ -1083,57 +1084,6 @@ namespace TFFCC_Save_Editor
 
 
         //Real time changes and checks
-        private void controls(Control parent)
-        {
-            foreach (Control control in parent.Controls)
-            {
-                control.TextChanged += change;
-                controls(control);
-            }
-        }
-        private void change(object sender, EventArgs e)
-        {
-            //Read total quests cleared
-            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-            //Read total quests cleared
-            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-            //Read total quests cleared
-            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-            //Read total quests cleared
-            Total_quests_cleared_textBox.Text = (Short_quests_cleared_numericUpDown.Value + Medium_quests_cleared_numericUpDown.Value + Long_quests_cleared_numericUpDown.Value + Inherited_quests_cleared_numericUpDown.Value).ToString();
-            //set total rating score
-            Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
-            //set total rating score
-            Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
-            //set total rating wins
-            Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
-            //set total rating wins
-            Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
-            //set total rating losses
-            Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
-            //set total rating losses
-            Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
-            //set total rating ties
-            Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
-            //set total rating ties
-            Total_rating_ties_textBox.Text = (Online_battle_rating_ties_numericUpDown.Value + Local_battle_rating_ties_numericUpDown.Value).ToString();
-            //Set scores played total basic
-            Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
-            //Set scores played total basic
-            Scores_played_total_basic_textBox.Text = (Scores_played_online_basic_numericUpDown.Value + Scores_played_local_basic_numericUpDown.Value).ToString();
-            //Set scores played total expert
-            Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
-            //Set scores played total expert
-            Scores_played_total_expert_textBox.Text = (Scores_played_online_expert_numericUpDown.Value + Scores_played_local_expert_numericUpDown.Value).ToString();
-            //Set scores played total ultimate
-            Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
-            //Set scores played total ultimate
-            Scores_played_total_ultimate_textBox.Text = (Scores_played_online_ultimate_numericUpDown.Value + Scores_played_local_ultimate_numericUpDown.Value).ToString();
-            //Set scores played total ultimate no-ex
-            Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
-            //Set scores played total ultimate no-ex
-            Scores_played_total_ultimatenex_textBox.Text = (Scores_played_online_ultimatenex_numericUpDown.Value + Scores_played_local_ultimatenex_numericUpDown.Value).ToString();
-        }
         private void dataGridView_integer_check(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             TextBox tb = e.Control as TextBox;
@@ -1149,6 +1099,7 @@ namespace TFFCC_Save_Editor
         }
         private void cellCheck(object sender, DataGridViewCellEventArgs e)
         {
+            if (max_button_pressed) return;
             if (e.ColumnIndex > 0 && e.RowIndex >= 0)
             {
                 uint i;
@@ -1161,6 +1112,8 @@ namespace TFFCC_Save_Editor
                     ((DataGridView)sender)[e.ColumnIndex, e.RowIndex].Value = (int)i;
                 }
             }
+            Write_items(null, null);
+            Write_collectacards(null, null);
         }
     }
 }
