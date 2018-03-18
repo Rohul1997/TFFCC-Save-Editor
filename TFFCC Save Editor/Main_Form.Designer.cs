@@ -55,15 +55,15 @@ namespace TFFCC_Save_Editor
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
@@ -212,6 +212,48 @@ namespace TFFCC_Save_Editor
             this.Critical_triggers_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ProfiCards_received_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.StreetPasses_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Characters_tabPage = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Member3_groupBox = new System.Windows.Forms.GroupBox();
+            this.Member2_groupBox = new System.Windows.Forms.GroupBox();
+            this.Member1_groupBox = new System.Windows.Forms.GroupBox();
+            this.Leader_groupBox = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Items_tabPage = new System.Windows.Forms.TabPage();
             this.max_items_button = new System.Windows.Forms.Button();
             this.Items_dataGridView = new System.Windows.Forms.DataGridView();
@@ -227,7 +269,6 @@ namespace TFFCC_Save_Editor
             this.Card_normal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_rare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Card_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Characters_tabPage = new System.Windows.Forms.TabPage();
             this.Songs_tabPage = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -245,6 +286,36 @@ namespace TFFCC_Save_Editor
             this.Save_file_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_savedata_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_extsavedata_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -316,12 +387,33 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Critical_triggers_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfiCards_received_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StreetPasses_numericUpDown)).BeginInit();
+            this.Characters_tabPage.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Member3_groupBox.SuspendLayout();
+            this.Member2_groupBox.SuspendLayout();
+            this.Member1_groupBox.SuspendLayout();
+            this.Leader_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Items_tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
             this.CollectaCards_tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -562,8 +654,8 @@ namespace TFFCC_Save_Editor
             // 
             // songs_Date
             // 
-            dataGridViewCellStyle19.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle10.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle10;
             this.songs_Date.HeaderText = "Date";
             this.songs_Date.Name = "songs_Date";
             this.songs_Date.Width = 68;
@@ -571,9 +663,9 @@ namespace TFFCC_Save_Editor
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Records_tabPage);
+            this.tabControl1.Controls.Add(this.Characters_tabPage);
             this.tabControl1.Controls.Add(this.Items_tabPage);
             this.tabControl1.Controls.Add(this.CollectaCards_tabPage);
-            this.tabControl1.Controls.Add(this.Characters_tabPage);
             this.tabControl1.Controls.Add(this.Songs_tabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
@@ -2038,6 +2130,428 @@ namespace TFFCC_Save_Editor
             this.StreetPasses_numericUpDown.TabIndex = 14;
             this.StreetPasses_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
+            // Characters_tabPage
+            // 
+            this.Characters_tabPage.Controls.Add(this.groupBox1);
+            this.Characters_tabPage.Controls.Add(this.Member3_groupBox);
+            this.Characters_tabPage.Controls.Add(this.Member2_groupBox);
+            this.Characters_tabPage.Controls.Add(this.Member1_groupBox);
+            this.Characters_tabPage.Controls.Add(this.Leader_groupBox);
+            this.Characters_tabPage.Location = new System.Drawing.Point(4, 22);
+            this.Characters_tabPage.Name = "Characters_tabPage";
+            this.Characters_tabPage.Size = new System.Drawing.Size(824, 443);
+            this.Characters_tabPage.TabIndex = 4;
+            this.Characters_tabPage.Text = "Characters";
+            this.Characters_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.numericUpDown10);
+            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.numericUpDown9);
+            this.groupBox1.Controls.Add(this.numericUpDown8);
+            this.groupBox1.Controls.Add(this.numericUpDown7);
+            this.groupBox1.Controls.Add(this.numericUpDown6);
+            this.groupBox1.Controls.Add(this.numericUpDown5);
+            this.groupBox1.Controls.Add(this.numericUpDown4);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Location = new System.Drawing.Point(3, 325);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(818, 115);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Character Editor";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(399, 38);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(249, 80);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(48, 13);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Total CP";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(249, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Level Resets";
+            // 
+            // numericUpDown10
+            // 
+            this.numericUpDown10.Location = new System.Drawing.Point(736, 48);
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown10.TabIndex = 3;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(324, 77);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown2.TabIndex = 3;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(324, 48);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown1.TabIndex = 3;
+            // 
+            // numericUpDown9
+            // 
+            this.numericUpDown9.Location = new System.Drawing.Point(622, 48);
+            this.numericUpDown9.Name = "numericUpDown9";
+            this.numericUpDown9.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown9.TabIndex = 3;
+            // 
+            // numericUpDown8
+            // 
+            this.numericUpDown8.Location = new System.Drawing.Point(495, 48);
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown8.TabIndex = 3;
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Location = new System.Drawing.Point(324, 19);
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown7.TabIndex = 3;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(736, 19);
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown6.TabIndex = 3;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(622, 19);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown5.TabIndex = 3;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(495, 19);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDown4.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(155, 77);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(88, 21);
+            this.comboBox4.TabIndex = 1;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(155, 48);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(88, 21);
+            this.comboBox3.TabIndex = 1;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(155, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(88, 21);
+            this.comboBox2.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(700, 52);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(30, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Spirit";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(571, 52);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Stamina";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(458, 50);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(31, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Luck";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(249, 23);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(22, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "HP";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(696, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(34, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Agility";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(580, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(36, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Magic";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(442, 23);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Strength";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(99, 80);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(28, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "EXP";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(99, 23);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(53, 13);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Character";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(99, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Level";
+            // 
+            // Member3_groupBox
+            // 
+            this.Member3_groupBox.Controls.Add(this.textBox16);
+            this.Member3_groupBox.Controls.Add(this.pictureBox6);
+            this.Member3_groupBox.Controls.Add(this.label31);
+            this.Member3_groupBox.Controls.Add(this.label34);
+            this.Member3_groupBox.Controls.Add(this.textBox13);
+            this.Member3_groupBox.Controls.Add(this.textBox15);
+            this.Member3_groupBox.Controls.Add(this.textBox14);
+            this.Member3_groupBox.Controls.Add(this.label33);
+            this.Member3_groupBox.Controls.Add(this.label32);
+            this.Member3_groupBox.Controls.Add(this.comboBox7);
+            this.Member3_groupBox.Location = new System.Drawing.Point(621, 3);
+            this.Member3_groupBox.Name = "Member3_groupBox";
+            this.Member3_groupBox.Size = new System.Drawing.Size(200, 322);
+            this.Member3_groupBox.TabIndex = 0;
+            this.Member3_groupBox.TabStop = false;
+            this.Member3_groupBox.Text = "Member";
+            // 
+            // Member2_groupBox
+            // 
+            this.Member2_groupBox.Controls.Add(this.textBox12);
+            this.Member2_groupBox.Controls.Add(this.pictureBox5);
+            this.Member2_groupBox.Controls.Add(this.label27);
+            this.Member2_groupBox.Controls.Add(this.textBox11);
+            this.Member2_groupBox.Controls.Add(this.label28);
+            this.Member2_groupBox.Controls.Add(this.comboBox6);
+            this.Member2_groupBox.Controls.Add(this.label29);
+            this.Member2_groupBox.Controls.Add(this.textBox10);
+            this.Member2_groupBox.Controls.Add(this.textBox9);
+            this.Member2_groupBox.Controls.Add(this.label30);
+            this.Member2_groupBox.Location = new System.Drawing.Point(415, 3);
+            this.Member2_groupBox.Name = "Member2_groupBox";
+            this.Member2_groupBox.Size = new System.Drawing.Size(200, 322);
+            this.Member2_groupBox.TabIndex = 0;
+            this.Member2_groupBox.TabStop = false;
+            this.Member2_groupBox.Text = "Member";
+            // 
+            // Member1_groupBox
+            // 
+            this.Member1_groupBox.Controls.Add(this.textBox8);
+            this.Member1_groupBox.Controls.Add(this.pictureBox4);
+            this.Member1_groupBox.Controls.Add(this.textBox7);
+            this.Member1_groupBox.Controls.Add(this.comboBox5);
+            this.Member1_groupBox.Controls.Add(this.textBox6);
+            this.Member1_groupBox.Controls.Add(this.label23);
+            this.Member1_groupBox.Controls.Add(this.textBox5);
+            this.Member1_groupBox.Controls.Add(this.label24);
+            this.Member1_groupBox.Controls.Add(this.label26);
+            this.Member1_groupBox.Controls.Add(this.label25);
+            this.Member1_groupBox.Location = new System.Drawing.Point(209, 3);
+            this.Member1_groupBox.Name = "Member1_groupBox";
+            this.Member1_groupBox.Size = new System.Drawing.Size(200, 322);
+            this.Member1_groupBox.TabIndex = 0;
+            this.Member1_groupBox.TabStop = false;
+            this.Member1_groupBox.Text = "Member";
+            // 
+            // Leader_groupBox
+            // 
+            this.Leader_groupBox.Controls.Add(this.textBox4);
+            this.Leader_groupBox.Controls.Add(this.textBox2);
+            this.Leader_groupBox.Controls.Add(this.textBox3);
+            this.Leader_groupBox.Controls.Add(this.textBox1);
+            this.Leader_groupBox.Controls.Add(this.label7);
+            this.Leader_groupBox.Controls.Add(this.label5);
+            this.Leader_groupBox.Controls.Add(this.label6);
+            this.Leader_groupBox.Controls.Add(this.label4);
+            this.Leader_groupBox.Controls.Add(this.comboBox1);
+            this.Leader_groupBox.Controls.Add(this.pictureBox1);
+            this.Leader_groupBox.Location = new System.Drawing.Point(3, 3);
+            this.Leader_groupBox.Name = "Leader_groupBox";
+            this.Leader_groupBox.Size = new System.Drawing.Size(200, 322);
+            this.Leader_groupBox.TabIndex = 0;
+            this.Leader_groupBox.TabStop = false;
+            this.Leader_groupBox.Text = "Leader";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(105, 296);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(89, 20);
+            this.textBox4.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(105, 256);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(89, 20);
+            this.textBox2.TabIndex = 0;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(7, 296);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(89, 20);
+            this.textBox3.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 256);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(89, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(126, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Ability 4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(126, 240);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ability 2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 280);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Ability 3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ability 1";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(7, 210);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Items_tabPage
             // 
             this.Items_tabPage.BackColor = System.Drawing.SystemColors.Control;
@@ -2068,37 +2582,37 @@ namespace TFFCC_Save_Editor
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle13;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Items_dataGridView.Name = "Items_dataGridView";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.Items_dataGridView.RowHeadersVisible = false;
             this.Items_dataGridView.Size = new System.Drawing.Size(818, 411);
             this.Items_dataGridView.TabIndex = 3;
@@ -2108,8 +2622,8 @@ namespace TFFCC_Save_Editor
             // Item
             // 
             this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Item.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Item.DefaultCellStyle = dataGridViewCellStyle12;
             this.Item.HeaderText = "Item Name";
             this.Item.Name = "Item";
             this.Item.ReadOnly = true;
@@ -2187,39 +2701,39 @@ namespace TFFCC_Save_Editor
             this.Cards_dataGridView.AllowUserToDeleteRows = false;
             this.Cards_dataGridView.AllowUserToResizeRows = false;
             this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Card_name,
             this.Card_normal,
             this.Card_rare,
             this.Card_premium});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle17;
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Cards_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.Cards_dataGridView.RowHeadersVisible = false;
             this.Cards_dataGridView.Size = new System.Drawing.Size(818, 411);
             this.Cards_dataGridView.TabIndex = 6;
@@ -2229,10 +2743,10 @@ namespace TFFCC_Save_Editor
             // Card_name
             // 
             this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.Format = "N0";
-            dataGridViewCellStyle25.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.Format = "N0";
+            dataGridViewCellStyle16.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle16;
             this.Card_name.FillWeight = 200F;
             this.Card_name.HeaderText = "Card Name";
             this.Card_name.Name = "Card_name";
@@ -2258,15 +2772,6 @@ namespace TFFCC_Save_Editor
             this.Card_premium.HeaderText = "[P] Premium";
             this.Card_premium.MaxInputLength = 2;
             this.Card_premium.Name = "Card_premium";
-            // 
-            // Characters_tabPage
-            // 
-            this.Characters_tabPage.Location = new System.Drawing.Point(4, 22);
-            this.Characters_tabPage.Name = "Characters_tabPage";
-            this.Characters_tabPage.Size = new System.Drawing.Size(824, 443);
-            this.Characters_tabPage.TabIndex = 4;
-            this.Characters_tabPage.Text = "Characters";
-            this.Characters_tabPage.UseVisualStyleBackColor = true;
             // 
             // Songs_tabPage
             // 
@@ -2336,7 +2841,7 @@ namespace TFFCC_Save_Editor
             this.File_ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(4, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(165, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(45, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -2356,7 +2861,7 @@ namespace TFFCC_Save_Editor
             this.Open_savedata_ToolStripMenuItem,
             this.Open_extsavedata_ToolStripMenuItem});
             this.Open_file_ToolStripMenuItem.Name = "Open_file_ToolStripMenuItem";
-            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.Open_file_ToolStripMenuItem.Text = "Open File";
             // 
             // Open_savedata_ToolStripMenuItem
@@ -2379,7 +2884,7 @@ namespace TFFCC_Save_Editor
             this.Save_savedata_ToolStripMenuItem,
             this.Save_extsavedata_ToolStripMenuItem});
             this.Save_file_ToolStripMenuItem.Name = "Save_file_ToolStripMenuItem";
-            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.Save_file_ToolStripMenuItem.Text = "Save File";
             // 
             // Save_savedata_ToolStripMenuItem
@@ -2403,7 +2908,7 @@ namespace TFFCC_Save_Editor
             this.Save_savedata_as_ToolStripMenuItem,
             this.Save_extsavedata_as_ToolStripMenuItem});
             this.Save_file_as_ToolStripMenuItem.Name = "Save_file_as_ToolStripMenuItem";
-            this.Save_file_as_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_file_as_ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.Save_file_as_ToolStripMenuItem.Text = "Save File As";
             // 
             // Save_savedata_as_ToolStripMenuItem
@@ -2420,6 +2925,252 @@ namespace TFFCC_Save_Editor
             this.Save_extsavedata_as_ToolStripMenuItem.Name = "Save_extsavedata_as_ToolStripMenuItem";
             this.Save_extsavedata_as_ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.Save_extsavedata_as_ToolStripMenuItem.Text = "Save extsavedata.bk As...";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(7, 210);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(187, 21);
+            this.comboBox5.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(30, 240);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Ability 1";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(30, 280);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Ability 3";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(126, 240);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(43, 13);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Ability 2";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(126, 280);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(43, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Ability 4";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(7, 256);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(89, 20);
+            this.textBox5.TabIndex = 0;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(7, 296);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(89, 20);
+            this.textBox6.TabIndex = 0;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(105, 256);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(89, 20);
+            this.textBox7.TabIndex = 0;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(105, 296);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(89, 20);
+            this.textBox8.TabIndex = 0;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(126, 240);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(43, 13);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Ability 2";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(126, 280);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(43, 13);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Ability 4";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(30, 280);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(43, 13);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Ability 3";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(7, 256);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(89, 20);
+            this.textBox9.TabIndex = 0;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(30, 240);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(43, 13);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Ability 1";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(7, 296);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(89, 20);
+            this.textBox10.TabIndex = 0;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(7, 210);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(187, 21);
+            this.comboBox6.TabIndex = 1;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(105, 256);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(89, 20);
+            this.textBox11.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(105, 296);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(89, 20);
+            this.textBox12.TabIndex = 0;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(30, 240);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(43, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Ability 1";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(7, 256);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(89, 20);
+            this.textBox13.TabIndex = 0;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(7, 296);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(89, 20);
+            this.textBox14.TabIndex = 0;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(30, 280);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(43, 13);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Ability 3";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(7, 210);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(187, 21);
+            this.comboBox7.TabIndex = 1;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(126, 280);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(43, 13);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Ability 4";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(105, 256);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(89, 20);
+            this.textBox15.TabIndex = 0;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(126, 240);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(43, 13);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Ability 2";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(105, 296);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(89, 20);
+            this.textBox16.TabIndex = 0;
             // 
             // Main_Form
             // 
@@ -2511,6 +3262,29 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Critical_triggers_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfiCards_received_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StreetPasses_numericUpDown)).EndInit();
+            this.Characters_tabPage.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Member3_groupBox.ResumeLayout(false);
+            this.Member3_groupBox.PerformLayout();
+            this.Member2_groupBox.ResumeLayout(false);
+            this.Member2_groupBox.PerformLayout();
+            this.Member1_groupBox.ResumeLayout(false);
+            this.Member1_groupBox.PerformLayout();
+            this.Leader_groupBox.ResumeLayout(false);
+            this.Leader_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Items_tabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
             this.CollectaCards_tabPage.ResumeLayout(false);
@@ -2519,6 +3293,9 @@ namespace TFFCC_Save_Editor
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2706,6 +3483,77 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.ToolStripMenuItem Save_file_as_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Save_savedata_as_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_as_ToolStripMenuItem;
+        private System.Windows.Forms.GroupBox Member3_groupBox;
+        private System.Windows.Forms.GroupBox Member2_groupBox;
+        private System.Windows.Forms.GroupBox Member1_groupBox;
+        private System.Windows.Forms.GroupBox Leader_groupBox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
     }
 }
 

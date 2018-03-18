@@ -1133,6 +1133,5 @@ namespace TFFCC_Save_Editor
             Write_items(null, null);
             Write_collectacards(null, null);
         }
-
     }
 }
