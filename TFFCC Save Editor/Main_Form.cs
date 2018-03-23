@@ -65,33 +65,55 @@ namespace TFFCC_Save_Editor
         }
 
         bool savedata_loaded;
+        bool extsavedata_loaded;
         byte[] savedata;
-        //Open savedata.bk file and store as savadata byte array
-        private void Open_savedata_ToolStripMenuItem_Click(object sender, EventArgs e)
+        byte[] extsavedata;
+        //Open savedata.bk and extsavedata.bk file and store as savadata byte array
+        private void Open_files_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                Save_savedata_ToolStripMenuItem.Enabled = Save_savedata_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = false;
-                open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
-                if (open_savedata.ShowDialog() != DialogResult.OK) return;
+                //Disable savedata.bk & extsavedata.bk stuff
+                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = extsavedata_loaded = false;
 
+                open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
+                if (open_savedata.ShowDialog() != DialogResult.OK)
+                {
+                    MessageBox.Show("You must open a savedata.bk file", "savedata.bk not found");
+                    return;
+                }
+
+                open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
+                if (open_extsavedata.ShowDialog() != DialogResult.OK)
+                {
+                    MessageBox.Show("You must open a extsavedata.bk file", "extsavedata.bk not found");
+                    return;
+                }
+
+                //savadata.bk
                 savedata = File.ReadAllBytes(open_savedata.FileName);
                 Items_dataGridView.Rows.Clear();
                 Cards_dataGridView.Rows.Clear();
-
                 Read_records(null, null);
                 Read_items(null, null);
                 Read_collectacards(null, null);
-                Save_savedata_ToolStripMenuItem.Enabled = Save_savedata_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = true;
+
+                //extsavadata.bk
+                extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
+                Songs_dataGridView.Rows.Clear();
+                Read_songs(null, null);
+
+                //Enable savedata.bk & extsavedata.bk stuff
+                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = extsavedata_loaded = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Invalid savedata.bk\n{ex}", "Failed to open the file");
+                MessageBox.Show($"Invalid save(s)\n{ex}", "Failed to open the file(s)");
             }
         }
 
         //Save to savadata.bk
-        private void Save_savedata_ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Save_files_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -105,7 +127,7 @@ namespace TFFCC_Save_Editor
         }
 
         //Save to savadata.bk as
-        private void Save_savedata_as_ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Save_files_as_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -893,7 +915,7 @@ namespace TFFCC_Save_Editor
         }
 
 
-        bool extsavedata_loaded;
+        //Read songs tab
         public string rank(byte[] rank)
         {
             switch (rank[0])
@@ -964,28 +986,6 @@ namespace TFFCC_Save_Editor
                     return "Unplayed";
             }
         }
-        byte[] extsavedata;
-        //Open extsavedata.bk file and store as extsavadata byte array
-        private void Open_extsavedata_ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Save_extsavedata_ToolStripMenuItem.Enabled = Save_extsavedata_as_ToolStripMenuItem.Enabled = extsavedata_loaded = false;
-                open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
-                if (open_extsavedata.ShowDialog() != DialogResult.OK) return;
-
-                extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
-                Songs_dataGridView.Rows.Clear();
-                Read_songs(null, null);
-                Save_extsavedata_ToolStripMenuItem.Enabled = Save_extsavedata_as_ToolStripMenuItem.Enabled = extsavedata_loaded = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Invalid extsavedata.bk\n{ex}", "Failed to open the file");
-            }
-        }
-
-        //Read songs tab
         private void Read_songs(object sender, EventArgs e)
         {
             try

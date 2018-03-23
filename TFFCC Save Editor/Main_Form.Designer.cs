@@ -55,15 +55,15 @@ namespace TFFCC_Save_Editor
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
@@ -241,8 +241,38 @@ namespace TFFCC_Save_Editor
             this.label21 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Member3_groupBox = new System.Windows.Forms.GroupBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.Member2_groupBox = new System.Windows.Forms.GroupBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.Member1_groupBox = new System.Windows.Forms.GroupBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.Leader_groupBox = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -277,45 +307,9 @@ namespace TFFCC_Save_Editor
             this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Open_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Open_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Open_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_file_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_savedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_extsavedata_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_file_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_savedata_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_extsavedata_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.Open_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_files_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -401,8 +395,11 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Member3_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.Member2_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.Member1_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Leader_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Items_tabPage.SuspendLayout();
@@ -411,9 +408,6 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -654,8 +648,8 @@ namespace TFFCC_Save_Editor
             // 
             // songs_Date
             // 
-            dataGridViewCellStyle10.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle28.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle28;
             this.songs_Date.HeaderText = "Date";
             this.songs_Date.Name = "songs_Date";
             this.songs_Date.Width = 68;
@@ -2182,7 +2176,7 @@ namespace TFFCC_Save_Editor
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(399, 38);
+            this.pictureBox3.Location = new System.Drawing.Point(54, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2413,6 +2407,88 @@ namespace TFFCC_Save_Editor
             this.Member3_groupBox.TabStop = false;
             this.Member3_groupBox.Text = "Member";
             // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(105, 296);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(89, 20);
+            this.textBox16.TabIndex = 0;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(30, 240);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(43, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Ability 1";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(126, 240);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(43, 13);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Ability 2";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(7, 256);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(89, 20);
+            this.textBox13.TabIndex = 0;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(105, 256);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(89, 20);
+            this.textBox15.TabIndex = 0;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(7, 296);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(89, 20);
+            this.textBox14.TabIndex = 0;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(126, 280);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(43, 13);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Ability 4";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(30, 280);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(43, 13);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Ability 3";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(7, 210);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(187, 21);
+            this.comboBox7.TabIndex = 1;
+            // 
             // Member2_groupBox
             // 
             this.Member2_groupBox.Controls.Add(this.textBox12);
@@ -2432,6 +2508,88 @@ namespace TFFCC_Save_Editor
             this.Member2_groupBox.TabStop = false;
             this.Member2_groupBox.Text = "Member";
             // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(105, 296);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(89, 20);
+            this.textBox12.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(126, 240);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(43, 13);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Ability 2";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(105, 256);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(89, 20);
+            this.textBox11.TabIndex = 0;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(126, 280);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(43, 13);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Ability 4";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(7, 210);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(187, 21);
+            this.comboBox6.TabIndex = 1;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(30, 280);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(43, 13);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Ability 3";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(7, 296);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(89, 20);
+            this.textBox10.TabIndex = 0;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(7, 256);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(89, 20);
+            this.textBox9.TabIndex = 0;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(30, 240);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(43, 13);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Ability 1";
+            // 
             // Member1_groupBox
             // 
             this.Member1_groupBox.Controls.Add(this.textBox8);
@@ -2450,6 +2608,88 @@ namespace TFFCC_Save_Editor
             this.Member1_groupBox.TabIndex = 0;
             this.Member1_groupBox.TabStop = false;
             this.Member1_groupBox.Text = "Member";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(105, 296);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(89, 20);
+            this.textBox8.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(105, 256);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(89, 20);
+            this.textBox7.TabIndex = 0;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(7, 210);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(187, 21);
+            this.comboBox5.TabIndex = 1;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(7, 296);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(89, 20);
+            this.textBox6.TabIndex = 0;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(30, 240);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Ability 1";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(7, 256);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(89, 20);
+            this.textBox5.TabIndex = 0;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(30, 280);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Ability 3";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(126, 280);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(43, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Ability 4";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(126, 240);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(43, 13);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Ability 2";
             // 
             // Leader_groupBox
             // 
@@ -2582,37 +2822,37 @@ namespace TFFCC_Save_Editor
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle31;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Items_dataGridView.Name = "Items_dataGridView";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.Items_dataGridView.RowHeadersVisible = false;
             this.Items_dataGridView.Size = new System.Drawing.Size(818, 411);
             this.Items_dataGridView.TabIndex = 3;
@@ -2622,8 +2862,8 @@ namespace TFFCC_Save_Editor
             // Item
             // 
             this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Item.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Item.DefaultCellStyle = dataGridViewCellStyle30;
             this.Item.HeaderText = "Item Name";
             this.Item.Name = "Item";
             this.Item.ReadOnly = true;
@@ -2701,39 +2941,39 @@ namespace TFFCC_Save_Editor
             this.Cards_dataGridView.AllowUserToDeleteRows = false;
             this.Cards_dataGridView.AllowUserToResizeRows = false;
             this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Card_name,
             this.Card_normal,
             this.Card_rare,
             this.Card_premium});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle35;
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Cards_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.Cards_dataGridView.RowHeadersVisible = false;
             this.Cards_dataGridView.Size = new System.Drawing.Size(818, 411);
             this.Cards_dataGridView.TabIndex = 6;
@@ -2743,10 +2983,10 @@ namespace TFFCC_Save_Editor
             // Card_name
             // 
             this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.Format = "N0";
-            dataGridViewCellStyle16.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.Format = "N0";
+            dataGridViewCellStyle34.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle34;
             this.Card_name.FillWeight = 200F;
             this.Card_name.HeaderText = "Card Name";
             this.Card_name.Name = "Card_name";
@@ -2841,336 +3081,42 @@ namespace TFFCC_Save_Editor
             this.File_ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(4, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(45, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(165, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // File_ToolStripMenuItem
             // 
             this.File_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Open_file_ToolStripMenuItem,
-            this.Save_file_ToolStripMenuItem,
-            this.Save_file_as_ToolStripMenuItem});
+            this.Open_files_ToolStripMenuItem,
+            this.Save_files_ToolStripMenuItem,
+            this.Save_files_as_ToolStripMenuItem});
             this.File_ToolStripMenuItem.Name = "File_ToolStripMenuItem";
             this.File_ToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.File_ToolStripMenuItem.Text = "File";
             // 
-            // Open_file_ToolStripMenuItem
-            // 
-            this.Open_file_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Open_savedata_ToolStripMenuItem,
-            this.Open_extsavedata_ToolStripMenuItem});
-            this.Open_file_ToolStripMenuItem.Name = "Open_file_ToolStripMenuItem";
-            this.Open_file_ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.Open_file_ToolStripMenuItem.Text = "Open File";
-            // 
-            // Open_savedata_ToolStripMenuItem
-            // 
-            this.Open_savedata_ToolStripMenuItem.Name = "Open_savedata_ToolStripMenuItem";
-            this.Open_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.Open_savedata_ToolStripMenuItem.Text = "Open savedata.bk...";
-            this.Open_savedata_ToolStripMenuItem.Click += new System.EventHandler(this.Open_savedata_ToolStripMenuItem_Click);
-            // 
-            // Open_extsavedata_ToolStripMenuItem
-            // 
-            this.Open_extsavedata_ToolStripMenuItem.Name = "Open_extsavedata_ToolStripMenuItem";
-            this.Open_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.Open_extsavedata_ToolStripMenuItem.Text = "Open extsavedata.bk...";
-            this.Open_extsavedata_ToolStripMenuItem.Click += new System.EventHandler(this.Open_extsavedata_ToolStripMenuItem_Click);
-            // 
-            // Save_file_ToolStripMenuItem
-            // 
-            this.Save_file_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Save_savedata_ToolStripMenuItem,
-            this.Save_extsavedata_ToolStripMenuItem});
-            this.Save_file_ToolStripMenuItem.Name = "Save_file_ToolStripMenuItem";
-            this.Save_file_ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.Save_file_ToolStripMenuItem.Text = "Save File";
-            // 
-            // Save_savedata_ToolStripMenuItem
-            // 
-            this.Save_savedata_ToolStripMenuItem.Enabled = false;
-            this.Save_savedata_ToolStripMenuItem.Name = "Save_savedata_ToolStripMenuItem";
-            this.Save_savedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.Save_savedata_ToolStripMenuItem.Text = "Save savedata.bk";
-            this.Save_savedata_ToolStripMenuItem.Click += new System.EventHandler(this.Save_savedata_ToolStripMenuItem_Click);
-            // 
-            // Save_extsavedata_ToolStripMenuItem
-            // 
-            this.Save_extsavedata_ToolStripMenuItem.Enabled = false;
-            this.Save_extsavedata_ToolStripMenuItem.Name = "Save_extsavedata_ToolStripMenuItem";
-            this.Save_extsavedata_ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.Save_extsavedata_ToolStripMenuItem.Text = "Save extsavedata.bk";
-            // 
-            // Save_file_as_ToolStripMenuItem
-            // 
-            this.Save_file_as_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Save_savedata_as_ToolStripMenuItem,
-            this.Save_extsavedata_as_ToolStripMenuItem});
-            this.Save_file_as_ToolStripMenuItem.Name = "Save_file_as_ToolStripMenuItem";
-            this.Save_file_as_ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.Save_file_as_ToolStripMenuItem.Text = "Save File As";
-            // 
-            // Save_savedata_as_ToolStripMenuItem
-            // 
-            this.Save_savedata_as_ToolStripMenuItem.Enabled = false;
-            this.Save_savedata_as_ToolStripMenuItem.Name = "Save_savedata_as_ToolStripMenuItem";
-            this.Save_savedata_as_ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.Save_savedata_as_ToolStripMenuItem.Text = "Save savedata.bk As...";
-            this.Save_savedata_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_savedata_as_ToolStripMenuItem_Click);
-            // 
-            // Save_extsavedata_as_ToolStripMenuItem
-            // 
-            this.Save_extsavedata_as_ToolStripMenuItem.Enabled = false;
-            this.Save_extsavedata_as_ToolStripMenuItem.Name = "Save_extsavedata_as_ToolStripMenuItem";
-            this.Save_extsavedata_as_ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.Save_extsavedata_as_ToolStripMenuItem.Text = "Save extsavedata.bk As...";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(7, 210);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(187, 21);
-            this.comboBox5.TabIndex = 1;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(30, 240);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Ability 1";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(30, 280);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Ability 3";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(126, 240);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(43, 13);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Ability 2";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(126, 280);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(43, 13);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Ability 4";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(7, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(89, 20);
-            this.textBox5.TabIndex = 0;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(7, 296);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 20);
-            this.textBox6.TabIndex = 0;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(105, 256);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(89, 20);
-            this.textBox7.TabIndex = 0;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(105, 296);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(89, 20);
-            this.textBox8.TabIndex = 0;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(126, 240);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(43, 13);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Ability 2";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(126, 280);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(43, 13);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Ability 4";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(30, 280);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(43, 13);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Ability 3";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(7, 256);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(89, 20);
-            this.textBox9.TabIndex = 0;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(30, 240);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(43, 13);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Ability 1";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(7, 296);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(89, 20);
-            this.textBox10.TabIndex = 0;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(7, 210);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(187, 21);
-            this.comboBox6.TabIndex = 1;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(105, 256);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(89, 20);
-            this.textBox11.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(105, 296);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(89, 20);
-            this.textBox12.TabIndex = 0;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(30, 240);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(43, 13);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Ability 1";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(7, 256);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(89, 20);
-            this.textBox13.TabIndex = 0;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(7, 296);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(89, 20);
-            this.textBox14.TabIndex = 0;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(30, 280);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(43, 13);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Ability 3";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(7, 210);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(187, 21);
-            this.comboBox7.TabIndex = 1;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(126, 280);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(43, 13);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Ability 4";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(105, 256);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(89, 20);
-            this.textBox15.TabIndex = 0;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(126, 240);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(43, 13);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Ability 2";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(105, 296);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(89, 20);
-            this.textBox16.TabIndex = 0;
+            // Open_files_ToolStripMenuItem
+            // 
+            this.Open_files_ToolStripMenuItem.Name = "Open_files_ToolStripMenuItem";
+            this.Open_files_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Open_files_ToolStripMenuItem.Text = "Open Files...";
+            this.Open_files_ToolStripMenuItem.Click += new System.EventHandler(this.Open_files_ToolStripMenuItem_Click);
+            // 
+            // Save_files_ToolStripMenuItem
+            // 
+            this.Save_files_ToolStripMenuItem.Enabled = false;
+            this.Save_files_ToolStripMenuItem.Name = "Save_files_ToolStripMenuItem";
+            this.Save_files_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_files_ToolStripMenuItem.Text = "Save Files";
+            this.Save_files_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_ToolStripMenuItem_Click);
+            // 
+            // Save_files_as_ToolStripMenuItem
+            // 
+            this.Save_files_as_ToolStripMenuItem.Enabled = false;
+            this.Save_files_as_ToolStripMenuItem.Name = "Save_files_as_ToolStripMenuItem";
+            this.Save_files_as_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_files_as_ToolStripMenuItem.Text = "Save Files As...";
+            this.Save_files_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_as_ToolStripMenuItem_Click);
             // 
             // Main_Form
             // 
@@ -3278,10 +3224,13 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Member3_groupBox.ResumeLayout(false);
             this.Member3_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.Member2_groupBox.ResumeLayout(false);
             this.Member2_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.Member1_groupBox.ResumeLayout(false);
             this.Member1_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Leader_groupBox.ResumeLayout(false);
             this.Leader_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -3293,9 +3242,6 @@ namespace TFFCC_Save_Editor
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3308,9 +3254,7 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.TabPage Songs_tabPage;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem File_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Open_file_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Open_extsavedata_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Open_savedata_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Open_files_ToolStripMenuItem;
         private System.Windows.Forms.TextBox Player_name_textBox;
         private System.Windows.Forms.Label Player_name_label;
         private System.Windows.Forms.Label Rhythmia_label;
@@ -3449,9 +3393,7 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.TextBox Scores_played_total_ultimate_textBox;
         private System.Windows.Forms.TextBox Scores_played_total_expert_textBox;
         private System.Windows.Forms.TextBox Scores_played_total_basic_textBox;
-        private System.Windows.Forms.ToolStripMenuItem Save_file_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Save_savedata_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Save_files_ToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -3480,9 +3422,7 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.DataGridViewTextBoxColumn Card_rare;
         private System.Windows.Forms.DataGridViewTextBoxColumn Card_premium;
         private System.Windows.Forms.TabPage Characters_tabPage;
-        private System.Windows.Forms.ToolStripMenuItem Save_file_as_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Save_savedata_as_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Save_extsavedata_as_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Save_files_as_ToolStripMenuItem;
         private System.Windows.Forms.GroupBox Member3_groupBox;
         private System.Windows.Forms.GroupBox Member2_groupBox;
         private System.Windows.Forms.GroupBox Member1_groupBox;
