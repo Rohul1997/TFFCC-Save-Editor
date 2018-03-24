@@ -70,7 +70,7 @@
       "offset": "0xCAA",
       "value": "0x0A"
     },
-    "Bucchus's Cider": {
+    "Bacchus's Cider": {
       "offset": "0xCAB",
       "value": "0x0B"
     },
@@ -102,7 +102,7 @@
       "offset": "0xCB2",
       "value": "0x12"
     },
-    "Rumah's Magicite": {
+    "Ramuh's Magicite": {
       "offset": "0xCB3",
       "value": "0x13"
     },
@@ -138,7 +138,7 @@
       "offset": "0xCBB",
       "value": "0x1B"
     },
-    "Bomb Fragement": {
+    "Bomb Fragment": {
       "offset": "0xCBC",
       "value": "0x1C"
     },
@@ -374,7 +374,7 @@
       "offset": "0xCF6",
       "value": "0x56"
     },
-    "Chocobo Cure Scroll": {
+    "Choco Cure Scroll": {
       "offset": "0xCF7",
       "value": "0x57"
     },
@@ -2911,10 +2911,10 @@
       "luck": "0x5D710",
       "stamina": "0x5D712",
       "spirit": "0x5D714",
-      "ability 1": "0x5D758",
-      "ability 2": "0x5D75A",
-      "ability 3": "0x5D75C",
-      "ability 4": "0x5D75E"
+      "ability 1": "0x5D77A",
+      "ability 2": "0x5D77C",
+      "ability 3": "0x5D77E",
+      "ability 4": "0x5D780"
     },
     "Rosa": {
       "value": "0x42",
@@ -2929,10 +2929,10 @@
       "luck": "0x5D79E",
       "stamina": "0x5D7A0",
       "spirit": "0x5D7A2",
-      "ability 1": "0x5D7E6",
-      "ability 2": "0x5D7E8",
-      "ability 3": "0x5D7EA",
-      "ability 4": "0x5D7EC"
+      "ability 1": "0x5D808",
+      "ability 2": "0x5D80A",
+      "ability 3": "0x5D80C",
+      "ability 4": "0x5D80E"
     },
     "Cloud #2": {
       "value": "0x43",
@@ -2947,10 +2947,10 @@
       "luck": "0x5D82C",
       "stamina": "0x5D82E",
       "spirit": "0x5D830",
-      "ability 1": "0x5D874",
-      "ability 2": "0x5D876",
-      "ability 3": "0x5D878",
-      "ability 4": "0x5D87A"
+      "ability 1": "0x5D896",
+      "ability 2": "0x5D898",
+      "ability 3": "0x5D89A",
+      "ability 4": "0x5D89C"
     },
     "Orlandeau": {
       "value": "0x44",
@@ -2965,10 +2965,10 @@
       "luck": "0x5D8BA",
       "stamina": "0x5D8BC",
       "spirit": "0x5D8BE",
-      "ability 1": "0x5D902",
-      "ability 2": "0x5D904",
-      "ability 3": "0x5D906",
-      "ability 4": "0x5D908"
+      "ability 1": "0x5D924",
+      "ability 2": "0x5D926",
+      "ability 3": "0x5D928",
+      "ability 4": "0x5D92A"
     },
     "Auron #2": {
       "value": "0x45",
@@ -2983,10 +2983,10 @@
       "luck": "0x5D948",
       "stamina": "0x5D94A",
       "spirit": "0x5D94C",
-      "ability 1": "0x5D990",
-      "ability 2": "0x5D992",
-      "ability 3": "0x5D994",
-      "ability 4": "0x5D996"
+      "ability 1": "0x5D9B2",
+      "ability 2": "0x5D9B4",
+      "ability 3": "0x5D9B6",
+      "ability 4": "0x5D9B8"
     },
     "Vincent": {
       "value": "0x46",
@@ -3001,10 +3001,10 @@
       "luck": "0x5D9D6",
       "stamina": "0x5D9D8",
       "spirit": "0x5D9DA",
-      "ability 1": "0x5DA1E",
-      "ability 2": "0x5DA20",
-      "ability 3": "0x5DA22",
-      "ability 4": "0x5DA24"
+      "ability 1": "0x5DA40",
+      "ability 2": "0x5DA42",
+      "ability 3": "0x5DA44",
+      "ability 4": "0x5DA46"
     }
   },
   "abilities": {
@@ -3242,10 +3242,10 @@
     "Libra Lv 3": "0x105"
   },
   "monsters": {
-    "Goblin (Small)": "0x00",
+    "Goblin": "0x00",
     "Lich": "0x01",
     "Behemoth": "0x02",
-    "Iron Giant (Original Blue)": "0x03",
+    "Iron Giant (Blue)": "0x03",
     "Iron Giant (Red)": "0x04",
     "Black Knight": "0x05",
     "Captain": "0x06",
@@ -3287,7 +3287,7 @@
     "Anima": "0x2A",
     "Seymour Natus": "0x2B",
     "Braska's Final Aeon": "0x2C",
-    "Goblin (Big)": "0x2D",
+    "Goblin (FFXIV)": "0x2D",
     "Gigas": "0x2E",
     "The Shadow Lord": "0x2F",
     "Goobbue": "0x30",
@@ -3315,66 +3315,66 @@
     "Magic Pot": "0x46",
     "Tonberry": "0x47",
     "Cactuar": "0x48",
-    "Ahriman (Original Yellow)": "0x49",
+    "Ahriman (Yellow)": "0x49",
     "Ahriman (Green)": "0x4A",
     "Ahriman (Blue)": "0x4B",
     "Ahriman (Red)": "0x4C",
     "Ahriman (Purple)": "0x4D",
-    "Malboro (Original Green)": "0x4E",
+    "Malboro (Green)": "0x4E",
     "Malboro (Yellow)": "0x4F",
     "Malboro (Blue)": "0x50",
-    "Malboro (Purple)": "0x51",
-    "Flan (Original Blue)": "0x52",
+    "Malboro (Grey)": "0x51",
+    "Flan (Blue)": "0x52",
     "Flan (Green)": "0x53",
     "Flan (Yellow)": "0x54",
     "Flan (Orange)": "0x55",
     "Flan (Purple)": "0x56",
-    "Bomb (Original Red)": "0x57",
+    "Bomb (Red)": "0x57",
     "Bomb (Green)": "0x58",
     "Bomb (Blue)": "0x59",
-    "Bomb (Purple)": "0x5A",
+    "Bomb (Grey)": "0x5A",
     "Green Dragon": "0x5B",
-    "Lamia (Original Red)": "0x5C",
+    "Lamia (Yellow)": "0x5C",
     "Lamia (Green)": "0x5D",
-    "Lamia (Orange)": "0x5E",
-    "Lamia (Purple)": "0x5F",
+    "Lamia (Purple)": "0x5E",
+    "Lamia (Grey)": "0x5F",
     "Lamia (Light Purple)": "0x60",
-    "Sahagin (Original Green)": "0x61",
+    "Sahagin (Green)": "0x61",
     "Sahagin (Blue)": "0x62",
-    "Sahagin (Light Purple)": "0x63",
-    "Sahagin (Pink)": "0x64",
-    "Sahagin (Purple)": "0x65",
-    "Coeurl (Original Orange)": "0x66",
+    "Sahagin (Purple)": "0x63",
+    "Sahagin (Red)": "0x64",
+    "Sahagin (Grey)": "0x65",
+    "Coeurl (Orange)": "0x66",
     "Coeurl (Blue)": "0x67",
     "Coeurl (Yellow)": "0x68",
     "Coeurl (Red)": "0x69",
-    "Sand Worm (Original Yellow)": "0x6A",
+    "Sand Worm (Yellow)": "0x6A",
     "Sand Worm (Green)": "0x6B",
     "Sand Worm (Teal)": "0x6C",
-    "Sand Worm (Red)": "0x6D",
+    "Sand Worm (Orange)": "0x6D",
     "Sand Worm (Purple)": "0x6E",
-    "Zu (Original Black)": "0x6F",
+    "Zu (Purple)": "0x6F",
     "Zu (Green)": "0x70",
     "Zu (Blue)": "0x71",
     "Zu (Brown)": "0x72",
     "Zu (Beige)": "0x73",
     "Mover": "0x74",
-    "Great Malboro (Original Green)": "0x75",
+    "Great Malboro (Green)": "0x75",
     "Great Malboro (Yellow)": "0x76",
     "Great Malboro (Blue)": "0x77",
-    "Great Malboro (Purple)": "0x78",
-    "Jumbo Flan (Original Blue)": "0x79",
+    "Great Malboro (Grey)": "0x78",
+    "Jumbo Flan (Blue)": "0x79",
     "Jumbo Flan (Green)": "0x7A",
     "Jumbo Flan (Yellow)": "0x7B",
     "Jumbo Flan (Orange)": "0x7C",
     "Jumbo Flan (Purple)": "0x7D",
-    "King Bomb (Original Red)": "0x7E",
+    "King Bomb (Red)": "0x7E",
     "King Bomb (Green)": "0x7F",
     "King Bomb (Blue)": "0x80",
-    "King Bomb (Purple)": "0x81",
-    "King Behemoth (Original Purple)": "0x82",
+    "King Bomb (Grey)": "0x81",
+    "King Behemoth (Purple)": "0x82",
     "King Behemoth (Brown)": "0x83",
-    "King Behemoth (Black)": "0x84",
+    "King Behemoth (Grey)": "0x84",
     "King Behemoth (Green)": "0x85",
     "King Behemoth (Maroon)": "0x86"
   },

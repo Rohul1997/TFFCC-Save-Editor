@@ -30,6 +30,8 @@ using System.IO;
 using System.Windows.Forms;
 using System.Web.Script.Serialization;
 using System.Linq;
+using System.Drawing;
+using System.Reflection;
 
 namespace TFFCC_Save_Editor
 {
@@ -40,6 +42,7 @@ namespace TFFCC_Save_Editor
             InitializeComponent();
         }
 
+        Assembly assembly = Assembly.GetExecutingAssembly();
         OpenFileDialog open_extsavedata = new OpenFileDialog();
         OpenFileDialog open_savedata = new OpenFileDialog();
         SaveFileDialog save_savedata = new SaveFileDialog();
@@ -90,17 +93,17 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
-                //savadata.bk
                 savedata = File.ReadAllBytes(open_savedata.FileName);
+                extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
+
                 Items_dataGridView.Rows.Clear();
                 Cards_dataGridView.Rows.Clear();
+                Songs_dataGridView.Rows.Clear();
+
                 Read_records(null, null);
                 Read_items(null, null);
                 Read_collectacards(null, null);
-
-                //extsavadata.bk
-                extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
-                Songs_dataGridView.Rows.Clear();
+                Read_characters(null, null);
                 Read_songs(null, null);
 
                 //Enable savedata.bk & extsavedata.bk stuff
@@ -142,6 +145,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Failed to save to {save_savedata.FileName}\n{ex}", "Failed to save the file");
             }
         }
+
 
         //Read Records tab
         private void Read_records(object sender, EventArgs e)
@@ -507,62 +511,6 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to update Records\n{ex}", "Error");
             }
         }
-        //Read Items tab
-        private void Read_items(object sender, EventArgs e)
-        {
-            try
-            {
-                var dbItemsJSON = dbJson("items");
-                if (dbItemsJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
-                //Read and initialise Items datagrid
-                for (int i = 0; i < 92; i++)
-                {
-                    var item = ((Dictionary<string, object>)dbItemsJSON).ToList()[i].Key;
-                    Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = item;
-
-                    Items_dataGridView.Rows[i].Cells["Quantity"].Value = savedata[Convert.ToUInt16(dbItemsJSON[item]["offset"], 16)] - 0x80;
-                    Items_dataGridView.Rows[i].Cells["Quantity"].Value = (int)Items_dataGridView.Rows[i].Cells["Quantity"].Value < 0 ? 0 : Items_dataGridView.Rows[i].Cells["Quantity"].Value;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Something went wrong while trying to update Items\n{ex}", "Error");
-            }
-        }
-        //Read CollectaCards tab
-        private void Read_collectacards(object sender, EventArgs e)
-        {
-            try
-            {
-                var dbItemsJSON = dbJson("items");
-                //Read and initialise CollectaCards datagrid
-                for (int i = 0; i < 162; i++)
-                {
-                    var card = ((Dictionary<string, object>)dbItemsJSON).ToList()[i + 92].Key;
-                    Cards_dataGridView.Rows[Cards_dataGridView.Rows.Add()].Cells["Card_name"].Value = card;
-
-                    Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["normal offset"], 16)] - 0x80;
-                    Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_normal"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_normal"].Value;
-
-                    Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["rare offset"], 16)] - 0x80;
-                    Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_rare"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_rare"].Value;
-
-                    Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["premium offset"], 16)] - 0x80;
-                    Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_premium"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_premium"].Value;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Something went wrong while trying to update CollectaCards\n{ex}", "Error");
-            }
-
-        }
-
         //Write Records tab
         private void Write_records(object sender, EventArgs e)
         {
@@ -804,6 +752,141 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Records changes\n{ex}", "Error");
             }
         }
+
+        //DLC character check
+        public string charType(string charType)
+        {
+            switch (charType)
+            {
+                case "Yuffie":
+                    return "DLC";
+                case "Rosa":
+                    return "DLC";
+                case "Cloud #2":
+                    return "DLC";
+                case "Orlandeau":
+                    return "DLC";
+                case "Auron #2":
+                    return "DLC";
+                case "Vincent":
+                    return "DLC";
+                default:
+                    return "Normal";
+            }
+        }
+        //Read Characters tab
+        private void Read_characters(object sender, EventArgs e)
+        {
+            try
+            {
+                var dbCharactersJSON = dbJson("characters");
+                Dictionary<string, object> dbAbilitiesJSON = dbJson("abilities");
+                if (dbCharactersJSON == null || dbAbilitiesJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                for (int i = 0; i < 71; i++)
+                {
+                    var character = ((Dictionary<string, object>)dbCharactersJSON).ToList()[i].Key;
+                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC98])
+                    {
+                        Party1_character_comboBox.SelectedItem = character;
+                        Party1_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
+                        Party1_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
+                        Party1_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
+                        Party1_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
+                        Party1_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
+                    }
+                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC9A])
+                    {
+                        Party2_character_comboBox.SelectedItem = character;
+                        Party2_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
+                        Party2_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
+                        Party2_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
+                        Party2_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
+                        Party2_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
+                    }
+                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC9C])
+                    {
+                        Party3_character_comboBox.SelectedItem = character;
+                        Party3_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
+                        Party3_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
+                        Party3_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
+                        Party3_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
+                        Party3_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
+                    }
+                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC9E])
+                    {
+                        Party4_character_comboBox.SelectedItem = character;
+                        Party4_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
+                        Party4_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
+                        Party4_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
+                        Party4_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
+                        Party4_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update Characters\n{ex}", "Error");
+            }
+        }
+        //Write Characters tab
+        private void Write_characters(object sender, EventArgs e)
+        {
+            if (!savedata_loaded || !extsavedata_loaded) return;
+            try
+            {
+                var dbCharactersJSON = dbJson("characters");
+                if (dbCharactersJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                savedata[0xC98] = Convert.ToByte(dbCharactersJSON[Party1_character_comboBox.SelectedItem.ToString()]["value"], 16);
+                savedata[0xC9A] = Convert.ToByte(dbCharactersJSON[Party2_character_comboBox.SelectedItem.ToString()]["value"], 16);
+                savedata[0xC9C] = Convert.ToByte(dbCharactersJSON[Party3_character_comboBox.SelectedItem.ToString()]["value"], 16);
+                savedata[0xC9E] = Convert.ToByte(dbCharactersJSON[Party4_character_comboBox.SelectedItem.ToString()]["value"], 16);
+
+                Read_characters(null, null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                MessageBox.Show($"Something went wrong while trying to store Characters changes\n{ex}", "Error");
+            }
+        }
+
+        //Read Items tab
+        private void Read_items(object sender, EventArgs e)
+        {
+            try
+            {
+                var dbItemsJSON = dbJson("items");
+                if (dbItemsJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                //Read and initialise Items datagrid
+                for (int i = 0; i < 92; i++)
+                {
+                    var item = ((Dictionary<string, object>)dbItemsJSON).ToList()[i].Key;
+                    Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = item;
+
+                    Items_dataGridView.Rows[i].Cells["Quantity"].Value = savedata[Convert.ToUInt16(dbItemsJSON[item]["offset"], 16)] - 0x80;
+                    Items_dataGridView.Rows[i].Cells["Quantity"].Value = (int)Items_dataGridView.Rows[i].Cells["Quantity"].Value < 0 ? 0 : Items_dataGridView.Rows[i].Cells["Quantity"].Value;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update Items\n{ex}", "Error");
+            }
+        }
         //Write Items tab
         private void Write_items(object sender, EventArgs e)
         {
@@ -826,6 +909,35 @@ namespace TFFCC_Save_Editor
             {
                 MessageBox.Show($"Something went wrong while trying to store Items changes\n{ex}", "Error");
             }
+        }
+
+        //Read CollectaCards tab
+        private void Read_collectacards(object sender, EventArgs e)
+        {
+            try
+            {
+                var dbItemsJSON = dbJson("items");
+                //Read and initialise CollectaCards datagrid
+                for (int i = 0; i < 162; i++)
+                {
+                    var card = ((Dictionary<string, object>)dbItemsJSON).ToList()[i + 92].Key;
+                    Cards_dataGridView.Rows[Cards_dataGridView.Rows.Add()].Cells["Card_name"].Value = card;
+
+                    Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["normal offset"], 16)] - 0x80;
+                    Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_normal"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_normal"].Value;
+
+                    Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["rare offset"], 16)] - 0x80;
+                    Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_rare"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_rare"].Value;
+
+                    Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["premium offset"], 16)] - 0x80;
+                    Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_premium"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_premium"].Value;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update CollectaCards\n{ex}", "Error");
+            }
+
         }
         //Write CollectaCards tab
         private void Write_collectacards(object sender, EventArgs e)

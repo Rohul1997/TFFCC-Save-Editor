@@ -54,21 +54,16 @@ namespace TFFCC_Save_Editor
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star1_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star2_pictureBox = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Progress_label = new System.Windows.Forms.Label();
             this.Player_name_label = new System.Windows.Forms.Label();
@@ -112,13 +107,9 @@ namespace TFFCC_Save_Editor
             this.Highest_rank_class_comboBox = new System.Windows.Forms.ComboBox();
             this.Highest_rank_comboBox = new System.Windows.Forms.ComboBox();
             this.Local_battle_rating_ties_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
             this.Online_battle_rating_ties_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
             this.Local_battle_rating_losses_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Song_icon_expert_pictureBox = new System.Windows.Forms.PictureBox();
             this.Online_battle_rating_losses_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Song_icon_basic_pictureBox = new System.Windows.Forms.PictureBox();
             this.Local_battle_rating_wins_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Online_battle_rating_wins_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Local_battle_rating_score_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -214,76 +205,70 @@ namespace TFFCC_Save_Editor
             this.StreetPasses_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Characters_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.CharEditor_totalCPlabel = new System.Windows.Forms.Label();
+            this.CharEditor_levelResets_label = new System.Windows.Forms.Label();
+            this.CharEditor_exp_textBox = new System.Windows.Forms.TextBox();
+            this.CharEditor_level_textBox = new System.Windows.Forms.TextBox();
+            this.CharEditor_spirit_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_totalCP_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_levelResets_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_stamina_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_luck_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_hp_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_agility_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_magic_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_strength_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_character_comboBox = new System.Windows.Forms.ComboBox();
+            this.CharEditor_spirit_label = new System.Windows.Forms.Label();
+            this.CharEditor_stamina_label = new System.Windows.Forms.Label();
+            this.CharEditor_luck_label = new System.Windows.Forms.Label();
+            this.CharEditor_hp_label = new System.Windows.Forms.Label();
+            this.CharEditor_agility_label = new System.Windows.Forms.Label();
+            this.CharEditor_magic_label = new System.Windows.Forms.Label();
+            this.CharEditor_strength_label = new System.Windows.Forms.Label();
+            this.CharEditor_exp_label = new System.Windows.Forms.Label();
+            this.CharEditor_character_label = new System.Windows.Forms.Label();
+            this.CharEditor_level_label = new System.Windows.Forms.Label();
             this.Member3_groupBox = new System.Windows.Forms.GroupBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.Party4_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party4_ability1_label = new System.Windows.Forms.Label();
+            this.Party4_ability2_label = new System.Windows.Forms.Label();
+            this.Party4_ability1_textBox = new System.Windows.Forms.TextBox();
+            this.Party4_ability2_textBox = new System.Windows.Forms.TextBox();
+            this.Party4_ability3_textBox = new System.Windows.Forms.TextBox();
+            this.Party4_ability4_label = new System.Windows.Forms.Label();
+            this.Party4_ability3_label = new System.Windows.Forms.Label();
+            this.Party4_character_comboBox = new System.Windows.Forms.ComboBox();
             this.Member2_groupBox = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
+            this.Party3_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party3_ability2_label = new System.Windows.Forms.Label();
+            this.Party3_ability2_textBox = new System.Windows.Forms.TextBox();
+            this.Party3_ability4_label = new System.Windows.Forms.Label();
+            this.Party3_character_comboBox = new System.Windows.Forms.ComboBox();
+            this.Party3_ability3_label = new System.Windows.Forms.Label();
+            this.Party3_ability3_textBox = new System.Windows.Forms.TextBox();
+            this.Party3_ability1_textBox = new System.Windows.Forms.TextBox();
+            this.Party3_ability1_label = new System.Windows.Forms.Label();
             this.Member1_groupBox = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.Party2_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party2_ability2_textBox = new System.Windows.Forms.TextBox();
+            this.Party2_character_comboBox = new System.Windows.Forms.ComboBox();
+            this.Party2_ability3_textBox = new System.Windows.Forms.TextBox();
+            this.Party2_ability1_label = new System.Windows.Forms.Label();
+            this.Party2_ability1_textBox = new System.Windows.Forms.TextBox();
+            this.Party2_ability3_label = new System.Windows.Forms.Label();
+            this.Party2_ability4_label = new System.Windows.Forms.Label();
+            this.Party2_ability2_label = new System.Windows.Forms.Label();
             this.Leader_groupBox = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Party1_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party1_ability2_textBox = new System.Windows.Forms.TextBox();
+            this.Party1_ability3_textBox = new System.Windows.Forms.TextBox();
+            this.Party1_ability1_textBox = new System.Windows.Forms.TextBox();
+            this.Party1_ability4_label = new System.Windows.Forms.Label();
+            this.Party1_ability2_label = new System.Windows.Forms.Label();
+            this.Party1_ability3_label = new System.Windows.Forms.Label();
+            this.Party1_ability1_label = new System.Windows.Forms.Label();
+            this.Party1_character_comboBox = new System.Windows.Forms.ComboBox();
             this.Items_tabPage = new System.Windows.Forms.TabPage();
             this.max_items_button = new System.Windows.Forms.Button();
             this.Items_dataGridView = new System.Windows.Forms.DataGridView();
@@ -310,13 +295,23 @@ namespace TFFCC_Save_Editor
             this.Open_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Song_icon_expert_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Song_icon_basic_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star1_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star2_pictureBox = new System.Windows.Forms.PictureBox();
+            this.CharEditor_levelResets_picturebox = new System.Windows.Forms.PictureBox();
+            this.CharEditor_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Party4_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Party3_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Party2_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Party1_character_pictureBox = new System.Windows.Forms.PictureBox();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -332,13 +327,9 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Levels_reset_numericUpDown)).BeginInit();
             this.Versus_mode_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_ties_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_ties_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_losses_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_losses_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_wins_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_wins_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_score_numericUpDown)).BeginInit();
@@ -383,31 +374,40 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.StreetPasses_numericUpDown)).BeginInit();
             this.Characters_tabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_spirit_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_totalCP_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_stamina_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_luck_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_hp_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_agility_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_magic_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_strength_numericUpDown)).BeginInit();
             this.Member3_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.Member2_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.Member1_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Leader_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Items_tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
             this.CollectaCards_tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party4_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party3_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party2_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party1_character_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -430,56 +430,6 @@ namespace TFFCC_Save_Editor
             Profile_groupBox.TabIndex = 2;
             Profile_groupBox.TabStop = false;
             Profile_groupBox.Text = "Profile";
-            // 
-            // Progress_star5_pictureBox
-            // 
-            this.Progress_star5_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star5_pictureBox.Image")));
-            this.Progress_star5_pictureBox.Location = new System.Drawing.Point(193, 93);
-            this.Progress_star5_pictureBox.Name = "Progress_star5_pictureBox";
-            this.Progress_star5_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star5_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star5_pictureBox.TabIndex = 3;
-            this.Progress_star5_pictureBox.TabStop = false;
-            // 
-            // Progress_star4_pictureBox
-            // 
-            this.Progress_star4_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star4_pictureBox.Image")));
-            this.Progress_star4_pictureBox.Location = new System.Drawing.Point(166, 93);
-            this.Progress_star4_pictureBox.Name = "Progress_star4_pictureBox";
-            this.Progress_star4_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star4_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star4_pictureBox.TabIndex = 3;
-            this.Progress_star4_pictureBox.TabStop = false;
-            // 
-            // Progress_star3_pictureBox
-            // 
-            this.Progress_star3_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star3_pictureBox.Image")));
-            this.Progress_star3_pictureBox.Location = new System.Drawing.Point(139, 93);
-            this.Progress_star3_pictureBox.Name = "Progress_star3_pictureBox";
-            this.Progress_star3_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star3_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star3_pictureBox.TabIndex = 3;
-            this.Progress_star3_pictureBox.TabStop = false;
-            // 
-            // Progress_star1_pictureBox
-            // 
-            this.Progress_star1_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star1_pictureBox.Image")));
-            this.Progress_star1_pictureBox.Location = new System.Drawing.Point(85, 93);
-            this.Progress_star1_pictureBox.Name = "Progress_star1_pictureBox";
-            this.Progress_star1_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star1_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star1_pictureBox.TabIndex = 3;
-            this.Progress_star1_pictureBox.TabStop = false;
-            // 
-            // Progress_star2_pictureBox
-            // 
-            this.Progress_star2_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star2_pictureBox.Image")));
-            this.Progress_star2_pictureBox.Location = new System.Drawing.Point(112, 93);
-            this.Progress_star2_pictureBox.Name = "Progress_star2_pictureBox";
-            this.Progress_star2_pictureBox.Size = new System.Drawing.Size(28, 28);
-            this.Progress_star2_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Progress_star2_pictureBox.TabIndex = 3;
-            this.Progress_star2_pictureBox.TabStop = false;
             // 
             // label12
             // 
@@ -648,8 +598,8 @@ namespace TFFCC_Save_Editor
             // 
             // songs_Date
             // 
-            dataGridViewCellStyle28.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle1;
             this.songs_Date.HeaderText = "Date";
             this.songs_Date.Name = "songs_Date";
             this.songs_Date.Width = 68;
@@ -994,16 +944,6 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_ties_numericUpDown.TabIndex = 42;
             this.Local_battle_rating_ties_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
-            // Song_icon_ultimatenex_pictureBox
-            // 
-            this.Song_icon_ultimatenex_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimatenex_pictureBox.Image")));
-            this.Song_icon_ultimatenex_pictureBox.Location = new System.Drawing.Point(309, 166);
-            this.Song_icon_ultimatenex_pictureBox.Name = "Song_icon_ultimatenex_pictureBox";
-            this.Song_icon_ultimatenex_pictureBox.Size = new System.Drawing.Size(44, 28);
-            this.Song_icon_ultimatenex_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_ultimatenex_pictureBox.TabIndex = 3;
-            this.Song_icon_ultimatenex_pictureBox.TabStop = false;
-            // 
             // Online_battle_rating_ties_numericUpDown
             // 
             this.Online_battle_rating_ties_numericUpDown.Location = new System.Drawing.Point(305, 61);
@@ -1016,16 +956,6 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_ties_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_ties_numericUpDown.TabIndex = 38;
             this.Online_battle_rating_ties_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
-            // 
-            // Song_icon_ultimate_pictureBox
-            // 
-            this.Song_icon_ultimate_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimate_pictureBox.Image")));
-            this.Song_icon_ultimate_pictureBox.Location = new System.Drawing.Point(259, 166);
-            this.Song_icon_ultimate_pictureBox.Name = "Song_icon_ultimate_pictureBox";
-            this.Song_icon_ultimate_pictureBox.Size = new System.Drawing.Size(25, 28);
-            this.Song_icon_ultimate_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_ultimate_pictureBox.TabIndex = 3;
-            this.Song_icon_ultimate_pictureBox.TabStop = false;
             // 
             // Local_battle_rating_losses_numericUpDown
             // 
@@ -1040,16 +970,6 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_losses_numericUpDown.TabIndex = 41;
             this.Local_battle_rating_losses_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
-            // Song_icon_expert_pictureBox
-            // 
-            this.Song_icon_expert_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_expert_pictureBox.Image")));
-            this.Song_icon_expert_pictureBox.Location = new System.Drawing.Point(201, 166);
-            this.Song_icon_expert_pictureBox.Name = "Song_icon_expert_pictureBox";
-            this.Song_icon_expert_pictureBox.Size = new System.Drawing.Size(25, 28);
-            this.Song_icon_expert_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_expert_pictureBox.TabIndex = 3;
-            this.Song_icon_expert_pictureBox.TabStop = false;
-            // 
             // Online_battle_rating_losses_numericUpDown
             // 
             this.Online_battle_rating_losses_numericUpDown.Location = new System.Drawing.Point(246, 61);
@@ -1062,16 +982,6 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_losses_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_losses_numericUpDown.TabIndex = 37;
             this.Online_battle_rating_losses_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
-            // 
-            // Song_icon_basic_pictureBox
-            // 
-            this.Song_icon_basic_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_basic_pictureBox.Image")));
-            this.Song_icon_basic_pictureBox.Location = new System.Drawing.Point(141, 166);
-            this.Song_icon_basic_pictureBox.Name = "Song_icon_basic_pictureBox";
-            this.Song_icon_basic_pictureBox.Size = new System.Drawing.Size(25, 28);
-            this.Song_icon_basic_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Song_icon_basic_pictureBox.TabIndex = 3;
-            this.Song_icon_basic_pictureBox.TabStop = false;
             // 
             // Local_battle_rating_wins_numericUpDown
             // 
@@ -2140,32 +2050,32 @@ namespace TFFCC_Save_Editor
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.numericUpDown10);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.numericUpDown9);
-            this.groupBox1.Controls.Add(this.numericUpDown8);
-            this.groupBox1.Controls.Add(this.numericUpDown7);
-            this.groupBox1.Controls.Add(this.numericUpDown6);
-            this.groupBox1.Controls.Add(this.numericUpDown5);
-            this.groupBox1.Controls.Add(this.numericUpDown4);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.CharEditor_levelResets_picturebox);
+            this.groupBox1.Controls.Add(this.CharEditor_totalCPlabel);
+            this.groupBox1.Controls.Add(this.CharEditor_levelResets_label);
+            this.groupBox1.Controls.Add(this.CharEditor_exp_textBox);
+            this.groupBox1.Controls.Add(this.CharEditor_level_textBox);
+            this.groupBox1.Controls.Add(this.CharEditor_spirit_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_totalCP_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_levelResets_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_stamina_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_luck_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_hp_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_agility_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_magic_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_strength_numericUpDown);
+            this.groupBox1.Controls.Add(this.CharEditor_character_pictureBox);
+            this.groupBox1.Controls.Add(this.CharEditor_character_comboBox);
+            this.groupBox1.Controls.Add(this.CharEditor_spirit_label);
+            this.groupBox1.Controls.Add(this.CharEditor_stamina_label);
+            this.groupBox1.Controls.Add(this.CharEditor_luck_label);
+            this.groupBox1.Controls.Add(this.CharEditor_hp_label);
+            this.groupBox1.Controls.Add(this.CharEditor_agility_label);
+            this.groupBox1.Controls.Add(this.CharEditor_magic_label);
+            this.groupBox1.Controls.Add(this.CharEditor_strength_label);
+            this.groupBox1.Controls.Add(this.CharEditor_exp_label);
+            this.groupBox1.Controls.Add(this.CharEditor_character_label);
+            this.groupBox1.Controls.Add(this.CharEditor_level_label);
             this.groupBox1.Location = new System.Drawing.Point(3, 325);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(818, 115);
@@ -2173,233 +2083,288 @@ namespace TFFCC_Save_Editor
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character Editor";
             // 
-            // pictureBox3
+            // CharEditor_totalCPlabel
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(54, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.CharEditor_totalCPlabel.AutoSize = true;
+            this.CharEditor_totalCPlabel.Location = new System.Drawing.Point(270, 80);
+            this.CharEditor_totalCPlabel.Name = "CharEditor_totalCPlabel";
+            this.CharEditor_totalCPlabel.Size = new System.Drawing.Size(48, 13);
+            this.CharEditor_totalCPlabel.TabIndex = 0;
+            this.CharEditor_totalCPlabel.Text = "Total CP";
             // 
-            // label22
+            // CharEditor_levelResets_label
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(249, 80);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 13);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Total CP";
+            this.CharEditor_levelResets_label.AutoSize = true;
+            this.CharEditor_levelResets_label.Location = new System.Drawing.Point(270, 50);
+            this.CharEditor_levelResets_label.Name = "CharEditor_levelResets_label";
+            this.CharEditor_levelResets_label.Size = new System.Drawing.Size(69, 13);
+            this.CharEditor_levelResets_label.TabIndex = 0;
+            this.CharEditor_levelResets_label.Text = "Level Resets";
             // 
-            // label8
+            // CharEditor_exp_textBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(249, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Level Resets";
+            this.CharEditor_exp_textBox.Location = new System.Drawing.Point(160, 77);
+            this.CharEditor_exp_textBox.Name = "CharEditor_exp_textBox";
+            this.CharEditor_exp_textBox.ReadOnly = true;
+            this.CharEditor_exp_textBox.Size = new System.Drawing.Size(99, 20);
+            this.CharEditor_exp_textBox.TabIndex = 0;
             // 
-            // numericUpDown10
+            // CharEditor_level_textBox
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(736, 48);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown10.TabIndex = 3;
+            this.CharEditor_level_textBox.Location = new System.Drawing.Point(160, 48);
+            this.CharEditor_level_textBox.Name = "CharEditor_level_textBox";
+            this.CharEditor_level_textBox.ReadOnly = true;
+            this.CharEditor_level_textBox.Size = new System.Drawing.Size(99, 20);
+            this.CharEditor_level_textBox.TabIndex = 0;
             // 
-            // numericUpDown2
+            // CharEditor_spirit_numericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(324, 77);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.CharEditor_spirit_numericUpDown.Location = new System.Drawing.Point(736, 48);
+            this.CharEditor_spirit_numericUpDown.Name = "CharEditor_spirit_numericUpDown";
+            this.CharEditor_spirit_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.CharEditor_spirit_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown1
+            // CharEditor_totalCP_numericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(324, 48);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.CharEditor_totalCP_numericUpDown.Location = new System.Drawing.Point(345, 77);
+            this.CharEditor_totalCP_numericUpDown.Name = "CharEditor_totalCP_numericUpDown";
+            this.CharEditor_totalCP_numericUpDown.Size = new System.Drawing.Size(81, 20);
+            this.CharEditor_totalCP_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown9
+            // CharEditor_levelResets_numericUpDown
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(622, 48);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown9.TabIndex = 3;
+            this.CharEditor_levelResets_numericUpDown.Location = new System.Drawing.Point(345, 48);
+            this.CharEditor_levelResets_numericUpDown.Name = "CharEditor_levelResets_numericUpDown";
+            this.CharEditor_levelResets_numericUpDown.Size = new System.Drawing.Size(81, 20);
+            this.CharEditor_levelResets_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown8
+            // CharEditor_stamina_numericUpDown
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(495, 48);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown8.TabIndex = 3;
+            this.CharEditor_stamina_numericUpDown.Location = new System.Drawing.Point(622, 48);
+            this.CharEditor_stamina_numericUpDown.Name = "CharEditor_stamina_numericUpDown";
+            this.CharEditor_stamina_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.CharEditor_stamina_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown7
+            // CharEditor_luck_numericUpDown
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(324, 19);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown7.TabIndex = 3;
+            this.CharEditor_luck_numericUpDown.Location = new System.Drawing.Point(495, 48);
+            this.CharEditor_luck_numericUpDown.Name = "CharEditor_luck_numericUpDown";
+            this.CharEditor_luck_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.CharEditor_luck_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown6
+            // CharEditor_hp_numericUpDown
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(736, 19);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown6.TabIndex = 3;
+            this.CharEditor_hp_numericUpDown.Location = new System.Drawing.Point(345, 19);
+            this.CharEditor_hp_numericUpDown.Name = "CharEditor_hp_numericUpDown";
+            this.CharEditor_hp_numericUpDown.Size = new System.Drawing.Size(81, 20);
+            this.CharEditor_hp_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown5
+            // CharEditor_agility_numericUpDown
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(622, 19);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown5.TabIndex = 3;
+            this.CharEditor_agility_numericUpDown.Location = new System.Drawing.Point(736, 19);
+            this.CharEditor_agility_numericUpDown.Name = "CharEditor_agility_numericUpDown";
+            this.CharEditor_agility_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.CharEditor_agility_numericUpDown.TabIndex = 3;
             // 
-            // numericUpDown4
+            // CharEditor_magic_numericUpDown
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(495, 19);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDown4.TabIndex = 3;
+            this.CharEditor_magic_numericUpDown.Location = new System.Drawing.Point(622, 19);
+            this.CharEditor_magic_numericUpDown.Name = "CharEditor_magic_numericUpDown";
+            this.CharEditor_magic_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.CharEditor_magic_numericUpDown.TabIndex = 3;
             // 
-            // pictureBox2
+            // CharEditor_strength_numericUpDown
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(90, 90);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.CharEditor_strength_numericUpDown.Location = new System.Drawing.Point(495, 19);
+            this.CharEditor_strength_numericUpDown.Name = "CharEditor_strength_numericUpDown";
+            this.CharEditor_strength_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.CharEditor_strength_numericUpDown.TabIndex = 3;
             // 
-            // comboBox4
+            // CharEditor_character_comboBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(155, 77);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(88, 21);
-            this.comboBox4.TabIndex = 1;
+            this.CharEditor_character_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CharEditor_character_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CharEditor_character_comboBox.FormattingEnabled = true;
+            this.CharEditor_character_comboBox.Items.AddRange(new object[] {
+            "Warrior of Light",
+            "Princess Sarah",
+            "Firion",
+            "Minwu",
+            "Onion Knight",
+            "Cid",
+            "Cecil",
+            "Kain",
+            "Rydia",
+            "Rosa",
+            "Edge",
+            "Bartz",
+            "Faris",
+            "Lenna",
+            "Galuf",
+            "Terra",
+            "Locke",
+            "Celes",
+            "Edgar",
+            "Cloud",
+            "Sephiroth",
+            "Aerith",
+            "Tifa",
+            "Yuffie",
+            "Barret",
+            "Vincent",
+            "Squall",
+            "Seifer",
+            "Rinoa",
+            "Laguna",
+            "Zidane",
+            "Vivi",
+            "Garnet",
+            "Eiko",
+            "Tidus",
+            "Yuna",
+            "Auron",
+            "Jecht",
+            "Auron #2",
+            "Shantotto",
+            "Prishe",
+            "Aphmau",
+            "Lilisette",
+            "Vaan",
+            "Ashe",
+            "Balthier",
+            "Fran",
+            "Lightning",
+            "Snow",
+            "Hope",
+            "Vanille",
+            "Y\'shtola",
+            "Benjamin",
+            "Ramza",
+            "Agrias",
+            "Orlandeau",
+            "Yuna #2",
+            "Rikku",
+            "Paine",
+            "Ciaran",
+            "Cloud #2",
+            "Tifa #2",
+            "Zack",
+            "Cosmos",
+            "Chaos",
+            "Ace",
+            "Machina",
+            "Rem",
+            "Serah",
+            "Noel",
+            "Lightning #2"});
+            this.CharEditor_character_comboBox.Location = new System.Drawing.Point(160, 19);
+            this.CharEditor_character_comboBox.Name = "CharEditor_character_comboBox";
+            this.CharEditor_character_comboBox.Size = new System.Drawing.Size(99, 21);
+            this.CharEditor_character_comboBox.TabIndex = 1;
+            this.CharEditor_character_comboBox.Text = "Warrior of Light";
             // 
-            // comboBox3
+            // CharEditor_spirit_label
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(155, 48);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(88, 21);
-            this.comboBox3.TabIndex = 1;
+            this.CharEditor_spirit_label.AutoSize = true;
+            this.CharEditor_spirit_label.Location = new System.Drawing.Point(696, 52);
+            this.CharEditor_spirit_label.Name = "CharEditor_spirit_label";
+            this.CharEditor_spirit_label.Size = new System.Drawing.Size(30, 13);
+            this.CharEditor_spirit_label.TabIndex = 0;
+            this.CharEditor_spirit_label.Text = "Spirit";
             // 
-            // comboBox2
+            // CharEditor_stamina_label
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(155, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(88, 21);
-            this.comboBox2.TabIndex = 1;
+            this.CharEditor_stamina_label.AutoSize = true;
+            this.CharEditor_stamina_label.Location = new System.Drawing.Point(571, 52);
+            this.CharEditor_stamina_label.Name = "CharEditor_stamina_label";
+            this.CharEditor_stamina_label.Size = new System.Drawing.Size(45, 13);
+            this.CharEditor_stamina_label.TabIndex = 0;
+            this.CharEditor_stamina_label.Text = "Stamina";
             // 
-            // label20
+            // CharEditor_luck_label
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(700, 52);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(30, 13);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Spirit";
+            this.CharEditor_luck_label.AutoSize = true;
+            this.CharEditor_luck_label.Location = new System.Drawing.Point(442, 50);
+            this.CharEditor_luck_label.Name = "CharEditor_luck_label";
+            this.CharEditor_luck_label.Size = new System.Drawing.Size(31, 13);
+            this.CharEditor_luck_label.TabIndex = 0;
+            this.CharEditor_luck_label.Text = "Luck";
             // 
-            // label19
+            // CharEditor_hp_label
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(571, 52);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 13);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Stamina";
+            this.CharEditor_hp_label.AutoSize = true;
+            this.CharEditor_hp_label.Location = new System.Drawing.Point(270, 21);
+            this.CharEditor_hp_label.Name = "CharEditor_hp_label";
+            this.CharEditor_hp_label.Size = new System.Drawing.Size(22, 13);
+            this.CharEditor_hp_label.TabIndex = 0;
+            this.CharEditor_hp_label.Text = "HP";
             // 
-            // label18
+            // CharEditor_agility_label
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(458, 50);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(31, 13);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Luck";
+            this.CharEditor_agility_label.AutoSize = true;
+            this.CharEditor_agility_label.Location = new System.Drawing.Point(696, 23);
+            this.CharEditor_agility_label.Name = "CharEditor_agility_label";
+            this.CharEditor_agility_label.Size = new System.Drawing.Size(34, 13);
+            this.CharEditor_agility_label.TabIndex = 0;
+            this.CharEditor_agility_label.Text = "Agility";
             // 
-            // label17
+            // CharEditor_magic_label
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(249, 23);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(22, 13);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "HP";
+            this.CharEditor_magic_label.AutoSize = true;
+            this.CharEditor_magic_label.Location = new System.Drawing.Point(571, 23);
+            this.CharEditor_magic_label.Name = "CharEditor_magic_label";
+            this.CharEditor_magic_label.Size = new System.Drawing.Size(36, 13);
+            this.CharEditor_magic_label.TabIndex = 0;
+            this.CharEditor_magic_label.Text = "Magic";
             // 
-            // label16
+            // CharEditor_strength_label
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(696, 21);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(34, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Agility";
+            this.CharEditor_strength_label.AutoSize = true;
+            this.CharEditor_strength_label.Location = new System.Drawing.Point(442, 23);
+            this.CharEditor_strength_label.Name = "CharEditor_strength_label";
+            this.CharEditor_strength_label.Size = new System.Drawing.Size(47, 13);
+            this.CharEditor_strength_label.TabIndex = 0;
+            this.CharEditor_strength_label.Text = "Strength";
             // 
-            // label15
+            // CharEditor_exp_label
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(580, 21);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Magic";
+            this.CharEditor_exp_label.AutoSize = true;
+            this.CharEditor_exp_label.Location = new System.Drawing.Point(104, 80);
+            this.CharEditor_exp_label.Name = "CharEditor_exp_label";
+            this.CharEditor_exp_label.Size = new System.Drawing.Size(28, 13);
+            this.CharEditor_exp_label.TabIndex = 0;
+            this.CharEditor_exp_label.Text = "EXP";
             // 
-            // label14
+            // CharEditor_character_label
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(442, 23);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Strength";
+            this.CharEditor_character_label.AutoSize = true;
+            this.CharEditor_character_label.Location = new System.Drawing.Point(104, 23);
+            this.CharEditor_character_label.Name = "CharEditor_character_label";
+            this.CharEditor_character_label.Size = new System.Drawing.Size(53, 13);
+            this.CharEditor_character_label.TabIndex = 0;
+            this.CharEditor_character_label.Text = "Character";
             // 
-            // label13
+            // CharEditor_level_label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(99, 80);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "EXP";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(99, 23);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 13);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Character";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(99, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Level";
+            this.CharEditor_level_label.AutoSize = true;
+            this.CharEditor_level_label.Location = new System.Drawing.Point(104, 50);
+            this.CharEditor_level_label.Name = "CharEditor_level_label";
+            this.CharEditor_level_label.Size = new System.Drawing.Size(33, 13);
+            this.CharEditor_level_label.TabIndex = 0;
+            this.CharEditor_level_label.Text = "Level";
             // 
             // Member3_groupBox
             // 
-            this.Member3_groupBox.Controls.Add(this.textBox16);
-            this.Member3_groupBox.Controls.Add(this.pictureBox6);
-            this.Member3_groupBox.Controls.Add(this.label31);
-            this.Member3_groupBox.Controls.Add(this.label34);
-            this.Member3_groupBox.Controls.Add(this.textBox13);
-            this.Member3_groupBox.Controls.Add(this.textBox15);
-            this.Member3_groupBox.Controls.Add(this.textBox14);
-            this.Member3_groupBox.Controls.Add(this.label33);
-            this.Member3_groupBox.Controls.Add(this.label32);
-            this.Member3_groupBox.Controls.Add(this.comboBox7);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability4_textBox);
+            this.Member3_groupBox.Controls.Add(this.Party4_character_pictureBox);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability1_label);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability2_label);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability1_textBox);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability2_textBox);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability3_textBox);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability4_label);
+            this.Member3_groupBox.Controls.Add(this.Party4_ability3_label);
+            this.Member3_groupBox.Controls.Add(this.Party4_character_comboBox);
             this.Member3_groupBox.Location = new System.Drawing.Point(621, 3);
             this.Member3_groupBox.Name = "Member3_groupBox";
             this.Member3_groupBox.Size = new System.Drawing.Size(200, 322);
@@ -2407,100 +2372,174 @@ namespace TFFCC_Save_Editor
             this.Member3_groupBox.TabStop = false;
             this.Member3_groupBox.Text = "Member";
             // 
-            // textBox16
+            // Party4_ability4_textBox
             // 
-            this.textBox16.Location = new System.Drawing.Point(105, 296);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(89, 20);
-            this.textBox16.TabIndex = 0;
+            this.Party4_ability4_textBox.Location = new System.Drawing.Point(105, 296);
+            this.Party4_ability4_textBox.Name = "Party4_ability4_textBox";
+            this.Party4_ability4_textBox.ReadOnly = true;
+            this.Party4_ability4_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party4_ability4_textBox.TabIndex = 0;
+            this.Party4_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox6
+            // Party4_ability1_label
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.Party4_ability1_label.AutoSize = true;
+            this.Party4_ability1_label.Location = new System.Drawing.Point(30, 240);
+            this.Party4_ability1_label.Name = "Party4_ability1_label";
+            this.Party4_ability1_label.Size = new System.Drawing.Size(43, 13);
+            this.Party4_ability1_label.TabIndex = 0;
+            this.Party4_ability1_label.Text = "Ability 1";
             // 
-            // label31
+            // Party4_ability2_label
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(30, 240);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(43, 13);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Ability 1";
+            this.Party4_ability2_label.AutoSize = true;
+            this.Party4_ability2_label.Location = new System.Drawing.Point(126, 240);
+            this.Party4_ability2_label.Name = "Party4_ability2_label";
+            this.Party4_ability2_label.Size = new System.Drawing.Size(43, 13);
+            this.Party4_ability2_label.TabIndex = 0;
+            this.Party4_ability2_label.Text = "Ability 2";
             // 
-            // label34
+            // Party4_ability1_textBox
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(126, 240);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(43, 13);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Ability 2";
+            this.Party4_ability1_textBox.Location = new System.Drawing.Point(7, 256);
+            this.Party4_ability1_textBox.Name = "Party4_ability1_textBox";
+            this.Party4_ability1_textBox.ReadOnly = true;
+            this.Party4_ability1_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party4_ability1_textBox.TabIndex = 0;
+            this.Party4_ability1_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox13
+            // Party4_ability2_textBox
             // 
-            this.textBox13.Location = new System.Drawing.Point(7, 256);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(89, 20);
-            this.textBox13.TabIndex = 0;
+            this.Party4_ability2_textBox.Location = new System.Drawing.Point(105, 256);
+            this.Party4_ability2_textBox.Name = "Party4_ability2_textBox";
+            this.Party4_ability2_textBox.ReadOnly = true;
+            this.Party4_ability2_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party4_ability2_textBox.TabIndex = 0;
+            this.Party4_ability2_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox15
+            // Party4_ability3_textBox
             // 
-            this.textBox15.Location = new System.Drawing.Point(105, 256);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(89, 20);
-            this.textBox15.TabIndex = 0;
+            this.Party4_ability3_textBox.Location = new System.Drawing.Point(7, 296);
+            this.Party4_ability3_textBox.Name = "Party4_ability3_textBox";
+            this.Party4_ability3_textBox.ReadOnly = true;
+            this.Party4_ability3_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party4_ability3_textBox.TabIndex = 0;
+            this.Party4_ability3_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox14
+            // Party4_ability4_label
             // 
-            this.textBox14.Location = new System.Drawing.Point(7, 296);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(89, 20);
-            this.textBox14.TabIndex = 0;
+            this.Party4_ability4_label.AutoSize = true;
+            this.Party4_ability4_label.Location = new System.Drawing.Point(126, 280);
+            this.Party4_ability4_label.Name = "Party4_ability4_label";
+            this.Party4_ability4_label.Size = new System.Drawing.Size(43, 13);
+            this.Party4_ability4_label.TabIndex = 0;
+            this.Party4_ability4_label.Text = "Ability 4";
             // 
-            // label33
+            // Party4_ability3_label
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(126, 280);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(43, 13);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Ability 4";
+            this.Party4_ability3_label.AutoSize = true;
+            this.Party4_ability3_label.Location = new System.Drawing.Point(30, 280);
+            this.Party4_ability3_label.Name = "Party4_ability3_label";
+            this.Party4_ability3_label.Size = new System.Drawing.Size(43, 13);
+            this.Party4_ability3_label.TabIndex = 0;
+            this.Party4_ability3_label.Text = "Ability 3";
             // 
-            // label32
+            // Party4_character_comboBox
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(30, 280);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(43, 13);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Ability 3";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(7, 210);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(187, 21);
-            this.comboBox7.TabIndex = 1;
+            this.Party4_character_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Party4_character_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Party4_character_comboBox.FormattingEnabled = true;
+            this.Party4_character_comboBox.Items.AddRange(new object[] {
+            "Warrior of Light",
+            "Princess Sarah",
+            "Firion",
+            "Minwu",
+            "Onion Knight",
+            "Cid",
+            "Cecil",
+            "Kain",
+            "Rydia",
+            "Rosa",
+            "Edge",
+            "Bartz",
+            "Faris",
+            "Lenna",
+            "Galuf",
+            "Terra",
+            "Locke",
+            "Celes",
+            "Edgar",
+            "Cloud",
+            "Sephiroth",
+            "Aerith",
+            "Tifa",
+            "Yuffie",
+            "Barret",
+            "Vincent",
+            "Squall",
+            "Seifer",
+            "Rinoa",
+            "Laguna",
+            "Zidane",
+            "Vivi",
+            "Garnet",
+            "Eiko",
+            "Tidus",
+            "Yuna",
+            "Auron",
+            "Jecht",
+            "Auron #2",
+            "Shantotto",
+            "Prishe",
+            "Aphmau",
+            "Lilisette",
+            "Vaan",
+            "Ashe",
+            "Balthier",
+            "Fran",
+            "Lightning",
+            "Snow",
+            "Hope",
+            "Vanille",
+            "Y\'shtola",
+            "Benjamin",
+            "Ramza",
+            "Agrias",
+            "Orlandeau",
+            "Yuna #2",
+            "Rikku",
+            "Paine",
+            "Ciaran",
+            "Cloud #2",
+            "Tifa #2",
+            "Zack",
+            "Cosmos",
+            "Chaos",
+            "Ace",
+            "Machina",
+            "Rem",
+            "Serah",
+            "Noel",
+            "Lightning #2"});
+            this.Party4_character_comboBox.Location = new System.Drawing.Point(7, 210);
+            this.Party4_character_comboBox.Name = "Party4_character_comboBox";
+            this.Party4_character_comboBox.Size = new System.Drawing.Size(187, 21);
+            this.Party4_character_comboBox.TabIndex = 1;
+            this.Party4_character_comboBox.Text = "Warrior of Light";
+            this.Party4_character_comboBox.SelectedIndexChanged += new System.EventHandler(this.Write_characters);
             // 
             // Member2_groupBox
             // 
-            this.Member2_groupBox.Controls.Add(this.textBox12);
-            this.Member2_groupBox.Controls.Add(this.pictureBox5);
-            this.Member2_groupBox.Controls.Add(this.label27);
-            this.Member2_groupBox.Controls.Add(this.textBox11);
-            this.Member2_groupBox.Controls.Add(this.label28);
-            this.Member2_groupBox.Controls.Add(this.comboBox6);
-            this.Member2_groupBox.Controls.Add(this.label29);
-            this.Member2_groupBox.Controls.Add(this.textBox10);
-            this.Member2_groupBox.Controls.Add(this.textBox9);
-            this.Member2_groupBox.Controls.Add(this.label30);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability4_textBox);
+            this.Member2_groupBox.Controls.Add(this.Party3_character_pictureBox);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability2_label);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability2_textBox);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability4_label);
+            this.Member2_groupBox.Controls.Add(this.Party3_character_comboBox);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability3_label);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability3_textBox);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability1_textBox);
+            this.Member2_groupBox.Controls.Add(this.Party3_ability1_label);
             this.Member2_groupBox.Location = new System.Drawing.Point(415, 3);
             this.Member2_groupBox.Name = "Member2_groupBox";
             this.Member2_groupBox.Size = new System.Drawing.Size(200, 322);
@@ -2508,100 +2547,174 @@ namespace TFFCC_Save_Editor
             this.Member2_groupBox.TabStop = false;
             this.Member2_groupBox.Text = "Member";
             // 
-            // textBox12
+            // Party3_ability4_textBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(105, 296);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(89, 20);
-            this.textBox12.TabIndex = 0;
+            this.Party3_ability4_textBox.Location = new System.Drawing.Point(105, 296);
+            this.Party3_ability4_textBox.Name = "Party3_ability4_textBox";
+            this.Party3_ability4_textBox.ReadOnly = true;
+            this.Party3_ability4_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party3_ability4_textBox.TabIndex = 0;
+            this.Party3_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox5
+            // Party3_ability2_label
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.Party3_ability2_label.AutoSize = true;
+            this.Party3_ability2_label.Location = new System.Drawing.Point(126, 240);
+            this.Party3_ability2_label.Name = "Party3_ability2_label";
+            this.Party3_ability2_label.Size = new System.Drawing.Size(43, 13);
+            this.Party3_ability2_label.TabIndex = 0;
+            this.Party3_ability2_label.Text = "Ability 2";
             // 
-            // label27
+            // Party3_ability2_textBox
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(126, 240);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(43, 13);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Ability 2";
+            this.Party3_ability2_textBox.Location = new System.Drawing.Point(105, 256);
+            this.Party3_ability2_textBox.Name = "Party3_ability2_textBox";
+            this.Party3_ability2_textBox.ReadOnly = true;
+            this.Party3_ability2_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party3_ability2_textBox.TabIndex = 0;
+            this.Party3_ability2_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox11
+            // Party3_ability4_label
             // 
-            this.textBox11.Location = new System.Drawing.Point(105, 256);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(89, 20);
-            this.textBox11.TabIndex = 0;
+            this.Party3_ability4_label.AutoSize = true;
+            this.Party3_ability4_label.Location = new System.Drawing.Point(126, 280);
+            this.Party3_ability4_label.Name = "Party3_ability4_label";
+            this.Party3_ability4_label.Size = new System.Drawing.Size(43, 13);
+            this.Party3_ability4_label.TabIndex = 0;
+            this.Party3_ability4_label.Text = "Ability 4";
             // 
-            // label28
+            // Party3_character_comboBox
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(126, 280);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(43, 13);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Ability 4";
+            this.Party3_character_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Party3_character_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Party3_character_comboBox.FormattingEnabled = true;
+            this.Party3_character_comboBox.Items.AddRange(new object[] {
+            "Warrior of Light",
+            "Princess Sarah",
+            "Firion",
+            "Minwu",
+            "Onion Knight",
+            "Cid",
+            "Cecil",
+            "Kain",
+            "Rydia",
+            "Rosa",
+            "Edge",
+            "Bartz",
+            "Faris",
+            "Lenna",
+            "Galuf",
+            "Terra",
+            "Locke",
+            "Celes",
+            "Edgar",
+            "Cloud",
+            "Sephiroth",
+            "Aerith",
+            "Tifa",
+            "Yuffie",
+            "Barret",
+            "Vincent",
+            "Squall",
+            "Seifer",
+            "Rinoa",
+            "Laguna",
+            "Zidane",
+            "Vivi",
+            "Garnet",
+            "Eiko",
+            "Tidus",
+            "Yuna",
+            "Auron",
+            "Jecht",
+            "Auron #2",
+            "Shantotto",
+            "Prishe",
+            "Aphmau",
+            "Lilisette",
+            "Vaan",
+            "Ashe",
+            "Balthier",
+            "Fran",
+            "Lightning",
+            "Snow",
+            "Hope",
+            "Vanille",
+            "Y\'shtola",
+            "Benjamin",
+            "Ramza",
+            "Agrias",
+            "Orlandeau",
+            "Yuna #2",
+            "Rikku",
+            "Paine",
+            "Ciaran",
+            "Cloud #2",
+            "Tifa #2",
+            "Zack",
+            "Cosmos",
+            "Chaos",
+            "Ace",
+            "Machina",
+            "Rem",
+            "Serah",
+            "Noel",
+            "Lightning #2"});
+            this.Party3_character_comboBox.Location = new System.Drawing.Point(7, 210);
+            this.Party3_character_comboBox.Name = "Party3_character_comboBox";
+            this.Party3_character_comboBox.Size = new System.Drawing.Size(187, 21);
+            this.Party3_character_comboBox.TabIndex = 1;
+            this.Party3_character_comboBox.Text = "Warrior of Light";
+            this.Party3_character_comboBox.SelectedIndexChanged += new System.EventHandler(this.Write_characters);
             // 
-            // comboBox6
+            // Party3_ability3_label
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(7, 210);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(187, 21);
-            this.comboBox6.TabIndex = 1;
+            this.Party3_ability3_label.AutoSize = true;
+            this.Party3_ability3_label.Location = new System.Drawing.Point(30, 280);
+            this.Party3_ability3_label.Name = "Party3_ability3_label";
+            this.Party3_ability3_label.Size = new System.Drawing.Size(43, 13);
+            this.Party3_ability3_label.TabIndex = 0;
+            this.Party3_ability3_label.Text = "Ability 3";
             // 
-            // label29
+            // Party3_ability3_textBox
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(30, 280);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(43, 13);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Ability 3";
+            this.Party3_ability3_textBox.Location = new System.Drawing.Point(7, 296);
+            this.Party3_ability3_textBox.Name = "Party3_ability3_textBox";
+            this.Party3_ability3_textBox.ReadOnly = true;
+            this.Party3_ability3_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party3_ability3_textBox.TabIndex = 0;
+            this.Party3_ability3_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox10
+            // Party3_ability1_textBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(7, 296);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(89, 20);
-            this.textBox10.TabIndex = 0;
+            this.Party3_ability1_textBox.Location = new System.Drawing.Point(7, 256);
+            this.Party3_ability1_textBox.Name = "Party3_ability1_textBox";
+            this.Party3_ability1_textBox.ReadOnly = true;
+            this.Party3_ability1_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party3_ability1_textBox.TabIndex = 0;
+            this.Party3_ability1_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox9
+            // Party3_ability1_label
             // 
-            this.textBox9.Location = new System.Drawing.Point(7, 256);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(89, 20);
-            this.textBox9.TabIndex = 0;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(30, 240);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(43, 13);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Ability 1";
+            this.Party3_ability1_label.AutoSize = true;
+            this.Party3_ability1_label.Location = new System.Drawing.Point(30, 240);
+            this.Party3_ability1_label.Name = "Party3_ability1_label";
+            this.Party3_ability1_label.Size = new System.Drawing.Size(43, 13);
+            this.Party3_ability1_label.TabIndex = 0;
+            this.Party3_ability1_label.Text = "Ability 1";
             // 
             // Member1_groupBox
             // 
-            this.Member1_groupBox.Controls.Add(this.textBox8);
-            this.Member1_groupBox.Controls.Add(this.pictureBox4);
-            this.Member1_groupBox.Controls.Add(this.textBox7);
-            this.Member1_groupBox.Controls.Add(this.comboBox5);
-            this.Member1_groupBox.Controls.Add(this.textBox6);
-            this.Member1_groupBox.Controls.Add(this.label23);
-            this.Member1_groupBox.Controls.Add(this.textBox5);
-            this.Member1_groupBox.Controls.Add(this.label24);
-            this.Member1_groupBox.Controls.Add(this.label26);
-            this.Member1_groupBox.Controls.Add(this.label25);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability4_textBox);
+            this.Member1_groupBox.Controls.Add(this.Party2_character_pictureBox);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability2_textBox);
+            this.Member1_groupBox.Controls.Add(this.Party2_character_comboBox);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability3_textBox);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability1_label);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability1_textBox);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability3_label);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability4_label);
+            this.Member1_groupBox.Controls.Add(this.Party2_ability2_label);
             this.Member1_groupBox.Location = new System.Drawing.Point(209, 3);
             this.Member1_groupBox.Name = "Member1_groupBox";
             this.Member1_groupBox.Size = new System.Drawing.Size(200, 322);
@@ -2609,100 +2722,174 @@ namespace TFFCC_Save_Editor
             this.Member1_groupBox.TabStop = false;
             this.Member1_groupBox.Text = "Member";
             // 
-            // textBox8
+            // Party2_ability4_textBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(105, 296);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(89, 20);
-            this.textBox8.TabIndex = 0;
+            this.Party2_ability4_textBox.Location = new System.Drawing.Point(105, 296);
+            this.Party2_ability4_textBox.Name = "Party2_ability4_textBox";
+            this.Party2_ability4_textBox.ReadOnly = true;
+            this.Party2_ability4_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party2_ability4_textBox.TabIndex = 0;
+            this.Party2_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox4
+            // Party2_ability2_textBox
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.Party2_ability2_textBox.Location = new System.Drawing.Point(105, 256);
+            this.Party2_ability2_textBox.Name = "Party2_ability2_textBox";
+            this.Party2_ability2_textBox.ReadOnly = true;
+            this.Party2_ability2_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party2_ability2_textBox.TabIndex = 0;
+            this.Party2_ability2_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox7
+            // Party2_character_comboBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(105, 256);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(89, 20);
-            this.textBox7.TabIndex = 0;
+            this.Party2_character_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Party2_character_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Party2_character_comboBox.FormattingEnabled = true;
+            this.Party2_character_comboBox.Items.AddRange(new object[] {
+            "Warrior of Light",
+            "Princess Sarah",
+            "Firion",
+            "Minwu",
+            "Onion Knight",
+            "Cid",
+            "Cecil",
+            "Kain",
+            "Rydia",
+            "Rosa",
+            "Edge",
+            "Bartz",
+            "Faris",
+            "Lenna",
+            "Galuf",
+            "Terra",
+            "Locke",
+            "Celes",
+            "Edgar",
+            "Cloud",
+            "Sephiroth",
+            "Aerith",
+            "Tifa",
+            "Yuffie",
+            "Barret",
+            "Vincent",
+            "Squall",
+            "Seifer",
+            "Rinoa",
+            "Laguna",
+            "Zidane",
+            "Vivi",
+            "Garnet",
+            "Eiko",
+            "Tidus",
+            "Yuna",
+            "Auron",
+            "Jecht",
+            "Auron #2",
+            "Shantotto",
+            "Prishe",
+            "Aphmau",
+            "Lilisette",
+            "Vaan",
+            "Ashe",
+            "Balthier",
+            "Fran",
+            "Lightning",
+            "Snow",
+            "Hope",
+            "Vanille",
+            "Y\'shtola",
+            "Benjamin",
+            "Ramza",
+            "Agrias",
+            "Orlandeau",
+            "Yuna #2",
+            "Rikku",
+            "Paine",
+            "Ciaran",
+            "Cloud #2",
+            "Tifa #2",
+            "Zack",
+            "Cosmos",
+            "Chaos",
+            "Ace",
+            "Machina",
+            "Rem",
+            "Serah",
+            "Noel",
+            "Lightning #2"});
+            this.Party2_character_comboBox.Location = new System.Drawing.Point(7, 210);
+            this.Party2_character_comboBox.Name = "Party2_character_comboBox";
+            this.Party2_character_comboBox.Size = new System.Drawing.Size(187, 21);
+            this.Party2_character_comboBox.TabIndex = 1;
+            this.Party2_character_comboBox.Text = "Warrior of Light";
+            this.Party2_character_comboBox.SelectedIndexChanged += new System.EventHandler(this.Write_characters);
             // 
-            // comboBox5
+            // Party2_ability3_textBox
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(7, 210);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(187, 21);
-            this.comboBox5.TabIndex = 1;
+            this.Party2_ability3_textBox.Location = new System.Drawing.Point(7, 296);
+            this.Party2_ability3_textBox.Name = "Party2_ability3_textBox";
+            this.Party2_ability3_textBox.ReadOnly = true;
+            this.Party2_ability3_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party2_ability3_textBox.TabIndex = 0;
+            this.Party2_ability3_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
+            // Party2_ability1_label
             // 
-            this.textBox6.Location = new System.Drawing.Point(7, 296);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 20);
-            this.textBox6.TabIndex = 0;
+            this.Party2_ability1_label.AutoSize = true;
+            this.Party2_ability1_label.Location = new System.Drawing.Point(30, 240);
+            this.Party2_ability1_label.Name = "Party2_ability1_label";
+            this.Party2_ability1_label.Size = new System.Drawing.Size(43, 13);
+            this.Party2_ability1_label.TabIndex = 0;
+            this.Party2_ability1_label.Text = "Ability 1";
             // 
-            // label23
+            // Party2_ability1_textBox
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(30, 240);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Ability 1";
+            this.Party2_ability1_textBox.Location = new System.Drawing.Point(7, 256);
+            this.Party2_ability1_textBox.Name = "Party2_ability1_textBox";
+            this.Party2_ability1_textBox.ReadOnly = true;
+            this.Party2_ability1_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party2_ability1_textBox.TabIndex = 0;
+            this.Party2_ability1_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // Party2_ability3_label
             // 
-            this.textBox5.Location = new System.Drawing.Point(7, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(89, 20);
-            this.textBox5.TabIndex = 0;
+            this.Party2_ability3_label.AutoSize = true;
+            this.Party2_ability3_label.Location = new System.Drawing.Point(30, 280);
+            this.Party2_ability3_label.Name = "Party2_ability3_label";
+            this.Party2_ability3_label.Size = new System.Drawing.Size(43, 13);
+            this.Party2_ability3_label.TabIndex = 0;
+            this.Party2_ability3_label.Text = "Ability 3";
             // 
-            // label24
+            // Party2_ability4_label
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(30, 280);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Ability 3";
+            this.Party2_ability4_label.AutoSize = true;
+            this.Party2_ability4_label.Location = new System.Drawing.Point(126, 280);
+            this.Party2_ability4_label.Name = "Party2_ability4_label";
+            this.Party2_ability4_label.Size = new System.Drawing.Size(43, 13);
+            this.Party2_ability4_label.TabIndex = 0;
+            this.Party2_ability4_label.Text = "Ability 4";
             // 
-            // label26
+            // Party2_ability2_label
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(126, 280);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(43, 13);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Ability 4";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(126, 240);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(43, 13);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Ability 2";
+            this.Party2_ability2_label.AutoSize = true;
+            this.Party2_ability2_label.Location = new System.Drawing.Point(126, 240);
+            this.Party2_ability2_label.Name = "Party2_ability2_label";
+            this.Party2_ability2_label.Size = new System.Drawing.Size(43, 13);
+            this.Party2_ability2_label.TabIndex = 0;
+            this.Party2_ability2_label.Text = "Ability 2";
             // 
             // Leader_groupBox
             // 
-            this.Leader_groupBox.Controls.Add(this.textBox4);
-            this.Leader_groupBox.Controls.Add(this.textBox2);
-            this.Leader_groupBox.Controls.Add(this.textBox3);
-            this.Leader_groupBox.Controls.Add(this.textBox1);
-            this.Leader_groupBox.Controls.Add(this.label7);
-            this.Leader_groupBox.Controls.Add(this.label5);
-            this.Leader_groupBox.Controls.Add(this.label6);
-            this.Leader_groupBox.Controls.Add(this.label4);
-            this.Leader_groupBox.Controls.Add(this.comboBox1);
-            this.Leader_groupBox.Controls.Add(this.pictureBox1);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability4_textBox);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability2_textBox);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability3_textBox);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability1_textBox);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability4_label);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability2_label);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability3_label);
+            this.Leader_groupBox.Controls.Add(this.Party1_ability1_label);
+            this.Leader_groupBox.Controls.Add(this.Party1_character_comboBox);
+            this.Leader_groupBox.Controls.Add(this.Party1_character_pictureBox);
             this.Leader_groupBox.Location = new System.Drawing.Point(3, 3);
             this.Leader_groupBox.Name = "Leader_groupBox";
             this.Leader_groupBox.Size = new System.Drawing.Size(200, 322);
@@ -2710,87 +2897,161 @@ namespace TFFCC_Save_Editor
             this.Leader_groupBox.TabStop = false;
             this.Leader_groupBox.Text = "Leader";
             // 
-            // textBox4
+            // Party1_ability4_textBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 296);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(89, 20);
-            this.textBox4.TabIndex = 0;
+            this.Party1_ability4_textBox.Location = new System.Drawing.Point(105, 296);
+            this.Party1_ability4_textBox.Name = "Party1_ability4_textBox";
+            this.Party1_ability4_textBox.ReadOnly = true;
+            this.Party1_ability4_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party1_ability4_textBox.TabIndex = 0;
+            this.Party1_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // Party1_ability2_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(105, 256);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(89, 20);
-            this.textBox2.TabIndex = 0;
+            this.Party1_ability2_textBox.Location = new System.Drawing.Point(105, 256);
+            this.Party1_ability2_textBox.Name = "Party1_ability2_textBox";
+            this.Party1_ability2_textBox.ReadOnly = true;
+            this.Party1_ability2_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party1_ability2_textBox.TabIndex = 0;
+            this.Party1_ability2_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // Party1_ability3_textBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(7, 296);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(89, 20);
-            this.textBox3.TabIndex = 0;
+            this.Party1_ability3_textBox.Location = new System.Drawing.Point(7, 296);
+            this.Party1_ability3_textBox.Name = "Party1_ability3_textBox";
+            this.Party1_ability3_textBox.ReadOnly = true;
+            this.Party1_ability3_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party1_ability3_textBox.TabIndex = 0;
+            this.Party1_ability3_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // Party1_ability1_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 256);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 20);
-            this.textBox1.TabIndex = 0;
+            this.Party1_ability1_textBox.Location = new System.Drawing.Point(7, 256);
+            this.Party1_ability1_textBox.Name = "Party1_ability1_textBox";
+            this.Party1_ability1_textBox.ReadOnly = true;
+            this.Party1_ability1_textBox.Size = new System.Drawing.Size(89, 20);
+            this.Party1_ability1_textBox.TabIndex = 0;
+            this.Party1_ability1_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label7
+            // Party1_ability4_label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(126, 280);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Ability 4";
+            this.Party1_ability4_label.AutoSize = true;
+            this.Party1_ability4_label.Location = new System.Drawing.Point(126, 280);
+            this.Party1_ability4_label.Name = "Party1_ability4_label";
+            this.Party1_ability4_label.Size = new System.Drawing.Size(43, 13);
+            this.Party1_ability4_label.TabIndex = 0;
+            this.Party1_ability4_label.Text = "Ability 4";
             // 
-            // label5
+            // Party1_ability2_label
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(126, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Ability 2";
+            this.Party1_ability2_label.AutoSize = true;
+            this.Party1_ability2_label.Location = new System.Drawing.Point(126, 240);
+            this.Party1_ability2_label.Name = "Party1_ability2_label";
+            this.Party1_ability2_label.Size = new System.Drawing.Size(43, 13);
+            this.Party1_ability2_label.TabIndex = 0;
+            this.Party1_ability2_label.Text = "Ability 2";
             // 
-            // label6
+            // Party1_ability3_label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 280);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Ability 3";
+            this.Party1_ability3_label.AutoSize = true;
+            this.Party1_ability3_label.Location = new System.Drawing.Point(30, 280);
+            this.Party1_ability3_label.Name = "Party1_ability3_label";
+            this.Party1_ability3_label.Size = new System.Drawing.Size(43, 13);
+            this.Party1_ability3_label.TabIndex = 0;
+            this.Party1_ability3_label.Text = "Ability 3";
             // 
-            // label4
+            // Party1_ability1_label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ability 1";
+            this.Party1_ability1_label.AutoSize = true;
+            this.Party1_ability1_label.Location = new System.Drawing.Point(30, 240);
+            this.Party1_ability1_label.Name = "Party1_ability1_label";
+            this.Party1_ability1_label.Size = new System.Drawing.Size(43, 13);
+            this.Party1_ability1_label.TabIndex = 0;
+            this.Party1_ability1_label.Text = "Ability 1";
             // 
-            // comboBox1
+            // Party1_character_comboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 210);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Party1_character_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Party1_character_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Party1_character_comboBox.FormattingEnabled = true;
+            this.Party1_character_comboBox.Items.AddRange(new object[] {
+            "Warrior of Light",
+            "Princess Sarah",
+            "Firion",
+            "Minwu",
+            "Onion Knight",
+            "Cid",
+            "Cecil",
+            "Kain",
+            "Rydia",
+            "Rosa",
+            "Edge",
+            "Bartz",
+            "Faris",
+            "Lenna",
+            "Galuf",
+            "Terra",
+            "Locke",
+            "Celes",
+            "Edgar",
+            "Cloud",
+            "Sephiroth",
+            "Aerith",
+            "Tifa",
+            "Yuffie",
+            "Barret",
+            "Vincent",
+            "Squall",
+            "Seifer",
+            "Rinoa",
+            "Laguna",
+            "Zidane",
+            "Vivi",
+            "Garnet",
+            "Eiko",
+            "Tidus",
+            "Yuna",
+            "Auron",
+            "Jecht",
+            "Auron #2",
+            "Shantotto",
+            "Prishe",
+            "Aphmau",
+            "Lilisette",
+            "Vaan",
+            "Ashe",
+            "Balthier",
+            "Fran",
+            "Lightning",
+            "Snow",
+            "Hope",
+            "Vanille",
+            "Y\'shtola",
+            "Benjamin",
+            "Ramza",
+            "Agrias",
+            "Orlandeau",
+            "Yuna #2",
+            "Rikku",
+            "Paine",
+            "Ciaran",
+            "Cloud #2",
+            "Tifa #2",
+            "Zack",
+            "Cosmos",
+            "Chaos",
+            "Ace",
+            "Machina",
+            "Rem",
+            "Serah",
+            "Noel",
+            "Lightning #2"});
+            this.Party1_character_comboBox.Location = new System.Drawing.Point(7, 210);
+            this.Party1_character_comboBox.Name = "Party1_character_comboBox";
+            this.Party1_character_comboBox.Size = new System.Drawing.Size(187, 21);
+            this.Party1_character_comboBox.TabIndex = 1;
+            this.Party1_character_comboBox.Text = "Warrior of Light";
+            this.Party1_character_comboBox.SelectedIndexChanged += new System.EventHandler(this.Write_characters);
             // 
             // Items_tabPage
             // 
@@ -2822,37 +3083,37 @@ namespace TFFCC_Save_Editor
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Items_dataGridView.Name = "Items_dataGridView";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Items_dataGridView.RowHeadersVisible = false;
             this.Items_dataGridView.Size = new System.Drawing.Size(818, 411);
             this.Items_dataGridView.TabIndex = 3;
@@ -2862,8 +3123,8 @@ namespace TFFCC_Save_Editor
             // Item
             // 
             this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Item.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Item.DefaultCellStyle = dataGridViewCellStyle3;
             this.Item.HeaderText = "Item Name";
             this.Item.Name = "Item";
             this.Item.ReadOnly = true;
@@ -2941,39 +3202,39 @@ namespace TFFCC_Save_Editor
             this.Cards_dataGridView.AllowUserToDeleteRows = false;
             this.Cards_dataGridView.AllowUserToResizeRows = false;
             this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Card_name,
             this.Card_normal,
             this.Card_rare,
             this.Card_premium});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Cards_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Cards_dataGridView.RowHeadersVisible = false;
             this.Cards_dataGridView.Size = new System.Drawing.Size(818, 411);
             this.Cards_dataGridView.TabIndex = 6;
@@ -2983,10 +3244,10 @@ namespace TFFCC_Save_Editor
             // Card_name
             // 
             this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.Format = "N0";
-            dataGridViewCellStyle34.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle7;
             this.Card_name.FillWeight = 200F;
             this.Card_name.HeaderText = "Card Name";
             this.Card_name.Name = "Card_name";
@@ -3081,7 +3342,7 @@ namespace TFFCC_Save_Editor
             this.File_ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(4, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(165, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(45, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -3098,7 +3359,9 @@ namespace TFFCC_Save_Editor
             // Open_files_ToolStripMenuItem
             // 
             this.Open_files_ToolStripMenuItem.Name = "Open_files_ToolStripMenuItem";
-            this.Open_files_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Open_files_ToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
+            this.Open_files_ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.Open_files_ToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.Open_files_ToolStripMenuItem.Text = "Open Files...";
             this.Open_files_ToolStripMenuItem.Click += new System.EventHandler(this.Open_files_ToolStripMenuItem_Click);
             // 
@@ -3106,7 +3369,9 @@ namespace TFFCC_Save_Editor
             // 
             this.Save_files_ToolStripMenuItem.Enabled = false;
             this.Save_files_ToolStripMenuItem.Name = "Save_files_ToolStripMenuItem";
-            this.Save_files_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_files_ToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
+            this.Save_files_ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.Save_files_ToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.Save_files_ToolStripMenuItem.Text = "Save Files";
             this.Save_files_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_ToolStripMenuItem_Click);
             // 
@@ -3114,9 +3379,156 @@ namespace TFFCC_Save_Editor
             // 
             this.Save_files_as_ToolStripMenuItem.Enabled = false;
             this.Save_files_as_ToolStripMenuItem.Name = "Save_files_as_ToolStripMenuItem";
-            this.Save_files_as_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.Save_files_as_ToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Shift+S";
+            this.Save_files_as_ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.Save_files_as_ToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.Save_files_as_ToolStripMenuItem.Text = "Save Files As...";
             this.Save_files_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_as_ToolStripMenuItem_Click);
+            // 
+            // Song_icon_ultimatenex_pictureBox
+            // 
+            this.Song_icon_ultimatenex_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimatenex_pictureBox.Image")));
+            this.Song_icon_ultimatenex_pictureBox.Location = new System.Drawing.Point(309, 166);
+            this.Song_icon_ultimatenex_pictureBox.Name = "Song_icon_ultimatenex_pictureBox";
+            this.Song_icon_ultimatenex_pictureBox.Size = new System.Drawing.Size(44, 28);
+            this.Song_icon_ultimatenex_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_ultimatenex_pictureBox.TabIndex = 3;
+            this.Song_icon_ultimatenex_pictureBox.TabStop = false;
+            // 
+            // Song_icon_ultimate_pictureBox
+            // 
+            this.Song_icon_ultimate_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimate_pictureBox.Image")));
+            this.Song_icon_ultimate_pictureBox.Location = new System.Drawing.Point(259, 166);
+            this.Song_icon_ultimate_pictureBox.Name = "Song_icon_ultimate_pictureBox";
+            this.Song_icon_ultimate_pictureBox.Size = new System.Drawing.Size(25, 28);
+            this.Song_icon_ultimate_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_ultimate_pictureBox.TabIndex = 3;
+            this.Song_icon_ultimate_pictureBox.TabStop = false;
+            // 
+            // Song_icon_expert_pictureBox
+            // 
+            this.Song_icon_expert_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_expert_pictureBox.Image")));
+            this.Song_icon_expert_pictureBox.Location = new System.Drawing.Point(201, 166);
+            this.Song_icon_expert_pictureBox.Name = "Song_icon_expert_pictureBox";
+            this.Song_icon_expert_pictureBox.Size = new System.Drawing.Size(25, 28);
+            this.Song_icon_expert_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_expert_pictureBox.TabIndex = 3;
+            this.Song_icon_expert_pictureBox.TabStop = false;
+            // 
+            // Song_icon_basic_pictureBox
+            // 
+            this.Song_icon_basic_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_basic_pictureBox.Image")));
+            this.Song_icon_basic_pictureBox.Location = new System.Drawing.Point(141, 166);
+            this.Song_icon_basic_pictureBox.Name = "Song_icon_basic_pictureBox";
+            this.Song_icon_basic_pictureBox.Size = new System.Drawing.Size(25, 28);
+            this.Song_icon_basic_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Song_icon_basic_pictureBox.TabIndex = 3;
+            this.Song_icon_basic_pictureBox.TabStop = false;
+            // 
+            // Progress_star5_pictureBox
+            // 
+            this.Progress_star5_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star5_pictureBox.Image")));
+            this.Progress_star5_pictureBox.Location = new System.Drawing.Point(193, 93);
+            this.Progress_star5_pictureBox.Name = "Progress_star5_pictureBox";
+            this.Progress_star5_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star5_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star5_pictureBox.TabIndex = 3;
+            this.Progress_star5_pictureBox.TabStop = false;
+            // 
+            // Progress_star4_pictureBox
+            // 
+            this.Progress_star4_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star4_pictureBox.Image")));
+            this.Progress_star4_pictureBox.Location = new System.Drawing.Point(166, 93);
+            this.Progress_star4_pictureBox.Name = "Progress_star4_pictureBox";
+            this.Progress_star4_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star4_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star4_pictureBox.TabIndex = 3;
+            this.Progress_star4_pictureBox.TabStop = false;
+            // 
+            // Progress_star3_pictureBox
+            // 
+            this.Progress_star3_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star3_pictureBox.Image")));
+            this.Progress_star3_pictureBox.Location = new System.Drawing.Point(139, 93);
+            this.Progress_star3_pictureBox.Name = "Progress_star3_pictureBox";
+            this.Progress_star3_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star3_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star3_pictureBox.TabIndex = 3;
+            this.Progress_star3_pictureBox.TabStop = false;
+            // 
+            // Progress_star1_pictureBox
+            // 
+            this.Progress_star1_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star1_pictureBox.Image")));
+            this.Progress_star1_pictureBox.Location = new System.Drawing.Point(85, 93);
+            this.Progress_star1_pictureBox.Name = "Progress_star1_pictureBox";
+            this.Progress_star1_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star1_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star1_pictureBox.TabIndex = 3;
+            this.Progress_star1_pictureBox.TabStop = false;
+            // 
+            // Progress_star2_pictureBox
+            // 
+            this.Progress_star2_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Progress_star2_pictureBox.Image")));
+            this.Progress_star2_pictureBox.Location = new System.Drawing.Point(112, 93);
+            this.Progress_star2_pictureBox.Name = "Progress_star2_pictureBox";
+            this.Progress_star2_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Progress_star2_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Progress_star2_pictureBox.TabIndex = 3;
+            this.Progress_star2_pictureBox.TabStop = false;
+            // 
+            // CharEditor_levelResets_picturebox
+            // 
+            this.CharEditor_levelResets_picturebox.Location = new System.Drawing.Point(54, 0);
+            this.CharEditor_levelResets_picturebox.Name = "CharEditor_levelResets_picturebox";
+            this.CharEditor_levelResets_picturebox.Size = new System.Drawing.Size(36, 36);
+            this.CharEditor_levelResets_picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CharEditor_levelResets_picturebox.TabIndex = 2;
+            this.CharEditor_levelResets_picturebox.TabStop = false;
+            // 
+            // CharEditor_character_pictureBox
+            // 
+            this.CharEditor_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.CharEditor_character_pictureBox.Name = "CharEditor_character_pictureBox";
+            this.CharEditor_character_pictureBox.Size = new System.Drawing.Size(90, 90);
+            this.CharEditor_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CharEditor_character_pictureBox.TabIndex = 0;
+            this.CharEditor_character_pictureBox.TabStop = false;
+            // 
+            // Party4_character_pictureBox
+            // 
+            this.Party4_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party4_character_pictureBox.Name = "Party4_character_pictureBox";
+            this.Party4_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party4_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party4_character_pictureBox.TabIndex = 0;
+            this.Party4_character_pictureBox.TabStop = false;
+            // 
+            // Party3_character_pictureBox
+            // 
+            this.Party3_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party3_character_pictureBox.Name = "Party3_character_pictureBox";
+            this.Party3_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party3_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party3_character_pictureBox.TabIndex = 0;
+            this.Party3_character_pictureBox.TabStop = false;
+            // 
+            // Party2_character_pictureBox
+            // 
+            this.Party2_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party2_character_pictureBox.Name = "Party2_character_pictureBox";
+            this.Party2_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party2_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party2_character_pictureBox.TabIndex = 0;
+            this.Party2_character_pictureBox.TabStop = false;
+            // 
+            // Party1_character_pictureBox
+            // 
+            this.Party1_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party1_character_pictureBox.Name = "Party1_character_pictureBox";
+            this.Party1_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party1_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party1_character_pictureBox.TabIndex = 0;
+            this.Party1_character_pictureBox.TabStop = false;
             // 
             // Main_Form
             // 
@@ -3134,11 +3546,6 @@ namespace TFFCC_Save_Editor
             this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save editor";
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -3156,13 +3563,9 @@ namespace TFFCC_Save_Editor
             this.Versus_mode_groupBox.ResumeLayout(false);
             this.Versus_mode_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_ties_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_ties_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_losses_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_losses_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_wins_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_wins_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_score_numericUpDown)).EndInit();
@@ -3211,29 +3614,23 @@ namespace TFFCC_Save_Editor
             this.Characters_tabPage.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_spirit_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_totalCP_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_stamina_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_luck_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_hp_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_agility_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_magic_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_strength_numericUpDown)).EndInit();
             this.Member3_groupBox.ResumeLayout(false);
             this.Member3_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.Member2_groupBox.ResumeLayout(false);
             this.Member2_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.Member1_groupBox.ResumeLayout(false);
             this.Member1_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Leader_groupBox.ResumeLayout(false);
             this.Leader_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Items_tabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
             this.CollectaCards_tabPage.ResumeLayout(false);
@@ -3242,6 +3639,21 @@ namespace TFFCC_Save_Editor
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party4_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party3_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party2_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Party1_character_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3427,73 +3839,73 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.GroupBox Member2_groupBox;
         private System.Windows.Forms.GroupBox Member1_groupBox;
         private System.Windows.Forms.GroupBox Leader_groupBox;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox Party1_character_comboBox;
+        private System.Windows.Forms.PictureBox Party1_character_pictureBox;
+        private System.Windows.Forms.Label Party1_ability4_label;
+        private System.Windows.Forms.Label Party1_ability2_label;
+        private System.Windows.Forms.Label Party1_ability3_label;
+        private System.Windows.Forms.Label Party1_ability1_label;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox CharEditor_levelResets_picturebox;
+        private System.Windows.Forms.Label CharEditor_totalCPlabel;
+        private System.Windows.Forms.Label CharEditor_levelResets_label;
+        private System.Windows.Forms.NumericUpDown CharEditor_spirit_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_totalCP_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_levelResets_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_stamina_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_luck_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_hp_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_agility_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_magic_numericUpDown;
+        private System.Windows.Forms.NumericUpDown CharEditor_strength_numericUpDown;
+        private System.Windows.Forms.PictureBox CharEditor_character_pictureBox;
+        private System.Windows.Forms.ComboBox CharEditor_character_comboBox;
+        private System.Windows.Forms.Label CharEditor_spirit_label;
+        private System.Windows.Forms.Label CharEditor_stamina_label;
+        private System.Windows.Forms.Label CharEditor_luck_label;
+        private System.Windows.Forms.Label CharEditor_hp_label;
+        private System.Windows.Forms.Label CharEditor_agility_label;
+        private System.Windows.Forms.Label CharEditor_magic_label;
+        private System.Windows.Forms.Label CharEditor_strength_label;
+        private System.Windows.Forms.Label CharEditor_exp_label;
+        private System.Windows.Forms.Label CharEditor_character_label;
+        private System.Windows.Forms.Label CharEditor_level_label;
+        private System.Windows.Forms.TextBox Party1_ability4_textBox;
+        private System.Windows.Forms.TextBox Party1_ability2_textBox;
+        private System.Windows.Forms.TextBox Party1_ability3_textBox;
+        private System.Windows.Forms.TextBox Party1_ability1_textBox;
+        private System.Windows.Forms.TextBox Party4_ability4_textBox;
+        private System.Windows.Forms.PictureBox Party4_character_pictureBox;
+        private System.Windows.Forms.Label Party4_ability1_label;
+        private System.Windows.Forms.Label Party4_ability2_label;
+        private System.Windows.Forms.TextBox Party4_ability1_textBox;
+        private System.Windows.Forms.TextBox Party4_ability2_textBox;
+        private System.Windows.Forms.TextBox Party4_ability3_textBox;
+        private System.Windows.Forms.Label Party4_ability4_label;
+        private System.Windows.Forms.Label Party4_ability3_label;
+        private System.Windows.Forms.ComboBox Party4_character_comboBox;
+        private System.Windows.Forms.TextBox Party3_ability4_textBox;
+        private System.Windows.Forms.PictureBox Party3_character_pictureBox;
+        private System.Windows.Forms.Label Party3_ability2_label;
+        private System.Windows.Forms.TextBox Party3_ability2_textBox;
+        private System.Windows.Forms.Label Party3_ability4_label;
+        private System.Windows.Forms.ComboBox Party3_character_comboBox;
+        private System.Windows.Forms.Label Party3_ability3_label;
+        private System.Windows.Forms.TextBox Party3_ability3_textBox;
+        private System.Windows.Forms.TextBox Party3_ability1_textBox;
+        private System.Windows.Forms.Label Party3_ability1_label;
+        private System.Windows.Forms.TextBox Party2_ability4_textBox;
+        private System.Windows.Forms.PictureBox Party2_character_pictureBox;
+        private System.Windows.Forms.TextBox Party2_ability2_textBox;
+        private System.Windows.Forms.ComboBox Party2_character_comboBox;
+        private System.Windows.Forms.TextBox Party2_ability3_textBox;
+        private System.Windows.Forms.Label Party2_ability1_label;
+        private System.Windows.Forms.TextBox Party2_ability1_textBox;
+        private System.Windows.Forms.Label Party2_ability3_label;
+        private System.Windows.Forms.Label Party2_ability4_label;
+        private System.Windows.Forms.Label Party2_ability2_label;
+        private System.Windows.Forms.TextBox CharEditor_exp_textBox;
+        private System.Windows.Forms.TextBox CharEditor_level_textBox;
     }
 }
 
