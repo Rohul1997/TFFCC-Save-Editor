@@ -846,6 +846,14 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
+                //Check if a character is used more than once
+                if (Party1_character_comboBox.SelectedIndex == Party2_character_comboBox.SelectedIndex || Party1_character_comboBox.SelectedIndex == Party3_character_comboBox.SelectedIndex || Party1_character_comboBox.SelectedIndex == Party4_character_comboBox.SelectedIndex || Party2_character_comboBox.SelectedIndex == Party3_character_comboBox.SelectedIndex || Party2_character_comboBox.SelectedIndex == Party4_character_comboBox.SelectedIndex || Party3_character_comboBox.SelectedIndex == Party4_character_comboBox.SelectedIndex)
+                {
+                    MessageBox.Show("The chosen character has already been set as a member!", "You cannot use the same character more than once!");
+                    Read_characters(null, null);
+                    return;
+                }
+
                 savedata[0xC98] = Convert.ToByte(dbCharactersJSON[Party1_character_comboBox.SelectedItem.ToString()]["value"], 16);
                 savedata[0xC9A] = Convert.ToByte(dbCharactersJSON[Party2_character_comboBox.SelectedItem.ToString()]["value"], 16);
                 savedata[0xC9C] = Convert.ToByte(dbCharactersJSON[Party3_character_comboBox.SelectedItem.ToString()]["value"], 16);
