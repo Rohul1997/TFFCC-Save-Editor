@@ -40,6 +40,8 @@ namespace TFFCC_Save_Editor
         public Main_Form()
         {
             InitializeComponent();
+            CharEditor_levelResets_picturebox.Parent = CharEditor_character_pictureBox;
+            CharEditor_levelResets_picturebox.Location = new Point(54, 0);
         }
 
         Assembly assembly = Assembly.GetExecutingAssembly();
@@ -753,6 +755,9 @@ namespace TFFCC_Save_Editor
             }
         }
 
+
+        //Characters Tab
+        bool CharEditor_character_changed;
         //DLC character check
         public string charType(string charType)
         {
@@ -787,6 +792,7 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
+                //Party
                 for (int i = 0; i < 71; i++)
                 {
                     var character = ((Dictionary<string, object>)dbCharactersJSON).ToList()[i].Key;
@@ -827,6 +833,27 @@ namespace TFFCC_Save_Editor
                         Party4_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
                     }
                 }
+
+                //Character Editor
+                CharEditor_character_changed = false;
+                //if the character is changed in the character editor then set CharEditor_character_changed to true
+                if (((ComboBox)sender) != null && ((ComboBox)sender).Name == "CharEditor_character_comboBox") CharEditor_character_changed = true;
+
+                CharEditor_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{CharEditor_character_comboBox.SelectedItem}.png"));
+                CharEditor_level_textBox.Text = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level"], 16)].ToString();
+                CharEditor_exp_textBox.Text = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["exp"], 16)).ToString();
+                CharEditor_hp_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16));
+                CharEditor_levelResets_numericUpDown.Value = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)];
+                CharEditor_totalCP_numericUpDown.Value = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)];
+                CharEditor_strength_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16));
+                CharEditor_magic_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["magic"], 16));
+                CharEditor_agility_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["agility"], 16));
+                CharEditor_luck_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["luck"], 16));
+                CharEditor_stamina_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16));
+                CharEditor_spirit_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16));
+                Set_LvReset_totalCP("reading level reset", null);
+
+                CharEditor_character_changed = false;
             }
             catch (Exception ex)
             {
@@ -836,7 +863,7 @@ namespace TFFCC_Save_Editor
         //Write Characters tab
         private void Write_characters(object sender, EventArgs e)
         {
-            if (!savedata_loaded || !extsavedata_loaded) return;
+            if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
             try
             {
                 var dbCharactersJSON = dbJson("characters");
@@ -854,17 +881,101 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
+                //Write Party
                 savedata[0xC98] = Convert.ToByte(dbCharactersJSON[Party1_character_comboBox.SelectedItem.ToString()]["value"], 16);
                 savedata[0xC9A] = Convert.ToByte(dbCharactersJSON[Party2_character_comboBox.SelectedItem.ToString()]["value"], 16);
                 savedata[0xC9C] = Convert.ToByte(dbCharactersJSON[Party3_character_comboBox.SelectedItem.ToString()]["value"], 16);
                 savedata[0xC9E] = Convert.ToByte(dbCharactersJSON[Party4_character_comboBox.SelectedItem.ToString()]["value"], 16);
 
+                //Write Character Editor
+                //Write HP
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_hp_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16), 2);
+                //Write Level Resets
+                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt16(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)] = (byte)CharEditor_levelResets_numericUpDown.Value;
+                //Write Total CP
+                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt16(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)] = (byte)CharEditor_totalCP_numericUpDown.Value;
+                //Write Strength
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_strength_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16), 2);
+                //Write Magic
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_magic_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["magic"], 16), 2);
+                //Write Agility
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_agility_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["agility"], 16), 2);
+                //Write Luck
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_luck_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["luck"], 16), 2);
+                //Write Stamina
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_stamina_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16), 2);
+                //Write Spirit
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_spirit_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16), 2);
+
                 Read_characters(null, null);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
                 MessageBox.Show($"Something went wrong while trying to store Characters changes\n{ex}", "Error");
+            }
+        }
+        //Set level reset value, level reset image and minimum Total CP value
+        private void Set_LvReset_totalCP(object sender, EventArgs e)
+        {
+            if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
+            try
+            {
+                switch (CharEditor_levelResets_numericUpDown.Value)
+                {
+                    case 0:
+                        CharEditor_totalCP_numericUpDown.Minimum = 0;
+                        CharEditor_levelResets_picturebox.Image = null;
+                        break;
+                    case 1:
+                        CharEditor_totalCP_numericUpDown.Minimum = 10;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_1;
+                        break;
+                    case 2:
+                        CharEditor_totalCP_numericUpDown.Minimum = 18;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_2;
+                        break;
+                    case 3:
+                        CharEditor_totalCP_numericUpDown.Minimum = 26;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_3;
+                        break;
+                    case 4:
+                        CharEditor_totalCP_numericUpDown.Minimum = 32;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_4;
+                        break;
+                    case 5:
+                        CharEditor_totalCP_numericUpDown.Minimum = 38;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_5;
+                        break;
+                    case 6:
+                        CharEditor_totalCP_numericUpDown.Minimum = 42;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_6;
+                        break;
+                    case 7:
+                        CharEditor_totalCP_numericUpDown.Minimum = 44;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_7;
+                        break;
+                    case 8:
+                        CharEditor_totalCP_numericUpDown.Minimum = 46;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_8;
+                        break;
+                    case 9:
+                        CharEditor_totalCP_numericUpDown.Minimum = 48;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_9;
+                        break;
+                    default:
+                        CharEditor_totalCP_numericUpDown.Minimum = 49;
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_10;
+                        break;
+                }
+
+                if (sender.ToString() != "reading level reset")
+                {
+                    Write_characters(null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to store Characters Editor changes\n{ex}", "Error");
             }
         }
 

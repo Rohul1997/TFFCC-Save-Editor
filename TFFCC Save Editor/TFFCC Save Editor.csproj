@@ -171,7 +171,7 @@
     <EmbeddedResource Include="Resources\Characters\Characters_Small\Vanille.png" />
     <EmbeddedResource Include="Resources\Characters\Characters_Small\Vincent.png" />
     <EmbeddedResource Include="Resources\Characters\Characters_Small\Vivi.png" />
-    <EmbeddedResource Include="Resources\Characters\Characters_Small\Warrior of light.png" />
+    <EmbeddedResource Include="Resources\Characters\Characters_Small\Warrior of Light.png" />
     <EmbeddedResource Include="Resources\Characters\Characters_Small\Y%27shtola.png" />
     <EmbeddedResource Include="Resources\Characters\Characters_Small\Yuffie.png" />
     <EmbeddedResource Include="Resources\Characters\Characters_Small\Yuna #2.png" />
@@ -236,6 +236,16 @@
     <EmbeddedResource Include="Resources\Characters\Yuna.png" />
     <EmbeddedResource Include="Resources\Characters\Zack.png" />
     <EmbeddedResource Include="Resources\Characters\Zidane.png" />
+    <None Include="Resources\Level_Resets_1.png" />
+    <None Include="Resources\Level_Resets_2.png" />
+    <None Include="Resources\Level_Resets_3.png" />
+    <None Include="Resources\Level_Resets_4.png" />
+    <None Include="Resources\Level_Resets_5.png" />
+    <None Include="Resources\Level_Resets_6.png" />
+    <None Include="Resources\Level_Resets_7.png" />
+    <None Include="Resources\Level_Resets_8.png" />
+    <None Include="Resources\Level_Resets_9.png" />
+    <None Include="Resources\Level_Resets_10.png" />
     <Content Include="TTFFCC Save Editor Icon.ico" />
   </ItemGroup>
   <ItemGroup />
