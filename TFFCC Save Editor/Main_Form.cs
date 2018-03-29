@@ -376,15 +376,19 @@ namespace TFFCC_Save_Editor
                 {
                     case 0x00:
                         Highest_rank_comboBox.SelectedIndex = 0;
+                        Highest_rank_pictureBox.Image = Properties.Resources.Bronze_Rank;
                         break;
                     case 0x01:
                         Highest_rank_comboBox.SelectedIndex = 1;
+                        Highest_rank_pictureBox.Image = Properties.Resources.Silver_Rank;
                         break;
                     case 0x02:
                         Highest_rank_comboBox.SelectedIndex = 2;
+                        Highest_rank_pictureBox.Image = Properties.Resources.Gold_Rank;
                         break;
                     case 0x03:
                         Highest_rank_comboBox.SelectedIndex = 3;
+                        Highest_rank_pictureBox.Image = Properties.Resources.Platinum_Rank;
                         break;
                 }
 

@@ -61,12 +61,32 @@ namespace TFFCC_Save_Editor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Bronze_Rank {
+            get {
+                object obj = ResourceManager.GetObject("Bronze_Rank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         public static byte[] Databases {
             get {
                 object obj = ResourceManager.GetObject("Databases", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Gold_Rank {
+            get {
+                object obj = ResourceManager.GetObject("Gold_Rank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -166,6 +186,26 @@ namespace TFFCC_Save_Editor.Properties {
         public static System.Drawing.Bitmap Level_Resets_9 {
             get {
                 object obj = ResourceManager.GetObject("Level_Resets_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Platinum_Rank {
+            get {
+                object obj = ResourceManager.GetObject("Platinum_Rank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Silver_Rank {
+            get {
+                object obj = ResourceManager.GetObject("Silver_Rank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

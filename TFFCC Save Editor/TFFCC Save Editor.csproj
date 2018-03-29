@@ -246,6 +246,10 @@
     <None Include="Resources\Level_Resets_8.png" />
     <None Include="Resources\Level_Resets_9.png" />
     <None Include="Resources\Level_Resets_10.png" />
+    <None Include="Resources\Bronze_Rank.png" />
+    <None Include="Resources\Gold_Rank.png" />
+    <None Include="Resources\Platinum_Rank.png" />
+    <None Include="Resources\Silver_Rank.png" />
     <Content Include="TTFFCC Save Editor Icon.ico" />
   </ItemGroup>
   <ItemGroup />
