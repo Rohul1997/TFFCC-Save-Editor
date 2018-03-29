@@ -41,7 +41,7 @@ namespace TFFCC_Save_Editor
         {
             InitializeComponent();
             CharEditor_levelResets_picturebox.Parent = CharEditor_character_pictureBox;
-            CharEditor_levelResets_picturebox.Location = new Point(54, 0);
+            CharEditor_levelResets_picturebox.Location = new Point(62, 0);
         }
 
         Assembly assembly = Assembly.GetExecutingAssembly();
