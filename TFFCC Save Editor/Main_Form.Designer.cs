@@ -216,6 +216,8 @@ namespace TFFCC_Save_Editor
             this.StreetPasses_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Characters_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Max_all_characters_stats_button = new System.Windows.Forms.Button();
+            this.Max_character_stats_button = new System.Windows.Forms.Button();
             this.CharEditor_levelResets_picturebox = new System.Windows.Forms.PictureBox();
             this.CharEditor_totalCPlabel = new System.Windows.Forms.Label();
             this.CharEditor_levelResets_label = new System.Windows.Forms.Label();
@@ -2165,6 +2167,8 @@ namespace TFFCC_Save_Editor
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Max_all_characters_stats_button);
+            this.groupBox1.Controls.Add(this.Max_character_stats_button);
             this.groupBox1.Controls.Add(this.CharEditor_levelResets_picturebox);
             this.groupBox1.Controls.Add(this.CharEditor_totalCPlabel);
             this.groupBox1.Controls.Add(this.CharEditor_levelResets_label);
@@ -2197,6 +2201,28 @@ namespace TFFCC_Save_Editor
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character Editor";
+            // 
+            // Max_all_characters_stats_button
+            // 
+            this.Max_all_characters_stats_button.Enabled = false;
+            this.Max_all_characters_stats_button.Location = new System.Drawing.Point(628, 76);
+            this.Max_all_characters_stats_button.Name = "Max_all_characters_stats_button";
+            this.Max_all_characters_stats_button.Size = new System.Drawing.Size(177, 23);
+            this.Max_all_characters_stats_button.TabIndex = 39;
+            this.Max_all_characters_stats_button.Text = "Max All Characters Stats";
+            this.Max_all_characters_stats_button.UseVisualStyleBackColor = true;
+            this.Max_all_characters_stats_button.Click += new System.EventHandler(this.Max_all_characters_stats_button_Click);
+            // 
+            // Max_character_stats_button
+            // 
+            this.Max_character_stats_button.Enabled = false;
+            this.Max_character_stats_button.Location = new System.Drawing.Point(445, 76);
+            this.Max_character_stats_button.Name = "Max_character_stats_button";
+            this.Max_character_stats_button.Size = new System.Drawing.Size(177, 23);
+            this.Max_character_stats_button.TabIndex = 39;
+            this.Max_character_stats_button.Text = "Max Warrior of Light Stats";
+            this.Max_character_stats_button.UseVisualStyleBackColor = true;
+            this.Max_character_stats_button.Click += new System.EventHandler(this.Max_character_stats_button_Click);
             // 
             // CharEditor_levelResets_picturebox
             // 
@@ -2375,6 +2401,7 @@ namespace TFFCC_Save_Editor
             // 
             this.CharEditor_character_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.CharEditor_character_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CharEditor_character_comboBox.Enabled = false;
             this.CharEditor_character_comboBox.FormattingEnabled = true;
             this.CharEditor_character_comboBox.Items.AddRange(new object[] {
             "Warrior of Light",
@@ -3995,6 +4022,8 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.TextBox CharEditor_level_textBox;
         private System.Windows.Forms.PictureBox Crowns_pictureBox;
         private System.Windows.Forms.PictureBox Highest_rank_pictureBox;
+        private System.Windows.Forms.Button Max_all_characters_stats_button;
+        private System.Windows.Forms.Button Max_character_stats_button;
     }
 }
 

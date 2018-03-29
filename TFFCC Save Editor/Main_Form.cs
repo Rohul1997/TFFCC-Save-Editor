@@ -48,6 +48,7 @@ namespace TFFCC_Save_Editor
         OpenFileDialog open_extsavedata = new OpenFileDialog();
         OpenFileDialog open_savedata = new OpenFileDialog();
         SaveFileDialog save_savedata = new SaveFileDialog();
+        SaveFileDialog save_extsavedata = new SaveFileDialog();
 
         public dynamic dbJson(string type)
         {
@@ -79,7 +80,7 @@ namespace TFFCC_Save_Editor
             try
             {
                 //Disable savedata.bk & extsavedata.bk stuff
-                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = extsavedata_loaded = false;
+                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = CharEditor_character_comboBox.Enabled = Max_character_stats_button.Enabled = Max_all_characters_stats_button.Enabled = savedata_loaded = extsavedata_loaded = false;
 
                 open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
                 if (open_savedata.ShowDialog() != DialogResult.OK)
@@ -109,11 +110,11 @@ namespace TFFCC_Save_Editor
                 Read_songs(null, null);
 
                 //Enable savedata.bk & extsavedata.bk stuff
-                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = savedata_loaded = extsavedata_loaded = true;
+                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = CharEditor_character_comboBox.Enabled = Max_character_stats_button.Enabled = Max_all_characters_stats_button.Enabled = savedata_loaded = extsavedata_loaded = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Invalid save(s)\n{ex}", "Failed to open the file(s)");
+                MessageBox.Show($"Invalid save(s)\n\n{ex}", "Failed to open the file(s)");
             }
         }
 
@@ -123,11 +124,12 @@ namespace TFFCC_Save_Editor
             try
             {
                 File.WriteAllBytes(open_savedata.FileName, savedata);
-                MessageBox.Show($"Successfully saved to {open_savedata.FileName}", "Successfully saved the file");
+                File.WriteAllBytes(open_extsavedata.FileName, extsavedata);
+                MessageBox.Show($"Successfully saved to:\n{open_savedata.FileName}\n\n{open_extsavedata.FileName}", "Successfully saved the file");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to save to {open_savedata.FileName}\n{ex}", "Failed to save the file");
+                MessageBox.Show($"Failed to save to:\n{open_savedata.FileName}\n\n{open_extsavedata.FileName}\n\n{ex}", "Failed to save the file");
             }
         }
 
@@ -138,13 +140,19 @@ namespace TFFCC_Save_Editor
             {
                 save_savedata.Filter = "savedata.bk Files | *.bk";
                 if (save_savedata.ShowDialog() != DialogResult.OK) return;
+                save_extsavedata.Filter = "extsavedata.bk Files | *.bk";
+                if (save_extsavedata.ShowDialog() != DialogResult.OK) return;
+
                 open_savedata.FileName = save_savedata.FileName;
                 File.WriteAllBytes(save_savedata.FileName, savedata);
-                MessageBox.Show($"Successfully saved to {save_savedata.FileName}", "Successfully saved the file");
+                open_savedata.FileName = save_extsavedata.FileName;
+                File.WriteAllBytes(save_extsavedata.FileName, extsavedata);
+
+                MessageBox.Show($"Successfully saved to:\n{save_savedata.FileName}\n\n{save_extsavedata.FileName}", "Successfully saved the file");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to save to {save_savedata.FileName}\n{ex}", "Failed to save the file");
+                MessageBox.Show($"Failed to save to:\n{save_savedata.FileName}\n\n{save_extsavedata.FileName}\n{ex}", "Failed to save the file");
             }
         }
 
@@ -514,7 +522,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to update Records\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to update Records\n\n{ex}", "Error");
             }
         }
         //Write Records tab
@@ -755,7 +763,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to store Records changes\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to store Records changes\n\n{ex}", "Error");
             }
         }
 
@@ -840,9 +848,10 @@ namespace TFFCC_Save_Editor
 
                 //Character Editor
                 CharEditor_character_changed = false;
-                //if the character is changed in the character editor then set CharEditor_character_changed to true
-                if (((ComboBox)sender) != null && ((ComboBox)sender).Name == "CharEditor_character_comboBox") CharEditor_character_changed = true;
+                //if the character is changedor if max button is pressed in the character editor then set CharEditor_character_changed to true
+                if (sender != null && sender.ToString() == "Max Button Pressed" || ((ComboBox)sender) != null && ((ComboBox)sender).Name == "CharEditor_character_comboBox") CharEditor_character_changed = true;
 
+                Max_character_stats_button.Text = $"Max {CharEditor_character_comboBox.SelectedItem} Stats";
                 CharEditor_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{CharEditor_character_comboBox.SelectedItem}.png"));
                 CharEditor_level_textBox.Text = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level"], 16)].ToString();
                 CharEditor_exp_textBox.Text = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["exp"], 16)).ToString();
@@ -897,7 +906,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to update Characters\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to update Characters\n\n{ex}", "Error");
             }
         }
         //Write Characters tab
@@ -931,9 +940,9 @@ namespace TFFCC_Save_Editor
                 //Write HP
                 Array.Copy(BitConverter.GetBytes((ushort)CharEditor_hp_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16), 2);
                 //Write Level Resets
-                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt16(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)] = (byte)CharEditor_levelResets_numericUpDown.Value;
+                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)] = (byte)CharEditor_levelResets_numericUpDown.Value;
                 //Write Total CP
-                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt16(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)] = (byte)CharEditor_totalCP_numericUpDown.Value;
+                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)] = (byte)CharEditor_totalCP_numericUpDown.Value;
                 //Write Strength
                 Array.Copy(BitConverter.GetBytes((ushort)CharEditor_strength_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16), 2);
                 //Write Magic
@@ -951,9 +960,10 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to store Characters changes\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to store Characters changes\n\n{ex}", "Error");
             }
         }
+
         //Set level reset value, level reset image and minimum Total CP value
         private void Set_LvReset_totalCP(object sender, EventArgs e)
         {
@@ -1004,9 +1014,93 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to store Characters Editor changes\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to store Characters Editor changes\n\n{ex}", "Error");
             }
         }
+
+        //Max current character stats
+        private void Max_character_stats_button_Click(object sender, EventArgs e)
+        {
+            if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
+            try
+            {
+                var dbCharactersJSON = dbJson("characters");
+                if (dbCharactersJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                //Write Max HP
+                Array.Copy(new byte[] { 0x0F, 0x27 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16), 2);
+                //Write Max Level Resets
+                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)] = 0x0A;
+                //Write Max Total CP
+                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)] = 0x63;
+                //Write Max Strength
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16), 2);
+                //Write Max Magic
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["magic"], 16), 2);
+                //Write Max Agility
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["agility"], 16), 2);
+                //Write Max Luck
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["luck"], 16), 2);
+                //Write Max Stamina
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16), 2);
+                //Write Max Spirit
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16), 2);
+
+                Read_characters("Max Button Pressed", null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to store Characters changesn\n{ex}", "Error");
+            }
+        }
+        //Max all characters stats
+        private void Max_all_characters_stats_button_Click(object sender, EventArgs e)
+        {
+            if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
+            try
+            {
+                var dbCharactersJSON = dbJson("characters");
+                if (dbCharactersJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                foreach (KeyValuePair<string, object> character in dbCharactersJSON)
+                {
+                    //Write Max HP
+                    Array.Copy(new byte[] { 0x0F, 0x27 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["hp"], 16), 2);
+                    //Write Max Level Resets
+                    (charType(character.Key) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[character.Key]["level resets"], 16)] = 0x0A;
+                    //Write Max Total CP
+                    (charType(character.Key) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[character.Key]["total cp"], 16)] = 0x63;
+                    //Write Max Strength
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["strength"], 16), 2);
+                    //Write Max Magic
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["magic"], 16), 2);
+                    //Write Max Agility
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["agility"], 16), 2);
+                    //Write Max Luck
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["luck"], 16), 2);
+                    //Write Max Stamina
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["stamina"], 16), 2);
+                    //Write Max Spirit
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["spirit"], 16), 2);
+                }
+
+                MessageBox.Show("All characters stats maxed successfully!", "All Maxed!");
+                Read_characters("Max Button Pressed", null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to store Characters changes\n\n{ex}", "Error");
+            }
+        }
+
 
         //Read Items tab
         private void Read_items(object sender, EventArgs e)
@@ -1032,7 +1126,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to update Items\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to update Items\n\n{ex}", "Error");
             }
         }
         //Write Items tab
@@ -1055,7 +1149,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to store Items changes\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to store Items changes\n\n{ex}", "Error");
             }
         }
 
@@ -1083,7 +1177,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to update CollectaCards\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to update CollectaCards\n\n{ex}", "Error");
             }
 
         }
@@ -1111,7 +1205,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to store CollectaCards changes\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to store CollectaCards changes\n\n{ex}", "Error");
             }
         }
 
@@ -1356,7 +1450,7 @@ namespace TFFCC_Save_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Invalid extsavedata.bk\n{ex}", "Failed to open the file");
+                MessageBox.Show($"Invalid extsavedata.bk\n\n{ex}", "Failed to open the file");
             }
         }
 
