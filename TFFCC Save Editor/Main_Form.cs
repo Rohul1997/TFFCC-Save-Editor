@@ -852,6 +852,42 @@ namespace TFFCC_Save_Editor
                 CharEditor_stamina_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16));
                 CharEditor_spirit_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16));
                 Set_LvReset_totalCP("reading level reset", null);
+                switch (CharEditor_levelResets_numericUpDown.Value)
+                {
+                    case 0:
+                        CharEditor_levelResets_picturebox.Image = null;
+                        break;
+                    case 1:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_1;
+                        break;
+                    case 2:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_2;
+                        break;
+                    case 3:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_3;
+                        break;
+                    case 4:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_4;
+                        break;
+                    case 5:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_5;
+                        break;
+                    case 6:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_6;
+                        break;
+                    case 7:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_7;
+                        break;
+                    case 8:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_8;
+                        break;
+                    case 9:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_9;
+                        break;
+                    default:
+                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_10;
+                        break;
+                }
 
                 CharEditor_character_changed = false;
             }
@@ -924,47 +960,36 @@ namespace TFFCC_Save_Editor
                 {
                     case 0:
                         CharEditor_totalCP_numericUpDown.Minimum = 0;
-                        CharEditor_levelResets_picturebox.Image = null;
                         break;
                     case 1:
                         CharEditor_totalCP_numericUpDown.Minimum = 10;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_1;
                         break;
                     case 2:
                         CharEditor_totalCP_numericUpDown.Minimum = 18;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_2;
                         break;
                     case 3:
                         CharEditor_totalCP_numericUpDown.Minimum = 26;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_3;
                         break;
                     case 4:
                         CharEditor_totalCP_numericUpDown.Minimum = 32;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_4;
                         break;
                     case 5:
                         CharEditor_totalCP_numericUpDown.Minimum = 38;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_5;
                         break;
                     case 6:
                         CharEditor_totalCP_numericUpDown.Minimum = 42;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_6;
                         break;
                     case 7:
                         CharEditor_totalCP_numericUpDown.Minimum = 44;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_7;
                         break;
                     case 8:
                         CharEditor_totalCP_numericUpDown.Minimum = 46;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_8;
                         break;
                     case 9:
                         CharEditor_totalCP_numericUpDown.Minimum = 48;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_9;
                         break;
                     default:
                         CharEditor_totalCP_numericUpDown.Minimum = 49;
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_10;
                         break;
                 }
 
