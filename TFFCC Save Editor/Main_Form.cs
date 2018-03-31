@@ -1118,7 +1118,8 @@ namespace TFFCC_Save_Editor
                 for (int i = 0; i < 92; i++)
                 {
                     var item = ((Dictionary<string, object>)dbItemsJSON).ToList()[i].Key;
-                    Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = item;
+                    Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Items.{item}.png"));
+                    Items_dataGridView.Rows[i].Cells["Item"].Tag = item;
 
                     Items_dataGridView.Rows[i].Cells["Quantity"].Value = savedata[Convert.ToUInt16(dbItemsJSON[item]["offset"], 16)] - 0x80;
                     Items_dataGridView.Rows[i].Cells["Quantity"].Value = (int)Items_dataGridView.Rows[i].Cells["Quantity"].Value < 0 ? 0 : Items_dataGridView.Rows[i].Cells["Quantity"].Value;
@@ -1144,7 +1145,7 @@ namespace TFFCC_Save_Editor
 
                 for (int i = 0; i < Items_dataGridView.RowCount; i++)
                 {
-                    savedata[Convert.ToUInt16(dbItemsJSON[Items_dataGridView.Rows[i].Cells["Item"].Value.ToString()]["offset"], 16)] = (byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80);
+                    savedata[Convert.ToUInt16(dbItemsJSON[Items_dataGridView.Rows[i].Cells["Item"].Tag.ToString()]["offset"], 16)] = (byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80);
                 }
             }
             catch (Exception ex)
