@@ -1153,6 +1153,20 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Items changes\n\n{ex}", "Error");
             }
         }
+        //Set item description
+        private void Set_item_desc(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!savedata_loaded) return;
+            try
+            {
+                Item_equip_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Tag.ToString()]["equip"].ToString();
+                Item_quest_med_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Tag.ToString()]["quest medley"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update Items description\n\n{ex}", "Error");
+            }
+        }
 
         //Read CollectaCards tab
         private void Read_collectacards(object sender, EventArgs e)

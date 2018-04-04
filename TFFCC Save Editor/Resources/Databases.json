@@ -28,371 +28,555 @@
   "items": {
     "Potion": {
       "offset": "0xCA0",
-      "value": "0x00"
+      "value": "0x00",
+      "equip": "Used when HP gauge drops below 20%. Restores 30% of HP gauge.",
+      "quest medley": "Used from the map during a Quest Medley. Restores 30% of the HP gauge."
     },
     "Hi-Potion": {
       "offset": "0xCA1",
-      "value": "0x01"
+      "value": "0x01",
+      "equip": "Used when HP drops below 15%. Restores 50% of HP gauge.",
+      "quest medley": "Used from the map during a Quest Medley. Restores 50% of the HP gauge."
     },
     "X-Potion": {
       "offset": "0xCA2",
-      "value": "0x02"
+      "value": "0x02",
+      "equip": "Used when HP drops below 10%. Restores 70% of HP gauge.",
+      "quest medley": "Used from the map during a Quest Medley. Restores 70% of the HP gauge."
     },
     "Elixir": {
       "offset": "0xCA3",
-      "value": "0x03"
+      "value": "0x03",
+      "equip": "Used when HP drops below 10%. Restores all HP.",
+      "quest medley": "Used from the map during a Quest Medley. Completely restores the HP gauge."
     },
     "Phoenix Down": {
       "offset": "0xCA4",
-      "value": "0x04"
+      "value": "0x04",
+      "equip": "Used when HP gauge hits zero. Restores 30% of HP gauge.",
+      "quest medley": "N/A"
     },
     "Phoenix Pinion": {
       "offset": "0xCA5",
-      "value": "0x05"
+      "value": "0x05",
+      "equip": "Used when HP gauge hits zero. Restores all HP.",
+      "quest medley": "N/A"
     },
     "Light Curtain": {
       "offset": "0xCA6",
-      "value": "0x06"
+      "value": "0x06",
+      "equip": "Used at the beginning of the Music Stage. Reduces damage taken by the party until the end of the stage. (Low strength)",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Reduces damage taken by the party. (Low strength)"
     },
     "Hero Drink": {
       "offset": "0xCA7",
-      "value": "0x07"
+      "value": "0x07",
+      "equip": "Used at the beginning of the Music Stage. Reduces damage taken by the party until the end of the stage. (Full strength)",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Reduces damage taken by the party. (Full strength)"
     },
     "Mog's Amulet": {
       "offset": "0xCA8",
-      "value": "0x08"
+      "value": "0x08",
+      "equip": "Used at the beginning of the Music Stage. Increases the success rate for probability-type abilities by 50%.",
+      "quest medley": "N/A"
     },
     "Ribbon": {
       "offset": "0xCA9",
-      "value": "0x09"
+      "value": "0x09",
+      "equip": "Used at the beginning of the Music Stage. Makes you somewhat more likely to receive rare items. (Full strength)",
+      "quest medley": "N/A"
     },
     "Giant's Tonic": {
       "offset": "0xCAA",
-      "value": "0x0A"
+      "value": "0x0A",
+      "equip": "Used at the beginning of the Music Stage. Increases party members' max HP by 15%.",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Increases party members' HP by 15%."
     },
     "Bacchus's Cider": {
       "offset": "0xCAB",
-      "value": "0x0B"
+      "value": "0x0B",
+      "equip": "Used at the beginning of the Music Stage. Increases party members' Strength by 15%.",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Increases party members' Strength by 15%."
     },
     "Sage's Wisdom": {
       "offset": "0xCAC",
-      "value": "0x0C"
+      "value": "0x0C",
+      "equip": "Used at the beginning of the Music Stage. Increases party members' Magic by 15%.",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Increases party members' Magic by 15%."
     },
     "Hermes Sandals": {
       "offset": "0xCAD",
-      "value": "0x0D"
+      "value": "0x0D",
+      "equip": "Used at the beginning of the Music Stage. Increases party members' Agility by 15%.",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Increases party members' Agility by 15%."
     },
     "Iron Draft": {
       "offset": "0xCAE",
-      "value": "0x0E"
+      "value": "0x0E",
+      "equip": "Used at the beginning of the Music Stage. Increases party members' Stamina by 15%.",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Increases party members' Stamina by 15%."
     },
     "Saint's Spirit": {
       "offset": "0xCAF",
-      "value": "0x0F"
+      "value": "0x0F",
+      "equip": "Used at the beginning of the Music Stage. Increases party members' Spirit by 15%.",
+      "quest medley": "Used from the map during a Quest Medley. Effects are triggered when the next stage begins. Increases party members' Spirit by 15%."
     },
     "Growth Egg": {
       "offset": "0xCB0",
-      "value": "0x10"
+      "value": "0x10",
+      "equip": "Activates at the end of a Music Stage. Multiplies the EXP received by all party members by two.",
+      "quest medley": "N/A"
     },
     "Miratete's Memoirs": {
       "offset": "0xCB1",
-      "value": "0x11"
+      "value": "0x11",
+      "equip": "Activates at the end of a Music Stage. Multiplies the EXP received by all party members by six.",
+      "quest medley": "N/A"
     },
     "Molulu's Charm": {
       "offset": "0xCB2",
-      "value": "0x12"
+      "value": "0x12",
+      "equip": "Used at the beginning of the Music Stage. Receive only CollectaCards when clearing a stage, and increases chance to receive new cards.",
+      "quest medley": "N/A"
     },
     "Ramuh's Magicite": {
       "offset": "0xCB3",
-      "value": "0x13"
+      "value": "0x13",
+      "equip": "Used during BMS and activated during the Feature Zone. Ensures that you summon Ramuh if summoning is successful.",
+      "quest medley": "N/A"
     },
     "Shiva's Magicite": {
       "offset": "0xCB4",
-      "value": "0x14"
+      "value": "0x14",
+      "equip": "Used during BMS and activated during the Feature Zone. Ensures that you summon Shiva if summoning is successful.",
+      "quest medley": "N/A"
     },
     "Ifrit's Magicite": {
       "offset": "0xCB5",
-      "value": "0x15"
+      "value": "0x15",
+      "equip": "Used during BMS and activated during the Feature Zone. Ensures that you summon Ifrit if summoning is successful.",
+      "quest medley": "N/A"
     },
     "Odin's Magicite": {
       "offset": "0xCB6",
-      "value": "0x16"
+      "value": "0x16",
+      "equip": "Used during BMS and activated during the Feature Zone. Ensures that you summon Odin if summoning is successful.",
+      "quest medley": "N/A"
     },
     "Bahamut's Magicite": {
       "offset": "0xCB7",
-      "value": "0x17"
+      "value": "0x17",
+      "equip": "Used during BMS and activated during the Feature Zone. Ensures that you summon Bahamut if summoning is successful.",
+      "quest medley": "N/A"
     },
     "Knights' Magicite": {
       "offset": "0xCB8",
-      "value": "0x18"
+      "value": "0x18",
+      "equip": "Used during BMS and activated during the Feature Zone. Ensures that you summon Knights of the Round if summoning is successful.",
+      "quest medley": "N/A"
     },
     "Shuriken": {
       "offset": "0xCB9",
-      "value": "0x19"
+      "value": "0x19",
+      "equip": "Used during BMS and activated when an enemy's HP dips below half to cause some damage. (Very low strength)",
+      "quest medley": "N/A"
     },
     "Fuma Shuriken": {
       "offset": "0xCBA",
-      "value": "0x1A"
+      "value": "0x1A",
+      "equip": "Used during BMS and activated whenan enemy's HP dips below half to cause some damage. (Low strength)",
+      "quest medley": "N/A"
     },
     "Antarctic Wind": {
       "offset": "0xCBB",
-      "value": "0x1B"
+      "value": "0x1B",
+      "equip": "Used during BMS and activated when an enemy's HP dips below 1/3 to cause some damage. (Medium strength)",
+      "quest medley": "N/A"
     },
     "Bomb Fragment": {
       "offset": "0xCBC",
-      "value": "0x1C"
+      "value": "0x1C",
+      "equip": "Used during BMS and activated when an enemy's HP dips below below half to cause some damage. (Full strength)",
+      "quest medley": "N/A"
     },
     "Zeus's Wrath": {
       "offset": "0xCBD",
-      "value": "0x1D"
+      "value": "0x1D",
+      "equip": "Used during BMS and activated when an enemy's HP dips below 3/4 to cause some damage. (Extra strength)",
+      "quest medley": "N/A"
     },
     "Brigand's Gloves": {
       "offset": "0xCBE",
-      "value": "0x1E"
+      "value": "0x1E",
+      "equip": "Used during BMS and activated before using the Steal ability, guaranteeing that you successfully steal an item.",
+      "quest medley": "N/A"
     },
     "Tantal Greens": {
       "offset": "0xCBF",
-      "value": "0x1F"
+      "value": "0x1F",
+      "equip": "Used during FMS and activated during Feature Zone. Guarantees that a good chocobo appears during the Chocobo Dash.",
+      "quest medley": "N/A"
     },
     "Gysahl Greens": {
       "offset": "0xCC0",
-      "value": "0x20"
+      "value": "0x20",
+      "equip": "Used during FMS and activated during Feature Zone. Guarantees that a great chocobo appears during the Chocobo Dash.",
+      "quest medley": "N/A"
     },
     "Sylkis Greens": {
       "offset": "0xCC1",
-      "value": "0x21"
+      "value": "0x21",
+      "equip": "Used during FMS and activated during Feature Zone. Guarantees that the fastest chocobo appears during the Chocobo Dash.",
+      "quest medley": "N/A"
     },
     "Pendant": {
       "offset": "0xCC2",
-      "value": "0x22"
+      "value": "0x22",
+      "equip": "Used during FMS and activated during the Feature Zone. Guarantees that you will see the Extended Version.",
+      "quest medley": "N/A"
     },
     "Gysahl Whistle": {
       "offset": "0xCC3",
-      "value": "0x23"
+      "value": "0x23",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Calls Fat Chocobo to the next FMS you can reach. Can only be used once per Chaos Map."
     },
     "Siren": {
       "offset": "0xCC4",
-      "value": "0x24"
+      "value": "0x24",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Summons fearsome foes to the next BMS you can reach. Can only be used once per Chaos Map."
     },
     "Gnomish Bread": {
       "offset": "0xCC5",
-      "value": "0x25"
+      "value": "0x25",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Reveals details of the next stage you can reach. Shows the song title and score type (difficulty)."
     },
     "Teleport Stone": {
       "offset": "0xCC6",
-      "value": "0x26"
+      "value": "0x26",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Moves you onto the next stop without playing through its MS."
     },
     "Tent": {
       "offset": "0xCC7",
-      "value": "0x27"
+      "value": "0x27",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Camp out in the field to fully restore your HP. Adds a day to the count."
     },
     "Jeweled Ring": {
       "offset": "0xCC8",
-      "value": "0x28"
+      "value": "0x28",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Adds a Crystal shard to the possible items you can obtain in the next stage you can reach."
     },
     "Fortune Sphere": {
       "offset": "0xCC9",
-      "value": "0x29"
+      "value": "0x29",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Changes the score type for the next stage you can reach to the next easiest type."
     },
     "Gambler's Spirit": {
       "offset": "0xCCA",
-      "value": "0x2A"
+      "value": "0x2A",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Changes the song for the next stage you can reach to another random selection."
     },
     "LevelDown Nut": {
       "offset": "0xCCB",
-      "value": "0x2B"
+      "value": "0x2B",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. If you conquer the final boss in the current quest, you will receive a Lv. 1 Chaos Map."
     },
     "Scapegoat": {
       "offset": "0xCCC",
-      "value": "0x2C"
+      "value": "0x2C",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Even if you get a game over, you will be revived with full HP from the last stop."
     },
     "Crimson Crest Key": {
       "offset": "0xCCD",
-      "value": "0x2D"
+      "value": "0x2D",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Opens a massive door that is blocking the way, carved with the image of Ifrit."
     },
     "Thunder Crest Key": {
       "offset": "0xCCE",
-      "value": "0x2E"
+      "value": "0x2E",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Opens an aged door that is blocking the way, carved with the image of Ramuh."
     },
     "Crystal Crest Key": {
       "offset": "0xCCF",
-      "value": "0x2F"
+      "value": "0x2F",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Opens an ornate door that is blocking the way, carved with the image of Shiva."
     },
     "Dark Crest Key": {
       "offset": "0xCD0",
-      "value": "0x30"
+      "value": "0x30",
+      "equip": "N/A",
+      "quest medley": "Used from the map during a Quest Medley. Opens a sinister door that is blocking the way, carved with the image of Bahamut."
     },
     "Economy Class Ticket": {
       "offset": "0xCD1",
-      "value": "0x31"
+      "value": "0x31",
+      "equip": "N/A",
+      "quest medley": "Used from Quest Medley selection screen. Calls an Airship Musical Stage to be the first stage of the map. Clearing it will transport you to a random stage on the map before the dungeon entrance."
     },
     "First Class Ticket": {
       "offset": "0xCD2",
-      "value": "0x32"
+      "value": "0x32",
+      "equip": "N/A",
+      "quest medley": "Used from Quest Medley selection screen. Calls an Airship Musical Stage to be the first stage of the map. Clearing it will transport you directly to the dungeon entrance."
     },
     "Curaga Scroll": {
       "offset": "0xCD3",
-      "value": "0x33"
+      "value": "0x33",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Curaga ability.",
+      "quest medley": "N/A"
     },
     "Pray Scroll I": {
       "offset": "0xCD4",
-      "value": "0x34"
+      "value": "0x34",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Pray (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Pray Scroll II": {
       "offset": "0xCD5",
-      "value": "0x35"
+      "value": "0x35",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Pray (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Pray Scroll III": {
       "offset": "0xCD6",
-      "value": "0x36"
+      "value": "0x36",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Pray (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "Brace Scroll I": {
       "offset": "0xCD7",
-      "value": "0x37"
+      "value": "0x37",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Brace (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Brace Scroll II": {
       "offset": "0xCD8",
-      "value": "0x38"
+      "value": "0x38",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Brace (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Brace Scroll III": {
       "offset": "0xCD9",
-      "value": "0x39"
+      "value": "0x39",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Brace (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "Recall Scroll": {
       "offset": "0xCDA",
-      "value": "0x3A"
+      "value": "0x3A",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Recall ability.",
+      "quest medley": "N/A"
     },
     "EXP Up Scroll I": {
       "offset": "0xCDB",
-      "value": "0x3B"
+      "value": "0x3B",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the EXP Up (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "EXP Up Scroll II": {
       "offset": "0xCDC",
-      "value": "0x3C"
+      "value": "0x3C",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the EXP Up (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "EXP Up Scroll III": {
       "offset": "0xCDD",
-      "value": "0x3D"
+      "value": "0x3D",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the EXP Up (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "EXP Hound Scroll": {
       "offset": "0xCDE",
-      "value": "0x3E"
+      "value": "0x3E",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the EXP Hound ability.",
+      "quest medley": "N/A"
     },
     "Pillager's Tome": {
       "offset": "0xCDF",
-      "value": "0x3F"
+      "value": "0x3F",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Treasure Hunter (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Millionaire's Tome": {
       "offset": "0xCE0",
-      "value": "0x40"
+      "value": "0x40",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Spare Change ability.",
+      "quest medley": "N/A"
     },
     "Flare Scroll V": {
       "offset": "0xCE1",
-      "value": "0x41"
+      "value": "0x41",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Level 5 Flare ability.",
+      "quest medley": "N/A"
     },
     "Thief's Tome": {
       "offset": "0xCE2",
-      "value": "0x42"
+      "value": "0x42",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Steal ability.",
+      "quest medley": "N/A"
     },
     "Kupo Nut Recipe": {
       "offset": "0xCE3",
-      "value": "0x43"
+      "value": "0x43",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Sight (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Runner's Tome": {
       "offset": "0xCE4",
-      "value": "0x44"
+      "value": "0x44",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Dash ability.",
+      "quest medley": "N/A"
     },
     "Cura Scroll": {
       "offset": "0xCE5",
-      "value": "0x45"
+      "value": "0x45",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Cura ability.",
+      "quest medley": "N/A"
     },
     "Mighty Guard Scroll": {
       "offset": "0xCE6",
-      "value": "0x46"
+      "value": "0x46",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Mighty Guard ability.",
+      "quest medley": "N/A"
     },
     "Elegy Scroll I": {
       "offset": "0xCE7",
-      "value": "0x47"
+      "value": "0x47",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Elegy (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Elegy Scroll II": {
       "offset": "0xCE8",
-      "value": "0x48"
+      "value": "0x48",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Elegy (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Elegy Scroll III": {
       "offset": "0xCE9",
-      "value": "0x49"
+      "value": "0x49",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Elegy (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "Berserk Scroll I": {
       "offset": "0xCEA",
-      "value": "0x4A"
+      "value": "0x4A",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Berserk (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Berserk Scroll II": {
       "offset": "0xCEB",
-      "value": "0x4B"
+      "value": "0x4B",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Berserk (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Berserk Scroll III": {
       "offset": "0xCEC",
-      "value": "0x4C"
+      "value": "0x4C",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Berserk (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "Meteor Scroll": {
       "offset": "0xCED",
-      "value": "0x4D"
+      "value": "0x4D",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Meteor ability.",
+      "quest medley": "N/A"
     },
     "Ultima Scroll": {
       "offset": "0xCEE",
-      "value": "0x4E"
+      "value": "0x4E",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Ultima ability.",
+      "quest medley": "N/A"
     },
     "Doomsday Scroll": {
       "offset": "0xCEF",
-      "value": "0x4F"
+      "value": "0x4F",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Doomsday ability.",
+      "quest medley": "N/A"
     },
     "Brawler Scroll I": {
       "offset": "0xCF0",
-      "value": "0x50"
+      "value": "0x50",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Brawler (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Brawler Scroll II": {
       "offset": "0xCF1",
-      "value": "0x51"
+      "value": "0x51",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Brawler (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Brawler Scroll III": {
       "offset": "0xCF2",
-      "value": "0x52"
+      "value": "0x52",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Brawler (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "Cry Scroll I": {
       "offset": "0xCF3",
-      "value": "0x53"
+      "value": "0x53",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Cry (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Cry Scroll II": {
       "offset": "0xCF4",
-      "value": "0x54"
+      "value": "0x54",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Cry (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Cry Scroll III": {
       "offset": "0xCF5",
-      "value": "0x55"
+      "value": "0x55",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Cry (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "Scare Scroll": {
       "offset": "0xCF6",
-      "value": "0x56"
+      "value": "0x56",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Scare ability.",
+      "quest medley": "N/A"
     },
     "Choco Cure Scroll": {
       "offset": "0xCF7",
-      "value": "0x57"
+      "value": "0x57",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Choco Cure ability.",
+      "quest medley": "N/A"
     },
     "Move-HP Up Scroll": {
       "offset": "0xCF8",
-      "value": "0x58"
+      "value": "0x58",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Move-HP Up ability.",
+      "quest medley": "N/A"
     },
     "Libra Scroll I": {
       "offset": "0xCF9",
-      "value": "0x59"
+      "value": "0x59",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Libra (Lv1) ability.",
+      "quest medley": "N/A"
     },
     "Libra Scroll II": {
       "offset": "0xCFA",
-      "value": "0x5A"
+      "value": "0x5A",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Libra (Lv2) ability.",
+      "quest medley": "N/A"
     },
     "Libra Scroll III": {
       "offset": "0xCFB",
-      "value": "0x5B"
+      "value": "0x5B",
+      "equip": "Used when you clear a Music Stage. Causes the party leader to acquire the Libra (Lv3) ability.",
+      "quest medley": "N/A"
     },
     "#001 Warrior of Light": {
       "normal offset": "0x3497",
