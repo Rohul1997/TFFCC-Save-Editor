@@ -1168,6 +1168,7 @@ namespace TFFCC_Save_Editor
             }
         }
 
+
         //Read CollectaCards tab
         private void Read_collectacards(object sender, EventArgs e)
         {
@@ -1194,7 +1195,6 @@ namespace TFFCC_Save_Editor
             {
                 MessageBox.Show($"Something went wrong while trying to update CollectaCards\n\n{ex}", "Error");
             }
-
         }
         //Write CollectaCards tab
         private void Write_collectacards(object sender, EventArgs e)
@@ -1221,6 +1221,26 @@ namespace TFFCC_Save_Editor
             catch (Exception ex)
             {
                 MessageBox.Show($"Something went wrong while trying to store CollectaCards changes\n\n{ex}", "Error");
+            }
+        }
+        //Set card description
+        private void Set_card_desc(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!savedata_loaded) return;
+            try
+            {
+                card_normal_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Normal.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Normal.png"));
+                card_rare_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Rare.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Rare.png"));
+                card_premium_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Premium.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Premium.png"));
+                card_back_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Back.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Back.png"));
+
+                card_normal_description_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Value.ToString()]["normal description"].ToString();
+                card_rare_description_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Value.ToString()]["rare description"].ToString();
+                card_premium_description_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Value.ToString()]["premium description"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update CollectaCards description\n\n{ex}", "Error");
             }
         }
 
