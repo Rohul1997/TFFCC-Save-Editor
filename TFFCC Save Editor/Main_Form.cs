@@ -1156,11 +1156,12 @@ namespace TFFCC_Save_Editor
         //Set item description
         private void Set_item_desc(object sender, DataGridViewCellEventArgs e)
         {
-            if (!savedata_loaded) return;
             try
             {
-                Item_equip_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Tag.ToString()]["equip"].ToString();
-                Item_quest_med_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Tag.ToString()]["quest medley"].ToString();
+                var iName = ((DataGridView)sender)[0, e.RowIndex].Tag == null ? "Potion" : ((DataGridView)sender)[0, e.RowIndex].Tag.ToString();
+
+                Item_equip_richTextBox.Text = dbJson("items")[iName]["equip"].ToString();
+                Item_quest_med_richTextBox.Text = dbJson("items")[iName]["quest medley"].ToString();
             }
             catch (Exception ex)
             {
@@ -1226,17 +1227,18 @@ namespace TFFCC_Save_Editor
         //Set card description
         private void Set_card_desc(object sender, DataGridViewCellEventArgs e)
         {
-            if (!savedata_loaded) return;
             try
             {
-                card_normal_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Normal.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Normal.png"));
-                card_rare_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Rare.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Rare.png"));
-                card_premium_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Premium.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Premium.png"));
-                card_back_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Back.{((DataGridView)sender)[0, e.RowIndex].Value.ToString()} Back.png"));
+                var cName = ((DataGridView)sender)[0, e.RowIndex].Value == null ? "#001 Warrior of Light" : ((DataGridView)sender)[0, e.RowIndex].Value.ToString();
 
-                card_normal_description_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Value.ToString()]["normal description"].ToString();
-                card_rare_description_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Value.ToString()]["rare description"].ToString();
-                card_premium_description_richTextBox.Text = dbJson("items")[((DataGridView)sender)[0, e.RowIndex].Value.ToString()]["premium description"].ToString();
+                card_normal_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Normal.{cName} Normal.png"));
+                card_rare_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Rare.{cName} Rare.png"));
+                card_premium_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Premium.{cName} Premium.png"));
+                card_back_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Back.{cName} Back.png"));
+
+                card_normal_description_richTextBox.Text = dbJson("items")[cName]["normal description"].ToString();
+                card_rare_description_richTextBox.Text = dbJson("items")[cName]["rare description"].ToString();
+                card_premium_description_richTextBox.Text = dbJson("items")[cName]["premium description"].ToString();
             }
             catch (Exception ex)
             {

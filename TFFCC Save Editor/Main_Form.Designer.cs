@@ -54,16 +54,16 @@ namespace TFFCC_Save_Editor
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.Progress_label = new System.Windows.Forms.Label();
             this.Player_name_label = new System.Windows.Forms.Label();
@@ -278,12 +278,28 @@ namespace TFFCC_Save_Editor
             this.Item_equip_richTextBox = new System.Windows.Forms.RichTextBox();
             this.max_items_button = new System.Windows.Forms.Button();
             this.Items_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Item = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CollectaCards_tabPage = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.card_premium_description_groupBox = new System.Windows.Forms.GroupBox();
+            this.card_premium_description_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.card_rare_description_groupBox = new System.Windows.Forms.GroupBox();
+            this.card_rare_description_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.card_normal_description_groupBox = new System.Windows.Forms.GroupBox();
+            this.card_normal_description_richTextBox = new System.Windows.Forms.RichTextBox();
             this.max_all_cards_button = new System.Windows.Forms.Button();
             this.max_premium_cards_button = new System.Windows.Forms.Button();
             this.max_rare_cards_button = new System.Windows.Forms.Button();
             this.max_normal_cards_button = new System.Windows.Forms.Button();
             this.Cards_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_normal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_rare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Card_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Songs_tabPage = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -295,12 +311,6 @@ namespace TFFCC_Save_Editor
             this.Open_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.card_normal_description_groupBox = new System.Windows.Forms.GroupBox();
-            this.card_rare_description_groupBox = new System.Windows.Forms.GroupBox();
-            this.card_premium_description_groupBox = new System.Windows.Forms.GroupBox();
-            this.card_normal_description_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.card_rare_description_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.card_premium_description_richTextBox = new System.Windows.Forms.RichTextBox();
             this.Highest_rank_pictureBox = new System.Windows.Forms.PictureBox();
             this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
             this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
@@ -322,16 +332,6 @@ namespace TFFCC_Save_Editor
             this.card_rare_pictureBox = new System.Windows.Forms.PictureBox();
             this.card_premium_pictureBox = new System.Windows.Forms.PictureBox();
             this.card_normal_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Card_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_normal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_rare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Card_premium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.Item = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
@@ -414,12 +414,16 @@ namespace TFFCC_Save_Editor
             this.Item_equip_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
             this.CollectaCards_tabPage.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.card_premium_description_groupBox.SuspendLayout();
+            this.card_rare_description_groupBox.SuspendLayout();
+            this.card_normal_description_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.card_normal_description_groupBox.SuspendLayout();
-            this.card_rare_description_groupBox.SuspendLayout();
-            this.card_premium_description_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Highest_rank_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
@@ -441,10 +445,6 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.card_rare_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_premium_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_normal_pictureBox)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -635,8 +635,8 @@ namespace TFFCC_Save_Editor
             // 
             // songs_Date
             // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle10;
             this.songs_Date.HeaderText = "Date";
             this.songs_Date.Name = "songs_Date";
             this.songs_Date.Width = 68;
@@ -3216,7 +3216,7 @@ namespace TFFCC_Save_Editor
             this.Item_quest_med_richTextBox.ReadOnly = true;
             this.Item_quest_med_richTextBox.Size = new System.Drawing.Size(216, 180);
             this.Item_quest_med_richTextBox.TabIndex = 1;
-            this.Item_quest_med_richTextBox.Text = "Used from the map during a Quest Medley. Restores 30% of the HP gauge.";
+            this.Item_quest_med_richTextBox.Text = "";
             // 
             // Item_equip_groupBox
             // 
@@ -3237,7 +3237,7 @@ namespace TFFCC_Save_Editor
             this.Item_equip_richTextBox.ReadOnly = true;
             this.Item_equip_richTextBox.Size = new System.Drawing.Size(216, 180);
             this.Item_equip_richTextBox.TabIndex = 1;
-            this.Item_equip_richTextBox.Text = "Used when HP gauge drops below 20%. Restores 30% of HP gauge.";
+            this.Item_equip_richTextBox.Text = "";
             // 
             // max_items_button
             // 
@@ -3256,43 +3256,61 @@ namespace TFFCC_Save_Editor
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle13;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Items_dataGridView.Name = "Items_dataGridView";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.Items_dataGridView.RowHeadersVisible = false;
             this.Items_dataGridView.Size = new System.Drawing.Size(582, 411);
             this.Items_dataGridView.TabIndex = 3;
             this.Items_dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellCheck);
             this.Items_dataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_integer_check);
             this.Items_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Set_item_desc);
+            // 
+            // Item
+            // 
+            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle12.NullValue")));
+            this.Item.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Item.HeaderText = "Item Name";
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
+            this.Item.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MaxInputLength = 2;
+            this.Quantity.Name = "Quantity";
             // 
             // CollectaCards_tabPage
             // 
@@ -3315,6 +3333,115 @@ namespace TFFCC_Save_Editor
             this.CollectaCards_tabPage.Size = new System.Drawing.Size(824, 443);
             this.CollectaCards_tabPage.TabIndex = 2;
             this.CollectaCards_tabPage.Text = "CollectaCards";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.card_back_pictureBox);
+            this.groupBox5.Location = new System.Drawing.Point(600, 189);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(219, 162);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Card Back";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.card_rare_pictureBox);
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
+            this.groupBox3.Location = new System.Drawing.Point(600, 26);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(219, 162);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "[R] Rare Card";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.card_premium_pictureBox);
+            this.groupBox4.ForeColor = System.Drawing.Color.Black;
+            this.groupBox4.Location = new System.Drawing.Point(380, 189);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(219, 162);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "[P] Premium Card";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.card_normal_pictureBox);
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.Location = new System.Drawing.Point(380, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(219, 162);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "[N] Normal Card";
+            // 
+            // card_premium_description_groupBox
+            // 
+            this.card_premium_description_groupBox.Controls.Add(this.card_premium_description_richTextBox);
+            this.card_premium_description_groupBox.ForeColor = System.Drawing.Color.Black;
+            this.card_premium_description_groupBox.Location = new System.Drawing.Point(676, 352);
+            this.card_premium_description_groupBox.Name = "card_premium_description_groupBox";
+            this.card_premium_description_groupBox.Size = new System.Drawing.Size(145, 88);
+            this.card_premium_description_groupBox.TabIndex = 8;
+            this.card_premium_description_groupBox.TabStop = false;
+            this.card_premium_description_groupBox.Text = "[P] Premium Card";
+            // 
+            // card_premium_description_richTextBox
+            // 
+            this.card_premium_description_richTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.card_premium_description_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.card_premium_description_richTextBox.Location = new System.Drawing.Point(6, 19);
+            this.card_premium_description_richTextBox.Name = "card_premium_description_richTextBox";
+            this.card_premium_description_richTextBox.ReadOnly = true;
+            this.card_premium_description_richTextBox.Size = new System.Drawing.Size(137, 52);
+            this.card_premium_description_richTextBox.TabIndex = 0;
+            this.card_premium_description_richTextBox.Text = "";
+            // 
+            // card_rare_description_groupBox
+            // 
+            this.card_rare_description_groupBox.Controls.Add(this.card_rare_description_richTextBox);
+            this.card_rare_description_groupBox.ForeColor = System.Drawing.Color.Black;
+            this.card_rare_description_groupBox.Location = new System.Drawing.Point(528, 352);
+            this.card_rare_description_groupBox.Name = "card_rare_description_groupBox";
+            this.card_rare_description_groupBox.Size = new System.Drawing.Size(145, 88);
+            this.card_rare_description_groupBox.TabIndex = 8;
+            this.card_rare_description_groupBox.TabStop = false;
+            this.card_rare_description_groupBox.Text = "[R] Rare Card";
+            // 
+            // card_rare_description_richTextBox
+            // 
+            this.card_rare_description_richTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.card_rare_description_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.card_rare_description_richTextBox.Location = new System.Drawing.Point(6, 19);
+            this.card_rare_description_richTextBox.Name = "card_rare_description_richTextBox";
+            this.card_rare_description_richTextBox.ReadOnly = true;
+            this.card_rare_description_richTextBox.Size = new System.Drawing.Size(137, 52);
+            this.card_rare_description_richTextBox.TabIndex = 0;
+            this.card_rare_description_richTextBox.Text = "";
+            // 
+            // card_normal_description_groupBox
+            // 
+            this.card_normal_description_groupBox.Controls.Add(this.card_normal_description_richTextBox);
+            this.card_normal_description_groupBox.ForeColor = System.Drawing.Color.Black;
+            this.card_normal_description_groupBox.Location = new System.Drawing.Point(380, 352);
+            this.card_normal_description_groupBox.Name = "card_normal_description_groupBox";
+            this.card_normal_description_groupBox.Size = new System.Drawing.Size(145, 88);
+            this.card_normal_description_groupBox.TabIndex = 8;
+            this.card_normal_description_groupBox.TabStop = false;
+            this.card_normal_description_groupBox.Text = "[N] Normal Card";
+            // 
+            // card_normal_description_richTextBox
+            // 
+            this.card_normal_description_richTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.card_normal_description_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.card_normal_description_richTextBox.Location = new System.Drawing.Point(6, 19);
+            this.card_normal_description_richTextBox.Name = "card_normal_description_richTextBox";
+            this.card_normal_description_richTextBox.ReadOnly = true;
+            this.card_normal_description_richTextBox.Size = new System.Drawing.Size(137, 52);
+            this.card_normal_description_richTextBox.TabIndex = 0;
+            this.card_normal_description_richTextBox.Text = "";
             // 
             // max_all_cards_button
             // 
@@ -3366,45 +3493,78 @@ namespace TFFCC_Save_Editor
             this.Cards_dataGridView.AllowUserToDeleteRows = false;
             this.Cards_dataGridView.AllowUserToResizeRows = false;
             this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Card_name,
             this.Card_normal,
             this.Card_rare,
             this.Card_premium});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle17;
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Cards_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.Cards_dataGridView.RowHeadersVisible = false;
             this.Cards_dataGridView.Size = new System.Drawing.Size(371, 411);
             this.Cards_dataGridView.TabIndex = 6;
             this.Cards_dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellCheck);
             this.Cards_dataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_integer_check);
             this.Cards_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Set_card_desc);
+            // 
+            // Card_name
+            // 
+            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.Format = "N0";
+            dataGridViewCellStyle16.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle16;
+            this.Card_name.FillWeight = 240F;
+            this.Card_name.HeaderText = "Card Name";
+            this.Card_name.Name = "Card_name";
+            this.Card_name.ReadOnly = true;
+            // 
+            // Card_normal
+            // 
+            this.Card_normal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_normal.HeaderText = "[N] Normal";
+            this.Card_normal.MaxInputLength = 2;
+            this.Card_normal.Name = "Card_normal";
+            // 
+            // Card_rare
+            // 
+            this.Card_rare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_rare.HeaderText = "[R] Rare";
+            this.Card_rare.MaxInputLength = 2;
+            this.Card_rare.Name = "Card_rare";
+            // 
+            // Card_premium
+            // 
+            this.Card_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Card_premium.HeaderText = "[P] Premium";
+            this.Card_premium.MaxInputLength = 2;
+            this.Card_premium.Name = "Card_premium";
             // 
             // Songs_tabPage
             // 
@@ -3517,72 +3677,6 @@ namespace TFFCC_Save_Editor
             this.Save_files_as_ToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.Save_files_as_ToolStripMenuItem.Text = "Save Files As...";
             this.Save_files_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_as_ToolStripMenuItem_Click);
-            // 
-            // card_normal_description_groupBox
-            // 
-            this.card_normal_description_groupBox.Controls.Add(this.card_normal_description_richTextBox);
-            this.card_normal_description_groupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.card_normal_description_groupBox.Location = new System.Drawing.Point(380, 352);
-            this.card_normal_description_groupBox.Name = "card_normal_description_groupBox";
-            this.card_normal_description_groupBox.Size = new System.Drawing.Size(145, 88);
-            this.card_normal_description_groupBox.TabIndex = 8;
-            this.card_normal_description_groupBox.TabStop = false;
-            this.card_normal_description_groupBox.Text = "[N] Normal Card";
-            // 
-            // card_rare_description_groupBox
-            // 
-            this.card_rare_description_groupBox.Controls.Add(this.card_rare_description_richTextBox);
-            this.card_rare_description_groupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(198)))), ((int)(((byte)(105)))));
-            this.card_rare_description_groupBox.Location = new System.Drawing.Point(528, 352);
-            this.card_rare_description_groupBox.Name = "card_rare_description_groupBox";
-            this.card_rare_description_groupBox.Size = new System.Drawing.Size(145, 88);
-            this.card_rare_description_groupBox.TabIndex = 8;
-            this.card_rare_description_groupBox.TabStop = false;
-            this.card_rare_description_groupBox.Text = "[R] Rare Card";
-            // 
-            // card_premium_description_groupBox
-            // 
-            this.card_premium_description_groupBox.Controls.Add(this.card_premium_description_richTextBox);
-            this.card_premium_description_groupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(26)))));
-            this.card_premium_description_groupBox.Location = new System.Drawing.Point(676, 352);
-            this.card_premium_description_groupBox.Name = "card_premium_description_groupBox";
-            this.card_premium_description_groupBox.Size = new System.Drawing.Size(145, 88);
-            this.card_premium_description_groupBox.TabIndex = 8;
-            this.card_premium_description_groupBox.TabStop = false;
-            this.card_premium_description_groupBox.Text = "[P] Premium Card";
-            // 
-            // card_normal_description_richTextBox
-            // 
-            this.card_normal_description_richTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.card_normal_description_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.card_normal_description_richTextBox.Location = new System.Drawing.Point(6, 30);
-            this.card_normal_description_richTextBox.Name = "card_normal_description_richTextBox";
-            this.card_normal_description_richTextBox.ReadOnly = true;
-            this.card_normal_description_richTextBox.Size = new System.Drawing.Size(137, 52);
-            this.card_normal_description_richTextBox.TabIndex = 0;
-            this.card_normal_description_richTextBox.Text = "HP+25\nSuccess Rate: 100%\nCritical Rate: 2%";
-            // 
-            // card_rare_description_richTextBox
-            // 
-            this.card_rare_description_richTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.card_rare_description_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.card_rare_description_richTextBox.Location = new System.Drawing.Point(6, 30);
-            this.card_rare_description_richTextBox.Name = "card_rare_description_richTextBox";
-            this.card_rare_description_richTextBox.ReadOnly = true;
-            this.card_rare_description_richTextBox.Size = new System.Drawing.Size(137, 52);
-            this.card_rare_description_richTextBox.TabIndex = 0;
-            this.card_rare_description_richTextBox.Text = "HP+45/Strength+1\nSuccess Rate: 100%\nCritical Rate: 4%";
-            // 
-            // card_premium_description_richTextBox
-            // 
-            this.card_premium_description_richTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.card_premium_description_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.card_premium_description_richTextBox.Location = new System.Drawing.Point(6, 30);
-            this.card_premium_description_richTextBox.Name = "card_premium_description_richTextBox";
-            this.card_premium_description_richTextBox.ReadOnly = true;
-            this.card_premium_description_richTextBox.Size = new System.Drawing.Size(137, 52);
-            this.card_premium_description_richTextBox.TabIndex = 0;
-            this.card_premium_description_richTextBox.Text = "HP+65/Strength+2\nSuccess Rate: 100%\nCritical Rate: 6%";
             // 
             // Highest_rank_pictureBox
             // 
@@ -3744,7 +3838,6 @@ namespace TFFCC_Save_Editor
             // 
             // card_back_pictureBox
             // 
-            this.card_back_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("card_back_pictureBox.Image")));
             this.card_back_pictureBox.Location = new System.Drawing.Point(2, 14);
             this.card_back_pictureBox.Name = "card_back_pictureBox";
             this.card_back_pictureBox.Size = new System.Drawing.Size(215, 145);
@@ -3754,7 +3847,6 @@ namespace TFFCC_Save_Editor
             // 
             // card_rare_pictureBox
             // 
-            this.card_rare_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("card_rare_pictureBox.Image")));
             this.card_rare_pictureBox.Location = new System.Drawing.Point(2, 14);
             this.card_rare_pictureBox.Name = "card_rare_pictureBox";
             this.card_rare_pictureBox.Size = new System.Drawing.Size(215, 145);
@@ -3764,7 +3856,6 @@ namespace TFFCC_Save_Editor
             // 
             // card_premium_pictureBox
             // 
-            this.card_premium_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("card_premium_pictureBox.Image")));
             this.card_premium_pictureBox.Location = new System.Drawing.Point(2, 14);
             this.card_premium_pictureBox.Name = "card_premium_pictureBox";
             this.card_premium_pictureBox.Size = new System.Drawing.Size(215, 145);
@@ -3774,107 +3865,12 @@ namespace TFFCC_Save_Editor
             // 
             // card_normal_pictureBox
             // 
-            this.card_normal_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("card_normal_pictureBox.Image")));
             this.card_normal_pictureBox.Location = new System.Drawing.Point(2, 14);
             this.card_normal_pictureBox.Name = "card_normal_pictureBox";
             this.card_normal_pictureBox.Size = new System.Drawing.Size(215, 145);
             this.card_normal_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.card_normal_pictureBox.TabIndex = 7;
             this.card_normal_pictureBox.TabStop = false;
-            // 
-            // Card_name
-            // 
-            this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.Format = "N0";
-            dataGridViewCellStyle7.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Card_name.FillWeight = 240F;
-            this.Card_name.HeaderText = "Card Name";
-            this.Card_name.Name = "Card_name";
-            this.Card_name.ReadOnly = true;
-            // 
-            // Card_normal
-            // 
-            this.Card_normal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_normal.HeaderText = "[N] Normal";
-            this.Card_normal.MaxInputLength = 2;
-            this.Card_normal.Name = "Card_normal";
-            // 
-            // Card_rare
-            // 
-            this.Card_rare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_rare.HeaderText = "[R] Rare";
-            this.Card_rare.MaxInputLength = 2;
-            this.Card_rare.Name = "Card_rare";
-            // 
-            // Card_premium
-            // 
-            this.Card_premium.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Card_premium.HeaderText = "[P] Premium";
-            this.Card_premium.MaxInputLength = 2;
-            this.Card_premium.Name = "Card_premium";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.card_normal_pictureBox);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.groupBox2.Location = new System.Drawing.Point(380, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(219, 162);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "[N] Normal Card";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.card_rare_pictureBox);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(198)))), ((int)(((byte)(105)))));
-            this.groupBox3.Location = new System.Drawing.Point(600, 26);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(219, 162);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "[R] Rare Card";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.card_premium_pictureBox);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(192)))), ((int)(((byte)(26)))));
-            this.groupBox4.Location = new System.Drawing.Point(380, 189);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(219, 162);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "[P] Premium Card";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.card_back_pictureBox);
-            this.groupBox5.Location = new System.Drawing.Point(600, 189);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(219, 162);
-            this.groupBox5.TabIndex = 9;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Card Back";
-            // 
-            // Item
-            // 
-            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.Item.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Item.HeaderText = "Item Name";
-            this.Item.Name = "Item";
-            this.Item.ReadOnly = true;
-            this.Item.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MaxInputLength = 2;
-            this.Quantity.Name = "Quantity";
             // 
             // Main_Form
             // 
@@ -3889,7 +3885,7 @@ namespace TFFCC_Save_Editor
             this.MaximizeBox = false;
             this.Name = "Main_Form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.26";
+            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.27";
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
@@ -3982,14 +3978,18 @@ namespace TFFCC_Save_Editor
             this.Item_equip_groupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
             this.CollectaCards_tabPage.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.card_premium_description_groupBox.ResumeLayout(false);
+            this.card_rare_description_groupBox.ResumeLayout(false);
+            this.card_normal_description_groupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).EndInit();
             this.Songs_tabPage.ResumeLayout(false);
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.card_normal_description_groupBox.ResumeLayout(false);
-            this.card_rare_description_groupBox.ResumeLayout(false);
-            this.card_premium_description_groupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Highest_rank_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
@@ -4011,10 +4011,6 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.card_rare_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_premium_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.card_normal_pictureBox)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

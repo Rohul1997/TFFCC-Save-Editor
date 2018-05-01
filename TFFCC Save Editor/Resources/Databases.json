@@ -581,1784 +581,1784 @@
     "#001 Warrior of Light": {
       "normal offset": "0x3497",
       "normal value": "0x5C",
-      "normal description": "HP+25\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "HP+25\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3498",
       "rare value": "0x5D",
-      "rare description": "HP+45/Strength+1\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+45/Strength+1\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3499",
       "premium value": "0x5E",
-      "premium description": "HP+65/Strength+2\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+65/Strength+2\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#002 Princess Sarah": {
       "normal offset": "0x349A",
       "normal value": "0x5F",
-      "normal description": "Luck+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Luck+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x349B",
       "rare value": "0x60",
-      "rare description": "Luck+3\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Luck+3\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x349C",
       "premium value": "0x61",
-      "premium description": "Luck+5\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Luck+5\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#003 Firion": {
       "normal offset": "0x349D",
       "normal value": "0x62",
-      "normal description": "Strength+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Strength+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x349E",
       "rare value": "0x63",
-      "rare description": "Strength+2/Stamina+1\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Strength+2/Stamina+1\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x349F",
       "premium value": "0x64",
-      "premium description": "Strength+3/Stamina+2\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Strength+3/Stamina+2\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#004 Minwu": {
       "normal offset": "0x34A0",
       "normal value": "0x65",
-      "normal description": "Magic+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Magic+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x34A1",
       "rare value": "0x66",
-      "rare description": "HP+20/Magic+1/Spirit+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "HP+20/Magic+1\nSpirit+1\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x34A2",
       "premium value": "0x67",
-      "premium description": "HP+20/Magic+3/Spirit+1\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "HP+20/Magic+3\nSpirit+1\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#005 Onion Knight": {
       "normal offset": "0x34A3",
       "normal value": "0x68",
-      "normal description": "Agility+1\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "normal description": "Agility+1\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "rare offset": "0x34A4",
       "rare value": "0x69",
-      "rare description": "Agility+3\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "Agility+3\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x34A5",
       "premium value": "0x6A",
-      "premium description": "Agility+5\nSuccess Rate: 100%\nCritical Rate: 10%"
+      "premium description": "Agility+5\n\nSuccess Rate: 100%\nCritical Rate: 10%"
     },
     "#006 Cid": {
       "normal offset": "0x34A6",
       "normal value": "0x6B",
-      "normal description": "Luck+1\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "normal description": "Luck+1\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "rare offset": "0x34A7",
       "rare value": "0x6C",
-      "rare description": "HP+20/Luck+2\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "HP+20/Luck+2\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x34A8",
       "premium value": "0x6D",
-      "premium description": "HP+40/Luck+3\nSuccess Rate: 100%\nCritical Rate: 10%"
+      "premium description": "HP+40/Luck+3\n\nSuccess Rate: 100%\nCritical Rate: 10%"
     },
     "#007 Cecil": {
       "normal offset": "0x34A9",
       "normal value": "0x6E",
-      "normal description": "HP+20\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "HP+20\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x34AA",
       "rare value": "0x6F",
-      "rare description": "HP+60\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "HP+60\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x34AB",
       "premium value": "0x70",
-      "premium description": "HP+100\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "HP+100\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#008 Rydia": {
       "normal offset": "0x34AC",
       "normal value": "0x71",
-      "normal description": "Magic+1/Spirit+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Magic+1/Spirit+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x34AD",
       "rare value": "0x72",
-      "rare description": "Magic+3/Spirit+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Magic+3/Spirit+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x34AE",
       "premium value": "0x73",
-      "premium description": "Magic+6/Spirit+3\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Magic+6/Spirit+3\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#009 Kain": {
       "normal offset": "0x34AF",
       "normal value": "0x74",
-      "normal description": "Stength+3/Stamina+2\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Strength+3/Stamina+2\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x34B0",
       "rare value": "0x75",
-      "rare description": "Stength+7/Stamina+7\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Strength+7/Stamina+7\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x34B1",
       "premium value": "0x76",
-      "premium description": "Stength+16/Stamina+16\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Strength+16/Stamina+16\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#010 Edge": {
       "normal offset": "0x34B2",
       "normal value": "0x77",
-      "normal description": "Agility+1\nSuccess Rate: 75%\nCritical Rate: 25%",
+      "normal description": "Agility+1\n\nSuccess Rate: 75%\nCritical Rate: 25%",
       "rare offset": "0x34B3",
       "rare value": "0x78",
-      "rare description": "Agility+3\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "rare description": "Agility+3\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "premium offset": "0x34B4",
       "premium value": "0x79",
-      "premium description": "Agility+5\nSuccess Rate: 75%\nCritical Rate: 35%"
+      "premium description": "Agility+5\n\nSuccess Rate: 75%\nCritical Rate: 35%"
     },
     "#011 Bartz": {
       "normal offset": "0x34B5",
       "normal value": "0x7A",
-      "normal description": "Agility+1\nSuccess Rate: 100%\nCritical Rate: 5%",
+      "normal description": "Agility+1\n\nSuccess Rate: 100%\nCritical Rate: 5%",
       "rare offset": "0x34B6",
       "rare value": "0x7B",
-      "rare description": "Agility+3\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "Agility+3\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x34B7",
       "premium value": "0x7C",
-      "premium description": "Agility+5\nSuccess Rate: 100%\nCritical Rate: 15%"
+      "premium description": "Agility+5\n\nSuccess Rate: 100%\nCritical Rate: 15%"
     },
     "#012 Faris": {
       "normal offset": "0x34B8",
       "normal value": "0x7D",
-      "normal description": "Agility+2\nSuccess Rate: 50%\nCritical Rate: 5%",
+      "normal description": "Agility+2\n\nSuccess Rate: 50%\nCritical Rate: 5%",
       "rare offset": "0x34B9",
       "rare value": "0x7E",
-      "rare description": "Agility+5\nSuccess Rate: 50%\nCritical Rate: 5%",
+      "rare description": "Agility+5\n\nSuccess Rate: 50%\nCritical Rate: 5%",
       "premium offset": "0x34BA",
       "premium value": "0x7F",
-      "premium description": "Agility+9\nSuccess Rate: 50%\nCritical Rate: 5%"
+      "premium description": "Agility+9\n\nSuccess Rate: 50%\nCritical Rate: 5%"
     },
     "#013 Lenna": {
       "normal offset": "0x34BB",
       "normal value": "0x80",
-      "normal description": "Spirit+1\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 80%\nCritical Rate: 15%",
       "rare offset": "0x34BC",
       "rare value": "0x81",
-      "rare description": "Magic+1/Luck+1/Spirit+1\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "rare description": "Magic+1/Luck+1\nSpirit+1\nSuccess Rate: 80%\nCritical Rate: 15%",
       "premium offset": "0x34BD",
       "premium value": "0x82",
-      "premium description": "Magic+1/Luck+1/Spirit+3\nSuccess Rate: 80%\nCritical Rate: 15%"
+      "premium description": "Magic+1/Luck+1\nSpirit+3\nSuccess Rate: 80%\nCritical Rate: 15%"
     },
     "#014 Galuf": {
       "normal offset": "0x34BE",
       "normal value": "0x83",
-      "normal description": "Strength+1\nSuccess Rate: 70%\nCritical Rate: 35%",
+      "normal description": "Strength+1\n\nSuccess Rate: 70%\nCritical Rate: 35%",
       "rare offset": "0x34BF",
       "rare value": "0x84",
-      "rare description": "Strength+1/Stamina+1\nSuccess Rate: 70%\nCritical Rate: 35%",
+      "rare description": "Strength+1/Stamina+1\n\nSuccess Rate: 70%\nCritical Rate: 35%",
       "premium offset": "0x34C0",
       "premium value": "0x85",
-      "premium description": "Strength+3/Stamina+2\nSuccess Rate: 70%\nCritical Rate: 35%"
+      "premium description": "Strength+3/Stamina+2\n\nSuccess Rate: 70%\nCritical Rate: 35%"
     },
     "#015 Terra": {
       "normal offset": "0x34C1",
       "normal value": "0x86",
-      "normal description": "Magic+2\nSuccess Rate: 35%\nCritical Rate: 40%",
+      "normal description": "Magic+2\n\nSuccess Rate: 35%\nCritical Rate: 40%",
       "rare offset": "0x34C2",
       "rare value": "0x87",
-      "rare description": "Magic+5\nSuccess Rate: 35%\nCritical Rate: 40%",
+      "rare description": "Magic+5\n\nSuccess Rate: 35%\nCritical Rate: 40%",
       "premium offset": "0x34C3",
       "premium value": "0x88",
-      "premium description": "Magic+10\nSuccess Rate: 35%\nCritical Rate: 40%"
+      "premium description": "Magic+10\n\nSuccess Rate: 35%\nCritical Rate: 40%"
     },
     "#016 Locke": {
       "normal offset": "0x34C4",
       "normal value": "0x89",
-      "normal description": "Agility+1/Luck+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Agility+1/Luck+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x34C5",
       "rare value": "0x8A",
-      "rare description": "Agility+2/Luck+3\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Agility+2/Luck+3\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x34C6",
       "premium value": "0x8B",
-      "premium description": "Agility+3/Luck+6\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Agility+3/Luck+6\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#017 Celes": {
       "normal offset": "0x34C7",
       "normal value": "0x8C",
-      "normal description": "Magic+1\nSuccess Rate: 100%\nCritical Rate: 5%",
+      "normal description": "Magic+1\n\nSuccess Rate: 100%\nCritical Rate: 5%",
       "rare offset": "0x34C8",
       "rare value": "0x8D",
-      "rare description": "Magic+2/Agility+1\nSuccess Rate: 100%\nCritical Rate: 5%",
+      "rare description": "Magic+2/Agility+1\n\nSuccess Rate: 100%\nCritical Rate: 5%",
       "premium offset": "0x34C9",
       "premium value": "0x8E",
-      "premium description": "Magic+3/Agility+2\nSuccess Rate: 100%\nCritical Rate: 5%"
+      "premium description": "Magic+3/Agility+2\n\nSuccess Rate: 100%\nCritical Rate: 5%"
     },
     "#018 Edgar": {
       "normal offset": "0x34CA",
       "normal value": "0x8F",
-      "normal description": "Strength+1\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "normal description": "Strength+1\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "rare offset": "0x34CB",
       "rare value": "0x90",
-      "rare description": "Strength+1/Stamina+1\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "rare description": "Strength+1/Stamina+1\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "premium offset": "0x34CC",
       "premium value": "0x91",
-      "premium description": "Strength+3/Stamina+2\nSuccess Rate: 75%\nCritical Rate: 30%"
+      "premium description": "Strength+3/Stamina+2\n\nSuccess Rate: 75%\nCritical Rate: 30%"
     },
     "#019 Cloud": {
       "normal offset": "0x34CD",
       "normal value": "0x92",
-      "normal description": "Strength+5\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "normal description": "Strength+5\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "rare offset": "0x34CE",
       "rare value": "0x93",
-      "rare description": "Strength+11\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "rare description": "Strength+11\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "premium offset": "0x34CF",
       "premium value": "0x94",
-      "premium description": "Strength+22\nSuccess Rate: 20%\nCritical Rate: 0%"
+      "premium description": "Strength+22\n\nSuccess Rate: 20%\nCritical Rate: 0%"
     },
     "#020 Aerith": {
       "normal offset": "0x34D0",
       "normal value": "0x95",
-      "normal description": "Spirit+1\nSuccess Rate: 95%\nCritical Rate: 5%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 95%\nCritical Rate: 5%",
       "rare offset": "0x34D1",
       "rare value": "0x96",
-      "rare description": "Magic+1/Spirit+2\nSuccess Rate: 95%\nCritical Rate: 5%",
+      "rare description": "Magic+1/Spirit+2\n\nSuccess Rate: 95%\nCritical Rate: 5%",
       "premium offset": "0x34D2",
       "premium value": "0x97",
-      "premium description": "Magic+2/Spirit+3\nSuccess Rate: 95%\nCritical Rate: 5%"
+      "premium description": "Magic+2/Spirit+3\n\nSuccess Rate: 95%\nCritical Rate: 5%"
     },
     "#021 Tifa": {
       "normal offset": "0x34D3",
       "normal value": "0x98",
-      "normal description": "Strength+1\nSuccess Rate: 85%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 85%\nCritical Rate: 10%",
       "rare offset": "0x34D4",
       "rare value": "0x99",
-      "rare description": "HP+20/Strength+1/Agility+1\nSuccess Rate: 85%\nCritical Rate: 10%",
+      "rare description": "HP+20/Strength+1\nAgility+1\nSuccess Rate: 85%\nCritical Rate: 10%",
       "premium offset": "0x34D5",
       "premium value": "0x9A",
-      "premium description": "HP+20/Strength+3/Agility+1\nSuccess Rate: 85%\nCritical Rate: 10%"
+      "premium description": "HP+20/Strength+3\nAgility+1\nSuccess Rate: 85%\nCritical Rate: 10%"
     },
     "#022 Barret": {
       "normal offset": "0x34D6",
       "normal value": "0x9B",
-      "normal description": "HP+30/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+30/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x34D7",
       "rare value": "0x9C",
-      "rare description": "HP+70/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+70/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x34D8",
       "premium value": "0x9D",
-      "premium description": "HP+130/Stamina+3\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+130/Stamina+3\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#023 Sephiroth": {
       "normal offset": "0x34D9",
       "normal value": "0x9E",
-      "normal description": "Strength+3/Magic+2\nSuccess Rate: 25%\nCritical Rate: 0%",
+      "normal description": "Strength+3/Magic+2\n\nSuccess Rate: 25%\nCritical Rate: 0%",
       "rare offset": "0x34DA",
       "rare value": "0x9F",
-      "rare description": "Strength+7/Magic+4\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "rare description": "Strength+7/Magic+4\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "premium offset": "0x34DB",
       "premium value": "0xA0",
-      "premium description": "Strength+16/Magic+6\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Strength+16/Magic+6\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#024 Squall": {
       "normal offset": "0x34DC",
       "normal value": "0xA1",
-      "normal description": "Strength+1\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "normal description": "Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 15%",
       "rare offset": "0x34DD",
       "rare value": "0xA2",
-      "rare description": "HP+20/Strength+1/Stamina+1\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "rare description": "HP+20/Strength+1\nStamina+1\nSuccess Rate: 80%\nCritical Rate: 15%",
       "premium offset": "0x34DE",
       "premium value": "0xA3",
-      "premium description": "HP+20/Strength+3/Stamina+1\nSuccess Rate: 80%\nCritical Rate: 15%"
+      "premium description": "HP+20/Strength+3\nStamina+1\nSuccess Rate: 80%\nCritical Rate: 15%"
     },
     "#025 Seifer": {
       "normal offset": "0x34DF",
       "normal value": "0xA4",
-      "normal description": "Strength+1\nSuccess Rate: 80%\nCritical Rate: 30%",
+      "normal description": "Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 30%",
       "rare offset": "0x34E0",
       "rare value": "0xA5",
-      "rare description": "HP+20/Strength+1/Luck+1\nSuccess Rate: 80%\nCritical Rate: 30%",
+      "rare description": "HP+20/Strength+1\nLuck+1\nSuccess Rate: 80%\nCritical Rate: 30%",
       "premium offset": "0x34E1",
       "premium value": "0xA6",
-      "premium description": "HP+20/Strength+3/Luck+1\nSuccess Rate: 80%\nCritical Rate: 30%"
+      "premium description": "HP+20/Strength+3\nLuck+1\nSuccess Rate: 80%\nCritical Rate: 30%"
     },
     "#026 Rinoa": {
       "normal offset": "0x34E2",
       "normal value": "0xA7",
-      "normal description": "Magic+1\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "normal description": "Magic+1\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "rare offset": "0x34E3",
       "rare value": "0xA8",
-      "rare description": "Magic+3\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "rare description": "Magic+3\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "premium offset": "0x34E4",
       "premium value": "0xA9",
-      "premium description": "Magic+5\nSuccess Rate: 75%\nCritical Rate: 30%"
+      "premium description": "Magic+5\n\nSuccess Rate: 75%\nCritical Rate: 30%"
     },
     "#027 Laguna": {
       "normal offset": "0x34E5",
       "normal value": "0xAA",
-      "normal description": "Strength+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "normal description": "Strength+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "rare offset": "0x34E6",
       "rare value": "0xAB",
-      "rare description": "Strength+2/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "rare description": "Strength+2/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "premium offset": "0x34E7",
       "premium value": "0xAC",
-      "premium description": "Strength+3/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 80%"
+      "premium description": "Strength+3/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 80%"
     },
     "#028 Zidane": {
       "normal offset": "0x34E8",
       "normal value": "0xAD",
-      "normal description": "Agility+5\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Agility+5\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x34E9",
       "rare value": "0xAE",
-      "rare description": "Agility+11\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Agility+11\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x34EA",
       "premium value": "0xAF",
-      "premium description": "Agility+22\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Agility+22\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#029 Vivi": {
       "normal offset": "0x34EB",
       "normal value": "0xB0",
-      "normal description": "Magic+1\nSuccess Rate: 80%\nCritical Rate: 30%",
+      "normal description": "Magic+1\n\nSuccess Rate: 80%\nCritical Rate: 30%",
       "rare offset": "0x34EC",
       "rare value": "0xB1",
-      "rare description": "Magic+3\nSuccess Rate: 80%\nCritical Rate: 30%",
+      "rare description": "Magic+3\n\nSuccess Rate: 80%\nCritical Rate: 30%",
       "premium offset": "0x34ED",
       "premium value": "0xB2",
-      "premium description": "Magic+5\nSuccess Rate: 80%\nCritical Rate: 30%"
+      "premium description": "Magic+5\n\nSuccess Rate: 80%\nCritical Rate: 30%"
     },
     "#030 Garnet": {
       "normal offset": "0x34EE",
       "normal value": "0xB3",
-      "normal description": "Magic+1\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "normal description": "Magic+1\n\nSuccess Rate: 80%\nCritical Rate: 15%",
       "rare offset": "0x34EF",
       "rare value": "0xB4",
-      "rare description": "Magic+2/Spirit+1\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "rare description": "Magic+2/Spirit+1\n\nSuccess Rate: 80%\nCritical Rate: 15%",
       "premium offset": "0x34F0",
       "premium value": "0xB5",
-      "premium description": "Magic+3/Spirit+2\nSuccess Rate: 80%\nCritical Rate: 15%"
+      "premium description": "Magic+3/Spirit+2\n\nSuccess Rate: 80%\nCritical Rate: 15%"
     },
     "#031 Eiko": {
       "normal offset": "0x34F1",
       "normal value": "0xB6",
-      "normal description": "Magic+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Magic+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x34F2",
       "rare value": "0xB7",
-      "rare description": "Magic+1/Luck+1/Spirit+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Magic+1/Luck+1\nSpirit+1\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x34F3",
       "premium value": "0xB8",
-      "premium description": "Magic+3/Luck+1/Spirit+1\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Magic+3/Luck+1\nSpirit+1\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#032 Tidus": {
       "normal offset": "0x34F4",
       "normal value": "0xB9",
-      "normal description": "Agility+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "normal description": "Agility+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "rare offset": "0x34F5",
       "rare value": "0xBA",
-      "rare description": "Agility+2/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "rare description": "Agility+2/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "premium offset": "0x34F6",
       "premium value": "0xBB",
-      "premium description": "Agility+3/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 80%"
+      "premium description": "Agility+3/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 80%"
     },
     "#033 Yuna": {
       "normal offset": "0x34F7",
       "normal value": "0xBC",
-      "normal description": "Spirit+1\nSuccess Rate: 80%\nCritical Rate: 30%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 80%\nCritical Rate: 30%",
       "rare offset": "0x34F8",
       "rare value": "0xBD",
-      "rare description": "Spirit+3\nSuccess Rate: 80%\nCritical Rate: 30%",
+      "rare description": "Spirit+3\n\nSuccess Rate: 80%\nCritical Rate: 30%",
       "premium offset": "0x34F9",
       "premium value": "0xBE",
-      "premium description": "Spirit+5\nSuccess Rate: 80%\nCritical Rate: 30%"
+      "premium description": "Spirit+5\n\nSuccess Rate: 80%\nCritical Rate: 30%"
     },
     "#034 Auron": {
       "normal offset": "0x34FA",
       "normal value": "0xBF",
-      "normal description": "HP+25/Strength+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+25/Strength+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x34FB",
       "rare value": "0xC0",
-      "rare description": "HP+45/Strength+3\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+45/Strength+3\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x34FC",
       "premium value": "0xC1",
-      "premium description": "HP+65/Strength+6\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+65/Strength+6\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#035 Jecht": {
       "normal offset": "0x34FD",
       "normal value": "0xC2",
-      "normal description": "HP+60/Strength+2\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "HP+60/Strength+2\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x34FE",
       "rare value": "0xC3",
-      "rare description": "HP+140/Strength+4\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "HP+140/Strength+4\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x34FF",
       "premium value": "0xC4",
-      "premium description": "HP+320/Strength+6\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "HP+320/Strength+6\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#036 Shantotto": {
       "normal offset": "0x3500",
       "normal value": "0xC5",
-      "normal description": "Magic+5\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "normal description": "Magic+5\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "rare offset": "0x3501",
       "rare value": "0xC6",
-      "rare description": "Magic+11\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "rare description": "Magic+11\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "premium offset": "0x3502",
       "premium value": "0xC7",
-      "premium description": "Magic+22\nSuccess Rate: 20%\nCritical Rate: 0%"
+      "premium description": "Magic+22\n\nSuccess Rate: 20%\nCritical Rate: 0%"
     },
     "#037 Prishe": {
       "normal offset": "0x3503",
       "normal value": "0xC8",
-      "normal description": "HP+20\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "HP+20\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3504",
       "rare value": "0xC9",
-      "rare description": "HP+40/Strength+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "HP+40/Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3505",
       "premium value": "0xCA",
-      "premium description": "HP+60/Strength+1\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "HP+60/Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#038 Aphmau": {
       "normal offset": "0x3506",
       "normal value": "0xCB",
-      "normal description": "Magic+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "normal description": "Magic+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "rare offset": "0x3507",
       "rare value": "0xCC",
-      "rare description": "Magic+2/Spirit+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "rare description": "Magic+2/Spirit+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "premium offset": "0x3508",
       "premium value": "0xCD",
-      "premium description": "Magic+3/Spirit+2\nSuccess Rate: 50%\nCritical Rate: 80%"
+      "premium description": "Magic+3/Spirit+2\n\nSuccess Rate: 50%\nCritical Rate: 80%"
     },
     "#039 Lilisette": {
       "normal offset": "0x3509",
       "normal value": "0xCE",
-      "normal description": "Agility+1\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "normal description": "Agility+1\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "rare offset": "0x350A",
       "rare value": "0xCF",
-      "rare description": "Strength+1/Agility+1\nSuccess Rate: 75%\nCritical Rate: 30%",
+      "rare description": "Strength+1/Agility+1\n\nSuccess Rate: 75%\nCritical Rate: 30%",
       "premium offset": "0x350B",
       "premium value": "0xD0",
-      "premium description": "Strength+2/Agility+3\nSuccess Rate: 75%\nCritical Rate: 30%"
+      "premium description": "Strength+2/Agility+3\n\nSuccess Rate: 75%\nCritical Rate: 30%"
     },
     "#040 Vaan": {
       "normal offset": "0x350C",
       "normal value": "0xD1",
-      "normal description": "Luck+2\nSuccess Rate: 50%\nCritical Rate: 10%",
+      "normal description": "Luck+2\n\nSuccess Rate: 50%\nCritical Rate: 10%",
       "rare offset": "0x350D",
       "rare value": "0xD2",
-      "rare description": "Luck+5\nSuccess Rate: 50%\nCritical Rate: 10%",
+      "rare description": "Luck+5\n\nSuccess Rate: 50%\nCritical Rate: 10%",
       "premium offset": "0x350E",
       "premium value": "0xD3",
-      "premium description": "Luck+9\nSuccess Rate: 50%\nCritical Rate: 10%"
+      "premium description": "Luck+9\n\nSuccess Rate: 50%\nCritical Rate: 10%"
     },
     "#041 Ashe": {
       "normal offset": "0x350F",
       "normal value": "0xD4",
-      "normal description": "Spirit+1\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "rare offset": "0x3510",
       "rare value": "0xD5",
-      "rare description": "HP+20/Spirit+2\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "HP+20/Spirit+2\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x3511",
       "premium value": "0xD6",
-      "premium description": "HP+40/Spirit+3\nSuccess Rate: 100%\nCritical Rate: 10%"
+      "premium description": "HP+40/Spirit+3\n\nSuccess Rate: 100%\nCritical Rate: 10%"
     },
     "#042 Balthier": {
       "normal offset": "0x3512",
       "normal value": "0xD7",
-      "normal description": "Agility+1/Luck+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Agility+1/Luck+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x3513",
       "rare value": "0xD8",
-      "rare description": "Agility+3/Luck+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Agility+3/Luck+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x3514",
       "premium value": "0xD9",
-      "premium description": "Agility+6/Luck+3\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Agility+6/Luck+3\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#043 Fran": {
       "normal offset": "0x3515",
       "normal value": "0xDA",
-      "normal description": "Strength+1/Magic+3/Spirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Strength+1/Magic+3\nSpirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x3516",
       "rare value": "0xDB",
-      "rare description": "Strength+3/Magic+6/Spirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Strength+3/Magic+6\nSpirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x3517",
       "premium value": "0xDC",
-      "premium description": "Strength+7/Magic+13/Spirit+2\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Strength+7/Magic+13\nSpirit+2\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#044 Lightning": {
       "normal offset": "0x3518",
       "normal value": "0xDD",
-      "normal description": "Magic+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Magic+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x3519",
       "rare value": "0xDE",
-      "rare description": "Strength+1/Magic+1/Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Strength+1/Magic+1\nAgility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x351A",
       "premium value": "0xDF",
-      "premium description": "Strength+1/Magic+3/Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Strength+1/Magic+3\nAgility+1\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#045 Snow": {
       "normal offset": "0x351B",
       "normal value": "0xE0",
-      "normal description": "Stamina+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x351C",
       "rare value": "0xE1",
-      "rare description": "Stamina+5\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Stamina+5\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x351D",
       "premium value": "0xE2",
-      "premium description": "Stamina+9\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Stamina+9\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#046 Hope": {
       "normal offset": "0x351E",
       "normal value": "0xE3",
-      "normal description": "Spirit+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x351F",
       "rare value": "0xE4",
-      "rare description": "Magic+1/Spirit+2\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Magic+1/Spirit+2\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3520",
       "premium value": "0xE5",
-      "premium description": "Magic+2/Spirit+3\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Magic+2/Spirit+3\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#047 Vanille": {
       "normal offset": "0x3521",
       "normal value": "0xE6",
-      "normal description": "Magic+1\nSuccess Rate: 85%\nCritical Rate: 10%",
+      "normal description": "Magic+1\n\nSuccess Rate: 85%\nCritical Rate: 10%",
       "rare offset": "0x3522",
       "rare value": "0xE7",
-      "rare description": "Magic+2/Spirit+1\nSuccess Rate: 85%\nCritical Rate: 10%",
+      "rare description": "Magic+2/Spirit+1\n\nSuccess Rate: 85%\nCritical Rate: 10%",
       "premium offset": "0x3523",
       "premium value": "0xE8",
-      "premium description": "Magic+3/Spirit+2\nSuccess Rate: 85%\nCritical Rate: 10%"
+      "premium description": "Magic+3/Spirit+2\n\nSuccess Rate: 85%\nCritical Rate: 10%"
     },
     "#048 Y'shtola": {
       "normal offset": "0x3524",
       "normal value": "0xE9",
-      "normal description": "Spirit+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3525",
       "rare value": "0xEA",
-      "rare description": "Spirit+3\nSuccess Rate: 80%\nCritical Rate: 15%",
+      "rare description": "Spirit+3\n\nSuccess Rate: 80%\nCritical Rate: 15%",
       "premium offset": "0x3526",
       "premium value": "0xEB",
-      "premium description": "Spirit+5\nSuccess Rate: 80%\nCritical Rate: 20%"
+      "premium description": "Spirit+5\n\nSuccess Rate: 80%\nCritical Rate: 20%"
     },
     "#049 Benjamin": {
       "normal offset": "0x3527",
       "normal value": "0xEC",
-      "normal description": "Strength+1\nSuccess Rate: 100%\nCritical Rate: 5%",
+      "normal description": "Strength+1\n\nSuccess Rate: 100%\nCritical Rate: 5%",
       "rare offset": "0x3528",
       "rare value": "0xED",
-      "rare description": "Strength+3\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "Strength+3\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x3529",
       "premium value": "0xEE",
-      "premium description": "Strength+5\nSuccess Rate: 100%\nCritical Rate: 15%"
+      "premium description": "Strength+5\n\nSuccess Rate: 100%\nCritical Rate: 15%"
     },
     "#050 Ramza": {
       "normal offset": "0x352A",
       "normal value": "0xEF",
-      "normal description": "HP+30\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "HP+30\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x352B",
       "rare value": "0xF0",
-      "rare description": "HP+70\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+70\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x352C",
       "premium value": "0xF1",
-      "premium description": "HP+110\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+110\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#051 Agrias": {
       "normal offset": "0x352D",
       "normal value": "0xF2",
-      "normal description": "Strength+1/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Strength+1/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x352E",
       "rare value": "0xF3",
-      "rare description": "Strength+3/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Strength+3/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x352F",
       "premium value": "0xF4",
-      "premium description": "Strength+6/Stamina+3\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Strength+6/Stamina+3\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#052 Yuna #2": {
       "normal offset": "0x3530",
       "normal value": "0xF5",
-      "normal description": "Spirit+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Spirit+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x3531",
       "rare value": "0xF6",
-      "rare description": "Spirit+5\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Spirit+5\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x3532",
       "premium value": "0xF7",
-      "premium description": "Spirit+9\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Spirit+9\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#053 Rikku": {
       "normal offset": "0x3533",
       "normal value": "0xF8",
-      "normal description": "Agility+1\nSuccess Rate: 70%\nCritical Rate: 35%",
+      "normal description": "Agility+1\n\nSuccess Rate: 70%\nCritical Rate: 35%",
       "rare offset": "0x3534",
       "rare value": "0xF9",
-      "rare description": "Agility+3\nSuccess Rate: 70%\nCritical Rate: 35%",
+      "rare description": "Agility+3\n\nSuccess Rate: 70%\nCritical Rate: 35%",
       "premium offset": "0x3535",
       "premium value": "0xFA",
-      "premium description": "Agility+5\nSuccess Rate: 70%\nCritical Rate: 35%"
+      "premium description": "Agility+5\n\nSuccess Rate: 70%\nCritical Rate: 35%"
     },
     "#054 Paine": {
       "normal offset": "0x3536",
       "normal value": "0xFB",
-      "normal description": "Strength+1\nSuccess Rate: 90%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 90%\nCritical Rate: 10%",
       "rare offset": "0x3537",
       "rare value": "0xFC",
-      "rare description": "Strength+3\nSuccess Rate: 90%\nCritical Rate: 10%",
+      "rare description": "Strength+3\n\nSuccess Rate: 90%\nCritical Rate: 10%",
       "premium offset": "0x3538",
       "premium value": "0xFD",
-      "premium description": "Strength+5\nSuccess Rate: 90%\nCritical Rate: 10%"
+      "premium description": "Strength+5\n\nSuccess Rate: 90%\nCritical Rate: 10%"
     },
     "#055 Ciaran": {
       "normal offset": "0x3539",
       "normal value": "0xFE",
-      "normal description": "Stamina+2\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "normal description": "Stamina+2\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "rare offset": "0x353A",
       "rare value": "0xFF",
-      "rare description": "Stamina+5\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "rare description": "Stamina+5\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "premium offset": "0x353B",
       "premium value": "0x100",
-      "premium description": "Stamina+10\nSuccess Rate: 30%\nCritical Rate: 40%"
+      "premium description": "Stamina+10\n\nSuccess Rate: 30%\nCritical Rate: 40%"
     },
     "#056 Tifa #2": {
       "normal offset": "0x353C",
       "normal value": "0x101",
-      "normal description": "Strength+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Strength+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x353D",
       "rare value": "0x102",
-      "rare description": "HP+20/Strength+1/Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "HP+20/Strength+1\nAgility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x353E",
       "premium value": "0x103",
-      "premium description": "HP+20/Strength+3/Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "HP+20/Strength+3\nAgility+1\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#057 Zack": {
       "normal offset": "0x353F",
       "normal value": "0x104",
-      "normal description": "HP+60/Strength+1/Stamina+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "HP+60/Strength+1\nStamina+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x3540",
       "rare value": "0x105",
-      "rare description": "HP+120/Strength+3/Stamina+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "HP+120/Strength+3\nStamina+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x3541",
       "premium value": "0x106",
-      "premium description": "HP+260/Strength+7/Stamina+2\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "HP+260/Strength+7\nStamina+2\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#058 Cosmos": {
       "normal offset": "0x3542",
       "normal value": "0x107",
-      "normal description": "CP+1/Luck+1\nSuccess Rate: 45%\nCritical Rate: 80%",
+      "normal description": "CP+1/Luck+1\n\nSuccess Rate: 45%\nCritical Rate: 80%",
       "rare offset": "0x3543",
       "rare value": "0x108",
-      "rare description": "CP+1/Luck+3\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "rare description": "CP+1/Luck+3\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "premium offset": "0x3544",
       "premium value": "0x109",
-      "premium description": "CP+1/Luck+5\nSuccess Rate: 55%\nCritical Rate: 80%"
+      "premium description": "CP+1/Luck+5\n\nSuccess Rate: 55%\nCritical Rate: 80%"
     },
     "#059 Chaos": {
       "normal offset": "0x3545",
       "normal value": "0x10A",
-      "normal description": "CP+1/Strength+3/Magic+1/Stamina+1\nSuccess Rate: 10%\nCritical Rate: 0%",
+      "normal description": "CP+1/Strength+3\nMagic+1/Stamina+1\nSuccess Rate: 10%\nCritical Rate: 0%",
       "rare offset": "0x3546",
       "rare value": "0x10B",
-      "rare description": "CP+1/Strength+6/Magic+3/Stamina+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "CP+1/Strength+6\nMagic+3/Stamina+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x3547",
       "premium value": "0x10C",
-      "premium description": "CP+1/Strength+13/Magic+7/Stamina+2\nSuccess Rate: 20%\nCritical Rate: 0%"
+      "premium description": "CP+1/Strength+13\nMagic+7/Stamina+2\nSuccess Rate: 20%\nCritical Rate: 0%"
     },
     "#060 Ace": {
       "normal offset": "0x3548",
       "normal value": "0x10D",
-      "normal description": "Magic+1/Spirit+1\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "normal description": "Magic+1/Spirit+1\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "rare offset": "0x3549",
       "rare value": "0x10E",
-      "rare description": "Magic+3/Spirit+2\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "rare description": "Magic+3/Spirit+2\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "premium offset": "0x354A",
       "premium value": "0x10F",
-      "premium description": "Magic+7/Spirit+3\nSuccess Rate: 30%\nCritical Rate: 40%"
+      "premium description": "Magic+7/Spirit+3\n\nSuccess Rate: 30%\nCritical Rate: 40%"
     },
     "#061 Machina": {
       "normal offset": "0x354B",
       "normal value": "0x110",
-      "normal description": "HP+25\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "HP+25\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x354C",
       "rare value": "0x111",
-      "rare description": "HP+65\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+65\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x354D",
       "premium value": "0x112",
-      "premium description": "HP+105\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+105\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#062 Rem": {
       "normal offset": "0x354E",
       "normal value": "0x113",
-      "normal description": "Luck+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Luck+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x354F",
       "rare value": "0x114",
-      "rare description": "Luck+2/Spirit+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Luck+2/Spirit+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3550",
       "premium value": "0x115",
-      "premium description": "Luck+3/Spirit+2\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Luck+3/Spirit+2\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#063 Serah": {
       "normal offset": "0x3551",
       "normal value": "0x116",
-      "normal description": "Magic+1\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "normal description": "Magic+1\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "rare offset": "0x3552",
       "rare value": "0x117",
-      "rare description": "Magic+3\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "Magic+3\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x3553",
       "premium value": "0x118",
-      "premium description": "Magic+5\nSuccess Rate: 100%\nCritical Rate: 10%"
+      "premium description": "Magic+5\n\nSuccess Rate: 100%\nCritical Rate: 10%"
     },
     "#064 Noel": {
       "normal offset": "0x3554",
       "normal value": "0x119",
-      "normal description": "Strength+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Strength+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x3555",
       "rare value": "0x11A",
-      "rare description": "Strength+1/Agility+1/Stamina+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Strength+1/Agility+1\nStamina+1\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x3556",
       "premium value": "0x11B",
-      "premium description": "Strength+3/Agility+1/Stamina+1\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Strength+3/Agility+1\nStamina+1\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#065 Lightning #2": {
       "normal offset": "0x3557",
       "normal value": "0x11C",
-      "normal description": "Strength+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3558",
       "rare value": "0x11D",
-      "rare description": "Strength+2/Magic+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Strength+2/Magic+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3559",
       "premium value": "0x11E",
-      "premium description": "Strength+3/Magic+2\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Strength+3/Magic+2\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#066 Chocobo": {
       "normal offset": "0x355A",
       "normal value": "0x11F",
-      "normal description": "Success Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+10%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x355B",
       "rare value": "0x120",
-      "rare description": "Success Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+20%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x355C",
       "premium value": "0x121",
-      "premium description": "Success Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#067 Fat Chocobo": {
       "normal offset": "0x355D",
       "normal value": "0x122",
-      "normal description": "Success Rate Bonus+5%/Critical Rate Bonus+5%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+5%\nCritical Rate Bonus+5%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x355E",
       "rare value": "0x123",
-      "rare description": "Success Rate Bonus+10%/Critical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+10%\nCritical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x355F",
       "premium value": "0x124",
-      "premium description": "Success Rate Bonus+15%/Critical Rate Bonus+15%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+15%\nCritical Rate Bonus+15%\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#068 Moogle": {
       "normal offset": "0x3560",
       "normal value": "0x125",
-      "normal description": "Critical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Critical Rate Bonus+10%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3561",
       "rare value": "0x126",
-      "rare description": "Critical Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Critical Rate Bonus+20%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3562",
       "premium value": "0x127",
-      "premium description": "Critical Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Critical Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#069 Curtain Call Heroes": {
       "normal offset": "0x3563",
       "normal value": "0x128",
-      "normal description": "Success Rate Bonus+10%/Critical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+10%\nCritical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3564",
       "rare value": "0x129",
-      "rare description": "Success Rate Bonus+15%/Critical Rate Bonus+15%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+15%\nCritical Rate Bonus+15%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3565",
       "premium value": "0x12A",
-      "premium description": "Success Rate Bonus+20%/Critical Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+20%\nCritical Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#070 Chocobo": {
       "normal offset": "0x3566",
       "normal value": "0x12B",
-      "normal description": "Success Rate Bonus+8%/Critical Rate Bonus+2%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+8%\nCritical Rate Bonus+2%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3567",
       "rare value": "0x12C",
-      "rare description": "Success Rate Bonus+18%/Critical Rate Bonus+2%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+18%\nCritical Rate Bonus+2%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3568",
       "premium value": "0x12D",
-      "premium description": "Success Rate Bonus+28%/Critical Rate Bonus+2%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+28%\nCritical Rate Bonus+2%\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#071 Shiva": {
       "normal offset": "0x3569",
       "normal value": "0x12E",
-      "normal description": "Critical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Critical Rate Bonus+10%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x356A",
       "rare value": "0x12F",
-      "rare description": "Critical Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Critical Rate Bonus+20%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x356B",
       "premium value": "0x130",
-      "premium description": "Critical Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Critical Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#072 Ramuh": {
       "normal offset": "0x356C",
       "normal value": "0x131",
-      "normal description": "Success Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+10%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x356D",
       "rare value": "0x132",
-      "rare description": "Success Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+20%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x356E",
       "premium value": "0x133",
-      "premium description": "Success Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#073 Ifrit": {
       "normal offset": "0x356F",
       "normal value": "0x134",
-      "normal description": "Critical Rate Bonus+10%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Critical Rate Bonus+10%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3570",
       "rare value": "0x135",
-      "rare description": "Critical Rate Bonus+20%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Critical Rate Bonus+20%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3571",
       "premium value": "0x136",
-      "premium description": "Critical Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Critical Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#074 Odin": {
       "normal offset": "0x3572",
       "normal value": "0x137",
-      "normal description": "Critical Rate Bonus+15%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Critical Rate Bonus+15%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3573",
       "rare value": "0x138",
-      "rare description": "Critical Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Critical Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3574",
       "premium value": "0x139",
-      "premium description": "Critical Rate Bonus+40%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Critical Rate Bonus+40%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#075 Bahamut": {
       "normal offset": "0x3575",
       "normal value": "0x13A",
-      "normal description": "Success Rate Bonus+15%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+15%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3576",
       "rare value": "0x13B",
-      "rare description": "Success Rate Bonus+30%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+30%\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3577",
       "premium value": "0x13C",
-      "premium description": "Success Rate Bonus+40%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+40%\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#076 Knights of the Round": {
       "normal offset": "0x3578",
       "normal value": "0x13D",
-      "normal description": "Success Rate Bonus+12%/Critical Rate Bonus+8%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "Success Rate Bonus+12%\nCritical Rate Bonus+8%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3579",
       "rare value": "0x13E",
-      "rare description": "Success Rate Bonus+17%/Critical Rate Bonus+13%\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "Success Rate Bonus+17%\nCritical Rate Bonus+13%\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x357A",
       "premium value": "0x13F",
-      "premium description": "Success Rate Bonus+22%/Critical Rate Bonus+18%\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "Success Rate Bonus+22%\nCritical Rate Bonus+18%\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#077 Lich": {
       "normal offset": "0x357B",
       "normal value": "0x140",
-      "normal description": "Magic+5\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Magic+5\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x357C",
       "rare value": "0x141",
-      "rare description": "Magic+11\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Magic+11\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x357D",
       "premium value": "0x142",
-      "premium description": "Magic+22\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Magic+22\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#078 Chaos": {
       "normal offset": "0x357E",
       "normal value": "0x143",
-      "normal description": "EXP+50/CP+1\nSuccess Rate: 60%\nCritical Rate: 25%",
+      "normal description": "EXP+50/CP+1\n\nSuccess Rate: 60%\nCritical Rate: 25%",
       "rare offset": "0x357F",
       "rare value": "0x144",
-      "rare description": "EXP+150/CP+1\nSuccess Rate: 65%\nCritical Rate: 25%",
+      "rare description": "EXP+150/CP+1\n\nSuccess Rate: 65%\nCritical Rate: 25%",
       "premium offset": "0x3580",
       "premium value": "0x145",
-      "premium description": "EXP+300/CP+1\nSuccess Rate: 75%\nCritical Rate: 25%"
+      "premium description": "EXP+300/CP+1\n\nSuccess Rate: 75%\nCritical Rate: 25%"
     },
     "#079 Captain": {
       "normal offset": "0x3581",
       "normal value": "0x146",
-      "normal description": "HP+15\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "HP+15\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3582",
       "rare value": "0x147",
-      "rare description": "HP+35/Stamina+1\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+35/Stamina+1\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3583",
       "premium value": "0x148",
-      "premium description": "HP+55/Stamina+2\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+55/Stamina+2\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#080 Black Knight": {
       "normal offset": "0x3584",
       "normal value": "0x149",
-      "normal description": "Strength+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3585",
       "rare value": "0x14A",
-      "rare description": "Strength+2/Stamina+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Strength+2/Stamina+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3586",
       "premium value": "0x14B",
-      "premium description": "Strength+3/Stamina+2\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Strength+3/Stamina+2\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#081 Emperor": {
       "normal offset": "0x3587",
       "normal value": "0x14C",
-      "normal description": "Magic+2\nSuccess Rate: 30%\nCritical Rate: 35%",
+      "normal description": "Magic+2\n\nSuccess Rate: 30%\nCritical Rate: 35%",
       "rare offset": "0x3588",
       "rare value": "0x14D",
-      "rare description": "Magic+5\nSuccess Rate: 30%\nCritical Rate: 35%",
+      "rare description": "Magic+5\n\nSuccess Rate: 30%\nCritical Rate: 35%",
       "premium offset": "0x3589",
       "premium value": "0x14E",
-      "premium description": "Magic+10\nSuccess Rate: 30%\nCritical Rate: 35%"
+      "premium description": "Magic+10\n\nSuccess Rate: 30%\nCritical Rate: 35%"
     },
     "#082 Hein": {
       "normal offset": "0x358A",
       "normal value": "0x14F",
-      "normal description": "Magic+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Magic+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x358B",
       "rare value": "0x150",
-      "rare description": "Magic+3\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Magic+3\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x358C",
       "premium value": "0x151",
-      "premium description": "Magic+5\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Magic+5\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#083 Xande": {
       "normal offset": "0x358D",
       "normal value": "0x152",
-      "normal description": "Magic+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Magic+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x358E",
       "rare value": "0x153",
-      "rare description": "Magic+3\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Magic+3\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x358F",
       "premium value": "0x154",
-      "premium description": "Magic+5\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Magic+5\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#084 Cloud of Darkness": {
       "normal offset": "0x3590",
       "normal value": "0x155",
-      "normal description": "Magic+1/Spirit+1\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "normal description": "Magic+1/Spirit+1\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "rare offset": "0x3591",
       "rare value": "0x156",
-      "rare description": "Magic+2/Spirit+3\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "rare description": "Magic+2/Spirit+3\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "premium offset": "0x3592",
       "premium value": "0x157",
-      "premium description": "Magic+3/Spirit+7\nSuccess Rate: 30%\nCritical Rate: 40%"
+      "premium description": "Magic+3/Spirit+7\n\nSuccess Rate: 30%\nCritical Rate: 40%"
     },
     "#085 Scarmiglione": {
       "normal offset": "0x3593",
       "normal value": "0x158",
-      "normal description": "Strength+1\nSuccess Rate: 95%\nCritical Rate: 2%",
+      "normal description": "Strength+1\n\nSuccess Rate: 95%\nCritical Rate: 2%",
       "rare offset": "0x3594",
       "rare value": "0x159",
-      "rare description": "Strength+3\nSuccess Rate: 95%\nCritical Rate: 4%",
+      "rare description": "Strength+3\n\nSuccess Rate: 95%\nCritical Rate: 4%",
       "premium offset": "0x3595",
       "premium value": "0x15A",
-      "premium description": "Strength+5\nSuccess Rate: 95%\nCritical Rate: 6%"
+      "premium description": "Strength+5\n\nSuccess Rate: 95%\nCritical Rate: 6%"
     },
     "#086 Cagnazzo": {
       "normal offset": "0x3596",
       "normal value": "0x15B",
-      "normal description": "Stamina+1\nSuccess Rate: 95%\nCritical Rate: 2%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 95%\nCritical Rate: 2%",
       "rare offset": "0x3597",
       "rare value": "0x15C",
-      "rare description": "Stamina+3\nSuccess Rate: 95%\nCritical Rate: 4%",
+      "rare description": "Stamina+3\n\nSuccess Rate: 95%\nCritical Rate: 4%",
       "premium offset": "0x3598",
       "premium value": "0x15D",
-      "premium description": "Stamina+5\nSuccess Rate: 95%\nCritical Rate: 6%"
+      "premium description": "Stamina+5\n\nSuccess Rate: 95%\nCritical Rate: 6%"
     },
     "#087 Barbariccia": {
       "normal offset": "0x3599",
       "normal value": "0x15E",
-      "normal description": "Agility+1\nSuccess Rate: 95%\nCritical Rate: 2%",
+      "normal description": "Agility+1\n\nSuccess Rate: 95%\nCritical Rate: 2%",
       "rare offset": "0x359A",
       "rare value": "0x15F",
-      "rare description": "Agility+3\nSuccess Rate: 95%\nCritical Rate: 4%",
+      "rare description": "Agility+3\n\nSuccess Rate: 95%\nCritical Rate: 4%",
       "premium offset": "0x359B",
       "premium value": "0x160",
-      "premium description": "Agility+5\nSuccess Rate: 95%\nCritical Rate: 6%"
+      "premium description": "Agility+5\n\nSuccess Rate: 95%\nCritical Rate: 6%"
     },
     "#088 Rubicante": {
       "normal offset": "0x359C",
       "normal value": "0x161",
-      "normal description": "Magic+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Magic+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x359D",
       "rare value": "0x162",
-      "rare description": "Magic+3\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Magic+3\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x359E",
       "premium value": "0x163",
-      "premium description": "Magic+5\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Magic+5\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#089 Golbez": {
       "normal offset": "0x359F",
       "normal value": "0x164",
-      "normal description": "Strength+2/Magic+3\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "normal description": "Strength+2/Magic+3\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "rare offset": "0x35A0",
       "rare value": "0x165",
-      "rare description": "Strength+4/Magic+7\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "rare description": "Strength+4/Magic+7\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "premium offset": "0x35A1",
       "premium value": "0x166",
-      "premium description": "Strength+6/Magic+16\nSuccess Rate: 20%\nCritical Rate: 0%"
+      "premium description": "Strength+6/Magic+16\n\nSuccess Rate: 20%\nCritical Rate: 0%"
     },
     "#090 Zeromus": {
       "normal offset": "0x35A2",
       "normal value": "0x167",
-      "normal description": "EXP+50\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "EXP+50\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x35A3",
       "rare value": "0x168",
-      "rare description": "EXP+150\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "EXP+150\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x35A4",
       "premium value": "0x169",
-      "premium description": "EXP+300\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "EXP+300\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#091 Objet d'Art": {
       "normal offset": "0x35A5",
       "normal value": "0x16A",
-      "normal description": "Strength+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Strength+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x35A6",
       "rare value": "0x16B",
-      "rare description": "Strength+3\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Strength+3\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x35A7",
       "premium value": "0x16C",
-      "premium description": "Strength+5\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Strength+5\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#092 Enkidu": {
       "normal offset": "0x35A8",
       "normal value": "0x16D",
-      "normal description": "Agility+1\nSuccess Rate: 70%\nCritical Rate: 25%",
+      "normal description": "Agility+1\n\nSuccess Rate: 70%\nCritical Rate: 25%",
       "rare offset": "0x35A9",
       "rare value": "0x16E",
-      "rare description": "Agility+3\nSuccess Rate: 70%\nCritical Rate: 25%",
+      "rare description": "Agility+3\n\nSuccess Rate: 70%\nCritical Rate: 25%",
       "premium offset": "0x35AA",
       "premium value": "0x16F",
-      "premium description": "Agility+5\nSuccess Rate: 70%\nCritical Rate: 25%"
+      "premium description": "Agility+5\n\nSuccess Rate: 70%\nCritical Rate: 25%"
     },
     "#093 Gilgamesh": {
       "normal offset": "0x35AB",
       "normal value": "0x170",
-      "normal description": "Strength+2\nSuccess Rate: 45%\nCritical Rate: 0%",
+      "normal description": "Strength+2\n\nSuccess Rate: 45%\nCritical Rate: 0%",
       "rare offset": "0x35AC",
       "rare value": "0x171",
-      "rare description": "Strength+5\nSuccess Rate: 45%\nCritical Rate: 0%",
+      "rare description": "Strength+5\n\nSuccess Rate: 45%\nCritical Rate: 0%",
       "premium offset": "0x35AD",
       "premium value": "0x172",
-      "premium description": "Strength+9\nSuccess Rate: 45%\nCritical Rate: 0%"
+      "premium description": "Strength+9\n\nSuccess Rate: 45%\nCritical Rate: 0%"
     },
     "#094 Omega": {
       "normal offset": "0x35AE",
       "normal value": "0x173",
-      "normal description": "EXP+50/CP+1\nSuccess Rate: 65%\nCritical Rate: 10%",
+      "normal description": "EXP+50/CP+1\n\nSuccess Rate: 65%\nCritical Rate: 10%",
       "rare offset": "0x35AF",
       "rare value": "0x174",
-      "rare description": "EXP+150/CP+1\nSuccess Rate: 70%\nCritical Rate: 10%",
+      "rare description": "EXP+150/CP+1\n\nSuccess Rate: 70%\nCritical Rate: 10%",
       "premium offset": "0x35B0",
       "premium value": "0x175",
-      "premium description": "EXP+300/CP+1\nSuccess Rate: 75%\nCritical Rate: 10%"
+      "premium description": "EXP+300/CP+1\n\nSuccess Rate: 75%\nCritical Rate: 10%"
     },
     "#095 Shinryu": {
       "normal offset": "0x35B1",
       "normal value": "0x176",
-      "normal description": "EXP+50/CP+1\nSuccess Rate: 75%\nCritical Rate: 5%",
+      "normal description": "EXP+50/CP+1\n\nSuccess Rate: 75%\nCritical Rate: 5%",
       "rare offset": "0x35B2",
       "rare value": "0x177",
-      "rare description": "EXP+150/CP+1\nSuccess Rate: 80%\nCritical Rate: 5%",
+      "rare description": "EXP+150/CP+1\n\nSuccess Rate: 80%\nCritical Rate: 5%",
       "premium offset": "0x35B3",
       "premium value": "0x178",
-      "premium description": "EXP+300/CP+1\nSuccess Rate: 85%\nCritical Rate: 5%"
+      "premium description": "EXP+300/CP+1\n\nSuccess Rate: 85%\nCritical Rate: 5%"
     },
     "#096 Exdeath": {
       "normal offset": "0x35B4",
       "normal value": "0x179",
-      "normal description": "Magic+1/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Magic+1/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x35B5",
       "rare value": "0x17A",
-      "rare description": "Magic+3/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Magic+3/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x35B6",
       "premium value": "0x17B",
-      "premium description": "Magic+6/Stamina+3\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Magic+6/Stamina+3\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#097 Magitek Armor": {
       "normal offset": "0x35B7",
       "normal value": "0x17C",
-      "normal description": "HP+20\nSuccess Rate: 90%\nCritical Rate: 2%",
+      "normal description": "HP+20\n\nSuccess Rate: 90%\nCritical Rate: 2%",
       "rare offset": "0x35B8",
       "rare value": "0x17D",
-      "rare description": "HP+60\nSuccess Rate: 90%\nCritical Rate: 4%",
+      "rare description": "HP+60\n\nSuccess Rate: 90%\nCritical Rate: 4%",
       "premium offset": "0x35B9",
       "premium value": "0x17E",
-      "premium description": "HP+100\nSuccess Rate: 90%\nCritical Rate: 6%"
+      "premium description": "HP+100\n\nSuccess Rate: 90%\nCritical Rate: 6%"
     },
     "#098 Ultros": {
       "normal offset": "0x35BA",
       "normal value": "0x17F",
-      "normal description": "Strength+2\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "normal description": "Strength+2\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "rare offset": "0x35BB",
       "rare value": "0x180",
-      "rare description": "Strength+5\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "rare description": "Strength+5\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "premium offset": "0x35BC",
       "premium value": "0x181",
-      "premium description": "Strength+10\nSuccess Rate: 30%\nCritical Rate: 40%"
+      "premium description": "Strength+10\n\nSuccess Rate: 30%\nCritical Rate: 40%"
     },
     "#099 Typhon": {
       "normal offset": "0x35BD",
       "normal value": "0x182",
-      "normal description": "Magic+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Magic+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x35BE",
       "rare value": "0x183",
-      "rare description": "Magic+2/Spirit+1\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Magic+2/Spirit+1\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x35BF",
       "premium value": "0x184",
-      "premium description": "Magic+3/Spirit+2\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Magic+3/Spirit+2\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#100 Deathgaze": {
       "normal offset": "0x35C0",
       "normal value": "0x185",
-      "normal description": "Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Agility+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x35C1",
       "rare value": "0x186",
-      "rare description": "Agility+3\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Agility+3\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x35C2",
       "premium value": "0x187",
-      "premium description": "Agility+5\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Agility+5\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#101 Kefka Palazzo": {
       "normal offset": "0x35C3",
       "normal value": "0x188",
-      "normal description": "Magic+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Magic+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x35C4",
       "rare value": "0x189",
-      "rare description": "Magic+5\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Magic+5\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x35C5",
       "premium value": "0x18A",
-      "premium description": "Magic+9\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Magic+9\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#102 Kefka": {
       "normal offset": "0x35C6",
       "normal value": "0x18B",
-      "normal description": "Magic+5\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Magic+5\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x35C7",
       "rare value": "0x18C",
-      "rare description": "Magic+10\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Magic+10\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x35C8",
       "premium value": "0x18D",
-      "premium description": "Magic+20\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Magic+20\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#103 Reno": {
       "normal offset": "0x35C9",
       "normal value": "0x18E",
-      "normal description": "Luck+1\nSuccess Rate: 90%\nCritical Rate: 2%",
+      "normal description": "Luck+1\n\nSuccess Rate: 90%\nCritical Rate: 2%",
       "rare offset": "0x35CA",
       "rare value": "0x18F",
-      "rare description": "Luck+3\nSuccess Rate: 90%\nCritical Rate: 4%",
+      "rare description": "Luck+3\n\nSuccess Rate: 90%\nCritical Rate: 4%",
       "premium offset": "0x35CB",
       "premium value": "0x190",
-      "premium description": "Luck+5\nSuccess Rate: 90%\nCritical Rate: 6%"
+      "premium description": "Luck+5\n\nSuccess Rate: 90%\nCritical Rate: 6%"
     },
     "#104 Ultimate Weapon": {
       "normal offset": "0x35CC",
       "normal value": "0x191",
-      "normal description": "EXP+75/CP+1\nSuccess Rate: 45%\nCritical Rate: 10%",
+      "normal description": "EXP+75/CP+1\n\nSuccess Rate: 45%\nCritical Rate: 10%",
       "rare offset": "0x35CD",
       "rare value": "0x192",
-      "rare description": "EXP+225/CP+1\nSuccess Rate: 50%\nCritical Rate: 10%",
+      "rare description": "EXP+225/CP+1\n\nSuccess Rate: 50%\nCritical Rate: 10%",
       "premium offset": "0x35CE",
       "premium value": "0x193",
-      "premium description": "EXP+450/CP+1\nSuccess Rate: 55%\nCritical Rate: 10%"
+      "premium description": "EXP+450/CP+1\n\nSuccess Rate: 55%\nCritical Rate: 10%"
     },
     "#105 Diamond Weapon": {
       "normal offset": "0x35CF",
       "normal value": "0x194",
-      "normal description": "EXP+75/CP+1\nSuccess Rate: 50%\nCritical Rate: 5%",
+      "normal description": "EXP+75/CP+1\n\nSuccess Rate: 50%\nCritical Rate: 5%",
       "rare offset": "0x35D0",
       "rare value": "0x195",
-      "rare description": "EXP+225/CP+1\nSuccess Rate: 55%\nCritical Rate: 5%",
+      "rare description": "EXP+225/CP+1\n\nSuccess Rate: 55%\nCritical Rate: 5%",
       "premium offset": "0x35D1",
       "premium value": "0x196",
-      "premium description": "EXP+450/CP+1\nSuccess Rate: 60%\nCritical Rate: 5%"
+      "premium description": "EXP+450/CP+1\n\nSuccess Rate: 60%\nCritical Rate: 5%"
     },
     "#106 Jenova - SYNTHESIS": {
       "normal offset": "0x35D2",
       "normal value": "0x197",
-      "normal description": "Spirit+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x35D3",
       "rare value": "0x198",
-      "rare description": "Magic+1/Spirit+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Magic+1/Spirit+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x35D4",
       "premium value": "0x199",
-      "premium description": "Magic+2/Spirit+3\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Magic+2/Spirit+3\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#107 Safer - Sephiroth": {
       "normal offset": "0x35D5",
       "normal value": "0x19A",
-      "normal description": "Strength+2/Magic+3\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Strength+2/Magic+3\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x35D6",
       "rare value": "0x19B",
-      "rare description": "Strength+4/Magic+7\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Strength+4/Magic+7\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x35D7",
       "premium value": "0x19C",
-      "premium description": "Strength+6/Magic+16\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Strength+6/Magic+16\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#108 Esthar Soldier": {
       "normal offset": "0x35D8",
       "normal value": "0x19D",
-      "normal description": "Agility+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Agility+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x35D9",
       "rare value": "0x19E",
-      "rare description": "Agility+2/Luck+1\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Agility+2/Luck+1\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x35DA",
       "premium value": "0x19F",
-      "premium description": "Agility+3/Luck+2\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Agility+3/Luck+2\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#109 Gesper": {
       "normal offset": "0x35DB",
       "normal value": "0x1A0",
-      "normal description": "Luck+1\nSuccess Rate: 85%\nCritical Rate: 2%",
+      "normal description": "Luck+1\n\nSuccess Rate: 85%\nCritical Rate: 2%",
       "rare offset": "0x35DC",
       "rare value": "0x1A1",
-      "rare description": "Luck+3\nSuccess Rate: 85%\nCritical Rate: 4%",
+      "rare description": "Luck+3\n\nSuccess Rate: 85%\nCritical Rate: 4%",
       "premium offset": "0x35DD",
       "premium value": "0x1A2",
-      "premium description": "Luck+5\nSuccess Rate: 85%\nCritical Rate: 6%"
+      "premium description": "Luck+5\n\nSuccess Rate: 85%\nCritical Rate: 6%"
     },
     "#110 PuPu": {
       "normal offset": "0x35DE",
       "normal value": "0x1A3",
-      "normal description": "HP+20\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "normal description": "HP+20\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "rare offset": "0x35DF",
       "rare value": "0x1A4",
-      "rare description": "HP+60\nSuccess Rate: 100%\nCritical Rate: 10%",
+      "rare description": "HP+60\n\nSuccess Rate: 100%\nCritical Rate: 10%",
       "premium offset": "0x35E0",
       "premium value": "0x1A5",
-      "premium description": "HP+110\nSuccess Rate: 100%\nCritical Rate: 10%"
+      "premium description": "HP+110\n\nSuccess Rate: 100%\nCritical Rate: 10%"
     },
     "#111 Tonberry King": {
       "normal offset": "0x35E1",
       "normal value": "0x1A6",
-      "normal description": "Strength+2\nSuccess Rate: 50%\nCritical Rate: 5%",
+      "normal description": "Strength+2\n\nSuccess Rate: 50%\nCritical Rate: 5%",
       "rare offset": "0x35E2",
       "rare value": "0x1A7",
-      "rare description": "Strength+5\nSuccess Rate: 50%\nCritical Rate: 5%",
+      "rare description": "Strength+5\n\nSuccess Rate: 50%\nCritical Rate: 5%",
       "premium offset": "0x35E3",
       "premium value": "0x1A8",
-      "premium description": "Strength+9\nSuccess Rate: 50%\nCritical Rate: 5%"
+      "premium description": "Strength+9\n\nSuccess Rate: 50%\nCritical Rate: 5%"
     },
     "#112 Gigantuar": {
       "normal offset": "0x35E4",
       "normal value": "0x1A9",
-      "normal description": "Agility+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Agility+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x35E5",
       "rare value": "0x1AA",
-      "rare description": "Agility+5\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Agility+5\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x35E6",
       "premium value": "0x1AB",
-      "premium description": "Agility+9\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Agility+9\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#113 Edea": {
       "normal offset": "0x35E7",
       "normal value": "0x1AC",
-      "normal description": "Magic+2\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "normal description": "Magic+2\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "rare offset": "0x35E8",
       "rare value": "0x1AD",
-      "rare description": "Magic+5\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "rare description": "Magic+5\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "premium offset": "0x35E9",
       "premium value": "0x1AE",
-      "premium description": "Magic+10\nSuccess Rate: 30%\nCritical Rate: 40%"
+      "premium description": "Magic+10\n\nSuccess Rate: 30%\nCritical Rate: 40%"
     },
     "#114 Ultimecia": {
       "normal offset": "0x35EA",
       "normal value": "0x1AF",
-      "normal description": "Magic+5\nSuccess Rate: 18%\nCritical Rate: 0%",
+      "normal description": "Magic+5\n\nSuccess Rate: 18%\nCritical Rate: 0%",
       "rare offset": "0x35EB",
       "rare value": "0x1B0",
-      "rare description": "Magic+11\nSuccess Rate: 18%\nCritical Rate: 0%",
+      "rare description": "Magic+11\n\nSuccess Rate: 18%\nCritical Rate: 0%",
       "premium offset": "0x35EC",
       "premium value": "0x1B1",
-      "premium description": "Magic+22\nSuccess Rate: 18%\nCritical Rate: 0%"
+      "premium description": "Magic+22\n\nSuccess Rate: 18%\nCritical Rate: 0%"
     },
     "#115 Black Waltz No. 3": {
       "normal offset": "0x35ED",
       "normal value": "0x1B2",
-      "normal description": "Magic+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Magic+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x35EE",
       "rare value": "0x1B3",
-      "rare description": "Magic+1/Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Magic+1/Agility+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x35EF",
       "premium value": "0x1B4",
-      "premium description": "Magic+3/Agility+2\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Magic+3/Agility+2\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#116 Ozma": {
       "normal offset": "0x35F0",
       "normal value": "0x1B5",
-      "normal description": "EXP+75/CP+1\nSuccess Rate: 55%\nCritical Rate: 0%",
+      "normal description": "EXP+75/CP+1\n\nSuccess Rate: 55%\nCritical Rate: 0%",
       "rare offset": "0x35F1",
       "rare value": "0x1B6",
-      "rare description": "EXP+225/CP+1\nSuccess Rate: 60%\nCritical Rate: 0%",
+      "rare description": "EXP+225/CP+1\n\nSuccess Rate: 60%\nCritical Rate: 0%",
       "premium offset": "0x35F2",
       "premium value": "0x1B7",
-      "premium description": "EXP+450/CP+1\nSuccess Rate: 65%\nCritical Rate: 0%"
+      "premium description": "EXP+450/CP+1\n\nSuccess Rate: 65%\nCritical Rate: 0%"
     },
     "#117 Trance Kuja": {
       "normal offset": "0x35F3",
       "normal value": "0x1B8",
-      "normal description": "HP+40\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+40\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x35F4",
       "rare value": "0x1B9",
-      "rare description": "HP+100\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+100\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x35F5",
       "premium value": "0x1BA",
-      "premium description": "HP+180\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+180\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#118 Necron": {
       "normal offset": "0x35F6",
       "normal value": "0x1BB",
-      "normal description": "EXP+50\nSuccess Rate: 90%\nCritical Rate: 0%",
+      "normal description": "EXP+50\n\nSuccess Rate: 90%\nCritical Rate: 0%",
       "rare offset": "0x35F7",
       "rare value": "0x1BC",
-      "rare description": "EXP+150\nSuccess Rate: 90%\nCritical Rate: 0%",
+      "rare description": "EXP+150\n\nSuccess Rate: 90%\nCritical Rate: 0%",
       "premium offset": "0x35F8",
       "premium value": "0x1BD",
-      "premium description": "EXP+300\nSuccess Rate: 90%\nCritical Rate: 0%"
+      "premium description": "EXP+300\n\nSuccess Rate: 90%\nCritical Rate: 0%"
     },
     "#119 Anima": {
       "normal offset": "0x35F9",
       "normal value": "0x1BE",
-      "normal description": "Stamina+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "rare offset": "0x35FA",
       "rare value": "0x1BF",
-      "rare description": "HP+20/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "rare description": "HP+20/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "premium offset": "0x35FB",
       "premium value": "0x1C0",
-      "premium description": "HP+40/Stamina+3\nSuccess Rate: 50%\nCritical Rate: 80%"
+      "premium description": "HP+40/Stamina+3\n\nSuccess Rate: 50%\nCritical Rate: 80%"
     },
     "#120 Seymour Natus": {
       "normal offset": "0x35FC",
       "normal value": "0x1C1",
-      "normal description": "HP+20\nSuccess Rate: 95%\nCritical Rate: 2%",
+      "normal description": "HP+20\n\nSuccess Rate: 95%\nCritical Rate: 2%",
       "rare offset": "0x35FD",
       "rare value": "0x1C2",
-      "rare description": "HP+60\nSuccess Rate: 95%\nCritical Rate: 4%",
+      "rare description": "HP+60\n\nSuccess Rate: 95%\nCritical Rate: 4%",
       "premium offset": "0x35FE",
       "premium value": "0x1C3",
-      "premium description": "HP+100\nSuccess Rate: 95%\nCritical Rate: 6%"
+      "premium description": "HP+100\n\nSuccess Rate: 95%\nCritical Rate: 6%"
     },
     "#121 Braska's Final Aeon": {
       "normal offset": "0x35FF",
       "normal value": "0x1C4",
-      "normal description": "EXP+50\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "EXP+50\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x3600",
       "rare value": "0x1C5",
-      "rare description": "EXP+150\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "EXP+150\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x3601",
       "premium value": "0x1C6",
-      "premium description": "EXP+300\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "EXP+300\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#122 Gigas": {
       "normal offset": "0x3602",
       "normal value": "0x1C7",
-      "normal description": "Stamina+1\nSuccess Rate: 90%\nCritical Rate: 2%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 90%\nCritical Rate: 2%",
       "rare offset": "0x3603",
       "rare value": "0x1C8",
-      "rare description": "Stamina+3\nSuccess Rate: 90%\nCritical Rate: 4%",
+      "rare description": "Stamina+3\n\nSuccess Rate: 90%\nCritical Rate: 4%",
       "premium offset": "0x3604",
       "premium value": "0x1C9",
-      "premium description": "Stamina+5\nSuccess Rate: 90%\nCritical Rate: 6%"
+      "premium description": "Stamina+5\n\nSuccess Rate: 90%\nCritical Rate: 6%"
     },
     "#123 Goobbue": {
       "normal offset": "0x3605",
       "normal value": "0x1CA",
-      "normal description": "HP+20/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+20/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x3606",
       "rare value": "0x1CB",
-      "rare description": "HP+40/Stamina+3\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+40/Stamina+3\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x3607",
       "premium value": "0x1CC",
-      "premium description": "HP+60/Stamina+6\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+60/Stamina+6\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#124 The Shadow Lord": {
       "normal offset": "0x3608",
       "normal value": "0x1CD",
-      "normal description": "Strength+1\nSuccess Rate: 75%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 75%\nCritical Rate: 10%",
       "rare offset": "0x3609",
       "rare value": "0x1CE",
-      "rare description": "Strength+3\nSuccess Rate: 75%\nCritical Rate: 10%",
+      "rare description": "Strength+3\n\nSuccess Rate: 75%\nCritical Rate: 10%",
       "premium offset": "0x360A",
       "premium value": "0x1CF",
-      "premium description": "Strength+5\nSuccess Rate: 75%\nCritical Rate: 10%"
+      "premium description": "Strength+5\n\nSuccess Rate: 75%\nCritical Rate: 10%"
     },
     "#125 Eald'narche": {
       "normal offset": "0x360B",
       "normal value": "0x1D0",
-      "normal description": "Agility+1\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "normal description": "Agility+1\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "rare offset": "0x360C",
       "rare value": "0x1D1",
-      "rare description": "Agility+3\nSuccess Rate: 50%\nCritical Rate: 80%",
+      "rare description": "Agility+3\n\nSuccess Rate: 50%\nCritical Rate: 80%",
       "premium offset": "0x360D",
       "premium value": "0x1D2",
-      "premium description": "Agility+5\nSuccess Rate: 50%\nCritical Rate: 80%"
+      "premium description": "Agility+5\n\nSuccess Rate: 50%\nCritical Rate: 80%"
     },
     "#126 Bangaa Thief": {
       "normal offset": "0x360E",
       "normal value": "0x1D3",
-      "normal description": "Luck+2\nSuccess Rate: 45%\nCritical Rate: 0%",
+      "normal description": "Luck+2\n\nSuccess Rate: 45%\nCritical Rate: 0%",
       "rare offset": "0x360F",
       "rare value": "0x1D4",
-      "rare description": "Luck+5\nSuccess Rate: 45%\nCritical Rate: 0%",
+      "rare description": "Luck+5\n\nSuccess Rate: 45%\nCritical Rate: 0%",
       "premium offset": "0x3610",
       "premium value": "0x1D5",
-      "premium description": "Luck+9\nSuccess Rate: 45%\nCritical Rate: 0%"
+      "premium description": "Luck+9\n\nSuccess Rate: 45%\nCritical Rate: 0%"
     },
     "#127 Mandragoras": {
       "normal offset": "0x3611",
       "normal value": "0x1D6",
-      "normal description": "HP+60/Stamina+1/Spirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "HP+60/Stamina+1\nSpirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x3612",
       "rare value": "0x1D7",
-      "rare description": "HP+120/Stamina+3/Spirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "HP+120/Stamina+3\nSpirit+1\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x3613",
       "premium value": "0x1D8",
-      "premium description": "HP+260/Stamina+7/Spirit+2\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "HP+260/Stamina+7\nSpirit+2\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#128 Gabranth": {
       "normal offset": "0x3614",
       "normal value": "0x1D9",
-      "normal description": "Stamina+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3615",
       "rare value": "0x1DA",
-      "rare description": "Stamina+2/Spirit+1\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Stamina+2/Spirit+1\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3616",
       "premium value": "0x1DB",
-      "premium description": "Stamina+3/Spirit+2\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Stamina+3/Spirit+2\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#129 The Undying": {
       "normal offset": "0x3617",
       "normal value": "0x1DC",
-      "normal description": "EXP+75\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "normal description": "EXP+75\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "rare offset": "0x3618",
       "rare value": "0x1DD",
-      "rare description": "EXP+225\nSuccess Rate: 100%\nCritical Rate: 0%",
+      "rare description": "EXP+225\n\nSuccess Rate: 100%\nCritical Rate: 0%",
       "premium offset": "0x3619",
       "premium value": "0x1DE",
-      "premium description": "EXP+450\nSuccess Rate: 100%\nCritical Rate: 0%"
+      "premium description": "EXP+450\n\nSuccess Rate: 100%\nCritical Rate: 0%"
     },
     "#130 Yiazmat": {
       "normal offset": "0x361A",
       "normal value": "0x1DF",
-      "normal description": "EXP+50/CP+1\nSuccess Rate: 90%\nCritical Rate: 0%",
+      "normal description": "EXP+50/CP+1\n\nSuccess Rate: 90%\nCritical Rate: 0%",
       "rare offset": "0x361B",
       "rare value": "0x1E0",
-      "rare description": "EXP+150/CP+1\nSuccess Rate: 90%\nCritical Rate: 0%",
+      "rare description": "EXP+150/CP+1\n\nSuccess Rate: 90%\nCritical Rate: 0%",
       "premium offset": "0x361C",
       "premium value": "0x1E1",
-      "premium description": "EXP+300/CP+1\nSuccess Rate: 90%\nCritical Rate: 0%"
+      "premium description": "EXP+300/CP+1\n\nSuccess Rate: 90%\nCritical Rate: 0%"
     },
     "#131 PSICOM Enforcer": {
       "normal offset": "0x361D",
       "normal value": "0x1E2",
-      "normal description": "Agility+1\nSuccess Rate: 90%\nCritical Rate: 2%",
+      "normal description": "Agility+1\n\nSuccess Rate: 90%\nCritical Rate: 2%",
       "rare offset": "0x361E",
       "rare value": "0x1E3",
-      "rare description": "Agility+3\nSuccess Rate: 90%\nCritical Rate: 4%",
+      "rare description": "Agility+3\n\nSuccess Rate: 90%\nCritical Rate: 4%",
       "premium offset": "0x361F",
       "premium value": "0x1E4",
-      "premium description": "Agility+5\nSuccess Rate: 90%\nCritical Rate: 6%"
+      "premium description": "Agility+5\n\nSuccess Rate: 90%\nCritical Rate: 6%"
     },
     "#132 Manasvin Warmech": {
       "normal offset": "0x3620",
       "normal value": "0x1E5",
-      "normal description": "Stamina+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3621",
       "rare value": "0x1E6",
-      "rare description": "Stamina+2/Spirit+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Stamina+2/Spirit+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3622",
       "premium value": "0x1E7",
-      "premium description": "Stamina+3/Spirit+2\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Stamina+3/Spirit+2\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#133 Orphan": {
       "normal offset": "0x3623",
       "normal value": "0x1E8",
-      "normal description": "EXP+75\nSuccess Rate: 40%\nCritical Rate: 25%",
+      "normal description": "EXP+75\n\nSuccess Rate: 40%\nCritical Rate: 25%",
       "rare offset": "0x3624",
       "rare value": "0x1E9",
-      "rare description": "EXP+225\nSuccess Rate: 40%\nCritical Rate: 25%",
+      "rare description": "EXP+225\n\nSuccess Rate: 40%\nCritical Rate: 25%",
       "premium offset": "0x3625",
       "premium value": "0x1EA",
-      "premium description": "EXP+450\nSuccess Rate: 40%\nCritical Rate: 25%"
+      "premium description": "EXP+450\n\nSuccess Rate: 40%\nCritical Rate: 25%"
     },
     "#134 Ultima, the High Seraph": {
       "normal offset": "0x3626",
       "normal value": "0x1EB",
-      "normal description": "Strength+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3627",
       "rare value": "0x1EC",
-      "rare description": "Strength+2/Agility+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Strength+2/Agility+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3628",
       "premium value": "0x1ED",
-      "premium description": "Strength+3/Agility+2\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Strength+3/Agility+2\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#135 Bahamut SIN": {
       "normal offset": "0x3629",
       "normal value": "0x1EE",
-      "normal description": "Strength+5\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "Strength+5\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x362A",
       "rare value": "0x1EF",
-      "rare description": "Strength+11\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "Strength+11\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x362B",
       "premium value": "0x1F0",
-      "premium description": "Strength+22\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "Strength+22\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#136 Manikin": {
       "normal offset": "0x362C",
       "normal value": "0x1F1",
-      "normal description": "Luck+1\nSuccess Rate: 65%\nCritical Rate: 30%",
+      "normal description": "Luck+1\n\nSuccess Rate: 65%\nCritical Rate: 30%",
       "rare offset": "0x362D",
       "rare value": "0x1F2",
-      "rare description": "Luck+3\nSuccess Rate: 65%\nCritical Rate: 30%",
+      "rare description": "Luck+3\n\nSuccess Rate: 65%\nCritical Rate: 30%",
       "premium offset": "0x362E",
       "premium value": "0x1F3",
-      "premium description": "Luck+5\nSuccess Rate: 65%\nCritical Rate: 30%"
+      "premium description": "Luck+5\n\nSuccess Rate: 65%\nCritical Rate: 30%"
     },
     "#137 Feral Chaos": {
       "normal offset": "0x362F",
       "normal value": "0x1F4",
-      "normal description": "EXP+60/CP+1\nSuccess Rate: 65%\nCritical Rate: 30%",
+      "normal description": "EXP+60/CP+1\n\nSuccess Rate: 65%\nCritical Rate: 30%",
       "rare offset": "0x3630",
       "rare value": "0x1F5",
-      "rare description": "EXP+160/CP+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "EXP+160/CP+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x3631",
       "premium value": "0x1F6",
-      "premium description": "EXP+310/CP+1\nSuccess Rate: 75%\nCritical Rate: 30%"
+      "premium description": "EXP+310/CP+1\n\nSuccess Rate: 75%\nCritical Rate: 30%"
     },
     "#138 Colossus": {
       "normal offset": "0x3632",
       "normal value": "0x1F7",
-      "normal description": "Stamina+1\nSuccess Rate: 85%\nCritical Rate: 2%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 85%\nCritical Rate: 2%",
       "rare offset": "0x3633",
       "rare value": "0x1F8",
-      "rare description": "Stamina+3\nSuccess Rate: 85%\nCritical Rate: 4%",
+      "rare description": "Stamina+3\n\nSuccess Rate: 85%\nCritical Rate: 4%",
       "premium offset": "0x3634",
       "premium value": "0x1F9",
-      "premium description": "Stamina+5\nSuccess Rate: 85%\nCritical Rate: 6%"
+      "premium description": "Stamina+5\n\nSuccess Rate: 85%\nCritical Rate: 6%"
     },
     "#139 Atlas": {
       "normal offset": "0x3635",
       "normal value": "0x1FA",
-      "normal description": "HP+20\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "HP+20\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x3636",
       "rare value": "0x1FB",
-      "rare description": "HP+20/Stamina+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "HP+20/Stamina+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x3637",
       "premium value": "0x1FC",
-      "premium description": "HP+60/Stamina+2\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "HP+60/Stamina+2\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#140 Goblin": {
       "normal offset": "0x3638",
       "normal value": "0x1FD",
-      "normal description": "Agility+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Agility+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3639",
       "rare value": "0x1FE",
-      "rare description": "Agility+3\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Agility+3\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x363A",
       "premium value": "0x1FF",
-      "premium description": "Agility+5\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Agility+5\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#141 Green Dragon": {
       "normal offset": "0x363B",
       "normal value": "0x200",
-      "normal description": "Strength+1/Agility+1\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "normal description": "Strength+1/Agility+1\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "rare offset": "0x363C",
       "rare value": "0x201",
-      "rare description": "Strength+3/Agility+2\nSuccess Rate: 30%\nCritical Rate: 40%",
+      "rare description": "Strength+3/Agility+2\n\nSuccess Rate: 30%\nCritical Rate: 40%",
       "premium offset": "0x363D",
       "premium value": "0x202",
-      "premium description": "Strength+7/Agility+3\nSuccess Rate: 30%\nCritical Rate: 40%"
+      "premium description": "Strength+7/Agility+3\n\nSuccess Rate: 30%\nCritical Rate: 40%"
     },
     "#142 Iron Giant": {
       "normal offset": "0x363E",
       "normal value": "0x203",
-      "normal description": "Stamina+1\nSuccess Rate: 90%\nCritical Rate: 5%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 90%\nCritical Rate: 5%",
       "rare offset": "0x363F",
       "rare value": "0x204",
-      "rare description": "Stamina+3\nSuccess Rate: 90%\nCritical Rate: 5%",
+      "rare description": "Stamina+3\n\nSuccess Rate: 90%\nCritical Rate: 5%",
       "premium offset": "0x3640",
       "premium value": "0x205",
-      "premium description": "Stamina+5\nSuccess Rate: 90%\nCritical Rate: 5%"
+      "premium description": "Stamina+5\n\nSuccess Rate: 90%\nCritical Rate: 5%"
     },
     "#143 Ahriman": {
       "normal offset": "0x3641",
       "normal value": "0x206",
-      "normal description": "HP+90\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "HP+90\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x3642",
       "rare value": "0x207",
-      "rare description": "HP+210\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "HP+210\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x3643",
       "premium value": "0x208",
-      "premium description": "HP+430\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "HP+430\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#144 Sand Worm": {
       "normal offset": "0x3644",
       "normal value": "0x209",
-      "normal description": "HP+20\nSuccess Rate: 85%\nCritical Rate: 2%",
+      "normal description": "HP+20\n\nSuccess Rate: 85%\nCritical Rate: 2%",
       "rare offset": "0x3645",
       "rare value": "0x20A",
-      "rare description": "HP+60\nSuccess Rate: 85%\nCritical Rate: 4%",
+      "rare description": "HP+60\n\nSuccess Rate: 85%\nCritical Rate: 4%",
       "premium offset": "0x3646",
       "premium value": "0x20B",
-      "premium description": "HP+100\nSuccess Rate: 85%\nCritical Rate: 6%"
+      "premium description": "HP+100\n\nSuccess Rate: 85%\nCritical Rate: 6%"
     },
     "#145 Zu": {
       "normal offset": "0x3647",
       "normal value": "0x20C",
-      "normal description": "Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Agility+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x3648",
       "rare value": "0x20D",
-      "rare description": "Strength+1/Agility+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Strength+1/Agility+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x3649",
       "premium value": "0x20E",
-      "premium description": "Strength+2/Agility+3\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Strength+2/Agility+3\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#146 Magic Pot": {
       "normal offset": "0x364A",
       "normal value": "0x20F",
-      "normal description": "EXP+200\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "normal description": "EXP+200\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "rare offset": "0x364B",
       "rare value": "0x210",
-      "rare description": "EXP+600\nSuccess Rate: 15%\nCritical Rate: 0%",
+      "rare description": "EXP+600\n\nSuccess Rate: 15%\nCritical Rate: 0%",
       "premium offset": "0x364C",
       "premium value": "0x211",
-      "premium description": "EXP+1300\nSuccess Rate: 15%\nCritical Rate: 0%"
+      "premium description": "EXP+1300\n\nSuccess Rate: 15%\nCritical Rate: 0%"
     },
     "#147 Lamia": {
       "normal offset": "0x364D",
       "normal value": "0x212",
-      "normal description": "Spirit+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Spirit+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x364E",
       "rare value": "0x213",
-      "rare description": "Spirit+3\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Spirit+3\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x364F",
       "premium value": "0x214",
-      "premium description": "Spirit+5\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Spirit+5\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#148 Tonberry": {
       "normal offset": "0x3650",
       "normal value": "0x215",
-      "normal description": "HP+20/Strength+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+20/Strength+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x3651",
       "rare value": "0x216",
-      "rare description": "HP+60/Strength+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+60/Strength+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x3652",
       "premium value": "0x217",
-      "premium description": "HP+120/Strength+2\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+120/Strength+2\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#149 Mover": {
       "normal offset": "0x3653",
       "normal value": "0x218",
-      "normal description": "CP+1\nSuccess Rate: 70%\nCritical Rate: 0%",
+      "normal description": "CP+1\n\nSuccess Rate: 70%\nCritical Rate: 0%",
       "rare offset": "0x3654",
       "rare value": "0x219",
-      "rare description": "CP+2\nSuccess Rate: 70%\nCritical Rate: 0%",
+      "rare description": "CP+2\n\nSuccess Rate: 70%\nCritical Rate: 0%",
       "premium offset": "0x3655",
       "premium value": "0x21A",
-      "premium description": "CP+3\nSuccess Rate: 70%\nCritical Rate: 0%"
+      "premium description": "CP+3\n\nSuccess Rate: 70%\nCritical Rate: 0%"
     },
     "#150 Cactuar": {
       "normal offset": "0x3656",
       "normal value": "0x21B",
-      "normal description": "Luck+1\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "normal description": "Luck+1\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "rare offset": "0x3657",
       "rare value": "0x21C",
-      "rare description": "Luck+3\nSuccess Rate: 70%\nCritical Rate: 30%",
+      "rare description": "Luck+3\n\nSuccess Rate: 70%\nCritical Rate: 30%",
       "premium offset": "0x3658",
       "premium value": "0x21D",
-      "premium description": "Luck+5\nSuccess Rate: 70%\nCritical Rate: 30%"
+      "premium description": "Luck+5\n\nSuccess Rate: 70%\nCritical Rate: 30%"
     },
     "#151 Hill Gigas": {
       "normal offset": "0x3659",
       "normal value": "0x21E",
-      "normal description": "HP+15/Strength+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+15/Strength+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x365A",
       "rare value": "0x21F",
-      "rare description": "HP+35/Strength+3\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+35/Strength+3\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x365B",
       "premium value": "0x220",
-      "premium description": "HP+55/Strength+6\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+55/Strength+6\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#152 Coeurl": {
       "normal offset": "0x365C",
       "normal value": "0x221",
-      "normal description": "Agility+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Agility+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x365D",
       "rare value": "0x222",
-      "rare description": "Agility+3\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Agility+3\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x365E",
       "premium value": "0x223",
-      "premium description": "Agility+5\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Agility+5\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#153 Sahagin": {
       "normal offset": "0x365F",
       "normal value": "0x224",
-      "normal description": "Stamina+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3660",
       "rare value": "0x225",
-      "rare description": "Stamina+3\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Stamina+3\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3661",
       "premium value": "0x226",
-      "premium description": "Stamina+5\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Stamina+5\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#154 Adamantoise": {
       "normal offset": "0x3662",
       "normal value": "0x227",
-      "normal description": "Stamina+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Stamina+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3663",
       "rare value": "0x228",
-      "rare description": "HP+20/Stamina+2\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+20/Stamina+2\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3664",
       "premium value": "0x229",
-      "premium description": "HP+40/Stamina+3\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+40/Stamina+3\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#155 Bomb": {
       "normal offset": "0x3665",
       "normal value": "0x22A",
-      "normal description": "Strength+1\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "normal description": "Strength+1\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "rare offset": "0x3666",
       "rare value": "0x22B",
-      "rare description": "Strength+3\nSuccess Rate: 80%\nCritical Rate: 10%",
+      "rare description": "Strength+3\n\nSuccess Rate: 80%\nCritical Rate: 10%",
       "premium offset": "0x3667",
       "premium value": "0x22C",
-      "premium description": "Strength+5\nSuccess Rate: 80%\nCritical Rate: 10%"
+      "premium description": "Strength+5\n\nSuccess Rate: 80%\nCritical Rate: 10%"
     },
     "#156 King Bomb": {
       "normal offset": "0x3668",
       "normal value": "0x22D",
-      "normal description": "Strength+2\nSuccess Rate: 50%\nCritical Rate: 5%",
+      "normal description": "Strength+2\n\nSuccess Rate: 50%\nCritical Rate: 5%",
       "rare offset": "0x3669",
       "rare value": "0x22E",
-      "rare description": "Strength+5\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Strength+5\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x366A",
       "premium value": "0x22F",
-      "premium description": "Strength+9\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Strength+9\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#157 Malboro": {
       "normal offset": "0x366B",
       "normal value": "0x230",
-      "normal description": "Luck+1\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "Luck+1\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x366C",
       "rare value": "0x231",
-      "rare description": "Luck+3\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "Luck+3\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x366D",
       "premium value": "0x232",
-      "premium description": "Luck+5\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "Luck+5\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#158 Great Malboro": {
       "normal offset": "0x366E",
       "normal value": "0x233",
-      "normal description": "Luck+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "Luck+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x366F",
       "rare value": "0x234",
-      "rare description": "Luck+5\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "Luck+5\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x3670",
       "premium value": "0x235",
-      "premium description": "Luck+9\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "Luck+9\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#159 Flan": {
       "normal offset": "0x3671",
       "normal value": "0x236",
-      "normal description": "HP+10\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "HP+10\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3672",
       "rare value": "0x237",
-      "rare description": "HP+50\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+50\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3673",
       "premium value": "0x238",
-      "premium description": "HP+90\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+90\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#160 Jumbo Flan": {
       "normal offset": "0x3674",
       "normal value": "0x239",
-      "normal description": "HP+20/Stamina+1\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "normal description": "HP+20/Stamina+1\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "rare offset": "0x3675",
       "rare value": "0x23A",
-      "rare description": "HP+60/Stamina+2\nSuccess Rate: 50%\nCritical Rate: 0%",
+      "rare description": "HP+60/Stamina+2\n\nSuccess Rate: 50%\nCritical Rate: 0%",
       "premium offset": "0x3676",
       "premium value": "0x23B",
-      "premium description": "HP+120/Stamina+3\nSuccess Rate: 50%\nCritical Rate: 0%"
+      "premium description": "HP+120/Stamina+3\n\nSuccess Rate: 50%\nCritical Rate: 0%"
     },
     "#161 Behemoth": {
       "normal offset": "0x3677",
       "normal value": "0x23C",
-      "normal description": "HP+20\nSuccess Rate: 100%\nCritical Rate: 2%",
+      "normal description": "HP+20\n\nSuccess Rate: 100%\nCritical Rate: 2%",
       "rare offset": "0x3678",
       "rare value": "0x23D",
-      "rare description": "HP+60\nSuccess Rate: 100%\nCritical Rate: 4%",
+      "rare description": "HP+60\n\nSuccess Rate: 100%\nCritical Rate: 4%",
       "premium offset": "0x3679",
       "premium value": "0x23E",
-      "premium description": "HP+100\nSuccess Rate: 100%\nCritical Rate: 6%"
+      "premium description": "HP+100\n\nSuccess Rate: 100%\nCritical Rate: 6%"
     },
     "#162 King Behemoth": {
       "normal offset": "0x367A",
       "normal value": "0x23F",
-      "normal description": "HP+100\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "normal description": "HP+100\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "rare offset": "0x367B",
       "rare value": "0x240",
-      "rare description": "HP+220\nSuccess Rate: 20%\nCritical Rate: 0%",
+      "rare description": "HP+220\n\nSuccess Rate: 20%\nCritical Rate: 0%",
       "premium offset": "0x367C",
       "premium value": "0x241",
-      "premium description": "HP+440\nSuccess Rate: 20%\nCritical Rate: 0%"
+      "premium description": "HP+440\n\nSuccess Rate: 20%\nCritical Rate: 0%"
     },
     "Red Shard": {
       "value": "0x242"
