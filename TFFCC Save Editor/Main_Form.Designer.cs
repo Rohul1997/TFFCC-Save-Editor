@@ -54,16 +54,21 @@ namespace TFFCC_Save_Editor
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star1_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Progress_star2_pictureBox = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Progress_label = new System.Windows.Forms.Label();
             this.Player_name_label = new System.Windows.Forms.Label();
@@ -104,14 +109,19 @@ namespace TFFCC_Save_Editor
             this.Abilities_triggered_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Levels_reset_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Versus_mode_groupBox = new System.Windows.Forms.GroupBox();
+            this.online_battle_rating_wins_button = new System.Windows.Forms.Button();
+            this.Highest_rank_pictureBox = new System.Windows.Forms.PictureBox();
             this.Highest_rank_class_comboBox = new System.Windows.Forms.ComboBox();
             this.Highest_rank_comboBox = new System.Windows.Forms.ComboBox();
             this.Local_battle_rating_ties_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
             this.Online_battle_rating_ties_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
             this.Local_battle_rating_losses_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_expert_pictureBox = new System.Windows.Forms.PictureBox();
             this.Online_battle_rating_losses_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Song_icon_basic_pictureBox = new System.Windows.Forms.PictureBox();
             this.Local_battle_rating_wins_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Online_battle_rating_wins_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Local_battle_rating_score_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Online_battle_rating_score_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.AI_battle_victories_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -165,6 +175,7 @@ namespace TFFCC_Save_Editor
             this.Long_quests_cleared_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Total_quests_cleared_textBox = new System.Windows.Forms.TextBox();
             this.Music_stages_groupBox = new System.Windows.Forms.GroupBox();
+            this.Crowns_pictureBox = new System.Windows.Forms.PictureBox();
             this.Total_songs_cleared_label = new System.Windows.Forms.Label();
             this.Basic_scores_cleared_label = new System.Windows.Forms.Label();
             this.Expert_scores_cleared_label = new System.Windows.Forms.Label();
@@ -207,6 +218,7 @@ namespace TFFCC_Save_Editor
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Max_all_characters_stats_button = new System.Windows.Forms.Button();
             this.Max_character_stats_button = new System.Windows.Forms.Button();
+            this.CharEditor_levelResets_picturebox = new System.Windows.Forms.PictureBox();
             this.CharEditor_totalCPlabel = new System.Windows.Forms.Label();
             this.CharEditor_levelResets_label = new System.Windows.Forms.Label();
             this.CharEditor_exp_textBox = new System.Windows.Forms.TextBox();
@@ -220,6 +232,7 @@ namespace TFFCC_Save_Editor
             this.CharEditor_agility_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CharEditor_magic_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CharEditor_strength_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CharEditor_character_pictureBox = new System.Windows.Forms.PictureBox();
             this.CharEditor_character_comboBox = new System.Windows.Forms.ComboBox();
             this.CharEditor_spirit_label = new System.Windows.Forms.Label();
             this.CharEditor_stamina_label = new System.Windows.Forms.Label();
@@ -233,6 +246,7 @@ namespace TFFCC_Save_Editor
             this.CharEditor_level_label = new System.Windows.Forms.Label();
             this.Member3_groupBox = new System.Windows.Forms.GroupBox();
             this.Party4_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party4_character_pictureBox = new System.Windows.Forms.PictureBox();
             this.Party4_ability1_label = new System.Windows.Forms.Label();
             this.Party4_ability2_label = new System.Windows.Forms.Label();
             this.Party4_ability1_textBox = new System.Windows.Forms.TextBox();
@@ -243,6 +257,7 @@ namespace TFFCC_Save_Editor
             this.Party4_character_comboBox = new System.Windows.Forms.ComboBox();
             this.Member2_groupBox = new System.Windows.Forms.GroupBox();
             this.Party3_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party3_character_pictureBox = new System.Windows.Forms.PictureBox();
             this.Party3_ability2_label = new System.Windows.Forms.Label();
             this.Party3_ability2_textBox = new System.Windows.Forms.TextBox();
             this.Party3_ability4_label = new System.Windows.Forms.Label();
@@ -253,6 +268,7 @@ namespace TFFCC_Save_Editor
             this.Party3_ability1_label = new System.Windows.Forms.Label();
             this.Member1_groupBox = new System.Windows.Forms.GroupBox();
             this.Party2_ability4_textBox = new System.Windows.Forms.TextBox();
+            this.Party2_character_pictureBox = new System.Windows.Forms.PictureBox();
             this.Party2_ability2_textBox = new System.Windows.Forms.TextBox();
             this.Party2_character_comboBox = new System.Windows.Forms.ComboBox();
             this.Party2_ability3_textBox = new System.Windows.Forms.TextBox();
@@ -271,6 +287,7 @@ namespace TFFCC_Save_Editor
             this.Party1_ability3_label = new System.Windows.Forms.Label();
             this.Party1_ability1_label = new System.Windows.Forms.Label();
             this.Party1_character_comboBox = new System.Windows.Forms.ComboBox();
+            this.Party1_character_pictureBox = new System.Windows.Forms.PictureBox();
             this.Items_tabPage = new System.Windows.Forms.TabPage();
             this.Item_quest_med_groupBox = new System.Windows.Forms.GroupBox();
             this.Item_quest_med_richTextBox = new System.Windows.Forms.RichTextBox();
@@ -282,9 +299,13 @@ namespace TFFCC_Save_Editor
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CollectaCards_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.card_back_pictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.card_rare_pictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.card_premium_pictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.card_normal_pictureBox = new System.Windows.Forms.PictureBox();
             this.card_premium_description_groupBox = new System.Windows.Forms.GroupBox();
             this.card_premium_description_richTextBox = new System.Windows.Forms.RichTextBox();
             this.card_rare_description_groupBox = new System.Windows.Forms.GroupBox();
@@ -311,29 +332,13 @@ namespace TFFCC_Save_Editor
             this.Open_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Highest_rank_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_ultimatenex_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_ultimate_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_expert_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Song_icon_basic_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star1_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Progress_star2_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Crowns_pictureBox = new System.Windows.Forms.PictureBox();
-            this.CharEditor_levelResets_picturebox = new System.Windows.Forms.PictureBox();
-            this.CharEditor_character_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Party4_character_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Party3_character_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Party2_character_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Party1_character_pictureBox = new System.Windows.Forms.PictureBox();
-            this.card_back_pictureBox = new System.Windows.Forms.PictureBox();
-            this.card_rare_pictureBox = new System.Windows.Forms.PictureBox();
-            this.card_premium_pictureBox = new System.Windows.Forms.PictureBox();
-            this.card_normal_pictureBox = new System.Windows.Forms.PictureBox();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -348,12 +353,16 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Abilities_triggered_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Levels_reset_numericUpDown)).BeginInit();
             this.Versus_mode_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Highest_rank_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_ties_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_ties_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_losses_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_losses_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_wins_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_wins_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_score_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_score_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AI_battle_victories_numericUpDown)).BeginInit();
@@ -375,6 +384,7 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Medium_quests_cleared_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Long_quests_cleared_numericUpDown)).BeginInit();
             this.Music_stages_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Crowns_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Total_songs_cleared_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basic_scores_cleared_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Expert_scores_cleared_numericUpDown)).BeginInit();
@@ -396,6 +406,7 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.StreetPasses_numericUpDown)).BeginInit();
             this.Characters_tabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_spirit_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_totalCP_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_numericUpDown)).BeginInit();
@@ -405,46 +416,34 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_agility_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_magic_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_strength_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_character_pictureBox)).BeginInit();
             this.Member3_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party4_character_pictureBox)).BeginInit();
             this.Member2_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party3_character_pictureBox)).BeginInit();
             this.Member1_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party2_character_pictureBox)).BeginInit();
             this.Leader_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party1_character_pictureBox)).BeginInit();
             this.Items_tabPage.SuspendLayout();
             this.Item_quest_med_groupBox.SuspendLayout();
             this.Item_equip_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).BeginInit();
             this.CollectaCards_tabPage.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.card_back_pictureBox)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.card_rare_pictureBox)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.card_premium_pictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.card_normal_pictureBox)).BeginInit();
             this.card_premium_description_groupBox.SuspendLayout();
             this.card_rare_description_groupBox.SuspendLayout();
             this.card_normal_description_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Highest_rank_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Crowns_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_character_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party4_character_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party3_character_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party2_character_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party1_character_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_back_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_rare_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_premium_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_normal_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -467,6 +466,51 @@ namespace TFFCC_Save_Editor
             Profile_groupBox.TabIndex = 2;
             Profile_groupBox.TabStop = false;
             Profile_groupBox.Text = "Profile";
+            // 
+            // Progress_star5_pictureBox
+            // 
+            this.Progress_star5_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
+            this.Progress_star5_pictureBox.Location = new System.Drawing.Point(191, 93);
+            this.Progress_star5_pictureBox.Name = "Progress_star5_pictureBox";
+            this.Progress_star5_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.Progress_star5_pictureBox.TabIndex = 3;
+            this.Progress_star5_pictureBox.TabStop = false;
+            // 
+            // Progress_star4_pictureBox
+            // 
+            this.Progress_star4_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
+            this.Progress_star4_pictureBox.Location = new System.Drawing.Point(161, 93);
+            this.Progress_star4_pictureBox.Name = "Progress_star4_pictureBox";
+            this.Progress_star4_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.Progress_star4_pictureBox.TabIndex = 3;
+            this.Progress_star4_pictureBox.TabStop = false;
+            // 
+            // Progress_star3_pictureBox
+            // 
+            this.Progress_star3_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
+            this.Progress_star3_pictureBox.Location = new System.Drawing.Point(131, 93);
+            this.Progress_star3_pictureBox.Name = "Progress_star3_pictureBox";
+            this.Progress_star3_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.Progress_star3_pictureBox.TabIndex = 3;
+            this.Progress_star3_pictureBox.TabStop = false;
+            // 
+            // Progress_star1_pictureBox
+            // 
+            this.Progress_star1_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
+            this.Progress_star1_pictureBox.Location = new System.Drawing.Point(71, 93);
+            this.Progress_star1_pictureBox.Name = "Progress_star1_pictureBox";
+            this.Progress_star1_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.Progress_star1_pictureBox.TabIndex = 3;
+            this.Progress_star1_pictureBox.TabStop = false;
+            // 
+            // Progress_star2_pictureBox
+            // 
+            this.Progress_star2_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
+            this.Progress_star2_pictureBox.Location = new System.Drawing.Point(101, 93);
+            this.Progress_star2_pictureBox.Name = "Progress_star2_pictureBox";
+            this.Progress_star2_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.Progress_star2_pictureBox.TabIndex = 3;
+            this.Progress_star2_pictureBox.TabStop = false;
             // 
             // label12
             // 
@@ -635,8 +679,8 @@ namespace TFFCC_Save_Editor
             // 
             // songs_Date
             // 
-            dataGridViewCellStyle10.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle46.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle46;
             this.songs_Date.HeaderText = "Date";
             this.songs_Date.Name = "songs_Date";
             this.songs_Date.Width = 68;
@@ -873,6 +917,7 @@ namespace TFFCC_Save_Editor
             // 
             // Versus_mode_groupBox
             // 
+            this.Versus_mode_groupBox.Controls.Add(this.online_battle_rating_wins_button);
             this.Versus_mode_groupBox.Controls.Add(this.Highest_rank_pictureBox);
             this.Versus_mode_groupBox.Controls.Add(this.Highest_rank_class_comboBox);
             this.Versus_mode_groupBox.Controls.Add(this.Highest_rank_comboBox);
@@ -885,7 +930,6 @@ namespace TFFCC_Save_Editor
             this.Versus_mode_groupBox.Controls.Add(this.Online_battle_rating_losses_numericUpDown);
             this.Versus_mode_groupBox.Controls.Add(this.Song_icon_basic_pictureBox);
             this.Versus_mode_groupBox.Controls.Add(this.Local_battle_rating_wins_numericUpDown);
-            this.Versus_mode_groupBox.Controls.Add(this.Online_battle_rating_wins_numericUpDown);
             this.Versus_mode_groupBox.Controls.Add(this.Local_battle_rating_score_numericUpDown);
             this.Versus_mode_groupBox.Controls.Add(this.Online_battle_rating_score_numericUpDown);
             this.Versus_mode_groupBox.Controls.Add(this.AI_battle_victories_numericUpDown);
@@ -927,6 +971,27 @@ namespace TFFCC_Save_Editor
             this.Versus_mode_groupBox.TabIndex = 31;
             this.Versus_mode_groupBox.TabStop = false;
             this.Versus_mode_groupBox.Text = "Versus Mode";
+            // 
+            // online_battle_rating_wins_button
+            // 
+            this.online_battle_rating_wins_button.Enabled = false;
+            this.online_battle_rating_wins_button.Location = new System.Drawing.Point(187, 61);
+            this.online_battle_rating_wins_button.Name = "online_battle_rating_wins_button";
+            this.online_battle_rating_wins_button.Size = new System.Drawing.Size(53, 20);
+            this.online_battle_rating_wins_button.TabIndex = 5;
+            this.online_battle_rating_wins_button.Text = "Set ...";
+            this.online_battle_rating_wins_button.UseVisualStyleBackColor = true;
+            this.online_battle_rating_wins_button.Click += new System.EventHandler(this.online_battle_rating_wins_button_Click);
+            // 
+            // Highest_rank_pictureBox
+            // 
+            this.Highest_rank_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Bronze_Rank;
+            this.Highest_rank_pictureBox.Location = new System.Drawing.Point(128, 136);
+            this.Highest_rank_pictureBox.Name = "Highest_rank_pictureBox";
+            this.Highest_rank_pictureBox.Size = new System.Drawing.Size(23, 21);
+            this.Highest_rank_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Highest_rank_pictureBox.TabIndex = 59;
+            this.Highest_rank_pictureBox.TabStop = false;
             // 
             // Highest_rank_class_comboBox
             // 
@@ -986,6 +1051,16 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_ties_numericUpDown.TabIndex = 42;
             this.Local_battle_rating_ties_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
+            // Song_icon_ultimatenex_pictureBox
+            // 
+            this.Song_icon_ultimatenex_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimatenex_pictureBox.Image")));
+            this.Song_icon_ultimatenex_pictureBox.Location = new System.Drawing.Point(309, 166);
+            this.Song_icon_ultimatenex_pictureBox.Name = "Song_icon_ultimatenex_pictureBox";
+            this.Song_icon_ultimatenex_pictureBox.Size = new System.Drawing.Size(46, 31);
+            this.Song_icon_ultimatenex_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Song_icon_ultimatenex_pictureBox.TabIndex = 3;
+            this.Song_icon_ultimatenex_pictureBox.TabStop = false;
+            // 
             // Online_battle_rating_ties_numericUpDown
             // 
             this.Online_battle_rating_ties_numericUpDown.Location = new System.Drawing.Point(305, 61);
@@ -998,6 +1073,16 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_ties_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Online_battle_rating_ties_numericUpDown.TabIndex = 38;
             this.Online_battle_rating_ties_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
+            // 
+            // Song_icon_ultimate_pictureBox
+            // 
+            this.Song_icon_ultimate_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimate_pictureBox.Image")));
+            this.Song_icon_ultimate_pictureBox.Location = new System.Drawing.Point(258, 166);
+            this.Song_icon_ultimate_pictureBox.Name = "Song_icon_ultimate_pictureBox";
+            this.Song_icon_ultimate_pictureBox.Size = new System.Drawing.Size(28, 31);
+            this.Song_icon_ultimate_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Song_icon_ultimate_pictureBox.TabIndex = 3;
+            this.Song_icon_ultimate_pictureBox.TabStop = false;
             // 
             // Local_battle_rating_losses_numericUpDown
             // 
@@ -1012,6 +1097,16 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_losses_numericUpDown.TabIndex = 41;
             this.Local_battle_rating_losses_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
+            // Song_icon_expert_pictureBox
+            // 
+            this.Song_icon_expert_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_expert_pictureBox.Image")));
+            this.Song_icon_expert_pictureBox.Location = new System.Drawing.Point(199, 166);
+            this.Song_icon_expert_pictureBox.Name = "Song_icon_expert_pictureBox";
+            this.Song_icon_expert_pictureBox.Size = new System.Drawing.Size(28, 31);
+            this.Song_icon_expert_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Song_icon_expert_pictureBox.TabIndex = 3;
+            this.Song_icon_expert_pictureBox.TabStop = false;
+            // 
             // Online_battle_rating_losses_numericUpDown
             // 
             this.Online_battle_rating_losses_numericUpDown.Location = new System.Drawing.Point(246, 61);
@@ -1025,6 +1120,16 @@ namespace TFFCC_Save_Editor
             this.Online_battle_rating_losses_numericUpDown.TabIndex = 37;
             this.Online_battle_rating_losses_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
+            // Song_icon_basic_pictureBox
+            // 
+            this.Song_icon_basic_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_basic_pictureBox.Image")));
+            this.Song_icon_basic_pictureBox.Location = new System.Drawing.Point(141, 166);
+            this.Song_icon_basic_pictureBox.Name = "Song_icon_basic_pictureBox";
+            this.Song_icon_basic_pictureBox.Size = new System.Drawing.Size(28, 31);
+            this.Song_icon_basic_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Song_icon_basic_pictureBox.TabIndex = 3;
+            this.Song_icon_basic_pictureBox.TabStop = false;
+            // 
             // Local_battle_rating_wins_numericUpDown
             // 
             this.Local_battle_rating_wins_numericUpDown.Location = new System.Drawing.Point(187, 85);
@@ -1037,19 +1142,6 @@ namespace TFFCC_Save_Editor
             this.Local_battle_rating_wins_numericUpDown.Size = new System.Drawing.Size(53, 20);
             this.Local_battle_rating_wins_numericUpDown.TabIndex = 40;
             this.Local_battle_rating_wins_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
-            // 
-            // Online_battle_rating_wins_numericUpDown
-            // 
-            this.Online_battle_rating_wins_numericUpDown.Location = new System.Drawing.Point(187, 61);
-            this.Online_battle_rating_wins_numericUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.Online_battle_rating_wins_numericUpDown.Name = "Online_battle_rating_wins_numericUpDown";
-            this.Online_battle_rating_wins_numericUpDown.Size = new System.Drawing.Size(53, 20);
-            this.Online_battle_rating_wins_numericUpDown.TabIndex = 36;
-            this.Online_battle_rating_wins_numericUpDown.ValueChanged += new System.EventHandler(this.Write_records);
             // 
             // Local_battle_rating_score_numericUpDown
             // 
@@ -1640,6 +1732,16 @@ namespace TFFCC_Save_Editor
             this.Music_stages_groupBox.TabStop = false;
             this.Music_stages_groupBox.Text = "Music Stages";
             // 
+            // Crowns_pictureBox
+            // 
+            this.Crowns_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Crowns_pictureBox.Image")));
+            this.Crowns_pictureBox.Location = new System.Drawing.Point(9, 165);
+            this.Crowns_pictureBox.Name = "Crowns_pictureBox";
+            this.Crowns_pictureBox.Size = new System.Drawing.Size(26, 18);
+            this.Crowns_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Crowns_pictureBox.TabIndex = 23;
+            this.Crowns_pictureBox.TabStop = false;
+            // 
             // Total_songs_cleared_label
             // 
             this.Total_songs_cleared_label.AutoSize = true;
@@ -2150,6 +2252,14 @@ namespace TFFCC_Save_Editor
             this.Max_character_stats_button.UseVisualStyleBackColor = true;
             this.Max_character_stats_button.Click += new System.EventHandler(this.Max_character_stats_button_Click);
             // 
+            // CharEditor_levelResets_picturebox
+            // 
+            this.CharEditor_levelResets_picturebox.Location = new System.Drawing.Point(69, 19);
+            this.CharEditor_levelResets_picturebox.Name = "CharEditor_levelResets_picturebox";
+            this.CharEditor_levelResets_picturebox.Size = new System.Drawing.Size(28, 28);
+            this.CharEditor_levelResets_picturebox.TabIndex = 2;
+            this.CharEditor_levelResets_picturebox.TabStop = false;
+            // 
             // CharEditor_totalCPlabel
             // 
             this.CharEditor_totalCPlabel.AutoSize = true;
@@ -2305,6 +2415,15 @@ namespace TFFCC_Save_Editor
             this.CharEditor_strength_numericUpDown.Size = new System.Drawing.Size(69, 20);
             this.CharEditor_strength_numericUpDown.TabIndex = 33;
             this.CharEditor_strength_numericUpDown.ValueChanged += new System.EventHandler(this.Write_characters);
+            // 
+            // CharEditor_character_pictureBox
+            // 
+            this.CharEditor_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.CharEditor_character_pictureBox.Name = "CharEditor_character_pictureBox";
+            this.CharEditor_character_pictureBox.Size = new System.Drawing.Size(90, 90);
+            this.CharEditor_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CharEditor_character_pictureBox.TabIndex = 0;
+            this.CharEditor_character_pictureBox.TabStop = false;
             // 
             // CharEditor_character_comboBox
             // 
@@ -2509,6 +2628,15 @@ namespace TFFCC_Save_Editor
             this.Party4_ability4_textBox.TabIndex = 25;
             this.Party4_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // Party4_character_pictureBox
+            // 
+            this.Party4_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party4_character_pictureBox.Name = "Party4_character_pictureBox";
+            this.Party4_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party4_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party4_character_pictureBox.TabIndex = 0;
+            this.Party4_character_pictureBox.TabStop = false;
+            // 
             // Party4_ability1_label
             // 
             this.Party4_ability1_label.AutoSize = true;
@@ -2684,6 +2812,15 @@ namespace TFFCC_Save_Editor
             this.Party3_ability4_textBox.TabIndex = 19;
             this.Party3_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // Party3_character_pictureBox
+            // 
+            this.Party3_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party3_character_pictureBox.Name = "Party3_character_pictureBox";
+            this.Party3_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party3_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party3_character_pictureBox.TabIndex = 0;
+            this.Party3_character_pictureBox.TabStop = false;
+            // 
             // Party3_ability2_label
             // 
             this.Party3_ability2_label.AutoSize = true;
@@ -2858,6 +2995,15 @@ namespace TFFCC_Save_Editor
             this.Party2_ability4_textBox.Size = new System.Drawing.Size(89, 20);
             this.Party2_ability4_textBox.TabIndex = 13;
             this.Party2_ability4_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Party2_character_pictureBox
+            // 
+            this.Party2_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party2_character_pictureBox.Name = "Party2_character_pictureBox";
+            this.Party2_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party2_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party2_character_pictureBox.TabIndex = 0;
+            this.Party2_character_pictureBox.TabStop = false;
             // 
             // Party2_ability2_textBox
             // 
@@ -3182,6 +3328,15 @@ namespace TFFCC_Save_Editor
             this.Party1_character_comboBox.Text = "Warrior of Light";
             this.Party1_character_comboBox.SelectedIndexChanged += new System.EventHandler(this.Write_characters);
             // 
+            // Party1_character_pictureBox
+            // 
+            this.Party1_character_pictureBox.Location = new System.Drawing.Point(7, 19);
+            this.Party1_character_pictureBox.Name = "Party1_character_pictureBox";
+            this.Party1_character_pictureBox.Size = new System.Drawing.Size(187, 185);
+            this.Party1_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Party1_character_pictureBox.TabIndex = 0;
+            this.Party1_character_pictureBox.TabStop = false;
+            // 
             // Items_tabPage
             // 
             this.Items_tabPage.BackColor = System.Drawing.SystemColors.Control;
@@ -3256,37 +3411,37 @@ namespace TFFCC_Save_Editor
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle49;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Items_dataGridView.Name = "Items_dataGridView";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle50;
             this.Items_dataGridView.RowHeadersVisible = false;
             this.Items_dataGridView.Size = new System.Drawing.Size(582, 411);
             this.Items_dataGridView.TabIndex = 3;
@@ -3297,9 +3452,9 @@ namespace TFFCC_Save_Editor
             // Item
             // 
             this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle12.NullValue")));
-            this.Item.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle48.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle48.NullValue")));
+            this.Item.DefaultCellStyle = dataGridViewCellStyle48;
             this.Item.HeaderText = "Item Name";
             this.Item.Name = "Item";
             this.Item.ReadOnly = true;
@@ -3344,6 +3499,15 @@ namespace TFFCC_Save_Editor
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Card Back";
             // 
+            // card_back_pictureBox
+            // 
+            this.card_back_pictureBox.Location = new System.Drawing.Point(2, 14);
+            this.card_back_pictureBox.Name = "card_back_pictureBox";
+            this.card_back_pictureBox.Size = new System.Drawing.Size(215, 145);
+            this.card_back_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.card_back_pictureBox.TabIndex = 7;
+            this.card_back_pictureBox.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.card_rare_pictureBox);
@@ -3354,6 +3518,15 @@ namespace TFFCC_Save_Editor
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "[R] Rare Card";
+            // 
+            // card_rare_pictureBox
+            // 
+            this.card_rare_pictureBox.Location = new System.Drawing.Point(2, 14);
+            this.card_rare_pictureBox.Name = "card_rare_pictureBox";
+            this.card_rare_pictureBox.Size = new System.Drawing.Size(215, 145);
+            this.card_rare_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.card_rare_pictureBox.TabIndex = 7;
+            this.card_rare_pictureBox.TabStop = false;
             // 
             // groupBox4
             // 
@@ -3366,6 +3539,15 @@ namespace TFFCC_Save_Editor
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "[P] Premium Card";
             // 
+            // card_premium_pictureBox
+            // 
+            this.card_premium_pictureBox.Location = new System.Drawing.Point(2, 14);
+            this.card_premium_pictureBox.Name = "card_premium_pictureBox";
+            this.card_premium_pictureBox.Size = new System.Drawing.Size(215, 145);
+            this.card_premium_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.card_premium_pictureBox.TabIndex = 7;
+            this.card_premium_pictureBox.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.card_normal_pictureBox);
@@ -3376,6 +3558,15 @@ namespace TFFCC_Save_Editor
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "[N] Normal Card";
+            // 
+            // card_normal_pictureBox
+            // 
+            this.card_normal_pictureBox.Location = new System.Drawing.Point(2, 14);
+            this.card_normal_pictureBox.Name = "card_normal_pictureBox";
+            this.card_normal_pictureBox.Size = new System.Drawing.Size(215, 145);
+            this.card_normal_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.card_normal_pictureBox.TabIndex = 7;
+            this.card_normal_pictureBox.TabStop = false;
             // 
             // card_premium_description_groupBox
             // 
@@ -3493,39 +3684,39 @@ namespace TFFCC_Save_Editor
             this.Cards_dataGridView.AllowUserToDeleteRows = false;
             this.Cards_dataGridView.AllowUserToResizeRows = false;
             this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle51;
             this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Card_name,
             this.Card_normal,
             this.Card_rare,
             this.Card_premium});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle53;
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Cards_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.Cards_dataGridView.RowHeadersVisible = false;
             this.Cards_dataGridView.Size = new System.Drawing.Size(371, 411);
             this.Cards_dataGridView.TabIndex = 6;
@@ -3536,10 +3727,10 @@ namespace TFFCC_Save_Editor
             // Card_name
             // 
             this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.Format = "N0";
-            dataGridViewCellStyle16.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.Format = "N0";
+            dataGridViewCellStyle52.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle52;
             this.Card_name.FillWeight = 240F;
             this.Card_name.HeaderText = "Card Name";
             this.Card_name.Name = "Card_name";
@@ -3678,200 +3869,6 @@ namespace TFFCC_Save_Editor
             this.Save_files_as_ToolStripMenuItem.Text = "Save Files As...";
             this.Save_files_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_as_ToolStripMenuItem_Click);
             // 
-            // Highest_rank_pictureBox
-            // 
-            this.Highest_rank_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Bronze_Rank;
-            this.Highest_rank_pictureBox.Location = new System.Drawing.Point(128, 136);
-            this.Highest_rank_pictureBox.Name = "Highest_rank_pictureBox";
-            this.Highest_rank_pictureBox.Size = new System.Drawing.Size(23, 21);
-            this.Highest_rank_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Highest_rank_pictureBox.TabIndex = 59;
-            this.Highest_rank_pictureBox.TabStop = false;
-            // 
-            // Song_icon_ultimatenex_pictureBox
-            // 
-            this.Song_icon_ultimatenex_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimatenex_pictureBox.Image")));
-            this.Song_icon_ultimatenex_pictureBox.Location = new System.Drawing.Point(309, 166);
-            this.Song_icon_ultimatenex_pictureBox.Name = "Song_icon_ultimatenex_pictureBox";
-            this.Song_icon_ultimatenex_pictureBox.Size = new System.Drawing.Size(46, 31);
-            this.Song_icon_ultimatenex_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Song_icon_ultimatenex_pictureBox.TabIndex = 3;
-            this.Song_icon_ultimatenex_pictureBox.TabStop = false;
-            // 
-            // Song_icon_ultimate_pictureBox
-            // 
-            this.Song_icon_ultimate_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_ultimate_pictureBox.Image")));
-            this.Song_icon_ultimate_pictureBox.Location = new System.Drawing.Point(258, 166);
-            this.Song_icon_ultimate_pictureBox.Name = "Song_icon_ultimate_pictureBox";
-            this.Song_icon_ultimate_pictureBox.Size = new System.Drawing.Size(28, 31);
-            this.Song_icon_ultimate_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Song_icon_ultimate_pictureBox.TabIndex = 3;
-            this.Song_icon_ultimate_pictureBox.TabStop = false;
-            // 
-            // Song_icon_expert_pictureBox
-            // 
-            this.Song_icon_expert_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_expert_pictureBox.Image")));
-            this.Song_icon_expert_pictureBox.Location = new System.Drawing.Point(199, 166);
-            this.Song_icon_expert_pictureBox.Name = "Song_icon_expert_pictureBox";
-            this.Song_icon_expert_pictureBox.Size = new System.Drawing.Size(28, 31);
-            this.Song_icon_expert_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Song_icon_expert_pictureBox.TabIndex = 3;
-            this.Song_icon_expert_pictureBox.TabStop = false;
-            // 
-            // Song_icon_basic_pictureBox
-            // 
-            this.Song_icon_basic_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Song_icon_basic_pictureBox.Image")));
-            this.Song_icon_basic_pictureBox.Location = new System.Drawing.Point(141, 166);
-            this.Song_icon_basic_pictureBox.Name = "Song_icon_basic_pictureBox";
-            this.Song_icon_basic_pictureBox.Size = new System.Drawing.Size(28, 31);
-            this.Song_icon_basic_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Song_icon_basic_pictureBox.TabIndex = 3;
-            this.Song_icon_basic_pictureBox.TabStop = false;
-            // 
-            // Progress_star5_pictureBox
-            // 
-            this.Progress_star5_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
-            this.Progress_star5_pictureBox.Location = new System.Drawing.Point(191, 93);
-            this.Progress_star5_pictureBox.Name = "Progress_star5_pictureBox";
-            this.Progress_star5_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.Progress_star5_pictureBox.TabIndex = 3;
-            this.Progress_star5_pictureBox.TabStop = false;
-            // 
-            // Progress_star4_pictureBox
-            // 
-            this.Progress_star4_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
-            this.Progress_star4_pictureBox.Location = new System.Drawing.Point(161, 93);
-            this.Progress_star4_pictureBox.Name = "Progress_star4_pictureBox";
-            this.Progress_star4_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.Progress_star4_pictureBox.TabIndex = 3;
-            this.Progress_star4_pictureBox.TabStop = false;
-            // 
-            // Progress_star3_pictureBox
-            // 
-            this.Progress_star3_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
-            this.Progress_star3_pictureBox.Location = new System.Drawing.Point(131, 93);
-            this.Progress_star3_pictureBox.Name = "Progress_star3_pictureBox";
-            this.Progress_star3_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.Progress_star3_pictureBox.TabIndex = 3;
-            this.Progress_star3_pictureBox.TabStop = false;
-            // 
-            // Progress_star1_pictureBox
-            // 
-            this.Progress_star1_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
-            this.Progress_star1_pictureBox.Location = new System.Drawing.Point(71, 93);
-            this.Progress_star1_pictureBox.Name = "Progress_star1_pictureBox";
-            this.Progress_star1_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.Progress_star1_pictureBox.TabIndex = 3;
-            this.Progress_star1_pictureBox.TabStop = false;
-            // 
-            // Progress_star2_pictureBox
-            // 
-            this.Progress_star2_pictureBox.Image = global::TFFCC_Save_Editor.Properties.Resources.Star_Empty;
-            this.Progress_star2_pictureBox.Location = new System.Drawing.Point(101, 93);
-            this.Progress_star2_pictureBox.Name = "Progress_star2_pictureBox";
-            this.Progress_star2_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.Progress_star2_pictureBox.TabIndex = 3;
-            this.Progress_star2_pictureBox.TabStop = false;
-            // 
-            // Crowns_pictureBox
-            // 
-            this.Crowns_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Crowns_pictureBox.Image")));
-            this.Crowns_pictureBox.Location = new System.Drawing.Point(9, 165);
-            this.Crowns_pictureBox.Name = "Crowns_pictureBox";
-            this.Crowns_pictureBox.Size = new System.Drawing.Size(26, 18);
-            this.Crowns_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Crowns_pictureBox.TabIndex = 23;
-            this.Crowns_pictureBox.TabStop = false;
-            // 
-            // CharEditor_levelResets_picturebox
-            // 
-            this.CharEditor_levelResets_picturebox.Location = new System.Drawing.Point(69, 19);
-            this.CharEditor_levelResets_picturebox.Name = "CharEditor_levelResets_picturebox";
-            this.CharEditor_levelResets_picturebox.Size = new System.Drawing.Size(28, 28);
-            this.CharEditor_levelResets_picturebox.TabIndex = 2;
-            this.CharEditor_levelResets_picturebox.TabStop = false;
-            // 
-            // CharEditor_character_pictureBox
-            // 
-            this.CharEditor_character_pictureBox.Location = new System.Drawing.Point(7, 19);
-            this.CharEditor_character_pictureBox.Name = "CharEditor_character_pictureBox";
-            this.CharEditor_character_pictureBox.Size = new System.Drawing.Size(90, 90);
-            this.CharEditor_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CharEditor_character_pictureBox.TabIndex = 0;
-            this.CharEditor_character_pictureBox.TabStop = false;
-            // 
-            // Party4_character_pictureBox
-            // 
-            this.Party4_character_pictureBox.Location = new System.Drawing.Point(7, 19);
-            this.Party4_character_pictureBox.Name = "Party4_character_pictureBox";
-            this.Party4_character_pictureBox.Size = new System.Drawing.Size(187, 185);
-            this.Party4_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Party4_character_pictureBox.TabIndex = 0;
-            this.Party4_character_pictureBox.TabStop = false;
-            // 
-            // Party3_character_pictureBox
-            // 
-            this.Party3_character_pictureBox.Location = new System.Drawing.Point(7, 19);
-            this.Party3_character_pictureBox.Name = "Party3_character_pictureBox";
-            this.Party3_character_pictureBox.Size = new System.Drawing.Size(187, 185);
-            this.Party3_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Party3_character_pictureBox.TabIndex = 0;
-            this.Party3_character_pictureBox.TabStop = false;
-            // 
-            // Party2_character_pictureBox
-            // 
-            this.Party2_character_pictureBox.Location = new System.Drawing.Point(7, 19);
-            this.Party2_character_pictureBox.Name = "Party2_character_pictureBox";
-            this.Party2_character_pictureBox.Size = new System.Drawing.Size(187, 185);
-            this.Party2_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Party2_character_pictureBox.TabIndex = 0;
-            this.Party2_character_pictureBox.TabStop = false;
-            // 
-            // Party1_character_pictureBox
-            // 
-            this.Party1_character_pictureBox.Location = new System.Drawing.Point(7, 19);
-            this.Party1_character_pictureBox.Name = "Party1_character_pictureBox";
-            this.Party1_character_pictureBox.Size = new System.Drawing.Size(187, 185);
-            this.Party1_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Party1_character_pictureBox.TabIndex = 0;
-            this.Party1_character_pictureBox.TabStop = false;
-            // 
-            // card_back_pictureBox
-            // 
-            this.card_back_pictureBox.Location = new System.Drawing.Point(2, 14);
-            this.card_back_pictureBox.Name = "card_back_pictureBox";
-            this.card_back_pictureBox.Size = new System.Drawing.Size(215, 145);
-            this.card_back_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.card_back_pictureBox.TabIndex = 7;
-            this.card_back_pictureBox.TabStop = false;
-            // 
-            // card_rare_pictureBox
-            // 
-            this.card_rare_pictureBox.Location = new System.Drawing.Point(2, 14);
-            this.card_rare_pictureBox.Name = "card_rare_pictureBox";
-            this.card_rare_pictureBox.Size = new System.Drawing.Size(215, 145);
-            this.card_rare_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.card_rare_pictureBox.TabIndex = 7;
-            this.card_rare_pictureBox.TabStop = false;
-            // 
-            // card_premium_pictureBox
-            // 
-            this.card_premium_pictureBox.Location = new System.Drawing.Point(2, 14);
-            this.card_premium_pictureBox.Name = "card_premium_pictureBox";
-            this.card_premium_pictureBox.Size = new System.Drawing.Size(215, 145);
-            this.card_premium_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.card_premium_pictureBox.TabIndex = 7;
-            this.card_premium_pictureBox.TabStop = false;
-            // 
-            // card_normal_pictureBox
-            // 
-            this.card_normal_pictureBox.Location = new System.Drawing.Point(2, 14);
-            this.card_normal_pictureBox.Name = "card_normal_pictureBox";
-            this.card_normal_pictureBox.Size = new System.Drawing.Size(215, 145);
-            this.card_normal_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.card_normal_pictureBox.TabIndex = 7;
-            this.card_normal_pictureBox.TabStop = false;
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3888,6 +3885,11 @@ namespace TFFCC_Save_Editor
             this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.27";
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rhythmia_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Songs_dataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -3904,12 +3906,16 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Levels_reset_numericUpDown)).EndInit();
             this.Versus_mode_groupBox.ResumeLayout(false);
             this.Versus_mode_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Highest_rank_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_ties_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_ties_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_losses_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_losses_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_wins_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_wins_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Local_battle_rating_score_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Online_battle_rating_score_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AI_battle_victories_numericUpDown)).EndInit();
@@ -3933,6 +3939,7 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Long_quests_cleared_numericUpDown)).EndInit();
             this.Music_stages_groupBox.ResumeLayout(false);
             this.Music_stages_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Crowns_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Total_songs_cleared_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basic_scores_cleared_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Expert_scores_cleared_numericUpDown)).EndInit();
@@ -3956,6 +3963,7 @@ namespace TFFCC_Save_Editor
             this.Characters_tabPage.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_spirit_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_totalCP_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_numericUpDown)).EndInit();
@@ -3965,23 +3973,32 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_agility_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_magic_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharEditor_strength_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_character_pictureBox)).EndInit();
             this.Member3_groupBox.ResumeLayout(false);
             this.Member3_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party4_character_pictureBox)).EndInit();
             this.Member2_groupBox.ResumeLayout(false);
             this.Member2_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party3_character_pictureBox)).EndInit();
             this.Member1_groupBox.ResumeLayout(false);
             this.Member1_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party2_character_pictureBox)).EndInit();
             this.Leader_groupBox.ResumeLayout(false);
             this.Leader_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Party1_character_pictureBox)).EndInit();
             this.Items_tabPage.ResumeLayout(false);
             this.Item_quest_med_groupBox.ResumeLayout(false);
             this.Item_equip_groupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Items_dataGridView)).EndInit();
             this.CollectaCards_tabPage.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.card_back_pictureBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.card_rare_pictureBox)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.card_premium_pictureBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.card_normal_pictureBox)).EndInit();
             this.card_premium_description_groupBox.ResumeLayout(false);
             this.card_rare_description_groupBox.ResumeLayout(false);
             this.card_normal_description_groupBox.ResumeLayout(false);
@@ -3990,27 +4007,6 @@ namespace TFFCC_Save_Editor
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Highest_rank_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimatenex_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_ultimate_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_expert_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Song_icon_basic_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star4_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star3_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star1_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Progress_star2_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Crowns_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_levelResets_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CharEditor_character_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party4_character_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party3_character_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party2_character_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Party1_character_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_back_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_rare_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_premium_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card_normal_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4079,7 +4075,6 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.NumericUpDown Local_battle_rating_losses_numericUpDown;
         private System.Windows.Forms.NumericUpDown Online_battle_rating_losses_numericUpDown;
         private System.Windows.Forms.NumericUpDown Local_battle_rating_wins_numericUpDown;
-        private System.Windows.Forms.NumericUpDown Online_battle_rating_wins_numericUpDown;
         private System.Windows.Forms.NumericUpDown Local_battle_rating_score_numericUpDown;
         private System.Windows.Forms.NumericUpDown Online_battle_rating_score_numericUpDown;
         private System.Windows.Forms.TextBox Total_rating_ties_textBox;
@@ -4285,6 +4280,7 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridViewImageColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.Button online_battle_rating_wins_button;
     }
 }
 

@@ -80,7 +80,7 @@ namespace TFFCC_Save_Editor
             try
             {
                 //Disable savedata.bk & extsavedata.bk stuff
-                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = CharEditor_character_comboBox.Enabled = Max_character_stats_button.Enabled = Max_all_characters_stats_button.Enabled = savedata_loaded = extsavedata_loaded = false;
+                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = online_battle_rating_wins_button.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = CharEditor_character_comboBox.Enabled = Max_character_stats_button.Enabled = Max_all_characters_stats_button.Enabled = savedata_loaded = extsavedata_loaded = false;
 
                 open_savedata.Filter = " savedata.bk Files|savedata.bk|All Files (*.*)|*.*";
                 if (open_savedata.ShowDialog() != DialogResult.OK)
@@ -110,7 +110,7 @@ namespace TFFCC_Save_Editor
                 Read_songs(null, null);
 
                 //Enable savedata.bk & extsavedata.bk stuff
-                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = CharEditor_character_comboBox.Enabled = Max_character_stats_button.Enabled = Max_all_characters_stats_button.Enabled = savedata_loaded = extsavedata_loaded = true;
+                Save_files_ToolStripMenuItem.Enabled = Save_files_as_ToolStripMenuItem.Enabled = online_battle_rating_wins_button.Enabled = max_items_button.Enabled = max_normal_cards_button.Enabled = max_rare_cards_button.Enabled = max_premium_cards_button.Enabled = max_all_cards_button.Enabled = CharEditor_character_comboBox.Enabled = Max_character_stats_button.Enabled = Max_all_characters_stats_button.Enabled = savedata_loaded = extsavedata_loaded = true;
             }
             catch (Exception ex)
             {
@@ -343,9 +343,6 @@ namespace TFFCC_Save_Editor
                 //Read online battle rating score
                 Online_battle_rating_score_numericUpDown.Value = BitConverter.ToUInt16(savedata, 0x56);
 
-                //Read online battle rating wins
-                Online_battle_rating_wins_numericUpDown.Value = BitConverter.ToUInt16(savedata, 0x37E6);
-
                 //Read online battle rating losses
                 Online_battle_rating_losses_numericUpDown.Value = BitConverter.ToUInt16(savedata, 0x37E8);
 
@@ -368,7 +365,7 @@ namespace TFFCC_Save_Editor
                 Total_rating_score_textBox.Text = (Online_battle_rating_score_numericUpDown.Value + Local_battle_rating_score_numericUpDown.Value).ToString();
 
                 //set total rating wins
-                Total_rating_wins_textBox.Text = (Online_battle_rating_wins_numericUpDown.Value + Local_battle_rating_wins_numericUpDown.Value).ToString();
+                Total_rating_wins_textBox.Text = (BitConverter.ToUInt16(savedata, 0x37E6) + Local_battle_rating_wins_numericUpDown.Value).ToString();
 
                 //set total rating losses
                 Total_rating_losses_textBox.Text = (Online_battle_rating_losses_numericUpDown.Value + Local_battle_rating_losses_numericUpDown.Value).ToString();
@@ -610,9 +607,6 @@ namespace TFFCC_Save_Editor
                 //Write online battle rating score
                 Array.Copy(BitConverter.GetBytes((ushort)Online_battle_rating_score_numericUpDown.Value), 0, savedata, 0x56, 2);
 
-                //Write online battle rating wins
-                Array.Copy(BitConverter.GetBytes((ushort)Online_battle_rating_wins_numericUpDown.Value), 0, savedata, 0x37E6, 2);
-
                 //Write online battle rating losses
                 Array.Copy(BitConverter.GetBytes((ushort)Online_battle_rating_losses_numericUpDown.Value), 0, savedata, 0x37E8, 2);
 
@@ -766,7 +760,13 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Records changes\n\n{ex}", "Error");
             }
         }
-
+        //Read/Write online battle rating wins
+        private void online_battle_rating_wins_button_Click(object sender, EventArgs e)
+        {
+            if (!savedata_loaded) return;
+            (new online_battle_rating_wins(ref savedata)).ShowDialog();
+            Read_records(null, null);
+        }
 
         //Characters Tab
         bool CharEditor_character_changed;
@@ -1168,7 +1168,6 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to update Items description\n\n{ex}", "Error");
             }
         }
-
 
         //Read CollectaCards tab
         private void Read_collectacards(object sender, EventArgs e)
