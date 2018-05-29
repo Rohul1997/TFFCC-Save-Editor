@@ -52,7 +52,7 @@ namespace TFFCC_Save_Editor
 
         public dynamic dbJson(string type)
         {
-            dynamic json = new JavaScriptSerializer().DeserializeObject((new StreamReader(new MemoryStream(Properties.Resources.Databases))).ReadToEnd());
+            dynamic json = new JavaScriptSerializer().DeserializeObject((new StreamReader(new MemoryStream(Properties.Resources.Databases))).ReadToEnd().Remove(0, 1216));
             switch (type)
             {
                 case "items":
