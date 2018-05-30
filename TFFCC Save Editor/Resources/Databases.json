@@ -4049,6 +4049,7 @@
   "songs": {
     "FINAL FANTASY": {
       "Battle": {
+        "value": "0x00",
         "type": "BMS",
         "basic score": "0x5FD54",
         "basic chain": "0x5FD58",
@@ -4076,6 +4077,7 @@
         "ultimate date": "0x5FDD2"
       },
       "Miniboss Battle": {
+        "value": "0x01",
         "type": "BMS",
         "basic score": "0x5FDD8",
         "basic chain": "0x5FDDC",
@@ -4103,6 +4105,7 @@
         "ultimate date": "0x5FE56"
       },
       "Final Battle": {
+        "value": "0x02",
         "type": "BMS",
         "basic score": "0x5FE5C",
         "basic chain": "0x5FE60",
@@ -4130,6 +4133,7 @@
         "ultimate date": "0x5FEDA"
       },
       "Main Theme": {
+        "value": "0x03",
         "type": "FMS",
         "basic score": "0x5FEE0",
         "basic chain": "0x5FEE4",
@@ -4157,6 +4161,7 @@
         "ultimate date": "0x5FF5E"
       },
       "Castle Cornelia": {
+        "value": "0x04",
         "type": "FMS",
         "basic score": "0x5FF64",
         "basic chain": "0x5FF68",
@@ -4184,6 +4189,7 @@
         "ultimate date": "0x5FFE2"
       },
       "Opening Theme": {
+        "value": "0x05",
         "type": "FMS",
         "basic score": "0x5FFE8",
         "basic chain": "0x5FFEC",
@@ -4211,6 +4217,7 @@
         "ultimate date": "0x60066"
       },
       "Matoya's Cave": {
+        "value": "0x06",
         "type": "FMS",
         "basic score": "0x6006C",
         "basic chain": "0x60070",
@@ -4238,6 +4245,7 @@
         "ultimate date": "0x600EA"
       },
       "Mt. Gulg": {
+        "value": "0x07",
         "type": "FMS",
         "basic score": "0x600F0",
         "basic chain": "0x600F4",
@@ -4265,6 +4273,7 @@
         "ultimate date": "0x6016E"
       },
       "Airship": {
+        "value": "0x08",
         "type": "FMS",
         "basic score": "0x60174",
         "basic chain": "0x60178",
@@ -4292,6 +4301,7 @@
         "ultimate date": "0x601F2"
       },
       "Sunken Shrine": {
+        "value": "0x09",
         "type": "FMS",
         "basic score": "0x601F8",
         "basic chain": "0x601FC",
@@ -4321,6 +4331,7 @@
     },
     "FINAL FANTASY II": {
       "Battle Theme 1": {
+        "value": "0x0A",
         "type": "BMS",
         "basic score": "0x6027C",
         "basic chain": "0x60280",
@@ -4348,6 +4359,7 @@
         "ultimate date": "0x602FA"
       },
       "The Rebel Army": {
+        "value": "0x0B",
         "type": "BMS",
         "basic score": "0x60300",
         "basic chain": "0x60304",
@@ -4375,6 +4387,7 @@
         "ultimate date": "0x6037E"
       },
       "(DLC) Battle Theme A": {
+        "value": "0xEC",
         "type": "BMS",
         "basic score": "0x67890",
         "basic chain": "0x67894",
@@ -4402,6 +4415,7 @@
         "ultimate date": "0x6790E"
       },
       "Battle Theme 2": {
+        "value": "0x0C",
         "type": "BMS",
         "basic score": "0x60384",
         "basic chain": "0x60388",
@@ -4429,6 +4443,7 @@
         "ultimate date": "0x60402"
       },
       "Main Theme": {
+        "value": "0x0D",
         "type": "FMS",
         "basic score": "0x60408",
         "basic chain": "0x6040C",
@@ -4456,6 +4471,7 @@
         "ultimate date": "0x60486"
       },
       "Town": {
+        "value": "0x0E",
         "type": "FMS",
         "basic score": "0x6048C",
         "basic chain": "0x60490",
@@ -4483,6 +4499,7 @@
         "ultimate date": "0x6050A"
       },
       "Dungeon": {
+        "value": "0x0F",
         "type": "FMS",
         "basic score": "0x60510",
         "basic chain": "0x60514",
@@ -4510,6 +4527,7 @@
         "ultimate date": "0x6058E"
       },
       "(DLC) The Imperial Army": {
+        "value": "0xFB",
         "type": "FMS",
         "basic score": "0x6804C",
         "basic chain": "0x68050",
@@ -4537,6 +4555,7 @@
         "ultimate date": "0x680CA"
       },
       "Tower of the Magi": {
+        "value": "0x10",
         "type": "FMS",
         "basic score": "0x60594",
         "basic chain": "0x60598",
@@ -4564,6 +4583,7 @@
         "ultimate date": "0x60612"
       },
       "(DLC) Chocobo Theme": {
+        "value": "0x100",
         "type": "FMS",
         "basic score": "0x682E0",
         "basic chain": "0x682E4",
@@ -4591,6 +4611,7 @@
         "ultimate date": "0x6835E"
       },
       "Finale": {
+        "value": "0x11",
         "type": "FMS",
         "basic score": "0x60618",
         "basic chain": "0x6061C",
@@ -4620,6 +4641,7 @@
     },
     "FINAL FANTASY III": {
       "Battle 1": {
+        "value": "0x12",
         "type": "BMS",
         "basic score": "0x6069C",
         "basic chain": "0x606A0",
@@ -4647,6 +4669,7 @@
         "ultimate date": "0x6071A"
       },
       "Battle 2": {
+        "value": "0x13",
         "type": "BMS",
         "basic score": "0x60720",
         "basic chain": "0x60724",
@@ -4674,6 +4697,7 @@
         "ultimate date": "0x6079E"
       },
       "This is the Last Battle": {
+        "value": "0x14",
         "type": "BMS",
         "basic score": "0x607A4",
         "basic chain": "0x607A8",
@@ -4701,6 +4725,7 @@
         "ultimate date": "0x60822"
       },
       "Crystal Cave": {
+        "value": "0x15",
         "type": "FMS",
         "basic score": "0x60828",
         "basic chain": "0x6082C",
@@ -4728,6 +4753,7 @@
         "ultimate date": "0x608A6"
       },
       "Eternal Wind": {
+        "value": "0x16",
         "type": "FMS",
         "basic score": "0x608AC",
         "basic chain": "0x608B0",
@@ -4755,6 +4781,7 @@
         "ultimate date": "0x6092A"
       },
       "The Boundless Ocean": {
+        "value": "0x17",
         "type": "FMS",
         "basic score": "0x60930",
         "basic chain": "0x60934",
@@ -4782,6 +4809,7 @@
         "ultimate date": "0x609AE"
       },
       "Aria, the Maiden of Water": {
+        "value": "0x18",
         "type": "FMS",
         "basic score": "0x609B4",
         "basic chain": "0x609B8",
@@ -4809,6 +4837,7 @@
         "ultimate date": "0x60A32"
       },
       "(DLC) Saronia": {
+        "value": "0x107",
         "type": "FMS",
         "basic score": "0x6867C",
         "basic chain": "0x68680",
@@ -4836,6 +4865,7 @@
         "ultimate date": "0x686FA"
       },
       "Let Me Know the Truth": {
+        "value": "0x19",
         "type": "FMS",
         "basic score": "0x60A38",
         "basic chain": "0x60A3C",
@@ -4863,6 +4893,7 @@
         "ultimate date": "0x60AB6"
       },
       "The Crystal Tower": {
+        "value": "0x1A",
         "type": "FMS",
         "basic score": "0x60ABC",
         "basic chain": "0x60AC0",
@@ -4892,6 +4923,7 @@
     },
     "FINAL FANTASY IV": {
       "Battle 1": {
+        "value": "0x1B",
         "type": "BMS",
         "basic score": "0x60B40",
         "basic chain": "0x60B44",
@@ -4919,6 +4951,7 @@
         "ultimate date": "0x60BBE"
       },
       "Battle 2": {
+        "value": "0x1C",
         "type": "BMS",
         "basic score": "0x60BC4",
         "basic chain": "0x60BC8",
@@ -4946,6 +4979,7 @@
         "ultimate date": "0x60C42"
       },
       "Battle with the Four Fiends": {
+        "value": "0x1D",
         "type": "BMS",
         "basic score": "0x60C48",
         "basic chain": "0x60C4C",
@@ -4973,6 +5007,7 @@
         "ultimate date": "0x60CC6"
       },
       "The Final Battle": {
+        "value": "0x1E",
         "type": "BMS",
         "basic score": "0x60CCC",
         "basic chain": "0x60CD0",
@@ -5000,6 +5035,7 @@
         "ultimate date": "0x60D4A"
       },
       "The Red Wings": {
+        "value": "0x1F",
         "type": "FMS",
         "basic score": "0x60D50",
         "basic chain": "0x60D54",
@@ -5027,6 +5063,7 @@
         "ultimate date": "0x60DCE"
       },
       "Theme of Love": {
+        "value": "0x20",
         "type": "FMS",
         "basic score": "0x60DD4",
         "basic chain": "0x60DD8",
@@ -5054,6 +5091,7 @@
         "ultimate date": "0x60E52"
       },
       "Main Theme of Final Fantasy IV": {
+        "value": "0x21",
         "type": "FMS",
         "basic score": "0x60E58",
         "basic chain": "0x60E5C",
@@ -5081,6 +5119,7 @@
         "ultimate date": "0x60ED6"
       },
       "Troian Beauty": {
+        "value": "0x22",
         "type": "FMS",
         "basic score": "0x60EDC",
         "basic chain": "0x60EE0",
@@ -5108,6 +5147,7 @@
         "ultimate date": "0x60F5A"
       },
       "Tower of Zot": {
+        "value": "0x23",
         "type": "FMS",
         "basic score": "0x60F60",
         "basic chain": "0x60F64",
@@ -5135,6 +5175,7 @@
         "ultimate date": "0x60FDE"
       },
       "The Airship": {
+        "value": "0x24",
         "type": "FMS",
         "basic score": "0x60FE4",
         "basic chain": "0x60FE8",
@@ -5162,6 +5203,7 @@
         "ultimate date": "0x61062"
       },
       "(DLC) Another Moon": {
+        "value": "0xF7",
         "type": "FMS",
         "basic score": "0x67E3C",
         "basic chain": "0x67E40",
@@ -5189,6 +5231,7 @@
         "ultimate date": "0x67EBA"
       },
       "Within the Giant": {
+        "value": "0x25",
         "type": "FMS",
         "basic score": "0x61068",
         "basic chain": "0x6106C",
@@ -5218,6 +5261,7 @@
     },
     "FINAL FANTASY V": {
       "Main Theme of Final Fantasy V": {
+        "value": "0x26",
         "type": "BMS",
         "basic score": "0x610EC",
         "basic chain": "0x610F0",
@@ -5245,6 +5289,7 @@
         "ultimate date": "0x6116A"
       },
       "Battle 1": {
+        "value": "0x27",
         "type": "BMS",
         "basic score": "0x61170",
         "basic chain": "0x61174",
@@ -5272,6 +5317,7 @@
         "ultimate date": "0x611EE"
       },
       "(DLC) Battle 2": {
+        "value": "0xE4",
         "type": "BMS",
         "basic score": "0x67470",
         "basic chain": "0x67474",
@@ -5299,6 +5345,7 @@
         "ultimate date": "0x674EE"
       },
       "(DLC) The Dawn Warriors": {
+        "value": "0x132",
         "type": "BMS",
         "basic score": "0x69CA8",
         "basic chain": "0x69CAC",
@@ -5326,6 +5373,7 @@
         "ultimate date": "0x69D26"
       },
       "Battle at the Big Bridge": {
+        "value": "0x28",
         "type": "BMS",
         "basic score": "0x611F4",
         "basic chain": "0x611F8",
@@ -5353,6 +5401,7 @@
         "ultimate date": "0x61272"
       },
       "The Decisive Battle": {
+        "value": "0x29",
         "type": "BMS",
         "basic score": "0x61278",
         "basic chain": "0x6127C",
@@ -5380,6 +5429,7 @@
         "ultimate date": "0x612F6"
       },
       "The Final Battle": {
+        "value": "0x2A",
         "type": "BMS",
         "basic score": "0x612FC",
         "basic chain": "0x61300",
@@ -5407,6 +5457,7 @@
         "ultimate date": "0x6137A"
       },
       "Four Hearts": {
+        "value": "0x2B",
         "type": "FMS",
         "basic score": "0x61380",
         "basic chain": "0x61384",
@@ -5434,6 +5485,7 @@
         "ultimate date": "0x613FE"
       },
       "Harvest": {
+        "value": "0x2C",
         "type": "FMS",
         "basic score": "0x61404",
         "basic chain": "0x61408",
@@ -5461,6 +5513,7 @@
         "ultimate date": "0x61482"
       },
       "(DLC) Library of Ancients": {
+        "value": "0xE0",
         "type": "FMS",
         "basic score": "0x67260",
         "basic chain": "0x67264",
@@ -5488,6 +5541,7 @@
         "ultimate date": "0x672DE"
       },
       "Home, Sweet Home": {
+        "value": "0x2D",
         "type": "FMS",
         "basic score": "0x61488",
         "basic chain": "0x6148C",
@@ -5515,6 +5569,7 @@
         "ultimate date": "0x61506"
       },
       "Mambo de Chocobo": {
+        "value": "0x2E",
         "type": "FMS",
         "basic score": "0x6150C",
         "basic chain": "0x61510",
@@ -5542,6 +5597,7 @@
         "ultimate date": "0x6158A"
       },
       "The Airship": {
+        "value": "0x2F",
         "type": "FMS",
         "basic score": "0x61590",
         "basic chain": "0x61594",
@@ -5569,6 +5625,7 @@
         "ultimate date": "0x6160E"
       },
       "A New World": {
+        "value": "0x30",
         "type": "FMS",
         "basic score": "0x61614",
         "basic chain": "0x61618",
@@ -5596,6 +5653,7 @@
         "ultimate date": "0x61692"
       },
       "In Search of Light": {
+        "value": "0x31",
         "type": "FMS",
         "basic score": "0x61698",
         "basic chain": "0x6169C",
@@ -5625,6 +5683,7 @@
     },
     "FINAL FANTASY VI": {
       "Battle": {
+        "value": "0x32",
         "type": "BMS",
         "basic score": "0x6171C",
         "basic chain": "0x61720",
@@ -5652,6 +5711,7 @@
         "ultimate date": "0x6179A"
       },
       "The Decisive Battle": {
+        "value": "0x33",
         "type": "BMS",
         "basic score": "0x617A0",
         "basic chain": "0x617A4",
@@ -5679,6 +5739,7 @@
         "ultimate date": "0x6181E"
       },
       "(DLC) Locke's Theme": {
+        "value": "0xFD",
         "type": "BMS",
         "basic score": "0x68154",
         "basic chain": "0x68158",
@@ -5706,6 +5767,7 @@
         "ultimate date": "0x681D2"
       },
       "(DLC) Protect the Espers!": {
+        "value": "0xE5",
         "type": "BMS",
         "basic score": "0x674F4",
         "basic chain": "0x674F8",
@@ -5733,6 +5795,7 @@
         "ultimate date": "0x67572"
       },
       "Battle to the Death": {
+        "value": "0x34",
         "type": "BMS",
         "basic score": "0x61824",
         "basic chain": "0x61828",
@@ -5760,6 +5823,7 @@
         "ultimate date": "0x618A2"
       },
       "Dancing Mad": {
+        "value": "0x35",
         "type": "BMS",
         "basic score": "0x618A8",
         "basic chain": "0x618AC",
@@ -5787,6 +5851,7 @@
         "ultimate date": "0x61926"
       },
       "Terra's Theme": {
+        "value": "0x36",
         "type": "FMS",
         "basic score": "0x6192C",
         "basic chain": "0x61930",
@@ -5814,6 +5879,7 @@
         "ultimate date": "0x619AA"
       },
       "Edgar & Sabin's Theme": {
+        "value": "0x37",
         "type": "FMS",
         "basic score": "0x619B0",
         "basic chain": "0x619B4",
@@ -5841,6 +5907,7 @@
         "ultimate date": "0x61A2E"
       },
       "Celes's Theme": {
+        "value": "0x38",
         "type": "FMS",
         "basic score": "0x61A34",
         "basic chain": "0x61A38",
@@ -5868,6 +5935,7 @@
         "ultimate date": "0x61AB2"
       },
       "The Airship Blackjack": {
+        "value": "0x39",
         "type": "FMS",
         "basic score": "0x61AB8",
         "basic chain": "0x61ABC",
@@ -5895,6 +5963,7 @@
         "ultimate date": "0x61B36"
       },
       "Searching for Friends": {
+        "value": "0x3A",
         "type": "FMS",
         "basic score": "0x61B3C",
         "basic chain": "0x61B40",
@@ -5922,6 +5991,7 @@
         "ultimate date": "0x61BBA"
       },
       "Kefka's Tower": {
+        "value": "0x3B",
         "type": "FMS",
         "basic score": "0x61BC0",
         "basic chain": "0x61BC4",
@@ -5951,6 +6021,7 @@
     },
     "FINAL FANTASY VII": {
       "(DLC) Opening - Bombing Mission -": {
+        "value": "0x120",
         "type": "BMS",
         "basic score": "0x69360",
         "basic chain": "0x69364",
@@ -5978,6 +6049,7 @@
         "ultimate date": "0x693DE"
       },
       "Let the Battles Begin!": {
+        "value": "0x3C",
         "type": "BMS",
         "basic score": "0x61C44",
         "basic chain": "0x61C48",
@@ -6005,6 +6077,7 @@
         "ultimate date": "0x61CC2"
       },
       "Fight On!": {
+        "value": "0x3D",
         "type": "BMS",
         "basic score": "0x61CC8",
         "basic chain": "0x61CCC",
@@ -6032,6 +6105,7 @@
         "ultimate date": "0x61D46"
       },
       "J-E-N-O-V-A": {
+        "value": "0x3E",
         "type": "BMS",
         "basic score": "0x61D4C",
         "basic chain": "0x61D50",
@@ -6059,6 +6133,7 @@
         "ultimate date": "0x61DCA"
       },
       "Aerith's Theme": {
+        "value": "0x3F",
         "type": "BMS",
         "basic score": "0x61DD0",
         "basic chain": "0x61DD4",
@@ -6086,6 +6161,7 @@
         "ultimate date": "0x61E4E"
       },
       "One-Winged Angel": {
+        "value": "0x40",
         "type": "BMS",
         "basic score": "0x61E54",
         "basic chain": "0x61E58",
@@ -6113,6 +6189,7 @@
         "ultimate date": "0x61ED2"
       },
       "(DLC) The Chase": {
+        "value": "0x103",
         "type": "FMS",
         "basic score": "0x6846C",
         "basic chain": "0x68470",
@@ -6140,6 +6217,7 @@
         "ultimate date": "0x684EA"
       },
       "Main Theme of Final Fantasy VII": {
+        "value": "0x41",
         "type": "FMS",
         "basic score": "0x61ED8",
         "basic chain": "0x61EDC",
@@ -6167,6 +6245,7 @@
         "ultimate date": "0x61F56"
       },
       "(DLC) Rufus's Welcoming Ceremony": {
+        "value": "0x10C",
         "type": "FMS",
         "basic score": "0x68910",
         "basic chain": "0x68914",
@@ -6194,6 +6273,7 @@
         "ultimate date": "0x6898E"
       },
       "Gold Saucer": {
+        "value": "0x42",
         "type": "FMS",
         "basic score": "0x61F5C",
         "basic chain": "0x61F60",
@@ -6221,6 +6301,7 @@
         "ultimate date": "0x61FDA"
       },
       "Cosmo Canyon": {
+        "value": "0x43",
         "type": "FMS",
         "basic score": "0x61FE0",
         "basic chain": "0x61FE4",
@@ -6248,6 +6329,7 @@
         "ultimate date": "0x6205E"
       },
       "The Highwind Takes to the Skies": {
+        "value": "0x44",
         "type": "FMS",
         "basic score": "0x62064",
         "basic chain": "0x62068",
@@ -6275,6 +6357,7 @@
         "ultimate date": "0x620E2"
       },
       "Judgement Day": {
+        "value": "0x45",
         "type": "FMS",
         "basic score": "0x620E8",
         "basic chain": "0x620EC",
@@ -6304,6 +6387,7 @@
     },
     "FINAL FANTASY VIII": {
       "(DLC) Liberi Fatali": {
+        "value": "0x126",
         "type": "BMS",
         "basic score": "0x69678",
         "basic chain": "0x6967C",
@@ -6331,6 +6415,7 @@
         "ultimate date": "0x696F6"
       },
       "Don't be Afraid": {
+        "value": "0x46",
         "type": "BMS",
         "basic score": "0x6216C",
         "basic chain": "0x62170",
@@ -6358,6 +6443,7 @@
         "ultimate date": "0x621EA"
       },
       "Force Your Way": {
+        "value": "0x47",
         "type": "BMS",
         "basic score": "0x621F0",
         "basic chain": "0x621F4",
@@ -6385,6 +6471,7 @@
         "ultimate date": "0x6226E"
       },
       "(DLC) Shuffle or Boogie": {
+        "value": "0xE3",
         "type": "BMS",
         "basic score": "0x673EC",
         "basic chain": "0x673F0",
@@ -6412,6 +6499,7 @@
         "ultimate date": "0x6746A"
       },
       "The Man with the Machine Gun": {
+        "value": "0x48",
         "type": "BMS",
         "basic score": "0x62274",
         "basic chain": "0x62278",
@@ -6439,6 +6527,7 @@
         "ultimate date": "0x622F2"
       },
       "(DLC) Premonition": {
+        "value": "0xF0",
         "type": "BMS",
         "basic score": "0x67AA0",
         "basic chain": "0x67AA4",
@@ -6466,6 +6555,7 @@
         "ultimate date": "0x67B1E"
       },
       "Maybe I'm a Lion": {
+        "value": "0x49",
         "type": "BMS",
         "basic score": "0x622F8",
         "basic chain": "0x622FC",
@@ -6493,6 +6583,7 @@
         "ultimate date": "0x62376"
       },
       "The Extreme": {
+        "value": "0x4A",
         "type": "BMS",
         "basic score": "0x6237C",
         "basic chain": "0x62380",
@@ -6520,6 +6611,7 @@
         "ultimate date": "0x623FA"
       },
       "(DLC) Balamb GARDEN": {
+        "value": "0xFF",
         "type": "FMS",
         "basic score": "0x6825C",
         "basic chain": "0x68260",
@@ -6547,6 +6639,7 @@
         "ultimate date": "0x682DA"
       },
       "Blue Fields": {
+        "value": "0x4B",
         "type": "FMS",
         "basic score": "0x62400",
         "basic chain": "0x62404",
@@ -6574,6 +6667,7 @@
         "ultimate date": "0x6247E"
       },
       "Find Your Way": {
+        "value": "0x4C",
         "type": "FMS",
         "basic score": "0x62484",
         "basic chain": "0x62488",
@@ -6601,6 +6695,7 @@
         "ultimate date": "0x62502"
       },
       "Waltz for the Moon": {
+        "value": "0x4D",
         "type": "FMS",
         "basic score": "0x62508",
         "basic chain": "0x6250C",
@@ -6628,6 +6723,7 @@
         "ultimate date": "0x62586"
       },
       "Fisherman's Horizon": {
+        "value": "0x4E",
         "type": "FMS",
         "basic score": "0x6258C",
         "basic chain": "0x62590",
@@ -6655,6 +6751,7 @@
         "ultimate date": "0x6260A"
       },
       "(DLC) The Oath": {
+        "value": "0x10B",
         "type": "FMS",
         "basic score": "0x6888C",
         "basic chain": "0x68890",
@@ -6682,6 +6779,7 @@
         "ultimate date": "0x6890A"
       },
       "Ride On": {
+        "value": "0x4F",
         "type": "FMS",
         "basic score": "0x62610",
         "basic chain": "0x62614",
@@ -6709,6 +6807,7 @@
         "ultimate date": "0x6268E"
       },
       "The Castle": {
+        "value": "0x50",
         "type": "FMS",
         "basic score": "0x62694",
         "basic chain": "0x62698",
@@ -6736,6 +6835,7 @@
         "ultimate date": "0x62712"
       },
       "Ending Theme": {
+        "value": "0x51",
         "type": "FMS",
         "basic score": "0x62718",
         "basic chain": "0x6271C",
@@ -6765,6 +6865,7 @@
     },
     "FINAL FANTASY IX": {
       "(DLC) Vamo' alla flamenco": {
+        "value": "0x12C",
         "type": "BMS",
         "basic score": "0x69990",
         "basic chain": "0x69994",
@@ -6792,6 +6893,7 @@
         "ultimate date": "0x69A0E"
       },
       "Battle 1": {
+        "value": "0x52",
         "type": "BMS",
         "basic score": "0x6279C",
         "basic chain": "0x627A0",
@@ -6819,6 +6921,7 @@
         "ultimate date": "0x6281A"
       },
       "Battle 2": {
+        "value": "0x53",
         "type": "BMS",
         "basic score": "0x62820",
         "basic chain": "0x62824",
@@ -6846,6 +6949,7 @@
         "ultimate date": "0x6289E"
       },
       "Swords of Fury": {
+        "value": "0x54",
         "type": "BMS",
         "basic score": "0x628A4",
         "basic chain": "0x628A8",
@@ -6873,6 +6977,7 @@
         "ultimate date": "0x62922"
       },
       "Festival of the Hunt": {
+        "value": "0x55",
         "type": "BMS",
         "basic score": "0x62928",
         "basic chain": "0x6292C",
@@ -6900,6 +7005,7 @@
         "ultimate date": "0x629A6"
       },
       "Something to Protect": {
+        "value": "0x56",
         "type": "BMS",
         "basic score": "0x629AC",
         "basic chain": "0x629B0",
@@ -6927,6 +7033,7 @@
         "ultimate date": "0x62A2A"
       },
       "The Darkness of Eternity": {
+        "value": "0x57",
         "type": "BMS",
         "basic score": "0x62A30",
         "basic chain": "0x62A34",
@@ -6954,6 +7061,7 @@
         "ultimate date": "0x62AAE"
       },
       "The Final Battle": {
+        "value": "0x58",
         "type": "BMS",
         "basic score": "0x62AB4",
         "basic chain": "0x62AB8",
@@ -6981,6 +7089,7 @@
         "ultimate date": "0x62B32"
       },
       "(DLC) Vivi's Theme": {
+        "value": "0xED",
         "type": "FMS",
         "basic score": "0x67914",
         "basic chain": "0x67918",
@@ -7008,6 +7117,7 @@
         "ultimate date": "0x67992"
       },
       "Over the Hill": {
+        "value": "0x59",
         "type": "FMS",
         "basic score": "0x62B38",
         "basic chain": "0x62B3C",
@@ -7035,6 +7145,7 @@
         "ultimate date": "0x62BB6"
       },
       "(DLC) Roses of May": {
+        "value": "0xDF",
         "type": "FMS",
         "basic score": "0x671DC",
         "basic chain": "0x671E0",
@@ -7062,6 +7173,7 @@
         "ultimate date": "0x6725A"
       },
       "Dark City Treno": {
+        "value": "0x5A",
         "type": "FMS",
         "basic score": "0x62BBC",
         "basic chain": "0x62BC0",
@@ -7089,6 +7201,7 @@
         "ultimate date": "0x62C3A"
       },
       "(DLC) Iifa, the Ancient Tree of Life": {
+        "value": "0xF6",
         "type": "FMS",
         "basic score": "0x67DB8",
         "basic chain": "0x67DBC",
@@ -7116,6 +7229,7 @@
         "ultimate date": "0x67E36"
       },
       "(DLC) Ipsen's Castle": {
+        "value": "0x106",
         "type": "FMS",
         "basic score": "0x685F8",
         "basic chain": "0x685FC",
@@ -7143,6 +7257,7 @@
         "ultimate date": "0x68676"
       },
       "Aboard the Hilda Garde": {
+        "value": "0x5B",
         "type": "FMS",
         "basic score": "0x62C40",
         "basic chain": "0x62C44",
@@ -7170,6 +7285,7 @@
         "ultimate date": "0x62CBE"
       },
       "Not Alone": {
+        "value": "0x5C",
         "type": "FMS",
         "basic score": "0x62CC4",
         "basic chain": "0x62CC8",
@@ -7197,6 +7313,7 @@
         "ultimate date": "0x62D42"
       },
       "Behind the Door": {
+        "value": "0x5D",
         "type": "FMS",
         "basic score": "0x62D48",
         "basic chain": "0x62D4C",
@@ -7224,6 +7341,7 @@
         "ultimate date": "0x62DC6"
       },
       "Melodies of Life ~ FINAL FANTASY": {
+        "value": "0x5E",
         "type": "FMS",
         "basic score": "0x62DCC",
         "basic chain": "0x62DD0",
@@ -7251,6 +7369,7 @@
         "ultimate date": "0x62E4A"
       },
       "A Place to Call Home": {
+        "value": "0x5F",
         "type": "FMS",
         "basic score": "0x62E50",
         "basic chain": "0x62E54",
@@ -7280,6 +7399,7 @@
     },
     "FINAL FANTASY X": {
       "Battle Theme": {
+        "value": "0x60",
         "type": "BMS",
         "basic score": "0x62ED4",
         "basic chain": "0x62ED8",
@@ -7307,6 +7427,7 @@
         "ultimate date": "0x62F52"
       },
       "(DLC) Blitz Off!": {
+        "value": "0xE2",
         "type": "BMS",
         "basic score": "0x67368",
         "basic chain": "0x6736C",
@@ -7334,6 +7455,7 @@
         "ultimate date": "0x673E6"
       },
       "(DLC) Assault": {
+        "value": "0x138",
         "type": "BMS",
         "basic score": "0x69FC0",
         "basic chain": "0x69FC4",
@@ -7361,6 +7483,7 @@
         "ultimate date": "0x6A03E"
       },
       "Fight with Seymour": {
+        "value": "0x61",
         "type": "BMS",
         "basic score": "0x62F58",
         "basic chain": "0x62F5C",
@@ -7388,6 +7511,7 @@
         "ultimate date": "0x62FD6"
       },
       "Challenge": {
+        "value": "0x62",
         "type": "BMS",
         "basic score": "0x62FDC",
         "basic chain": "0x62FE0",
@@ -7415,6 +7539,7 @@
         "ultimate date": "0x6305A"
       },
       "Otherworld": {
+        "value": "0x63",
         "type": "BMS",
         "basic score": "0x63060",
         "basic chain": "0x63064",
@@ -7442,6 +7567,7 @@
         "ultimate date": "0x630DE"
       },
       "A Contest of Aeons": {
+        "value": "0x64",
         "type": "BMS",
         "basic score": "0x630E4",
         "basic chain": "0x630E8",
@@ -7469,6 +7595,7 @@
         "ultimate date": "0x63162"
       },
       "Final Battle": {
+        "value": "0x65",
         "type": "BMS",
         "basic score": "0x63168",
         "basic chain": "0x6316C",
@@ -7496,6 +7623,7 @@
         "ultimate date": "0x631E6"
       },
       "Zanarkand": {
+        "value": "0x66",
         "type": "FMS",
         "basic score": "0x631EC",
         "basic chain": "0x631F0",
@@ -7523,6 +7651,7 @@
         "ultimate date": "0x6326A"
       },
       "Spira Unplugged": {
+        "value": "0x67",
         "type": "FMS",
         "basic score": "0x63270",
         "basic chain": "0x63274",
@@ -7550,6 +7679,7 @@
         "ultimate date": "0x632EE"
       },
       "Mi'ihen Highroad": {
+        "value": "0x68",
         "type": "FMS",
         "basic score": "0x632F4",
         "basic chain": "0x632F8",
@@ -7577,6 +7707,7 @@
         "ultimate date": "0x63372"
       },
       "Movement In Green": {
+        "value": "0x69",
         "type": "FMS",
         "basic score": "0x63378",
         "basic chain": "0x6337C",
@@ -7604,6 +7735,7 @@
         "ultimate date": "0x633F6"
       },
       "(DLC) Thunder Plains": {
+        "value": "0xEA",
         "type": "FMS",
         "basic score": "0x67788",
         "basic chain": "0x6778C",
@@ -7631,6 +7763,7 @@
         "ultimate date": "0x67806"
       },
       "SUTEKI DA NE (Isn't It Wonderful?)": {
+        "value": "0x6A",
         "type": "FMS",
         "basic score": "0x633FC",
         "basic chain": "0x63400",
@@ -7658,6 +7791,7 @@
         "ultimate date": "0x6347A"
       },
       "Launch": {
+        "value": "0x6B",
         "type": "FMS",
         "basic score": "0x63480",
         "basic chain": "0x63484",
@@ -7685,6 +7819,7 @@
         "ultimate date": "0x634FE"
       },
       "(DLC) Via Purifico": {
+        "value": "0xFE",
         "type": "FMS",
         "basic score": "0x681D8",
         "basic chain": "0x681DC",
@@ -7712,6 +7847,7 @@
         "ultimate date": "0x68256"
       },
       "Servants of the Mountain": {
+        "value": "0x6C",
         "type": "FMS",
         "basic score": "0x63504",
         "basic chain": "0x63508",
@@ -7739,6 +7875,7 @@
         "ultimate date": "0x63582"
       },
       "A Fleeting Dream": {
+        "value": "0x6D",
         "type": "FMS",
         "basic score": "0x63588",
         "basic chain": "0x6358C",
@@ -7768,6 +7905,7 @@
     },
     "FINAL FANTASY XI": {
       "Battle Theme": {
+        "value": "0x6E",
         "type": "BMS",
         "basic score": "0x6360C",
         "basic chain": "0x63610",
@@ -7795,6 +7933,7 @@
         "ultimate date": "0x6368A"
       },
       "FFXI Opening Theme": {
+        "value": "0x6F",
         "type": "BMS",
         "basic score": "0x63690",
         "basic chain": "0x63694",
@@ -7822,6 +7961,7 @@
         "ultimate date": "0x6370E"
       },
       "Awakening": {
+        "value": "0x70",
         "type": "BMS",
         "basic score": "0x63714",
         "basic chain": "0x63718",
@@ -7849,6 +7989,7 @@
         "ultimate date": "0x63792"
       },
       "(DLC) Tough Battle #2": {
+        "value": "0xE1",
         "type": "BMS",
         "basic score": "0x672E4",
         "basic chain": "0x672E8",
@@ -7876,6 +8017,7 @@
         "ultimate date": "0x67362"
       },
       "Fighters of the Crystal": {
+        "value": "0x71",
         "type": "BMS",
         "basic score": "0x63798",
         "basic chain": "0x6379C",
@@ -7903,6 +8045,7 @@
         "ultimate date": "0x63816"
       },
       "(DLC) Iron Colossus": {
+        "value": "0x10E",
         "type": "BMS",
         "basic score": "0x68A18",
         "basic chain": "0x68A1C",
@@ -7930,6 +8073,7 @@
         "ultimate date": "0x68A96"
       },
       "Ragnarok": {
+        "value": "0x72",
         "type": "BMS",
         "basic score": "0x6381C",
         "basic chain": "0x63820",
@@ -7957,6 +8101,7 @@
         "ultimate date": "0x6389A"
       },
       "(DLC) Melodies Errant": {
+        "value": "0x109",
         "type": "BMS",
         "basic score": "0x68784",
         "basic chain": "0x68788",
@@ -7984,6 +8129,7 @@
         "ultimate date": "0x68802"
       },
       "Shinryu": {
+        "value": "0x73",
         "type": "BMS",
         "basic score": "0x638A0",
         "basic chain": "0x638A4",
@@ -8011,6 +8157,7 @@
         "ultimate date": "0x6391E"
       },
       "Vana'diel March": {
+        "value": "0x74",
         "type": "FMS",
         "basic score": "0x63924",
         "basic chain": "0x63928",
@@ -8038,6 +8185,7 @@
         "ultimate date": "0x639A2"
       },
       "Ronfaure": {
+        "value": "0x75",
         "type": "FMS",
         "basic score": "0x639A8",
         "basic chain": "0x639AC",
@@ -8065,6 +8213,7 @@
         "ultimate date": "0x63A26"
       },
       "Gustaberg": {
+        "value": "0x76",
         "type": "FMS",
         "basic score": "0x63A2C",
         "basic chain": "0x63A30",
@@ -8092,6 +8241,7 @@
         "ultimate date": "0x63AAA"
       },
       "Sarutabaruta": {
+        "value": "0x77",
         "type": "FMS",
         "basic score": "0x63AB0",
         "basic chain": "0x63AB4",
@@ -8119,6 +8269,7 @@
         "ultimate date": "0x63B2E"
       },
       "Heavens Tower": {
+        "value": "0x78",
         "type": "FMS",
         "basic score": "0x63B34",
         "basic chain": "0x63B38",
@@ -8146,6 +8297,7 @@
         "ultimate date": "0x63BB2"
       },
       "Voyager": {
+        "value": "0x79",
         "type": "FMS",
         "basic score": "0x63BB8",
         "basic chain": "0x63BBC",
@@ -8173,6 +8325,7 @@
         "ultimate date": "0x63C36"
       },
       "Selbina": {
+        "value": "0x7A",
         "type": "FMS",
         "basic score": "0x63C3C",
         "basic chain": "0x63C40",
@@ -8200,6 +8353,7 @@
         "ultimate date": "0x63CBA"
       },
       "The Sanctuary of Zi'Tah": {
+        "value": "0x7B",
         "type": "FMS",
         "basic score": "0x63CC0",
         "basic chain": "0x63CC4",
@@ -8227,6 +8381,7 @@
         "ultimate date": "0x63D3E"
       },
       "(DLC) A New Horizon - Tavnazian Archipelago": {
+        "value": "0x102",
         "type": "FMS",
         "basic score": "0x683E8",
         "basic chain": "0x683EC",
@@ -8256,6 +8411,7 @@
     },
     "FINAL FANTASY XII": {
       "FINAL FANTASY (FFXII Version)": {
+        "value": "0x7C",
         "type": "BMS",
         "basic score": "0x63D44",
         "basic chain": "0x63D48",
@@ -8283,6 +8439,7 @@
         "ultimate date": "0x63DC2"
       },
       "Boss Battle": {
+        "value": "0x7D",
         "type": "BMS",
         "basic score": "0x63DC8",
         "basic chain": "0x63DCC",
@@ -8310,6 +8467,7 @@
         "ultimate date": "0x63E46"
       },
       "Battle with an Esper": {
+        "value": "0x7E",
         "type": "BMS",
         "basic score": "0x63E4C",
         "basic chain": "0x63E50",
@@ -8337,6 +8495,7 @@
         "ultimate date": "0x63ECA"
       },
       "Life and Death": {
+        "value": "0x7F",
         "type": "BMS",
         "basic score": "0x63ED0",
         "basic chain": "0x63ED4",
@@ -8364,6 +8523,7 @@
         "ultimate date": "0x63F4E"
       },
       "Flash of Steel": {
+        "value": "0x80",
         "type": "BMS",
         "basic score": "0x63F54",
         "basic chain": "0x63F58",
@@ -8391,6 +8551,7 @@
         "ultimate date": "0x63FD2"
       },
       "Struggle for Freedom": {
+        "value": "0x81",
         "type": "BMS",
         "basic score": "0x63FD8",
         "basic chain": "0x63FDC",
@@ -8418,6 +8579,7 @@
         "ultimate date": "0x64056"
       },
       "Ending Movie": {
+        "value": "0x82",
         "type": "BMS",
         "basic score": "0x6405C",
         "basic chain": "0x64060",
@@ -8445,6 +8607,7 @@
         "ultimate date": "0x640DA"
       },
       "Streets of Rabanastre": {
+        "value": "0x83",
         "type": "FMS",
         "basic score": "0x640E0",
         "basic chain": "0x640E4",
@@ -8472,6 +8635,7 @@
         "ultimate date": "0x6415E"
       },
       "The Dalmasca Estersand": {
+        "value": "0x84",
         "type": "FMS",
         "basic score": "0x64164",
         "basic chain": "0x64168",
@@ -8499,6 +8663,7 @@
         "ultimate date": "0x641E2"
       },
       "Heart of a Child": {
+        "value": "0x85",
         "type": "FMS",
         "basic score": "0x641E8",
         "basic chain": "0x641EC",
@@ -8526,6 +8691,7 @@
         "ultimate date": "0x64266"
       },
       "Giza Plains": {
+        "value": "0x86",
         "type": "FMS",
         "basic score": "0x6426C",
         "basic chain": "0x64270",
@@ -8553,6 +8719,7 @@
         "ultimate date": "0x642EA"
       },
       "The Mosphoran Highwaste": {
+        "value": "0x87",
         "type": "FMS",
         "basic score": "0x642F0",
         "basic chain": "0x642F4",
@@ -8580,6 +8747,7 @@
         "ultimate date": "0x6436E"
       },
       "(DLC) Phon Coast": {
+        "value": "0x10A",
         "type": "FMS",
         "basic score": "0x68808",
         "basic chain": "0x6880C",
@@ -8607,6 +8775,7 @@
         "ultimate date": "0x68886"
       },
       "The Archadian Empire": {
+        "value": "0x88",
         "type": "FMS",
         "basic score": "0x64374",
         "basic chain": "0x64378",
@@ -8636,6 +8805,7 @@
     },
     "FINAL FANTASY XIII": {
       "Blinded By Light": {
+        "value": "0x89",
         "type": "BMS",
         "basic score": "0x643F8",
         "basic chain": "0x643FC",
@@ -8663,6 +8833,7 @@
         "ultimate date": "0x64476"
       },
       "Defiers of Fate": {
+        "value": "0x8A",
         "type": "BMS",
         "basic score": "0x6447C",
         "basic chain": "0x64480",
@@ -8690,6 +8861,7 @@
         "ultimate date": "0x644FA"
       },
       "Saber's Edge": {
+        "value": "0x8B",
         "type": "BMS",
         "basic score": "0x64500",
         "basic chain": "0x64504",
@@ -8717,6 +8889,7 @@
         "ultimate date": "0x6457E"
       },
       "Desperate Struggle": {
+        "value": "0x8C",
         "type": "BMS",
         "basic score": "0x64584",
         "basic chain": "0x64588",
@@ -8744,6 +8917,7 @@
         "ultimate date": "0x64602"
       },
       "Fighting Fate": {
+        "value": "0x8D",
         "type": "BMS",
         "basic score": "0x64608",
         "basic chain": "0x6460C",
@@ -8771,6 +8945,7 @@
         "ultimate date": "0x64686"
       },
       "(DLC) Nascent Requiem": {
+        "value": "0x108",
         "type": "BMS",
         "basic score": "0x68700",
         "basic chain": "0x68704",
@@ -8798,6 +8973,7 @@
         "ultimate date": "0x6877E"
       },
       "The Sunleth Waterscape": {
+        "value": "0x8E",
         "type": "FMS",
         "basic score": "0x6468C",
         "basic chain": "0x64690",
@@ -8825,6 +9001,7 @@
         "ultimate date": "0x6470A"
       },
       "March of the Dreadnoughts": {
+        "value": "0x8F",
         "type": "FMS",
         "basic score": "0x64710",
         "basic chain": "0x64714",
@@ -8852,6 +9029,7 @@
         "ultimate date": "0x6478E"
       },
       "The Gapra Whitewood": {
+        "value": "0x90",
         "type": "FMS",
         "basic score": "0x64794",
         "basic chain": "0x64798",
@@ -8879,6 +9057,7 @@
         "ultimate date": "0x64812"
       },
       "The Archylte Steppe": {
+        "value": "0x91",
         "type": "FMS",
         "basic score": "0x64818",
         "basic chain": "0x6481C",
@@ -8906,6 +9085,7 @@
         "ultimate date": "0x64896"
       },
       "Dust to Dust": {
+        "value": "0x92",
         "type": "FMS",
         "basic score": "0x6489C",
         "basic chain": "0x648A0",
@@ -8935,6 +9115,7 @@
     },
     "FINAL FANTASY XIV": {
       "Answers": {
+        "value": "0x9B",
         "type": "EMS",
         "basic score": "0x64D40",
         "basic chain": "0x64D44",
@@ -8962,6 +9143,7 @@
         "ultimate date": "0x64DBE"
       },
       "The Land Breathes": {
+        "value": "0x93",
         "type": "BMS",
         "basic score": "0x64920",
         "basic chain": "0x64924",
@@ -8989,6 +9171,7 @@
         "ultimate date": "0x6499E"
       },
       "(DLC) Hard to Miss": {
+        "value": "0x119",
         "type": "BMS",
         "basic score": "0x68FC4",
         "basic chain": "0x68FC8",
@@ -9016,6 +9199,7 @@
         "ultimate date": "0x69042"
       },
       "(DLC) Nemesis": {
+        "value": "0x131",
         "type": "BMS",
         "basic score": "0x69C24",
         "basic chain": "0x69C28",
@@ -9043,6 +9227,7 @@
         "ultimate date": "0x69CA2"
       },
       "(DLC) Primal Judgement": {
+        "value": "0x11F",
         "type": "BMS",
         "basic score": "0x692DC",
         "basic chain": "0x692E0",
@@ -9070,6 +9255,7 @@
         "ultimate date": "0x6935A"
       },
       "(DLC) Good King Moggle Mog XII": {
+        "value": "0xEB",
         "type": "BMS",
         "basic score": "0x6780C",
         "basic chain": "0x67810",
@@ -9097,6 +9283,7 @@
         "ultimate date": "0x6788A"
       },
       "Fallen Angel": {
+        "value": "0x94",
         "type": "BMS",
         "basic score": "0x649A4",
         "basic chain": "0x649A8",
@@ -9124,6 +9311,7 @@
         "ultimate date": "0x64A22"
       },
       "Torn from the Heavens": {
+        "value": "0x95",
         "type": "BMS",
         "basic score": "0x64A28",
         "basic chain": "0x64A2C",
@@ -9151,6 +9339,7 @@
         "ultimate date": "0x64AA6"
       },
       "Under the Weight": {
+        "value": "0x96",
         "type": "BMS",
         "basic score": "0x64AAC",
         "basic chain": "0x64AB0",
@@ -9178,6 +9367,7 @@
         "ultimate date": "0x64B2A"
       },
       "(DLC) Ultima": {
+        "value": "0x11A",
         "type": "BMS",
         "basic score": "0x69048",
         "basic chain": "0x6904C",
@@ -9205,6 +9395,7 @@
         "ultimate date": "0x690C6"
       },
       "To the Sun": {
+        "value": "0x97",
         "type": "FMS",
         "basic score": "0x64B30",
         "basic chain": "0x64B34",
@@ -9232,6 +9423,7 @@
         "ultimate date": "0x64BAE"
       },
       "On Westerly Winds": {
+        "value": "0x98",
         "type": "FMS",
         "basic score": "0x64BB4",
         "basic chain": "0x64BB8",
@@ -9259,6 +9451,7 @@
         "ultimate date": "0x64C32"
       },
       "Serenity": {
+        "value": "0x99",
         "type": "FMS",
         "basic score": "0x64C38",
         "basic chain": "0x64C3C",
@@ -9286,6 +9479,7 @@
         "ultimate date": "0x64CB6"
       },
       "Engage": {
+        "value": "0x9A",
         "type": "FMS",
         "basic score": "0x64CBC",
         "basic chain": "0x64CC0",
@@ -9315,6 +9509,7 @@
     },
     "FINAL FANTASY MYSTIC QUEST": {
       "Battle 1": {
+        "value": "0x9C",
         "type": "BMS",
         "basic score": "0x64DC4",
         "basic chain": "0x64DC8",
@@ -9342,6 +9537,7 @@
         "ultimate date": "0x64E42"
       },
       "Battle 2": {
+        "value": "0x9D",
         "type": "BMS",
         "basic score": "0x64E48",
         "basic chain": "0x64E4C",
@@ -9371,6 +9567,7 @@
     },
     "FINAL FANTASY TACTICS": {
       "Opening": {
+        "value": "0xA2",
         "type": "EMS",
         "basic score": "0x650DC",
         "basic chain": "0x650E0",
@@ -9398,6 +9595,7 @@
         "ultimate date": "0x6515A"
       },
       "Answers": {
+        "value": "0x9E",
         "type": "BMS",
         "basic score": "0x64ECC",
         "basic chain": "0x64ED0",
@@ -9425,6 +9623,7 @@
         "ultimate date": "0x64F4A"
       },
       "(DLC) Apoplexy": {
+        "value": "0x137",
         "type": "BMS",
         "basic score": "0x69F3C",
         "basic chain": "0x69F40",
@@ -9452,6 +9651,7 @@
         "ultimate date": "0x69FBA"
       },
       "Antipyretic": {
+        "value": "0x9F",
         "type": "BMS",
         "basic score": "0x64F50",
         "basic chain": "0x64F54",
@@ -9479,6 +9679,7 @@
         "ultimate date": "0x64FCE"
       },
       "(DLC) Precipitous Combat": {
+        "value": "0x105",
         "type": "BMS",
         "basic score": "0x68574",
         "basic chain": "0x68578",
@@ -9506,6 +9707,7 @@
         "ultimate date": "0x685F2"
       },
       "Ultima's Transformation": {
+        "value": "0xA0",
         "type": "BMS",
         "basic score": "0x64FD4",
         "basic chain": "0x64FD8",
@@ -9533,6 +9735,7 @@
         "ultimate date": "0x65052"
       },
       "Prologue": {
+        "value": "0xA1",
         "type": "FMS",
         "basic score": "0x65058",
         "basic chain": "0x6505C",
@@ -9560,6 +9763,7 @@
         "ultimate date": "0x650D6"
       },
       "(DLC) Ovelia's Theme": {
+        "value": "0xEE",
         "type": "FMS",
         "basic score": "0x67998",
         "basic chain": "0x6799C",
@@ -9589,6 +9793,7 @@
     },
     "FINAL FANTASY X-2": {
       "1000 Words": {
+        "value": "0xA8",
         "type": "EMS",
         "basic score": "0x653F4",
         "basic chain": "0x653F8",
@@ -9616,6 +9821,7 @@
         "ultimate date": "0x65472"
       },
       "(DLC) real Emotion": {
+        "value": "0x140",
         "type": "BMS",
         "basic score": "0x6A3E0",
         "basic chain": "0x6A3E4",
@@ -9643,6 +9849,7 @@
         "ultimate date": "0x6A45E"
       },
       "YRP, Fight! No. 1": {
+        "value": "0xA3",
         "type": "BMS",
         "basic score": "0x65160",
         "basic chain": "0x65164",
@@ -9670,6 +9877,7 @@
         "ultimate date": "0x651DE"
       },
       "Let Me Blow You a Kiss": {
+        "value": "0xA4",
         "type": "BMS",
         "basic score": "0x651E4",
         "basic chain": "0x651E8",
@@ -9697,6 +9905,7 @@
         "ultimate date": "0x65262"
       },
       "Resting Place": {
+        "value": "0xA5",
         "type": "BMS",
         "basic score": "0x65268",
         "basic chain": "0x6526C",
@@ -9724,6 +9933,7 @@
         "ultimate date": "0x652E6"
       },
       "(DLC) KUON: Memories of Waves and Light": {
+        "value": "0xDE",
         "type": "FMS",
         "basic score": "0x67158",
         "basic chain": "0x6715C",
@@ -9751,6 +9961,7 @@
         "ultimate date": "0x671D6"
       },
       "(DLC) The Bevelle Underground": {
+        "value": "0xF5",
         "type": "FMS",
         "basic score": "0x67D34",
         "basic chain": "0x67D38",
@@ -9778,6 +9989,7 @@
         "ultimate date": "0x67DB2"
       },
       "The Farplane Abyss": {
+        "value": "0xA6",
         "type": "FMS",
         "basic score": "0x652EC",
         "basic chain": "0x652F0",
@@ -9805,6 +10017,7 @@
         "ultimate date": "0x6536A"
       },
       "We're the Gullwings!": {
+        "value": "0xA7",
         "type": "FMS",
         "basic score": "0x65370",
         "basic chain": "0x65374",
@@ -9834,6 +10047,7 @@
     },
     "FINAL FANTASY CRYSTAL CHRONICLES": {
       "Moonless Starry Night": {
+        "value": "0xAE",
         "type": "EMS",
         "basic score": "0x6570C",
         "basic chain": "0x65710",
@@ -9861,6 +10075,7 @@
         "ultimate date": "0x6578A"
       },
       "Monster Ronde": {
+        "value": "0xA9",
         "type": "BMS",
         "basic score": "0x65478",
         "basic chain": "0x6547C",
@@ -9888,6 +10103,7 @@
         "ultimate date": "0x654F6"
       },
       "United, Heaven-Sent": {
+        "value": "0xAA",
         "type": "BMS",
         "basic score": "0x654FC",
         "basic chain": "0x65500",
@@ -9915,6 +10131,7 @@
         "ultimate date": "0x6557A"
       },
       "This Is the End for You!": {
+        "value": "0xAB",
         "type": "BMS",
         "basic score": "0x65580",
         "basic chain": "0x65584",
@@ -9942,6 +10159,7 @@
         "ultimate date": "0x655FE"
       },
       "Sound of the Winds": {
+        "value": "0xAC",
         "type": "FMS",
         "basic score": "0x65604",
         "basic chain": "0x65608",
@@ -9969,6 +10187,7 @@
         "ultimate date": "0x65682"
       },
       "(DLC) Promised Grace": {
+        "value": "0xE6",
         "type": "FMS",
         "basic score": "0x67578",
         "basic chain": "0x6757C",
@@ -9996,6 +10215,7 @@
         "ultimate date": "0x675F6"
       },
       "Across the Divide": {
+        "value": "0xAD",
         "type": "FMS",
         "basic score": "0x65688",
         "basic chain": "0x6568C",
@@ -10023,6 +10243,7 @@
         "ultimate date": "0x65706"
       },
       "(DLC) Today Comes To Be Tomorrow": {
+        "value": "0xFA",
         "type": "FMS",
         "basic score": "0x67FC8",
         "basic chain": "0x67FCC",
@@ -10052,6 +10273,7 @@
     },
     "FINAL FANTASY VII: Advent Children": {
       "Advent: One-Winged Angel": {
+        "value": "0xB3",
         "type": "EMS",
         "basic score": "0x659A0",
         "basic chain": "0x659A4",
@@ -10079,6 +10301,7 @@
         "ultimate date": "0x65A1E"
       },
       "(DLC) Beyond the Wasteland": {
+        "value": "0x101",
         "type": "BMS",
         "basic score": "0x68364",
         "basic chain": "0x68368",
@@ -10106,6 +10329,7 @@
         "ultimate date": "0x683E2"
       },
       "Those Who Fight (Piano Version)": {
+        "value": "0xAF",
         "type": "BMS",
         "basic score": "0x65790",
         "basic chain": "0x65794",
@@ -10133,6 +10357,7 @@
         "ultimate date": "0x6580E"
       },
       "(DLC) Battle in the Forgotten City": {
+        "value": "0x10D",
         "type": "BMS",
         "basic score": "0x68994",
         "basic chain": "0x68998",
@@ -10160,6 +10385,7 @@
         "ultimate date": "0x68A12"
       },
       "Divinity II": {
+        "value": "0xB0",
         "type": "BMS",
         "basic score": "0x65814",
         "basic chain": "0x65818",
@@ -10187,6 +10413,7 @@
         "ultimate date": "0x65892"
       },
       "J-E-N-O-V-A (AC Version)": {
+        "value": "0xB1",
         "type": "BMS",
         "basic score": "0x65898",
         "basic chain": "0x6589C",
@@ -10214,6 +10441,7 @@
         "ultimate date": "0x65916"
       },
       "(DLC) Advent: One-Winged Angel": {
+        "value": "0xF9",
         "type": "BMS",
         "basic score": "0x67F44",
         "basic chain": "0x67F48",
@@ -10241,6 +10469,7 @@
         "ultimate date": "0x67FC2"
       },
       "(DLC) Aerith's Theme (Piano Version)": {
+        "value": "0xE8",
         "type": "FMS",
         "basic score": "0x67680",
         "basic chain": "0x67684",
@@ -10268,6 +10497,7 @@
         "ultimate date": "0x676FE"
       },
       "Cloud Smiles": {
+        "value": "0xB2",
         "type": "FMS",
         "basic score": "0x6591C",
         "basic chain": "0x65920",
@@ -10297,6 +10527,7 @@
     },
     "CRISIS CORE -FINAL FANTASY VII-": {
       "CRISIS CORE Theme - Dreams and Honor": {
+        "value": "0xB9",
         "type": "EMS",
         "basic score": "0x65CB8",
         "basic chain": "0x65CBC",
@@ -10324,6 +10555,7 @@
         "ultimate date": "0x65D36"
       },
       "Encounter": {
+        "value": "0xB4",
         "type": "BMS",
         "basic score": "0x65A24",
         "basic chain": "0x65A28",
@@ -10351,6 +10583,7 @@
         "ultimate date": "0x65AA2"
       },
       "The SOLDIER Way": {
+        "value": "0xB5",
         "type": "BMS",
         "basic score": "0x65AA8",
         "basic chain": "0x65AAC",
@@ -10378,6 +10611,7 @@
         "ultimate date": "0x65B26"
       },
       "The Price of Freedom": {
+        "value": "0xB6",
         "type": "BMS",
         "basic score": "0x65B2C",
         "basic chain": "0x65B30",
@@ -10405,6 +10639,7 @@
         "ultimate date": "0x65BAA"
       },
       "Timely Ambush (from FFVII 'Let the Battles Begin!')": {
+        "value": "0xB7",
         "type": "FMS",
         "basic score": "0x65BB0",
         "basic chain": "0x65BB4",
@@ -10432,6 +10667,7 @@
         "ultimate date": "0x65C2E"
       },
       "A Flower Blooming in the Slums (from FVII 'Aerith's Theme')": {
+        "value": "0xB8",
         "type": "FMS",
         "basic score": "0x65C34",
         "basic chain": "0x65C38",
@@ -10461,6 +10697,7 @@
     },
     "FINAL FANTASY FABLES: CHOCOBO'S DUNGEON": {
       "Dungeon Hero X's Theme": {
+        "value": "0xBA",
         "type": "BMS",
         "basic score": "0x65D3C",
         "basic chain": "0x65D40",
@@ -10488,6 +10725,7 @@
         "ultimate date": "0x65DBA"
       },
       "(DLC) Pop-Up Duel": {
+        "value": "0xEF",
         "type": "BMS",
         "basic score": "0x67A1C",
         "basic chain": "0x67A20",
@@ -10515,6 +10753,7 @@
         "ultimate date": "0x67A9A"
       },
       "Raffaello Battle": {
+        "value": "0xBB",
         "type": "BMS",
         "basic score": "0x65DC0",
         "basic chain": "0x65DC4",
@@ -10542,6 +10781,7 @@
         "ultimate date": "0x65E3E"
       },
       "(DLC) Leviathan Battle": {
+        "value": "0xFC",
         "type": "BMS",
         "basic score": "0x680D0",
         "basic chain": "0x680D4",
@@ -10569,6 +10809,7 @@
         "ultimate date": "0x6814E"
       },
       "Guardian of the Dark II": {
+        "value": "0xBC",
         "type": "BMS",
         "basic score": "0x65E44",
         "basic chain": "0x65E48",
@@ -10598,6 +10839,7 @@
     },
     "DISSIDIA FINAL FANTASY": {
       "The Troops' Advance": {
+        "value": "0xBD",
         "type": "BMS",
         "basic score": "0x65EC8",
         "basic chain": "0x65ECC",
@@ -10625,6 +10867,7 @@
         "ultimate date": "0x65F46"
       },
       "The Decisive Battle - arrangement - from FINAL FANTASY VI": {
+        "value": "0xBE",
         "type": "BMS",
         "basic score": "0x65F4C",
         "basic chain": "0x65F50",
@@ -10652,6 +10895,7 @@
         "ultimate date": "0x65FCA"
       },
       "(DLC) Battle 1 - arrangement - from FINAL FANTASY IX": {
+        "value": "0xE7",
         "type": "BMS",
         "basic score": "0x675FC",
         "basic chain": "0x67600",
@@ -10679,6 +10923,7 @@
         "ultimate date": "0x6767A"
       },
       "DISSIDIA - ending -": {
+        "value": "0xBF",
         "type": "BMS",
         "basic score": "0x65FD0",
         "basic chain": "0x65FD4",
@@ -10706,6 +10951,7 @@
         "ultimate date": "0x6604E"
       },
       "DISSIDIA FINAL FANTASY [FINAL TRAILER]": {
+        "value": "0xC0",
         "type": "BMS",
         "basic score": "0x66054",
         "basic chain": "0x66058",
@@ -10733,6 +10979,7 @@
         "ultimate date": "0x660D2"
       },
       "Keeping the Peace": {
+        "value": "0xC1",
         "type": "FMS",
         "basic score": "0x660D8",
         "basic chain": "0x660DC",
@@ -10762,6 +11009,7 @@
     },
     "DISSIDIA 012[doudecim] FINAL FANTASY": {
       "Lux Concordiae": {
+        "value": "0xC5",
         "type": "EMS",
         "basic score": "0x662E8",
         "basic chain": "0x662EC",
@@ -10789,6 +11037,7 @@
         "ultimate date": "0x66366"
       },
       "Cantata Mortis": {
+        "value": "0xC2",
         "type": "BMS",
         "basic score": "0x6615C",
         "basic chain": "0x66160",
@@ -10816,6 +11065,7 @@
         "ultimate date": "0x661DA"
       },
       "DISSIDIA 012[doudecim] FINAL FANTASY [FINAL TRAILER]": {
+        "value": "0xC3",
         "type": "BMS",
         "basic score": "0x661E0",
         "basic chain": "0x661E4",
@@ -10843,6 +11093,7 @@
         "ultimate date": "0x6625E"
       },
       "Gate to the Rift": {
+        "value": "0xC4",
         "type": "FMS",
         "basic score": "0x66264",
         "basic chain": "0x66268",
@@ -10870,6 +11121,7 @@
         "ultimate date": "0x662E2"
       },
       "(DLC) Canto Mortis -An Undocumented Battle-": {
+        "value": "0xE9",
         "type": "FMS",
         "basic score": "0x67704",
         "basic chain": "0x67708",
@@ -10899,6 +11151,7 @@
     },
     "FINAL FANTASY TYPE-0": {
       "We Have Come": {
+        "value": "0xCC",
         "type": "EMS",
         "basic score": "0x66684",
         "basic chain": "0x66688",
@@ -10926,6 +11179,7 @@
         "ultimate date": "0x66702"
       },
       "War: Warrior Worth a Thousand": {
+        "value": "0xC6",
         "type": "BMS",
         "basic score": "0x6636C",
         "basic chain": "0x66370",
@@ -10953,6 +11207,7 @@
         "ultimate date": "0x663EA"
       },
       "War: The White Weapon": {
+        "value": "0xC7",
         "type": "BMS",
         "basic score": "0x663F0",
         "basic chain": "0x663F4",
@@ -10980,6 +11235,7 @@
         "ultimate date": "0x6646E"
       },
       "Vermilion Fire": {
+        "value": "0xC8",
         "type": "BMS",
         "basic score": "0x66474",
         "basic chain": "0x66478",
@@ -11007,6 +11263,7 @@
         "ultimate date": "0x664F2"
       },
       "(DLC) We Have Come": {
+        "value": "0x104",
         "type": "BMS",
         "basic score": "0x684F0",
         "basic chain": "0x684F4",
@@ -11034,6 +11291,7 @@
         "ultimate date": "0x6856E"
       },
       "(DLC) Zero": {
+        "value": "0x118",
         "type": "BMS",
         "basic score": "0x68F40",
         "basic chain": "0x68F44",
@@ -11061,6 +11319,7 @@
         "ultimate date": "0x68FBE"
       },
       "The Earth Under Our Feet": {
+        "value": "0xC9",
         "type": "FMS",
         "basic score": "0x664F8",
         "basic chain": "0x664FC",
@@ -11088,6 +11347,7 @@
         "ultimate date": "0x66576"
       },
       "Soar": {
+        "value": "0xCA",
         "type": "FMS",
         "basic score": "0x6657C",
         "basic chain": "0x66580",
@@ -11115,6 +11375,7 @@
         "ultimate date": "0x665FA"
       },
       "Tempus Finis": {
+        "value": "0xCB",
         "type": "FMS",
         "basic score": "0x66600",
         "basic chain": "0x66604",
@@ -11144,6 +11405,7 @@
     },
     "FINAL FANTASY XIII-2": {
       "Warrior Goddess": {
+        "value": "0xD4",
         "type": "EMS",
         "basic score": "0x66AA4",
         "basic chain": "0x66AA8",
@@ -11171,6 +11433,7 @@
         "ultimate date": "0x66B22"
       },
       "The Last Hunter": {
+        "value": "0xCD",
         "type": "BMS",
         "basic score": "0x66708",
         "basic chain": "0x6670C",
@@ -11198,6 +11461,7 @@
         "ultimate date": "0x66786"
       },
       "Etro's Champion": {
+        "value": "0xCE",
         "type": "BMS",
         "basic score": "0x6678C",
         "basic chain": "0x66790",
@@ -11225,6 +11489,7 @@
         "ultimate date": "0x6680A"
       },
       "Heart of Chaos": {
+        "value": "0xCF",
         "type": "BMS",
         "basic score": "0x66810",
         "basic chain": "0x66814",
@@ -11252,6 +11517,7 @@
         "ultimate date": "0x6688E"
       },
       "Historia Crux": {
+        "value": "0xD0",
         "type": "FMS",
         "basic score": "0x66894",
         "basic chain": "0x66898",
@@ -11279,6 +11545,7 @@
         "ultimate date": "0x66912"
       },
       "Groovy Chocobo": {
+        "value": "0xD1",
         "type": "FMS",
         "basic score": "0x66918",
         "basic chain": "0x6691C",
@@ -11306,6 +11573,7 @@
         "ultimate date": "0x66996"
       },
       "(DLC) Crazy Chocobo": {
+        "value": "0xDD",
         "type": "FMS",
         "basic score": "0x670D4",
         "basic chain": "0x670D8",
@@ -11333,6 +11601,7 @@
         "ultimate date": "0x67152"
       },
       "Eclipse": {
+        "value": "0xD2",
         "type": "FMS",
         "basic score": "0x6699C",
         "basic chain": "0x669A0",
@@ -11360,6 +11629,7 @@
         "ultimate date": "0x66A1A"
       },
       "Noel's Theme - Final Journey -": {
+        "value": "0xD3",
         "type": "FMS",
         "basic score": "0x66A20",
         "basic chain": "0x66A24",
@@ -11389,6 +11659,7 @@
     },
     "LIGHTNING RETURNS: FINAL FANTASY XIII": {
       "Savior of Souls": {
+        "value": "0xDA",
         "type": "EMS",
         "basic score": "0x66DBC",
         "basic chain": "0x66DC0",
@@ -11416,6 +11687,7 @@
         "ultimate date": "0x66E3A"
       },
       "Crimson Blitz": {
+        "value": "0xD5",
         "type": "BMS",
         "basic score": "0x66B28",
         "basic chain": "0x66B2C",
@@ -11443,6 +11715,7 @@
         "ultimate date": "0x66BA6"
       },
       "Chaos": {
+        "value": "0xD6",
         "type": "BMS",
         "basic score": "0x66BAC",
         "basic chain": "0x66BB0",
@@ -11470,6 +11743,7 @@
         "ultimate date": "0x66C2A"
       },
       "Lightning Returns": {
+        "value": "0xD7",
         "type": "BMS",
         "basic score": "0x66C30",
         "basic chain": "0x66C34",
@@ -11497,6 +11771,7 @@
         "ultimate date": "0x66CAE"
       },
       "The Glittering City of Yusnaan": {
+        "value": "0xD8",
         "type": "FMS",
         "basic score": "0x66CB4",
         "basic chain": "0x66CB8",
@@ -11524,6 +11799,7 @@
         "ultimate date": "0x66D32"
       },
       "The Dead Dunes": {
+        "value": "0xD9",
         "type": "FMS",
         "basic score": "0x66D38",
         "basic chain": "0x66D3C",
@@ -11553,6 +11829,7 @@
     },
     "FINAL FANTASY Series": {
       "THEATRHYTHM FINAL FANTASY CURTAIN CALL Special Arrangement Medley": {
+        "value": "0xDC",
         "type": "EMS",
         "basic score": "0x66EC4",
         "basic chain": "0x66EC8",
@@ -11580,6 +11857,7 @@
         "ultimate date": "0x66F42"
       },
       "The Chaos Shrine - TFFCC BMS Arrangement - From FF": {
+        "value": "0xDB",
         "type": "BMS",
         "basic score": "0x66E40",
         "basic chain": "0x66E44",
@@ -11607,6 +11885,7 @@
         "ultimate date": "0x66EBE"
       },
       "(DLC) Last Order": {
+        "value": "0xF8",
         "type": "BMS",
         "basic score": "0x67EC0",
         "basic chain": "0x67EC4",
@@ -11636,6 +11915,7 @@
     },
     "SQUARE ENIX Titles": {
       "(DLC) Struggle to the Death": {
+        "value": "0x13F",
         "type": "BMS",
         "basic score": "0x6A35C",
         "basic chain": "0x6A360",
@@ -11663,6 +11943,7 @@
         "ultimate date": "0x6A3DA"
       },
       "(DLC) The Conflict": {
+        "value": "0x130",
         "type": "BMS",
         "basic score": "0x69BA0",
         "basic chain": "0x69BA4",
@@ -11690,6 +11971,7 @@
         "ultimate date": "0x69C1E"
       },
       "(DLC) Beat Them Up!": {
+        "value": "0x136",
         "type": "BMS",
         "basic score": "0x69EB8",
         "basic chain": "0x69EBC",
@@ -11717,6 +11999,7 @@
         "ultimate date": "0x69F36"
       },
       "(DLC) Coup de Grace": {
+        "value": "0xF4",
         "type": "BMS",
         "basic score": "0x67CB0",
         "basic chain": "0x67CB4",
@@ -11744,6 +12027,7 @@
         "ultimate date": "0x67D2E"
       },
       "(DLC) Encounter with the Seven Heroes": {
+        "value": "0xF3",
         "type": "BMS",
         "basic score": "0x67C2C",
         "basic chain": "0x67C30",
@@ -11771,6 +12055,7 @@
         "ultimate date": "0x67CAA"
       },
       "(DLC) The Ultimate Confrontation": {
+        "value": "0x12F",
         "type": "BMS",
         "basic score": "0x69B1C",
         "basic chain": "0x69B20",
@@ -11798,6 +12083,7 @@
         "ultimate date": "0x69B9A"
       },
       "(DLC) Title Screen": {
+        "value": "0x117",
         "type": "FMS",
         "basic score": "0x68EBC",
         "basic chain": "0x68EC0",
@@ -11825,6 +12111,7 @@
         "ultimate date": "0x68F3A"
       },
       "(DLC) Devil Lord Confrontation I": {
+        "value": "0xF2",
         "type": "BMS",
         "basic score": "0x67BA8",
         "basic chain": "0x67BAC",
@@ -11852,6 +12139,7 @@
         "ultimate date": "0x67C26"
       },
       "(DLC) Devil Lord Confrontation II": {
+        "value": "0x13E",
         "type": "BMS",
         "basic score": "0x6A2D8",
         "basic chain": "0x6A2DC",
@@ -11879,6 +12167,7 @@
         "ultimate date": "0x6A356"
       },
       "(DLC) Final Confrontation": {
+        "value": "0x125",
         "type": "BMS",
         "basic score": "0x695F4",
         "basic chain": "0x695F8",
@@ -11906,6 +12195,7 @@
         "ultimate date": "0x69672"
       },
       "(DLC) Horrible Shadow": {
+        "value": "0xF1",
         "type": "FMS",
         "basic score": "0x67B24",
         "basic chain": "0x67B28",
@@ -11933,6 +12223,7 @@
         "ultimate date": "0x67BA2"
       },
       "(DLC) Battle #4": {
+        "value": "0x115",
         "type": "BMS",
         "basic score": "0x68DB4",
         "basic chain": "0x68DB8",
@@ -11960,6 +12251,7 @@
         "ultimate date": "0x68E32"
       },
       "(DLC) Last Battle -T260G-": {
+        "value": "0x11D",
         "type": "BMS",
         "basic score": "0x691D4",
         "basic chain": "0x691D8",
@@ -11987,6 +12279,7 @@
         "ultimate date": "0x69252"
       },
       "(DLC) Misgestalt": {
+        "value": "0x12B",
         "type": "BMS",
         "basic score": "0x6990C",
         "basic chain": "0x69910",
@@ -12014,6 +12307,7 @@
         "ultimate date": "0x6998A"
       },
       "(DLC) Ardent Rhythm": {
+        "value": "0x116",
         "type": "BMS",
         "basic score": "0x68E38",
         "basic chain": "0x68E3C",
@@ -12041,6 +12335,7 @@
         "ultimate date": "0x68EB6"
       },
       "(DLC) In Search of the Sword of Mana": {
+        "value": "0x11C",
         "type": "FMS",
         "basic score": "0x69150",
         "basic chain": "0x69154",
@@ -12068,6 +12363,7 @@
         "ultimate date": "0x691CE"
       },
       "(DLC) Meridian Dance": {
+        "value": "0x114",
         "type": "BMS",
         "basic score": "0x68D30",
         "basic chain": "0x68D34",
@@ -12095,6 +12391,7 @@
         "ultimate date": "0x68DAE"
       },
       "(DLC) Into the Thick of It": {
+        "value": "0x134",
         "type": "FMS",
         "basic score": "0x69DB0",
         "basic chain": "0x69DB4",
@@ -12122,6 +12419,7 @@
         "ultimate date": "0x69E2E"
       },
       "(DLC) Swivel": {
+        "value": "0x127",
         "type": "BMS",
         "basic score": "0x696FC",
         "basic chain": "0x69700",
@@ -12149,6 +12447,7 @@
         "ultimate date": "0x6977A"
       },
       "(DLC) Sacrifice Part Three": {
+        "value": "0x11B",
         "type": "BMS",
         "basic score": "0x690CC",
         "basic chain": "0x690D0",
@@ -12176,6 +12475,7 @@
         "ultimate date": "0x6914A"
       },
       "(DLC) Meridian Child": {
+        "value": "0x13B",
         "type": "FMS",
         "basic score": "0x6A14C",
         "basic chain": "0x6A150",
@@ -12203,6 +12503,7 @@
         "ultimate date": "0x6A1CA"
       },
       "(DLC) Echoes of the Spiral": {
+        "value": "0x129",
         "type": "FMS",
         "basic score": "0x69804",
         "basic chain": "0x69808",
@@ -12230,6 +12531,7 @@
         "ultimate date": "0x69882"
       },
       "(DLC) Megalomania": {
+        "value": "0x12E",
         "type": "BMS",
         "basic score": "0x69A98",
         "basic chain": "0x69A9C",
@@ -12257,6 +12559,7 @@
         "ultimate date": "0x69B16"
       },
       "(DLC) Birds in the Sky, Fish in the River": {
+        "value": "0x139",
         "type": "FMS",
         "basic score": "0x6A044",
         "basic chain": "0x6A048",
@@ -12284,6 +12587,7 @@
         "ultimate date": "0x6A0C2"
       },
       "(DLC) Chrono Trigger": {
+        "value": "0x113",
         "type": "BMS",
         "basic score": "0x68CAC",
         "basic chain": "0x68CB0",
@@ -12311,6 +12615,7 @@
         "ultimate date": "0x68D2A"
       },
       "(DLC) Frog's Theme": {
+        "value": "0x12A",
         "type": "BMS",
         "basic score": "0x69888",
         "basic chain": "0x6988C",
@@ -12338,6 +12643,7 @@
         "ultimate date": "0x69906"
       },
       "(DLC) Boss Battle 2": {
+        "value": "0x13D",
         "type": "BMS",
         "basic score": "0x6A254",
         "basic chain": "0x6A258",
@@ -12365,6 +12671,7 @@
         "ultimate date": "0x6A2D2"
       },
       "(DLC) Battle With Magus": {
+        "value": "0x135",
         "type": "BMS",
         "basic score": "0x69E34",
         "basic chain": "0x69E38",
@@ -12392,6 +12699,7 @@
         "ultimate date": "0x69EB2"
       },
       "(DLC) World Revolution": {
+        "value": "0x124",
         "type": "BMS",
         "basic score": "0x69570",
         "basic chain": "0x69574",
@@ -12419,6 +12727,7 @@
         "ultimate date": "0x695EE"
       },
       "(DLC) Wind Scene": {
+        "value": "0x123",
         "type": "FMS",
         "basic score": "0x694EC",
         "basic chain": "0x694F0",
@@ -12446,6 +12755,7 @@
         "ultimate date": "0x6956A"
       },
       "(DLC) Corridors of Time": {
+        "value": "0x13C",
         "type": "FMS",
         "basic score": "0x6A1D0",
         "basic chain": "0x6A1D4",
@@ -12473,6 +12783,7 @@
         "ultimate date": "0x6A24E"
       },
       "(DLC) Soaring": {
+        "value": "0x11E",
         "type": "BMS",
         "basic score": "0x69258",
         "basic chain": "0x6925C",
@@ -12500,6 +12811,7 @@
         "ultimate date": "0x692D6"
       },
       "(DLC) Twister": {
+        "value": "0x122",
         "type": "BMS",
         "basic score": "0x69468",
         "basic chain": "0x6946C",
@@ -12527,6 +12839,7 @@
         "ultimate date": "0x694E6"
       },
       "(DLC) Calling": {
+        "value": "0x121",
         "type": "FMS",
         "basic score": "0x693E4",
         "basic chain": "0x693E8",
@@ -12554,6 +12867,7 @@
         "ultimate date": "0x69462"
       },
       "(DLC) Hills of Radiant Winds": {
+        "value": "0x133",
         "type": "BMS",
         "basic score": "0x69D2C",
         "basic chain": "0x69D30",
@@ -12581,6 +12895,7 @@
         "ultimate date": "0x69DAA"
       },
       "(DLC) Shadowlord": {
+        "value": "0x13A",
         "type": "BMS",
         "basic score": "0x6A0C8",
         "basic chain": "0x6A0CC",
@@ -12608,6 +12923,7 @@
         "ultimate date": "0x6A146"
       },
       "(DLC) Song of the Ancients / Devola": {
+        "value": "0x12D",
         "type": "FMS",
         "basic score": "0x69A14",
         "basic chain": "0x69A18",
@@ -12635,6 +12951,7 @@
         "ultimate date": "0x69A92"
       },
       "(DLC) Kainé / Salvation": {
+        "value": "0x128",
         "type": "FMS",
         "basic score": "0x69780",
         "basic chain": "0x69784",
@@ -12662,6 +12979,7 @@
         "ultimate date": "0x697FE"
       },
       "(DLC) He of the Name": {
+        "value": "0x112",
         "type": "BMS",
         "basic score": "0x68C28",
         "basic chain": "0x68C2C",
@@ -12689,6 +13007,7 @@
         "ultimate date": "0x68CA6"
       },
       "(DLC) Evil Wings": {
+        "value": "0x110",
         "type": "BMS",
         "basic score": "0x68B20",
         "basic chain": "0x68B24",
@@ -12716,6 +13035,7 @@
         "ultimate date": "0x68B9E"
       },
       "(DLC) The Serpent That Devours the Horizon": {
+        "value": "0x10F",
         "type": "BMS",
         "basic score": "0x68A9C",
         "basic chain": "0x68AA0",
@@ -12743,6 +13063,7 @@
         "ultimate date": "0x68B1A"
       },
       "(DLC) Horizon of Light and Shadow": {
+        "value": "0x111",
         "type": "FMS",
         "basic score": "0x68BA4",
         "basic chain": "0x68BA8",
