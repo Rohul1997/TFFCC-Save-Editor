@@ -54,7 +54,6 @@ namespace TFFCC_Save_Editor
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -64,6 +63,7 @@ namespace TFFCC_Save_Editor
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
@@ -77,18 +77,6 @@ namespace TFFCC_Save_Editor
             this.Rhythmia_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Trophies_textBox = new System.Windows.Forms.TextBox();
             this.Songs_dataGridView = new System.Windows.Forms.DataGridView();
-            this.songs_Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Song_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_TImes_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songs_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Records_tabPage = new System.Windows.Forms.TabPage();
             this.Battle_party_groupBox = new System.Windows.Forms.GroupBox();
@@ -332,6 +320,21 @@ namespace TFFCC_Save_Editor
             this.Open_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.songs_Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Song_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Chain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Play_style = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Times_played = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_TImes_cleared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local_play_picks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.online_play_picks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_times_played_online = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songs_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -598,6 +601,9 @@ namespace TFFCC_Save_Editor
             this.songs_Play_style,
             this.songs_Times_played,
             this.songs_TImes_cleared,
+            this.local_play_picks,
+            this.online_play_picks,
+            this.total_times_played_online,
             this.songs_Date});
             this.Songs_dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Songs_dataGridView.GridColor = System.Drawing.SystemColors.Control;
@@ -606,84 +612,6 @@ namespace TFFCC_Save_Editor
             this.Songs_dataGridView.RowHeadersVisible = false;
             this.Songs_dataGridView.Size = new System.Drawing.Size(818, 419);
             this.Songs_dataGridView.TabIndex = 2;
-            // 
-            // songs_Series
-            // 
-            this.songs_Series.HeaderText = "Series";
-            this.songs_Series.Name = "songs_Series";
-            this.songs_Series.ReadOnly = true;
-            this.songs_Series.Width = 68;
-            // 
-            // songs_Type
-            // 
-            this.songs_Type.HeaderText = "Type";
-            this.songs_Type.Name = "songs_Type";
-            this.songs_Type.ReadOnly = true;
-            this.songs_Type.Width = 68;
-            // 
-            // songs_Song_name
-            // 
-            this.songs_Song_name.HeaderText = "Song Name";
-            this.songs_Song_name.Name = "songs_Song_name";
-            this.songs_Song_name.ReadOnly = true;
-            this.songs_Song_name.Width = 68;
-            // 
-            // songs_Difficulty
-            // 
-            this.songs_Difficulty.HeaderText = "Difficulty";
-            this.songs_Difficulty.Name = "songs_Difficulty";
-            this.songs_Difficulty.ReadOnly = true;
-            this.songs_Difficulty.Width = 68;
-            // 
-            // songs_Score
-            // 
-            this.songs_Score.HeaderText = "Score";
-            this.songs_Score.Name = "songs_Score";
-            this.songs_Score.Width = 68;
-            // 
-            // songs_Chain
-            // 
-            this.songs_Chain.HeaderText = "Chain";
-            this.songs_Chain.Name = "songs_Chain";
-            this.songs_Chain.Width = 67;
-            // 
-            // songs_Rank
-            // 
-            this.songs_Rank.HeaderText = "Rank";
-            this.songs_Rank.Name = "songs_Rank";
-            this.songs_Rank.Width = 68;
-            // 
-            // songs_Status
-            // 
-            this.songs_Status.HeaderText = "Status";
-            this.songs_Status.Name = "songs_Status";
-            this.songs_Status.Width = 68;
-            // 
-            // songs_Play_style
-            // 
-            this.songs_Play_style.HeaderText = "Play Style";
-            this.songs_Play_style.Name = "songs_Play_style";
-            this.songs_Play_style.Width = 68;
-            // 
-            // songs_Times_played
-            // 
-            this.songs_Times_played.HeaderText = "Times Played";
-            this.songs_Times_played.Name = "songs_Times_played";
-            this.songs_Times_played.Width = 68;
-            // 
-            // songs_TImes_cleared
-            // 
-            this.songs_TImes_cleared.HeaderText = "Times Cleared";
-            this.songs_TImes_cleared.Name = "songs_TImes_cleared";
-            this.songs_TImes_cleared.Width = 68;
-            // 
-            // songs_Date
-            // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle1;
-            this.songs_Date.HeaderText = "Date";
-            this.songs_Date.Name = "songs_Date";
-            this.songs_Date.Width = 68;
             // 
             // tabControl1
             // 
@@ -3869,6 +3797,99 @@ namespace TFFCC_Save_Editor
             this.Save_files_as_ToolStripMenuItem.Text = "Save Files As...";
             this.Save_files_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_as_ToolStripMenuItem_Click);
             // 
+            // songs_Series
+            // 
+            this.songs_Series.HeaderText = "Series";
+            this.songs_Series.Name = "songs_Series";
+            this.songs_Series.ReadOnly = true;
+            this.songs_Series.Width = 68;
+            // 
+            // songs_Type
+            // 
+            this.songs_Type.HeaderText = "Type";
+            this.songs_Type.Name = "songs_Type";
+            this.songs_Type.ReadOnly = true;
+            this.songs_Type.Width = 68;
+            // 
+            // songs_Song_name
+            // 
+            this.songs_Song_name.HeaderText = "Song Name";
+            this.songs_Song_name.Name = "songs_Song_name";
+            this.songs_Song_name.ReadOnly = true;
+            this.songs_Song_name.Width = 68;
+            // 
+            // songs_Difficulty
+            // 
+            this.songs_Difficulty.HeaderText = "Difficulty";
+            this.songs_Difficulty.Name = "songs_Difficulty";
+            this.songs_Difficulty.ReadOnly = true;
+            this.songs_Difficulty.Width = 68;
+            // 
+            // songs_Score
+            // 
+            this.songs_Score.HeaderText = "Score";
+            this.songs_Score.Name = "songs_Score";
+            this.songs_Score.Width = 68;
+            // 
+            // songs_Chain
+            // 
+            this.songs_Chain.HeaderText = "Chain";
+            this.songs_Chain.Name = "songs_Chain";
+            this.songs_Chain.Width = 67;
+            // 
+            // songs_Rank
+            // 
+            this.songs_Rank.HeaderText = "Rank";
+            this.songs_Rank.Name = "songs_Rank";
+            this.songs_Rank.Width = 68;
+            // 
+            // songs_Status
+            // 
+            this.songs_Status.HeaderText = "Status";
+            this.songs_Status.Name = "songs_Status";
+            this.songs_Status.Width = 68;
+            // 
+            // songs_Play_style
+            // 
+            this.songs_Play_style.HeaderText = "Play Style";
+            this.songs_Play_style.Name = "songs_Play_style";
+            this.songs_Play_style.Width = 68;
+            // 
+            // songs_Times_played
+            // 
+            this.songs_Times_played.HeaderText = "Times Played";
+            this.songs_Times_played.Name = "songs_Times_played";
+            this.songs_Times_played.Width = 68;
+            // 
+            // songs_TImes_cleared
+            // 
+            this.songs_TImes_cleared.HeaderText = "Times Cleared";
+            this.songs_TImes_cleared.Name = "songs_TImes_cleared";
+            this.songs_TImes_cleared.Width = 68;
+            // 
+            // local_play_picks
+            // 
+            this.local_play_picks.HeaderText = "Local Play Picks";
+            this.local_play_picks.Name = "local_play_picks";
+            // 
+            // online_play_picks
+            // 
+            this.online_play_picks.HeaderText = "Online Play Picks";
+            this.online_play_picks.Name = "online_play_picks";
+            // 
+            // total_times_played_online
+            // 
+            this.total_times_played_online.HeaderText = "Total Times Played Online";
+            this.total_times_played_online.Name = "total_times_played_online";
+            // 
+            // songs_Date
+            // 
+            dataGridViewCellStyle1.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle1;
+            this.songs_Date.HeaderText = "Date";
+            this.songs_Date.Name = "songs_Date";
+            this.songs_Date.Width = 68;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4161,18 +4182,6 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Series;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Song_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Difficulty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Score;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Chain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Rank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Play_style;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Times_played;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_TImes_cleared;
-        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Date;
         private System.Windows.Forms.DataGridView Cards_dataGridView;
         private System.Windows.Forms.Button max_items_button;
         private System.Windows.Forms.Button max_all_cards_button;
@@ -4281,6 +4290,21 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.DataGridViewImageColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.Button online_battle_rating_wins_button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Series;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Song_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Difficulty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Score;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Chain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Rank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Play_style;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Times_played;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_TImes_cleared;
+        private System.Windows.Forms.DataGridViewTextBoxColumn local_play_picks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn online_play_picks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_times_played_online;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songs_Date;
     }
 }
 

@@ -1452,6 +1452,21 @@ namespace TFFCC_Save_Editor
                     Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times cleared"], 16));
                     Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times cleared"], 16));
 
+                    //Read local play picks value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["local_play_picks"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic local play picks"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["local_play_picks"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert local play picks"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["local_play_picks"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate local play picks"], 16));
+
+                    //Read online play picks value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["online_play_picks"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic online play picks"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["online_play_picks"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert online play picks"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["online_play_picks"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate online play picks"], 16));
+
+                    //Read total times played online value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["total_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic total times played online"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["total_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert total times played online"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["total_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate total times played online"], 16));
+
                     //Read date value for song
                     Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16))}";
                     Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16))}";
