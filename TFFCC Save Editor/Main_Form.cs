@@ -1395,93 +1395,94 @@ namespace TFFCC_Save_Editor
                 int Total_basic_all_criticals = 0;
                 int Total_expert_all_criticals = 0;
                 int Total_ultimate_all_criticals = 0;
-                foreach (KeyValuePair<string, object> series in dbSongsJSON)
+                for (int i = 0; i < 321; i++)
                 {
-                    foreach (KeyValuePair<string, object> songName in (Dictionary<string, object>)series.Value)
-                    {
-                        Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Basic";
-                        Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Expert";
-                        Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Ultimate";
+                    var song_value = ((Dictionary<string, object>)dbSongsJSON).ToList()[i].Key;
+                    Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Basic";
+                    Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Expert";
+                    Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Ultimate";
 
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Value = series.Key;
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Value = series.Key;
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Value = series.Key;
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Value = dbSongsJSON[song_value]["series"];
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Tag = song_value;
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Value = dbSongsJSON[song_value]["series"];
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Tag = song_value;
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Value = dbSongsJSON[song_value]["series"];
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Tag = song_value;
 
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Song_name"].Value = songName.Key;
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Song_name"].Value = songName.Key;
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Song_name"].Value = songName.Key;
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Song_name"].Value = dbSongsJSON[song_value]["song name"];
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Song_name"].Value = dbSongsJSON[song_value]["song name"];
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Song_name"].Value = dbSongsJSON[song_value]["song name"];
 
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Type"].Value = dbSongsJSON[series.Key][songName.Key]["type"];
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Type"].Value = dbSongsJSON[song_value]["type"];
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Type"].Value = dbSongsJSON[song_value]["type"];
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Type"].Value = dbSongsJSON[song_value]["type"];
 
-                        //Read Score value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic score"], 16));
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert score"], 16));
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate score"], 16));
+                    //Read Score value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic score"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert score"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate score"], 16));
 
-                        //Read chain value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic chain"], 16));
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert chain"], 16));
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate chain"], 16));
+                    //Read chain value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic chain"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert chain"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate chain"], 16));
 
-                        //Read rank value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic rank"], 16))));
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert rank"], 16))));
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate rank"], 16))));
+                    //Read rank value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic rank"], 16))));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert rank"], 16))));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate rank"], 16))));
 
-                        //Read status value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic status"], 16))));
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert status"], 16))));
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate status"], 16))));
+                    //Read status value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic status"], 16))));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert status"], 16))));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate status"], 16))));
 
-                        //Read playstyle value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic play style"], 16)]);
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert play style"], 16)]);
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate play style"], 16)]);
+                    //Read playstyle value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic play style"], 16)]);
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert play style"], 16)]);
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate play style"], 16)]);
 
-                        //Read times played value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic times played"], 16));
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert times played"], 16));
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate times played"], 16));
+                    //Read times played value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played"], 16));
 
-                        //Read times cleared value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic times cleared"], 16));
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert times cleared"], 16));
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate times cleared"], 16));
+                    //Read times cleared value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times cleared"], 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times cleared"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times cleared"], 16));
 
-                        //Read date value for song
-                        Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["basic date"], 16))}";
-                        Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["expert date"], 16))}";
-                        Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[series.Key][songName.Key]["ultimate date"], 16))}";
+                    //Read date value for song
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16))}";
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16))}";
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16))}";
 
-                        //Add cleared and played values
-                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value);
-                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value);
-                        Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value);
-                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value);
-                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value);
-                        Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value);
+                    //Add cleared and played values
+                    Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value);
+                    Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value);
+                    Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value);
+                    Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value);
+                    Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value);
+                    Total_cleared += Convert.ToInt32(Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value);
 
-                        //Add total All-Critical values
-                        if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
-                        if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                    //Add total All-Critical values
+                    if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Basic" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_basic_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Expert" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_expert_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
+                    if (Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Difficulty"].Value.ToString() == "Ultimate" && Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value.ToString() == "All-Critical") Total_ultimate_all_criticals++;
 
-                        label1.Text = $"Total Basic All-Criticals: {Total_basic_all_criticals}";
-                        label2.Text = $"Total Expert All-Criticals: {Total_expert_all_criticals}";
-                        label3.Text = $"Total Ultimate All-Criticals: {Total_ultimate_all_criticals}";
-                        label11.Text = $"Total Times Played: {Total_played}";
-                        label10.Text = $"Total Times Cleared: {Total_cleared}";
+                    label1.Text = $"Total Basic All-Criticals: {Total_basic_all_criticals}";
+                    label2.Text = $"Total Expert All-Criticals: {Total_expert_all_criticals}";
+                    label3.Text = $"Total Ultimate All-Criticals: {Total_ultimate_all_criticals}";
+                    label11.Text = $"Total Times Played: {Total_played}";
+                    label10.Text = $"Total Times Cleared: {Total_cleared}";
 
-                        songIndex += 3;
-                    }
+                    songIndex += 3;
                 }
             }
             catch (Exception ex)
