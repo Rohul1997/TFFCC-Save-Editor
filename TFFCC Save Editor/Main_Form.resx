@@ -165,68 +165,7 @@
   <metadata name="songs_Date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="songs_Series.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Type.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Song_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Difficulty.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Score.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Chain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Rank.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Play_style.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Times_played.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_TImes_cleared.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_song_picked_online.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_song_picked_online_noEX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_times_played_online.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="songs_Date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Crowns_pictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAYAAABFGc6jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAlNJREFUSEu1lD+I01Acx59rQWgOGk6kwSZQpQgOWaQdT4dDOG6o/zJUl7Zyg5Ui
-        KAgHxw12EJWicBkC4pYOWYQTjJOLSxVvOBAkwi3KOWTI4NAMP3+/lz+XpNFrC37h04P36/0+7/3eowwA
-        FsL3fU5eLY/gY4ZUq1UBsUslBgj+LQlh6djMJVIUplvWBvj+WzCMmygr6WHp2MwrsjMiB5fVoPrvxCIc
-        iSqdZE73mgKiyGxkaixYH5g7TYAfr+H53RooytIYlztBNYgsy1e1s8xFoFIpjsLllGhk7rTBO7Bgc/MK
-        yVJjkSRJQJHrHRhc9P39QxLRKC4F3wiCImfysQ9Er9ci2YDWkyKbJMTu7jaJaLfxWFDETxOJiHa7SbJ4
-        15RzZ5bdjMjGZTkpGtDYItHa2mkol8t8N3SaRqPBT5MUWZYRnUpFgYDot2+sc8mHZ3WSUI0mo8YiSq12
-        Sh8OtwB+vQTvyyPodpdAktiIMM0V8LwnHPh5n/P7kwZP2wwkxmxkbD6u4P9twFcU3btVgGKRn4Y2K2RF
-        qqatchGXeQaYZhOFJ2IJF327A5O9FhcR3cuMCyJIdBEfQyiRqXdKREGZmxQRcLh9xH6PS5Ii+Hw9RShy
-        sR0fPSVPpO+/aeWLUDKL6BXeD4pST39KhM+zM9w6D5PDFzHgdAD2sGFEpnGWfn8dCgVG9xM//TyRrK2y
-        tCgpmUFUry9TQ3pt/H4oUyLKBYmN3+EjOGJlLnCv1DC+H8rfRB3EQdxFEEWRxvYg6BYkVxSGfhXoMhcl
-        9WMbi/4/wP4AuSgtZ4GMM4YAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="Song_icon_ultimatenex_pictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEIAAAAsCAYAAADRqm7CAAAABGdBTUEAALGPC/xhBQAADrhJREFUaEPN
@@ -446,26 +385,25 @@
         GzDy5S7n/geXGs9goFIvNgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="Crowns_pictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAYAAABFGc6jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAlNJREFUSEu1lD+I01Acx59rQWgOGk6kwSZQpQgOWaQdT4dDOG6o/zJUl7Zyg5Ui
+        KAgHxw12EJWicBkC4pYOWYQTjJOLSxVvOBAkwi3KOWTI4NAMP3+/lz+XpNFrC37h04P36/0+7/3eowwA
+        FsL3fU5eLY/gY4ZUq1UBsUslBgj+LQlh6djMJVIUplvWBvj+WzCMmygr6WHp2MwrsjMiB5fVoPrvxCIc
+        iSqdZE73mgKiyGxkaixYH5g7TYAfr+H53RooytIYlztBNYgsy1e1s8xFoFIpjsLllGhk7rTBO7Bgc/MK
+        yVJjkSRJQJHrHRhc9P39QxLRKC4F3wiCImfysQ9Er9ci2YDWkyKbJMTu7jaJaLfxWFDETxOJiHa7SbJ4
+        15RzZ5bdjMjGZTkpGtDYItHa2mkol8t8N3SaRqPBT5MUWZYRnUpFgYDot2+sc8mHZ3WSUI0mo8YiSq12
+        Sh8OtwB+vQTvyyPodpdAktiIMM0V8LwnHPh5n/P7kwZP2wwkxmxkbD6u4P9twFcU3btVgGKRn4Y2K2RF
+        qqatchGXeQaYZhOFJ2IJF327A5O9FhcR3cuMCyJIdBEfQyiRqXdKREGZmxQRcLh9xH6PS5Ii+Hw9RShy
+        sR0fPSVPpO+/aeWLUDKL6BXeD4pST39KhM+zM9w6D5PDFzHgdAD2sGFEpnGWfn8dCgVG9xM//TyRrK2y
+        tCgpmUFUry9TQ3pt/H4oUyLKBYmN3+EjOGJlLnCv1DC+H8rfRB3EQdxFEEWRxvYg6BYkVxSGfhXoMhcl
+        9WMbi/4/wP4AuSgtZ4GMM4YAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewCellStyle39.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
-        w8bGw8bGw8bGw8bGw8bGw8YAAAAAAISChP///////////////////////////////////////////8bD
-        xgAAAAAAhIKE////////////////////////////////////////////xsPGAAAAAACEgoT/////////
-        ///////////////////////////////////Gw8YAAAAAAISChP//////////////////////////////
-        /////////////8bDxgAAAAAAhIKE////////////AAD/AAD/////////AAD/AAD/////////xsPGAAAA
-        AACEgoT///////////////8AAP8AAP8AAP8AAP/////////////Gw8YAAAAAAISChP//////////////
-        /////wAA/wAA/////////////////8bDxgAAAAAAhIKE////////////////AAD/AAD/AAD/AAD/////
-        ////////xsPGAAAAAACEgoT///////////8AAP8AAP////////8AAP8AAP/////////Gw8YAAAAAAISC
-        hP///////////////////////////////////////////8bDxgAAAAAAhIKE////////////////////
-        ////////////////////////xsPGAAAAAACEgoT/////////////////////////////////////////
-        ///Gw8YAAAAAAISChP///////////////////////////////////////////8bDxgAAAAAAhIKEhIKE
-        hIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEAAA=
-</value>
-  </data>
   <metadata name="Quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
