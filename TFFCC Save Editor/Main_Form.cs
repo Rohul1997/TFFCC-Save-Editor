@@ -123,6 +123,12 @@ namespace TFFCC_Save_Editor
         {
             try
             {
+                //Write all values onto save one last time
+                Write_records(null, null);
+                Write_characters(null, null);
+                Write_collectacards(null, null);
+                Write_items(null, null);
+
                 File.WriteAllBytes(open_savedata.FileName, savedata);
                 File.WriteAllBytes(open_extsavedata.FileName, extsavedata);
                 MessageBox.Show($"Successfully saved to:\n{open_savedata.FileName}\n\n{open_extsavedata.FileName}", "Successfully saved the file");
@@ -138,6 +144,12 @@ namespace TFFCC_Save_Editor
         {
             try
             {
+                //Write all values onto save one last time
+                Write_records(null, null);
+                Write_characters(null, null);
+                Write_collectacards(null, null);
+                Write_items(null, null);
+
                 save_savedata.Filter = "savedata.bk Files | *.bk";
                 if (save_savedata.ShowDialog() != DialogResult.OK) return;
                 save_extsavedata.Filter = "extsavedata.bk Files | *.bk";
