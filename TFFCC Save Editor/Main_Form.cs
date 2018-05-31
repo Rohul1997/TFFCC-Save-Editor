@@ -1482,9 +1482,9 @@ namespace TFFCC_Save_Editor
                     Songs_dataGridView.Rows[songIndex + 2].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played online"], 16));
 
                     //Read date value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16))}";
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16))}";
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 3]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 2]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16))}";
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 2]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16))}";
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 2]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16))}";
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 2]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16))}";
 
                     //Add cleared and played values
                     Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value);
