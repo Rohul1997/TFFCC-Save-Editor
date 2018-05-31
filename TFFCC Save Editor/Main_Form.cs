@@ -126,7 +126,6 @@ namespace TFFCC_Save_Editor
                 //Write all values onto save one last time
                 Write_records(null, null);
                 Write_characters(null, null);
-                Write_collectacards(null, null);
                 Write_items(null, null);
 
                 File.WriteAllBytes(open_savedata.FileName, savedata);
@@ -147,7 +146,6 @@ namespace TFFCC_Save_Editor
                 //Write all values onto save one last time
                 Write_records(null, null);
                 Write_characters(null, null);
-                Write_collectacards(null, null);
                 Write_items(null, null);
 
                 save_savedata.Filter = "savedata.bk Files | *.bk";
