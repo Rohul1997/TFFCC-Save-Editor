@@ -166,7 +166,6 @@ namespace TFFCC_Save_Editor
             }
         }
 
-
         //Read Records tab
         private void Read_records(object sender, EventArgs e)
         {
@@ -778,6 +777,7 @@ namespace TFFCC_Save_Editor
             Read_records(null, null);
         }
 
+
         //Characters Tab
         bool CharEditor_character_changed;
         //DLC character check
@@ -973,7 +973,6 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Characters changes\n\n{ex}", "Error");
             }
         }
-
         //Set level reset value, level reset image and minimum Total CP value
         private void Set_LvReset_totalCP(object sender, EventArgs e)
         {
@@ -1027,7 +1026,6 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Characters Editor changes\n\n{ex}", "Error");
             }
         }
-
         //Max current character stats
         private void Max_character_stats_button_Click(object sender, EventArgs e)
         {
@@ -1179,6 +1177,7 @@ namespace TFFCC_Save_Editor
             }
         }
 
+
         //Read CollectaCards tab
         private void Read_collectacards(object sender, EventArgs e)
         {
@@ -1255,6 +1254,7 @@ namespace TFFCC_Save_Editor
             }
         }
 
+
         bool max_button_pressed;
         //Max all items
         private void max_items_button_Click(object sender, EventArgs e)
@@ -1267,6 +1267,7 @@ namespace TFFCC_Save_Editor
             Write_items(null, null);
             max_button_pressed = false;
         }
+
         //Max all normal cards
         private void max_normal_cards_button_Click(object sender, EventArgs e)
         {
@@ -1316,6 +1317,18 @@ namespace TFFCC_Save_Editor
 
 
         //Read songs tab
+        //For top songs
+        public class Song : IComparable<Song>
+        {
+            public UInt32 TimesPlayed { get; set; }
+            public string Value { get; set; }
+            public string Difficulty { get; set; }
+
+            public int CompareTo(Song other)
+            {
+                return TimesPlayed.CompareTo(other.TimesPlayed);
+            }
+        }
         public string rank(byte[] rank)
         {
             switch (rank[0])
@@ -1405,6 +1418,7 @@ namespace TFFCC_Save_Editor
                 int Total_basic_all_criticals = 0;
                 int Total_expert_all_criticals = 0;
                 int Total_ultimate_all_criticals = 0;
+                List<Song> Songs_list = new List<Song>();
                 for (int i = 0; i < 321; i++)
                 {
                     var song_value = ((Dictionary<string, object>)dbSongsJSON).ToList()[i].Key;
@@ -1509,8 +1523,35 @@ namespace TFFCC_Save_Editor
                     label11.Text = $"Total Times Played: {Total_played}";
                     label10.Text = $"Total Times Cleared: {Total_cleared}";
 
+                    //Store top songs data
+                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played"], 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played online"], 16)), Value = song_value, Difficulty = "basic" });
+                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played"], 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played online"], 16)), Value = song_value, Difficulty = "expert" });
+                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played"], 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played online"], 16)), Value = song_value, Difficulty = "ultimate" });
+
                     songIndex += 3;
                 }
+
+                //Write top songs values onto save
+                Songs_list.Sort();
+                Songs_list.Reverse();
+                ushort topSongOffset = 0x3854;
+                for (int i = 0; i < 8; i++)
+                {
+                    if (Songs_list[i].TimesPlayed != 0)
+                    {
+                        Array.Copy(BitConverter.GetBytes(Convert.ToUInt16(Songs_list[i].Value, 16)), 0, savedata, topSongOffset, 2);
+                        if (Songs_list[i].Difficulty == "basic") savedata[topSongOffset + 4] = 0x00;
+                        if (Songs_list[i].Difficulty == "expert") savedata[topSongOffset + 4] = 0x01;
+                        if (Songs_list[i].Difficulty == "ultimate") savedata[topSongOffset + 4] = 0x02;
+                        Array.Copy(BitConverter.GetBytes(Songs_list[i].TimesPlayed), 0, savedata, topSongOffset + 6, 2);
+                    }
+                    else
+                    {
+                        Array.Copy(new byte[] { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }, 0, savedata, topSongOffset, 8);
+                    }
+                    topSongOffset += 8;
+                }
+                Songs_list.Clear();
             }
             catch (Exception ex)
             {

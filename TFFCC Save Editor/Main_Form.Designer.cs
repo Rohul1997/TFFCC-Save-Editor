@@ -3903,7 +3903,7 @@ namespace TFFCC_Save_Editor
             this.MaximizeBox = false;
             this.Name = "Main_Form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.29";
+            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.30";
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).EndInit();
