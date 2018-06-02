@@ -74,6 +74,7 @@ namespace TFFCC_Save_Editor
         bool extsavedata_loaded;
         byte[] savedata;
         byte[] extsavedata;
+
         //Open savedata.bk and extsavedata.bk file and store as savadata byte array
         private void Open_files_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -117,7 +118,6 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Invalid save(s)\n\n{ex}", "Failed to open the file(s)");
             }
         }
-
         //Save to savadata.bk
         private void Save_files_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -775,6 +775,65 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded) return;
             (new online_battle_rating_wins(ref savedata)).ShowDialog();
             Read_records(null, null);
+        }
+
+
+        //Read Top Songs Played
+        private void Read_top_songs_played()
+        {
+            try
+            {
+                var dbSongsJSON = dbJson("songs");
+                if (dbSongsJSON == null)
+                {
+                    MessageBox.Show("Failed loading database", "Error");
+                    return;
+                }
+
+                PictureBox[] typeArray = new PictureBox[] { Top_songs_played_1_type_pictureBox, Top_songs_played_2_type_pictureBox, Top_songs_played_3_type_pictureBox, Top_songs_played_4_type_pictureBox, Top_songs_played_5_type_pictureBox, Top_songs_played_6_type_pictureBox, Top_songs_played_7_type_pictureBox, Top_songs_played_8_type_pictureBox };
+                RichTextBox[] nameArray = new RichTextBox[] { Top_songs_played_1_name_richTextBox, Top_songs_played_2_name_richTextBox, Top_songs_played_3_name_richTextBox, Top_songs_played_4_name_richTextBox, Top_songs_played_5_name_richTextBox, Top_songs_played_6_name_richTextBox, Top_songs_played_7_name_richTextBox, Top_songs_played_8_name_richTextBox };
+                PictureBox[] difficultyArray = new PictureBox[] { Top_songs_played_1_difficulty_pictureBox, Top_songs_played_2_difficulty_pictureBox, Top_songs_played_3_difficulty_pictureBox, Top_songs_played_4_difficulty_pictureBox, Top_songs_played_5_difficulty_pictureBox, Top_songs_played_6_difficulty_pictureBox, Top_songs_played_7_difficulty_pictureBox, Top_songs_played_8_difficulty_pictureBox };
+                TextBox[] timesplayedArray = new TextBox[] { Top_songs_played_1_timesplayed_textBox, Top_songs_played_2_timesplayed_textBox, Top_songs_played_3_timesplayed_textBox, Top_songs_played_4_timesplayed_textBox, Top_songs_played_5_timesplayed_textBox, Top_songs_played_6_timesplayed_textBox, Top_songs_played_7_timesplayed_textBox, Top_songs_played_8_timesplayed_textBox };
+
+                ushort topSongOffset = 0x3854;
+                dynamic song;
+                for (int i = 0; i < 8; i++)
+                {
+                    song = savedata[topSongOffset] != 0xFF ? dbSongsJSON[$"0x{(BitConverter.ToUInt16(savedata, topSongOffset)).ToString("X")}"] : null;
+
+                    if (savedata[topSongOffset] != 0xFF)
+                    {
+                        //Set song type image
+                        if (song["type"] == "BMS") typeArray[i].Image = Properties.Resources.Song_BMS;
+                        if (song["type"] == "FMS") typeArray[i].Image = Properties.Resources.Song_FMS;
+                        if (song["type"] == "EMS") typeArray[i].Image = Properties.Resources.Song_EMS;
+
+                        //Set series and song name
+                        nameArray[i].Text = $"{song["series"]}\n{song["song name"]}";
+
+                        //Set song difficulty image
+                        if (savedata[topSongOffset + 4] == 0x00) difficultyArray[i].Image = Properties.Resources.Song_Icon_Basic;
+                        if (savedata[topSongOffset + 4] == 0x01) difficultyArray[i].Image = Properties.Resources.Song_Icon_Expert;
+                        if (savedata[topSongOffset + 4] == 0x02) difficultyArray[i].Image = Properties.Resources.Song_Icon_Ultimate;
+
+                        //Set times played
+                        timesplayedArray[i].Text = (BitConverter.ToUInt16(savedata, topSongOffset + 6)).ToString();
+                    }
+                    else
+                    {
+                        //Set all to blank
+                        typeArray[i].Image = null;
+                        nameArray[i].Text = "N/A";
+                        difficultyArray[i].Image = null;
+                        timesplayedArray[i].Text = "N/A";
+                    }
+                    topSongOffset += 8;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update Top Songs Played\n\n{ex}", "Error");
+            }
         }
 
 
@@ -1552,10 +1611,11 @@ namespace TFFCC_Save_Editor
                     topSongOffset += 8;
                 }
                 Songs_list.Clear();
+                Read_top_songs_played();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Invalid extsavedata.bk\n\n{ex}", "Failed to open the file");
+                MessageBox.Show($"Something went wrong while trying to update Songs\n\n{ex}", "Error");
             }
         }
 
