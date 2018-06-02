@@ -809,7 +809,7 @@ namespace TFFCC_Save_Editor
                         if (song["type"] == "EMS") typeArray[i].Image = Properties.Resources.Song_EMS;
 
                         //Set series and song name
-                        nameArray[i].Text = $"{song["series"]}\n{song["song name"]}";
+                        nameArray[i].Rtf = $@"{{\rtf \b {song["series"]}\b0 \line {song["song name"]}}}";
 
                         //Set song difficulty image
                         if (savedata[topSongOffset + 4] == 0x00) difficultyArray[i].Image = Properties.Resources.Song_Icon_Basic;
@@ -1303,9 +1303,9 @@ namespace TFFCC_Save_Editor
                 card_premium_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Premium.{cName} Premium.png"));
                 card_back_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Back.{cName} Back.png"));
 
-                card_normal_description_richTextBox.Text = dbJson("items")[cName]["normal description"].ToString();
-                card_rare_description_richTextBox.Text = dbJson("items")[cName]["rare description"].ToString();
-                card_premium_description_richTextBox.Text = dbJson("items")[cName]["premium description"].ToString();
+                card_normal_description_richTextBox.Rtf = $@"{{\rtf {dbJson("items")[cName]["normal description"].ToString()}}}";
+                card_rare_description_richTextBox.Rtf = $@"{{\rtf {dbJson("items")[cName]["rare description"].ToString()}}}";
+                card_premium_description_richTextBox.Rtf = $@"{{\rtf {dbJson("items")[cName]["premium description"].ToString()}}}";
             }
             catch (Exception ex)
             {
