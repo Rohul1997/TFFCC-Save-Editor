@@ -999,6 +999,12 @@
     <EmbeddedResource Include="Resources\CollectaCards\Rare\#160 Jumbo Flan Rare.png" />
     <EmbeddedResource Include="Resources\CollectaCards\Rare\#161 Behemoth Rare.png" />
     <EmbeddedResource Include="Resources\CollectaCards\Rare\#162 King Behemoth Rare.png" />
+    <None Include="Resources\Song Icon Basic.png" />
+    <None Include="Resources\Song Icon Expert.png" />
+    <None Include="Resources\Song Icon Ultimate.png" />
+    <None Include="Resources\Song_BMS.png" />
+    <None Include="Resources\Song_EMS.png" />
+    <None Include="Resources\Song_FMS.png" />
     <Content Include="TTFFCC Save Editor Icon.ico" />
   </ItemGroup>
   <ItemGroup />
