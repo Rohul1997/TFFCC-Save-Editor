@@ -1,4 +1,29 @@
-﻿namespace TFFCC_Save_Editor
+﻿/*
+ *   This file is part of TFFCC Save Editor
+ *   Copyright (C) 2017-2018 Rohul1997
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, version 3 of the License
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *   Additional Terms 7.b and 7.c of GPLv3 apply to this file:
+ *       * Requiring preservation of specified reasonable legal notices or
+ *         author attributions in that material or in the Appropriate Legal
+ *         Notices displayed by works containing it.
+ *       * Prohibiting misrepresentation of the origin of that material,
+ *         or requiring that modified versions of such material be marked in
+ *         reasonable ways as different from the original version.
+ */
+
+namespace TFFCC_Save_Editor
 {
     partial class online_battle_rating_wins
     {
@@ -51,7 +76,7 @@
             0});
             this.anyone_numericUpDown.Name = "anyone_numericUpDown";
             this.anyone_numericUpDown.Size = new System.Drawing.Size(51, 20);
-            this.anyone_numericUpDown.TabIndex = 0;
+            this.anyone_numericUpDown.TabIndex = 1;
             this.anyone_numericUpDown.ValueChanged += new System.EventHandler(this.Write_rating);
             // 
             // anyone_label
@@ -74,7 +99,7 @@
             0});
             this.friends_numericUpDown.Name = "friends_numericUpDown";
             this.friends_numericUpDown.Size = new System.Drawing.Size(51, 20);
-            this.friends_numericUpDown.TabIndex = 0;
+            this.friends_numericUpDown.TabIndex = 2;
             this.friends_numericUpDown.ValueChanged += new System.EventHandler(this.Write_rating);
             // 
             // friends_label
