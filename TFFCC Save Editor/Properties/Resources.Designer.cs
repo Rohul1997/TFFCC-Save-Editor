@@ -73,6 +73,16 @@ namespace TFFCC_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        public static byte[] Database {
+            get {
+                object obj = ResourceManager.GetObject("Database", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         public static byte[] Databases {
             get {
                 object obj = ResourceManager.GetObject("Databases", resourceCulture);
