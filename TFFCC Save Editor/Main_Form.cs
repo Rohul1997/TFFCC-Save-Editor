@@ -24,21 +24,30 @@
  */
 
 using System;
-using System.Text;
 using System.Collections.Generic;
-using System.IO;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Reflection;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Reflection;
+using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace TFFCC_Save_Editor
 {
     public partial class Main_Form : Form
     {
         SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;MultipleActiveResultSets=True;ApplicationIntent=ReadOnly");
+        Assembly assembly = Assembly.GetExecutingAssembly();
+        OpenFileDialog open_extsavedata = new OpenFileDialog();
+        OpenFileDialog open_savedata = new OpenFileDialog();
+        SaveFileDialog save_savedata = new SaveFileDialog();
+        SaveFileDialog save_extsavedata = new SaveFileDialog();
+        bool savedata_loaded;
+        bool extsavedata_loaded;
+        byte[] savedata;
+        byte[] extsavedata;
 
         public Main_Form()
         {
@@ -49,16 +58,6 @@ namespace TFFCC_Save_Editor
             CharEditor_levelResets_picturebox.Location = new Point(62, 0);
         }
 
-        Assembly assembly = Assembly.GetExecutingAssembly();
-        OpenFileDialog open_extsavedata = new OpenFileDialog();
-        OpenFileDialog open_savedata = new OpenFileDialog();
-        SaveFileDialog save_savedata = new SaveFileDialog();
-        SaveFileDialog save_extsavedata = new SaveFileDialog();
-
-        bool savedata_loaded;
-        bool extsavedata_loaded;
-        byte[] savedata;
-        byte[] extsavedata;
 
         //Open savedata.bk and extsavedata.bk file and store as savadata byte array
         private void Open_files_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,6 +102,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Invalid save(s)\n\n{ex}", "Failed to open the file(s)");
             }
         }
+
         //Save to savadata.bk
         private void Save_files_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -150,6 +150,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Failed to save to:\n{save_savedata.FileName}\n\n{save_extsavedata.FileName}\n{ex}", "Failed to save the file");
             }
         }
+
 
         //Read Records tab
         private void Read_records(object sender, EventArgs e)
@@ -516,6 +517,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to update Records\n\n{ex}", "Error");
             }
         }
+
         //Write Records tab
         private void Write_records(object sender, EventArgs e)
         {
@@ -754,6 +756,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Records changes\n\n{ex}", "Error");
             }
         }
+
         //Read/Write online battle rating wins
         private void online_battle_rating_wins_button_Click(object sender, EventArgs e)
         {
@@ -1034,6 +1037,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to update Characters\n\n{ex}", "Error");
             }
         }
+
         //Write Characters tab
         private void Write_characters(object sender, EventArgs e)
         {
@@ -1093,6 +1097,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Characters changes\n\n{ex}", "Error");
             }
         }
+
         //Set level reset value, level reset image and minimum Total CP value
         private void Set_LvReset_totalCP(object sender, EventArgs e)
         {
@@ -1146,6 +1151,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Characters Editor changes\n\n{ex}", "Error");
             }
         }
+
         //Max current character stats
         private void Max_character_stats_button_Click(object sender, EventArgs e)
         {
@@ -1185,6 +1191,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Characters changesn\n\n{ex}", "Error");
             }
         }
+
         //Max all characters stats
         private void Max_all_characters_stats_button_Click(object sender, EventArgs e)
         {
@@ -1251,6 +1258,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to update Items\n\n{ex}", "Error");
             }
         }
+
         //Write Items tab
         private void Write_items(object sender, EventArgs e)
         {
@@ -1273,6 +1281,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store Items changes\n\n{ex}", "Error");
             }
         }
+
         //Set item description
         private void Set_item_desc(object sender, DataGridViewCellEventArgs e)
         {
@@ -1324,6 +1333,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to update CollectaCards\n\n{ex}", "Error");
             }
         }
+
         //Write CollectaCards tab
         private void Write_collectacards(object sender, EventArgs e)
         {
@@ -1348,6 +1358,7 @@ namespace TFFCC_Save_Editor
                 MessageBox.Show($"Something went wrong while trying to store CollectaCards changes\n\n{ex}", "Error");
             }
         }
+
         //Set card description
         private void Set_card_desc(object sender, DataGridViewCellEventArgs e)
         {
@@ -1378,7 +1389,6 @@ namespace TFFCC_Save_Editor
             }
         }
 
-
         bool max_button_pressed;
         //Max all items
         private void max_items_button_Click(object sender, EventArgs e)
@@ -1403,6 +1413,7 @@ namespace TFFCC_Save_Editor
             Write_collectacards(null, null);
             max_button_pressed = false;
         }
+
         //Max all rare cards
         private void max_rare_cards_button_Click(object sender, EventArgs e)
         {
@@ -1414,6 +1425,7 @@ namespace TFFCC_Save_Editor
             Write_collectacards(null, null);
             max_button_pressed = false;
         }
+
         //Max all premium cards
         private void max_premium_cards_button_Click(object sender, EventArgs e)
         {
@@ -1425,6 +1437,7 @@ namespace TFFCC_Save_Editor
             Write_collectacards(null, null);
             max_button_pressed = false;
         }
+
         //Max all cards
         private void max_all_cards_button_Click(object sender, EventArgs e)
         {
@@ -1440,8 +1453,7 @@ namespace TFFCC_Save_Editor
         }
 
 
-        //Read songs tab
-        //For top songs
+        //For top songs when reading songs
         public class Song : IComparable<Song>
         {
             public UInt32 TimesPlayed { get; set; }
@@ -1453,6 +1465,8 @@ namespace TFFCC_Save_Editor
                 return TimesPlayed.CompareTo(other.TimesPlayed);
             }
         }
+
+        //Get song rank
         public string rank(byte[] rank)
         {
             switch (rank[0])
@@ -1485,6 +1499,8 @@ namespace TFFCC_Save_Editor
                     return "Unknown";
             }
         }
+
+        //Get song status
         public string status(byte[] status)
         {
             switch (status[0])
@@ -1507,6 +1523,8 @@ namespace TFFCC_Save_Editor
                     return "Unknown";
             }
         }
+
+        //Get song play style
         public string playstyle(byte playstyle)
         {
             switch (playstyle)
@@ -1523,6 +1541,8 @@ namespace TFFCC_Save_Editor
                     return "Unplayed";
             }
         }
+
+        //Read Songs tab
         private void Read_songs(object sender, EventArgs e)
         {
             try
@@ -1685,10 +1705,12 @@ namespace TFFCC_Save_Editor
                 if (tb != null) tb.KeyPress += new KeyPressEventHandler(notInteger);
             }
         }
+
         private void notInteger(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
         }
+
         private void cellCheck(object sender, DataGridViewCellEventArgs e)
         {
             if (max_button_pressed) return;
