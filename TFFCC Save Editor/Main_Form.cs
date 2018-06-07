@@ -28,17 +28,22 @@ using System.Text;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using System.Web.Script.Serialization;
-using System.Linq;
 using System.Drawing;
 using System.Reflection;
+using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Threading;
 
 namespace TFFCC_Save_Editor
 {
     public partial class Main_Form : Form
     {
+        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;MultipleActiveResultSets=True;ApplicationIntent=ReadOnly");
+
         public Main_Form()
         {
+            new Thread(OpenSQL).Start();
+
             InitializeComponent();
             CharEditor_levelResets_picturebox.Parent = CharEditor_character_pictureBox;
             CharEditor_levelResets_picturebox.Location = new Point(62, 0);
@@ -49,26 +54,6 @@ namespace TFFCC_Save_Editor
         OpenFileDialog open_savedata = new OpenFileDialog();
         SaveFileDialog save_savedata = new SaveFileDialog();
         SaveFileDialog save_extsavedata = new SaveFileDialog();
-
-        public dynamic dbJson(string type)
-        {
-            dynamic json = new JavaScriptSerializer().DeserializeObject((new StreamReader(new MemoryStream(Properties.Resources.Databases))).ReadToEnd().Remove(0, 1216));
-            switch (type)
-            {
-                case "items":
-                    return json["items"];
-                case "characters":
-                    return json["characters"];
-                case "abilities":
-                    return json["abilities"];
-                case "monsters":
-                    return json["monsters"];
-                case "songs":
-                    return json["songs"];
-                default:
-                    return null;
-            }
-        }
 
         bool savedata_loaded;
         bool extsavedata_loaded;
@@ -783,33 +768,26 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                var dbSongsJSON = dbJson("songs");
-                if (dbSongsJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
                 PictureBox[] typeArray = new PictureBox[] { Top_songs_played_1_type_pictureBox, Top_songs_played_2_type_pictureBox, Top_songs_played_3_type_pictureBox, Top_songs_played_4_type_pictureBox, Top_songs_played_5_type_pictureBox, Top_songs_played_6_type_pictureBox, Top_songs_played_7_type_pictureBox, Top_songs_played_8_type_pictureBox };
                 RichTextBox[] nameArray = new RichTextBox[] { Top_songs_played_1_name_richTextBox, Top_songs_played_2_name_richTextBox, Top_songs_played_3_name_richTextBox, Top_songs_played_4_name_richTextBox, Top_songs_played_5_name_richTextBox, Top_songs_played_6_name_richTextBox, Top_songs_played_7_name_richTextBox, Top_songs_played_8_name_richTextBox };
                 PictureBox[] difficultyArray = new PictureBox[] { Top_songs_played_1_difficulty_pictureBox, Top_songs_played_2_difficulty_pictureBox, Top_songs_played_3_difficulty_pictureBox, Top_songs_played_4_difficulty_pictureBox, Top_songs_played_5_difficulty_pictureBox, Top_songs_played_6_difficulty_pictureBox, Top_songs_played_7_difficulty_pictureBox, Top_songs_played_8_difficulty_pictureBox };
                 TextBox[] timesplayedArray = new TextBox[] { Top_songs_played_1_timesplayed_textBox, Top_songs_played_2_timesplayed_textBox, Top_songs_played_3_timesplayed_textBox, Top_songs_played_4_timesplayed_textBox, Top_songs_played_5_timesplayed_textBox, Top_songs_played_6_timesplayed_textBox, Top_songs_played_7_timesplayed_textBox, Top_songs_played_8_timesplayed_textBox };
 
                 ushort topSongOffset = 0x3854;
-                dynamic song;
                 for (int i = 0; i < 8; i++)
                 {
-                    song = savedata[topSongOffset] != 0xFF ? dbSongsJSON[$"0x{(BitConverter.ToUInt16(savedata, topSongOffset)).ToString("X")}"] : null;
+                    SqlDataReader reader = new SqlCommand($"SELECT Series, Song, Type FROM Songs WHERE Value = '0x{(BitConverter.ToUInt16(savedata, topSongOffset)).ToString("X2")}'", connection).ExecuteReader();
+                    reader.Read();
 
                     if (savedata[topSongOffset] != 0xFF)
                     {
                         //Set song type image
-                        if (song["type"] == "BMS") typeArray[i].Image = Properties.Resources.Song_BMS;
-                        if (song["type"] == "FMS") typeArray[i].Image = Properties.Resources.Song_FMS;
-                        if (song["type"] == "EMS") typeArray[i].Image = Properties.Resources.Song_EMS;
+                        if (reader["Type"].ToString() == "BMS") typeArray[i].Image = Properties.Resources.Song_BMS;
+                        if (reader["Type"].ToString() == "FMS") typeArray[i].Image = Properties.Resources.Song_FMS;
+                        if (reader["Type"].ToString() == "EMS") typeArray[i].Image = Properties.Resources.Song_EMS;
 
                         //Set series and song name
-                        nameArray[i].Rtf = $@"{{\rtf \b {song["series"]}\b0 \line {song["song name"]}}}";
+                        nameArray[i].Rtf = $@"{{\rtf \b {reader["Series"]}\b0 \line {reader["Song"]}}}";
 
                         //Set song difficulty image
                         if (savedata[topSongOffset + 4] == 0x00) difficultyArray[i].Image = Properties.Resources.Song_Icon_Basic;
@@ -828,6 +806,7 @@ namespace TFFCC_Save_Editor
                         timesplayedArray[i].Text = "N/A";
                     }
                     topSongOffset += 8;
+                    reader.Close();
                 }
             }
             catch (Exception ex)
@@ -839,100 +818,177 @@ namespace TFFCC_Save_Editor
 
         //Characters Tab
         bool CharEditor_character_changed;
-        //DLC character check
-        public string charType(string charType)
-        {
-            switch (charType)
-            {
-                case "Yuffie":
-                    return "DLC";
-                case "Rosa":
-                    return "DLC";
-                case "Cloud #2":
-                    return "DLC";
-                case "Orlandeau":
-                    return "DLC";
-                case "Auron #2":
-                    return "DLC";
-                case "Vincent":
-                    return "DLC";
-                default:
-                    return "Normal";
-            }
-        }
         //Read Characters tab
         private void Read_characters(object sender, EventArgs e)
         {
             try
             {
-                var dbCharactersJSON = dbJson("characters");
-                Dictionary<string, object> dbAbilitiesJSON = dbJson("abilities");
-                if (dbCharactersJSON == null || dbAbilitiesJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
+                var savetype = savedata;
                 //Party
-                for (int i = 0; i < 71; i++)
+                //Leader
+                SqlDataReader readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC98].ToString("X2")}'", connection).ExecuteReader();
+                while (readerChar.Read())
                 {
-                    var character = ((Dictionary<string, object>)dbCharactersJSON).ToList()[i].Key;
-                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC98])
-                    {
-                        Party1_character_comboBox.SelectedItem = character;
-                        Party1_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
-                        Party1_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
-                        Party1_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
-                        Party1_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
-                        Party1_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
-                    }
-                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC9A])
-                    {
-                        Party2_character_comboBox.SelectedItem = character;
-                        Party2_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
-                        Party2_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
-                        Party2_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
-                        Party2_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
-                        Party2_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
-                    }
-                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC9C])
-                    {
-                        Party3_character_comboBox.SelectedItem = character;
-                        Party3_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
-                        Party3_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
-                        Party3_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
-                        Party3_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
-                        Party3_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
-                    }
-                    if (Convert.ToByte(dbCharactersJSON[character]["value"], 16) == savedata[0xC9E])
-                    {
-                        Party4_character_comboBox.SelectedItem = character;
-                        Party4_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{character}.png"));
-                        Party4_ability1_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 1"], 16))).First().Key;
-                        Party4_ability2_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 2"], 16))).First().Key;
-                        Party4_ability3_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 3"], 16))).First().Key;
-                        Party4_ability4_textBox.Text = dbAbilitiesJSON.Where(a => Convert.ToUInt16(a.Value.ToString(), 16) == BitConverter.ToUInt16(charType(character) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character]["ability 4"], 16))).First().Key;
-                    }
+                    Party1_character_comboBox.SelectedItem = readerChar["Character"].ToString();
+                    Party1_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
+
+                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+
+                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party1_ability1_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party1_ability2_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party1_ability3_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party1_ability4_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
                 }
+                readerChar.Close();
+
+                //Party 2
+                readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9A].ToString("X2")}'", connection).ExecuteReader();
+                while (readerChar.Read())
+                {
+                    Party2_character_comboBox.SelectedItem = readerChar["Character"].ToString();
+                    Party2_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
+
+                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+
+                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party2_ability1_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party2_ability2_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party2_ability3_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party2_ability4_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+                }
+                readerChar.Close();
+
+                //Party 3
+                readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9C].ToString("X2")}'", connection).ExecuteReader();
+                while (readerChar.Read())
+                {
+                    Party3_character_comboBox.SelectedItem = readerChar["Character"].ToString();
+                    Party3_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
+
+                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+
+                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party3_ability1_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party3_ability2_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party3_ability3_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party3_ability4_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+                }
+                readerChar.Close();
+
+                //Party 4
+                readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9E].ToString("X2")}'", connection).ExecuteReader();
+                while (readerChar.Read())
+                {
+                    Party4_character_comboBox.SelectedItem = readerChar["Character"].ToString();
+                    Party4_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
+
+                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+
+                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party4_ability1_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party4_ability2_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party4_ability3_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+
+                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility.Read();
+                    Party4_ability4_textBox.Text = readerAbility["Ability"].ToString();
+                    readerAbility.Close();
+                }
+                readerChar.Close();
 
                 //Character Editor
                 CharEditor_character_changed = false;
-                //if the character is changedor if max button is pressed in the character editor then set CharEditor_character_changed to true
+                //if the character is changed or if max button is pressed in the character editor then set CharEditor_character_changed to true
                 if (sender != null && sender.ToString() == "Max Button Pressed" || ((ComboBox)sender) != null && ((ComboBox)sender).Name == "CharEditor_character_comboBox") CharEditor_character_changed = true;
 
-                Max_character_stats_button.Text = $"Max {CharEditor_character_comboBox.SelectedItem} Stats";
-                CharEditor_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{CharEditor_character_comboBox.SelectedItem}.png"));
-                CharEditor_level_textBox.Text = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level"], 16)].ToString();
-                CharEditor_exp_textBox.Text = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["exp"], 16)).ToString();
-                CharEditor_hp_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16));
-                CharEditor_levelResets_numericUpDown.Value = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)];
-                CharEditor_totalCP_numericUpDown.Value = (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)];
-                CharEditor_strength_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16));
-                CharEditor_magic_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["magic"], 16));
-                CharEditor_agility_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["agility"], 16));
-                CharEditor_luck_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["luck"], 16));
-                CharEditor_stamina_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16));
-                CharEditor_spirit_numericUpDown.Value = BitConverter.ToUInt16(charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16));
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Characters WHERE Character = @character", connection);
+                cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
+                readerChar = cmd.ExecuteReader();
+                readerChar.Read();
+                savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+
+                //Read Charcter Name for max stats button
+                Max_character_stats_button.Text = $"Max {readerChar["Character"].ToString()} Stats";
+                //Read Character Image
+                CharEditor_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{readerChar["Character"].ToString()}.png"));
+                //Read Level
+                CharEditor_level_textBox.Text = savetype[Convert.ToUInt32(readerChar["Level"].ToString(), 16)].ToString();
+                //Read EXP
+                CharEditor_exp_textBox.Text = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["EXP"].ToString(), 16)).ToString();
+                //Read HP
+                CharEditor_hp_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["HP"].ToString(), 16));
+                //Read Level Resets
+                CharEditor_levelResets_numericUpDown.Value = savetype[Convert.ToUInt32(readerChar["Level Resets"].ToString(), 16)];
+                //Read Total CP
+                CharEditor_totalCP_numericUpDown.Value = savetype[Convert.ToUInt32(readerChar["Total CP"].ToString(), 16)];
+                //Read Strength
+                CharEditor_strength_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Strength"].ToString(), 16));
+                //Read Magic
+                CharEditor_magic_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Magic"].ToString(), 16));
+                //Read Agility
+                CharEditor_agility_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Agility"].ToString(), 16));
+                //Read Luck
+                CharEditor_luck_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Luck"].ToString(), 16));
+                //Read Stamina
+                CharEditor_stamina_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Stamina"].ToString(), 16));
+                //Read Spirit
+                CharEditor_spirit_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Spirit"].ToString(), 16));
+                readerChar.Close();
+
+                //Read Level Resets Image
                 Set_LvReset_totalCP("reading level reset", null);
                 switch (CharEditor_levelResets_numericUpDown.Value)
                 {
@@ -984,13 +1040,6 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
             try
             {
-                var dbCharactersJSON = dbJson("characters");
-                if (dbCharactersJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
                 //Check if a character is used more than once
                 if (Party1_character_comboBox.SelectedIndex == Party2_character_comboBox.SelectedIndex || Party1_character_comboBox.SelectedIndex == Party3_character_comboBox.SelectedIndex || Party1_character_comboBox.SelectedIndex == Party4_character_comboBox.SelectedIndex || Party2_character_comboBox.SelectedIndex == Party3_character_comboBox.SelectedIndex || Party2_character_comboBox.SelectedIndex == Party4_character_comboBox.SelectedIndex || Party3_character_comboBox.SelectedIndex == Party4_character_comboBox.SelectedIndex)
                 {
@@ -1000,30 +1049,42 @@ namespace TFFCC_Save_Editor
                 }
 
                 //Write Party
-                savedata[0xC98] = Convert.ToByte(dbCharactersJSON[Party1_character_comboBox.SelectedItem.ToString()]["value"], 16);
-                savedata[0xC9A] = Convert.ToByte(dbCharactersJSON[Party2_character_comboBox.SelectedItem.ToString()]["value"], 16);
-                savedata[0xC9C] = Convert.ToByte(dbCharactersJSON[Party3_character_comboBox.SelectedItem.ToString()]["value"], 16);
-                savedata[0xC9E] = Convert.ToByte(dbCharactersJSON[Party4_character_comboBox.SelectedItem.ToString()]["value"], 16);
+                SqlDataReader readerChar = new SqlCommand("SELECT Character, Value FROM Characters", connection).ExecuteReader();
+                for (int i = 0; readerChar.Read(); i++)
+                {
+                    if (readerChar["Character"].ToString() == Party1_character_comboBox.SelectedItem.ToString()) savedata[0xC98] = Convert.ToByte(readerChar["Value"].ToString(), 16);
+                    if (readerChar["Character"].ToString() == Party2_character_comboBox.SelectedItem.ToString()) savedata[0xC9A] = Convert.ToByte(readerChar["Value"].ToString(), 16);
+                    if (readerChar["Character"].ToString() == Party3_character_comboBox.SelectedItem.ToString()) savedata[0xC9C] = Convert.ToByte(readerChar["Value"].ToString(), 16);
+                    if (readerChar["Character"].ToString() == Party4_character_comboBox.SelectedItem.ToString()) savedata[0xC9E] = Convert.ToByte(readerChar["Value"].ToString(), 16);
+                }
+                readerChar.Close();
 
                 //Write Character Editor
+                SqlCommand cmd = new SqlCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
+                cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
+                readerChar = cmd.ExecuteReader();
+                readerChar.Read();
+                var savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+
                 //Write HP
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_hp_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_hp_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["HP"].ToString(), 16), 2);
                 //Write Level Resets
-                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)] = (byte)CharEditor_levelResets_numericUpDown.Value;
+                savetype[Convert.ToUInt32(readerChar["Level Resets"].ToString(), 16)] = (byte)CharEditor_levelResets_numericUpDown.Value;
                 //Write Total CP
-                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)] = (byte)CharEditor_totalCP_numericUpDown.Value;
+                savetype[Convert.ToUInt32(readerChar["Total CP"].ToString(), 16)] = (byte)CharEditor_totalCP_numericUpDown.Value;
                 //Write Strength
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_strength_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_strength_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Strength"].ToString(), 16), 2);
                 //Write Magic
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_magic_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["magic"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_magic_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Magic"].ToString(), 16), 2);
                 //Write Agility
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_agility_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["agility"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_agility_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Agility"].ToString(), 16), 2);
                 //Write Luck
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_luck_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["luck"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_luck_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Luck"].ToString(), 16), 2);
                 //Write Stamina
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_stamina_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_stamina_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Stamina"].ToString(), 16), 2);
                 //Write Spirit
-                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_spirit_numericUpDown.Value), 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16), 2);
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_spirit_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Spirit"].ToString(), 16), 2);
+                readerChar.Close();
 
                 Read_characters(null, null);
             }
@@ -1091,37 +1152,37 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
             try
             {
-                var dbCharactersJSON = dbJson("characters");
-                if (dbCharactersJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
+                //Write Character Editor
+                SqlCommand cmd = new SqlCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
+                cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
+                SqlDataReader readerChar = cmd.ExecuteReader();
+                readerChar.Read();
+                var savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
 
                 //Write Max HP
-                Array.Copy(new byte[] { 0x0F, 0x27 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["hp"], 16), 2);
+                Array.Copy(new byte[] { 0x0F, 0x27 }, 0, savetype, Convert.ToInt32(readerChar["HP"].ToString(), 16), 2);
                 //Write Max Level Resets
-                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["level resets"], 16)] = 0x0A;
+                savetype[Convert.ToUInt32(readerChar["Level Resets"].ToString(), 16)] = 0x0A;
                 //Write Max Total CP
-                (charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["total cp"], 16)] = 0x63;
+                savetype[Convert.ToUInt32(readerChar["Total CP"].ToString(), 16)] = 0x63;
                 //Write Max Strength
-                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["strength"], 16), 2);
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(readerChar["Strength"].ToString(), 16), 2);
                 //Write Max Magic
-                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["magic"], 16), 2);
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(readerChar["Magic"].ToString(), 16), 2);
                 //Write Max Agility
-                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["agility"], 16), 2);
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(readerChar["Agility"].ToString(), 16), 2);
                 //Write Max Luck
-                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["luck"], 16), 2);
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(readerChar["Luck"].ToString(), 16), 2);
                 //Write Max Stamina
-                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["stamina"], 16), 2);
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(readerChar["Stamina"].ToString(), 16), 2);
                 //Write Max Spirit
-                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(CharEditor_character_comboBox.SelectedItem.ToString()) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[CharEditor_character_comboBox.SelectedItem.ToString()]["spirit"], 16), 2);
+                Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(readerChar["Spirit"].ToString(), 16), 2);
 
                 Read_characters("Max Button Pressed", null);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Something went wrong while trying to store Characters changesn\n{ex}", "Error");
+                MessageBox.Show($"Something went wrong while trying to store Characters changesn\n\n{ex}", "Error");
             }
         }
         //Max all characters stats
@@ -1130,34 +1191,32 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
             try
             {
-                var dbCharactersJSON = dbJson("characters");
-                if (dbCharactersJSON == null)
+                SqlDataReader reader = new SqlCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters", connection).ExecuteReader();
+                for (int i = 0; reader.Read(); i++)
                 {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
+                    var savetype = reader["DLC"].ToString() == "True" ? extsavedata : savedata;
 
-                foreach (KeyValuePair<string, object> character in dbCharactersJSON)
-                {
                     //Write Max HP
-                    Array.Copy(new byte[] { 0x0F, 0x27 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["hp"], 16), 2);
+                    Array.Copy(new byte[] { 0x0F, 0x27 }, 0, savetype, Convert.ToInt32(reader["HP"].ToString(), 16), 2);
                     //Write Max Level Resets
-                    (charType(character.Key) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[character.Key]["level resets"], 16)] = 0x0A;
+                    (savetype)[Convert.ToUInt32(reader["Level Resets"].ToString(), 16)] = 0x0A;
                     //Write Max Total CP
-                    (charType(character.Key) == "DLC" ? extsavedata : savedata)[Convert.ToUInt32(dbCharactersJSON[character.Key]["total cp"], 16)] = 0x63;
+                    (savetype)[Convert.ToUInt32(reader["Total CP"].ToString(), 16)] = 0x63;
                     //Write Max Strength
-                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["strength"], 16), 2);
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(reader["Strength"].ToString(), 16), 2);
                     //Write Max Magic
-                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["magic"], 16), 2);
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(reader["Magic"].ToString(), 16), 2);
                     //Write Max Agility
-                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["agility"], 16), 2);
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(reader["Agility"].ToString(), 16), 2);
                     //Write Max Luck
-                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["luck"], 16), 2);
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(reader["Luck"].ToString(), 16), 2);
                     //Write Max Stamina
-                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["stamina"], 16), 2);
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(reader["Stamina"].ToString(), 16), 2);
                     //Write Max Spirit
-                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, charType(character.Key) == "DLC" ? extsavedata : savedata, Convert.ToInt32(dbCharactersJSON[character.Key]["spirit"], 16), 2);
+                    Array.Copy(new byte[] { 0xE7, 0x03 }, 0, savetype, Convert.ToInt32(reader["Spirit"].ToString(), 16), 2);
+
                 }
+                reader.Close();
 
                 MessageBox.Show("All characters stats maxed successfully!", "All Maxed!");
                 Read_characters("Max Button Pressed", null);
@@ -1174,23 +1233,18 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                var dbItemsJSON = dbJson("items");
-                if (dbItemsJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
                 //Read and initialise Items datagrid
-                for (int i = 0; i < 92; i++)
+                SqlDataReader reader = new SqlCommand("SELECT Item, Offset FROM Items", connection).ExecuteReader();
+                for (int i = 0; reader.Read(); i++)
                 {
-                    var item = ((Dictionary<string, object>)dbItemsJSON).ToList()[i].Key;
-                    Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Items.{item}.png"));
-                    Items_dataGridView.Rows[i].Cells["Item"].Tag = item;
+                    Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Items.{reader["Item"].ToString()}.png"));
+                    Items_dataGridView.Rows[i].Cells["Item"].Tag = reader["Item"].ToString();
 
-                    Items_dataGridView.Rows[i].Cells["Quantity"].Value = savedata[Convert.ToUInt16(dbItemsJSON[item]["offset"], 16)] - 0x80;
+                    Items_dataGridView.Rows[i].Cells["Quantity"].Value = savedata[Convert.ToUInt16(reader["Offset"].ToString(), 16)] - 0x80;
                     Items_dataGridView.Rows[i].Cells["Quantity"].Value = (int)Items_dataGridView.Rows[i].Cells["Quantity"].Value < 0 ? 0 : Items_dataGridView.Rows[i].Cells["Quantity"].Value;
+
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -1203,16 +1257,15 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded) return;
             try
             {
-                var dbItemsJSON = dbJson("items");
-                if (dbItemsJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
                 for (int i = 0; i < Items_dataGridView.RowCount; i++)
                 {
-                    savedata[Convert.ToUInt16(dbItemsJSON[Items_dataGridView.Rows[i].Cells["Item"].Tag.ToString()]["offset"], 16)] = (byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80);
+                    SqlCommand cmd = new SqlCommand("SELECT Offset FROM Items WHERE Item = @item", connection);
+                    cmd.Parameters.AddWithValue("@item", Items_dataGridView.Rows[i].Cells["Item"].Tag.ToString());
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    reader.Read();
+                    savedata[Convert.ToUInt16(reader["Offset"].ToString(), 16)] = (byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80);
+                    reader.Close();
                 }
             }
             catch (Exception ex)
@@ -1225,10 +1278,17 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                var iName = ((DataGridView)sender)[0, e.RowIndex].Tag == null ? "Potion" : ((DataGridView)sender)[0, e.RowIndex].Tag.ToString();
+                string iName = ((DataGridView)sender)[0, e.RowIndex].Tag == null ? "Potion" : ((DataGridView)sender)[0, e.RowIndex].Tag.ToString();
 
-                Item_equip_richTextBox.Text = dbJson("items")[iName]["equip"].ToString();
-                Item_quest_med_richTextBox.Text = dbJson("items")[iName]["quest medley"].ToString();
+                SqlCommand cmd = new SqlCommand("SELECT Equip, [Quest Medley] FROM Items WHERE Item = @item", connection);
+                cmd.Parameters.AddWithValue("@item", iName);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Item_equip_richTextBox.Text = reader["Equip"].ToString();
+                    Item_quest_med_richTextBox.Text = reader["Quest Medley"].ToString();
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -1242,22 +1302,22 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                var dbItemsJSON = dbJson("items");
                 //Read and initialise CollectaCards datagrid
-                for (int i = 0; i < 162; i++)
+                SqlDataReader reader = new SqlCommand("SELECT CollectaCard, [Normal Offset], [Rare Offset], [Premium Offset] FROM CollectaCards", connection).ExecuteReader();
+                for (int i = 0; reader.Read(); i++)
                 {
-                    var card = ((Dictionary<string, object>)dbItemsJSON).ToList()[i + 92].Key;
-                    Cards_dataGridView.Rows[Cards_dataGridView.Rows.Add()].Cells["Card_name"].Value = card;
+                    Cards_dataGridView.Rows[Cards_dataGridView.Rows.Add()].Cells["Card_name"].Value = reader["CollectaCard"].ToString();
 
-                    Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["normal offset"], 16)] - 0x80;
+                    Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = savedata[Convert.ToUInt16(reader["Normal Offset"].ToString(), 16)] - 0x80;
                     Cards_dataGridView.Rows[i].Cells["Card_normal"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_normal"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_normal"].Value;
 
-                    Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["rare offset"], 16)] - 0x80;
+                    Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = savedata[Convert.ToUInt16(reader["Rare Offset"].ToString(), 16)] - 0x80;
                     Cards_dataGridView.Rows[i].Cells["Card_rare"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_rare"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_rare"].Value;
 
-                    Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = savedata[Convert.ToUInt16(dbItemsJSON[card]["premium offset"], 16)] - 0x80;
+                    Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = savedata[Convert.ToUInt16(reader["Premium Offset"].ToString(), 16)] - 0x80;
                     Cards_dataGridView.Rows[i].Cells["Card_premium"].Value = (int)Cards_dataGridView.Rows[i].Cells["Card_premium"].Value < 0 ? 0 : Cards_dataGridView.Rows[i].Cells["Card_premium"].Value;
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -1270,20 +1330,17 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded) return;
             try
             {
-                var dbItemsJSON = dbJson("items");
-                if (dbItemsJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
-                //CollectaCards tab
-                //Write CollectaCards
                 for (int i = 0; i < Cards_dataGridView.RowCount; i++)
                 {
-                    savedata[Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["normal offset"], 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_normal"].Value) + 0x80);
-                    savedata[Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["rare offset"], 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_rare"].Value) + 0x80);
-                    savedata[Convert.ToUInt16(dbItemsJSON[Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString()]["premium offset"], 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_premium"].Value) + 0x80);
+                    SqlCommand cmd = new SqlCommand("SELECT [Normal Offset], [Rare Offset], [Premium Offset] FROM CollectaCards WHERE CollectaCard = @collectaCard", connection);
+                    cmd.Parameters.AddWithValue("@collectaCard", Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString());
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    reader.Read();
+                    savedata[Convert.ToUInt16(reader["Normal Offset"].ToString(), 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_normal"].Value) + 0x80);
+                    savedata[Convert.ToUInt16(reader["Rare Offset"].ToString(), 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_rare"].Value) + 0x80);
+                    savedata[Convert.ToUInt16(reader["Premium Offset"].ToString(), 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_premium"].Value) + 0x80);
+                    reader.Close();
                 }
             }
             catch (Exception ex)
@@ -1296,16 +1353,24 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                var cName = ((DataGridView)sender)[0, e.RowIndex].Value == null ? "#001 Warrior of Light" : ((DataGridView)sender)[0, e.RowIndex].Value.ToString();
+                string cName = ((DataGridView)sender)[0, e.RowIndex].Value == null ? "#001 Warrior of Light" : ((DataGridView)sender)[0, e.RowIndex].Value.ToString();
+
+                SqlCommand cmd = new SqlCommand("SELECT [Normal Description], [Rare Description], [Premium Description] FROM CollectaCards WHERE CollectaCard = @collectaCard", connection);
+                cmd.Parameters.AddWithValue("@collectaCard", cName);
+                SqlDataReader reader = cmd.ExecuteReader();
 
                 card_normal_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Normal.{cName} Normal.png"));
                 card_rare_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Rare.{cName} Rare.png"));
                 card_premium_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Premium.{cName} Premium.png"));
                 card_back_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Back.{cName} Back.png"));
 
-                card_normal_description_richTextBox.Rtf = $@"{{\rtf {dbJson("items")[cName]["normal description"].ToString()}}}";
-                card_rare_description_richTextBox.Rtf = $@"{{\rtf {dbJson("items")[cName]["rare description"].ToString()}}}";
-                card_premium_description_richTextBox.Rtf = $@"{{\rtf {dbJson("items")[cName]["premium description"].ToString()}}}";
+                while (reader.Read())
+                {
+                    card_normal_description_richTextBox.Rtf = $@"{{\rtf {reader["Normal Description"].ToString()}}}";
+                    card_rare_description_richTextBox.Rtf = $@"{{\rtf {reader["Rare Description"].ToString()}}}";
+                    card_premium_description_richTextBox.Rtf = $@"{{\rtf {reader["Premium Description"].ToString()}}}";
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -1462,14 +1527,6 @@ namespace TFFCC_Save_Editor
         {
             try
             {
-                //Songs tab
-                var dbSongsJSON = dbJson("songs");
-                if (dbSongsJSON == null)
-                {
-                    MessageBox.Show("Failed loading database", "Error");
-                    return;
-                }
-
                 //Read and intitalise songs datagrid
                 int songIndex = 0;
                 int Total_cleared = 0;
@@ -1478,84 +1535,82 @@ namespace TFFCC_Save_Editor
                 int Total_expert_all_criticals = 0;
                 int Total_ultimate_all_criticals = 0;
                 List<Song> Songs_list = new List<Song>();
-                for (int i = 0; i < 321; i++)
+                SqlDataReader reader = new SqlCommand("SELECT * FROM Songs", connection).ExecuteReader();
+                for (int i = 0; reader.Read(); i++)
                 {
-                    var song_value = ((Dictionary<string, object>)dbSongsJSON).ToList()[i].Key;
                     Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Basic";
                     Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Expert";
                     Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Ultimate";
 
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Value = dbSongsJSON[song_value]["series"];
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Tag = song_value;
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Value = dbSongsJSON[song_value]["series"];
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Tag = song_value;
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Value = dbSongsJSON[song_value]["series"];
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Tag = song_value;
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Value = reader["Series"].ToString();
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Series"].Tag = reader["Value"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Value = reader["Series"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Series"].Tag = reader["Value"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Value = reader["Series"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Series"].Tag = reader["Value"].ToString();
 
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Song_name"].Value = dbSongsJSON[song_value]["song name"];
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Song_name"].Value = dbSongsJSON[song_value]["song name"];
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Song_name"].Value = dbSongsJSON[song_value]["song name"];
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Song_name"].Value = reader["Song"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Song_name"].Value = reader["Song"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Song_name"].Value = reader["Song"].ToString();
 
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Type"].Value = dbSongsJSON[song_value]["type"];
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Type"].Value = dbSongsJSON[song_value]["type"];
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Type"].Value = dbSongsJSON[song_value]["type"];
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Type"].Value = reader["Type"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Type"].Value = reader["Type"].ToString();
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Type"].Value = reader["Type"].ToString();
 
                     //Read Score value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic score"], 16));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert score"], 16));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate score"], 16));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Basic Score"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Expert Score"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Score"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Ultimate Score"].ToString(), 16));
 
                     //Read chain value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic chain"], 16));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert chain"], 16));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate chain"], 16));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Basic Chain"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Expert Chain"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Chain"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Ultimate Chain"].ToString(), 16));
 
                     //Read rank value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic rank"], 16))));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert rank"], 16))));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate rank"], 16))));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(reader["Basic Rank"].ToString(), 16))));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(reader["Expert Rank"].ToString(), 16))));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Rank"].Value = rank(BitConverter.GetBytes(BitConverter.ToUInt64(extsavedata, Convert.ToInt32(reader["Ultimate Rank"].ToString(), 16))));
 
                     //Read status value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic status"], 16))));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert status"], 16))));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate status"], 16))));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Basic Status"].ToString(), 16))));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Expert Status"].ToString(), 16))));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Status"].Value = status(BitConverter.GetBytes(BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Ultimate Status"].ToString(), 16))));
 
                     //Read playstyle value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic play style"], 16)]);
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert play style"], 16)]);
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate play style"], 16)]);
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(reader["Basic Play Style"].ToString(), 16)]);
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(reader["Expert Play Style"].ToString(), 16)]);
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Play_style"].Value = playstyle(extsavedata[Convert.ToInt32(reader["Ultimate Play Style"].ToString(), 16)]);
 
                     //Read times played value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played"], 16));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played"], 16));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played"], 16));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Basic Times Played"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Expert Times Played"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Times_played"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Ultimate Times Played"].ToString(), 16));
 
                     //Read times cleared value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times cleared"], 16));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times cleared"], 16));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times cleared"], 16));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Basic Times Cleared"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Expert Times Cleared"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_TImes_cleared"].Value = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Ultimate Times Cleared"].ToString(), 16));
 
                     //Read song picked online value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_song_picked_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic song picked online"], 16));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_song_picked_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert song picked online"], 16));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_song_picked_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate song picked online"], 16));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_song_picked_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Basic Song Picked (Online)"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_song_picked_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Expert Song Picked (Online)"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_song_picked_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Ultimate Song Picked (Online)"].ToString(), 16));
 
                     //Read song picked online no ex value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_song_picked_online_noEX"].Value = "N/A";
                     Songs_dataGridView.Rows[songIndex].Cells["songs_song_picked_online_noEX"].ReadOnly = true;
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_song_picked_online_noEX"].Value = "N/A";
                     Songs_dataGridView.Rows[songIndex + 1].Cells["songs_song_picked_online_noEX"].ReadOnly = true;
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_song_picked_online_noEX"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate song picked online no ex"], 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_song_picked_online_noEX"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Ultimate Song Picked (Online, No-EX)"].ToString(), 16));
 
                     //Read times played online value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played online"], 16));
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played online"], 16));
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played online"], 16));
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Basic Times Played (Online)"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Expert Times Played (Online)"].ToString(), 16));
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_times_played_online"].Value = BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Ultimate Times Played (Online)"].ToString(), 16));
 
                     //Read date value for song
-                    Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 2]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic date"], 16))}";
-                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 2]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert date"], 16))}";
-                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 2]}.{extsavedata[Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate date"], 16))}";
+                    Songs_dataGridView.Rows[songIndex].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(reader["Basic Date"].ToString(), 16) + 2]}.{extsavedata[Convert.ToInt32(reader["Basic Date"].ToString(), 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Basic Date"].ToString(), 16))}";
+                    Songs_dataGridView.Rows[songIndex + 1].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(reader["Expert Date"].ToString(), 16) + 2]}.{extsavedata[Convert.ToInt32(reader["Expert Date"].ToString(), 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Expert Date"].ToString(), 16))}";
+                    Songs_dataGridView.Rows[songIndex + 2].Cells["songs_Date"].Value = $"{extsavedata[Convert.ToInt32(reader["Ultimate Date"].ToString(), 16) + 2]}.{extsavedata[Convert.ToInt32(reader["Ultimate Date"].ToString(), 16) + 3]}.{BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Ultimate Date"].ToString(), 16))}";
 
                     //Add cleared and played values
                     Total_played += Convert.ToInt32(Songs_dataGridView.Rows[songIndex].Cells["songs_Times_played"].Value);
@@ -1583,9 +1638,9 @@ namespace TFFCC_Save_Editor
                     label10.Text = $"Total Times Cleared: {Total_cleared}";
 
                     //Store top songs data
-                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played"], 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["basic times played online"], 16)), Value = song_value, Difficulty = "basic" });
-                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played"], 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["expert times played online"], 16)), Value = song_value, Difficulty = "expert" });
-                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played"], 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(dbSongsJSON[song_value]["ultimate times played online"], 16)), Value = song_value, Difficulty = "ultimate" });
+                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Basic Times Played"].ToString(), 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Basic Times Played (Online)"].ToString(), 16)), Value = reader["Value"].ToString(), Difficulty = "basic" });
+                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Expert Times Played"].ToString(), 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Expert Times Played (Online)"].ToString(), 16)), Value = reader["Value"].ToString(), Difficulty = "expert" });
+                    Songs_list.Add(new Song() { TimesPlayed = BitConverter.ToUInt32(extsavedata, Convert.ToInt32(reader["Ultimate Times Played"].ToString(), 16)) + BitConverter.ToUInt16(extsavedata, Convert.ToInt32(reader["Ultimate Times Played (Online)"].ToString(), 16)), Value = reader["Value"].ToString(), Difficulty = "ultimate" });
 
                     songIndex += 3;
                 }
@@ -1651,6 +1706,43 @@ namespace TFFCC_Save_Editor
             }
             Write_items(null, null);
             Write_collectacards(null, null);
+        }
+
+
+        //Open SQL connection and create database files
+        private void OpenSQL()
+        {
+            try
+            {
+                File.WriteAllBytes("Database.mdf", Properties.Resources.Database);
+                File.SetAttributes("Database.mdf", File.GetAttributes("Database.mdf") | FileAttributes.Hidden);
+                connection.Open();
+                File.SetAttributes("Database_log.ldf", File.GetAttributes("Database_log.ldf") | FileAttributes.Hidden);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to create the database files or while trying to open the SQL connection\n\n{ex}", "Error");
+            }
+        }
+
+        //Before form is closed kill SQL processes and delete SQL database files 
+        private void Kill_SQL(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                connection.Close();
+                foreach (var process in Process.GetProcessesByName("sqlservr"))
+                {
+                    process.Kill();
+                    process.WaitForExit();
+                }
+                File.Delete("Database.mdf");
+                File.Delete("Database_log.ldf");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to close/kill the SQL process or trying to delete the database files\n\n{ex}", "Error");
+            }
         }
     }
 }
