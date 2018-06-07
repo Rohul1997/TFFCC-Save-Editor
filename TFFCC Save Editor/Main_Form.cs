@@ -38,7 +38,7 @@ namespace TFFCC_Save_Editor
 {
     public partial class Main_Form : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;MultipleActiveResultSets=True;ApplicationIntent=ReadOnly");
+        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Database.mdf;MultipleActiveResultSets=True;ApplicationIntent=ReadOnly;Enlist=False;Pooling=False");
         Assembly assembly = Assembly.GetExecutingAssembly();
         OpenFileDialog open_extsavedata = new OpenFileDialog();
         OpenFileDialog open_savedata = new OpenFileDialog();
