@@ -25,20 +25,18 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Diagnostics;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace TFFCC_Save_Editor
 {
     public partial class Main_Form : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Database.mdf;MultipleActiveResultSets=True;ApplicationIntent=ReadOnly;Enlist=False;Pooling=False");
+        SQLiteConnection connection = new SQLiteConnection("Data Source=Database.sqlite3;Read Only=True");
         Assembly assembly = Assembly.GetExecutingAssembly();
         OpenFileDialog open_extsavedata = new OpenFileDialog();
         OpenFileDialog open_savedata = new OpenFileDialog();
@@ -51,11 +49,20 @@ namespace TFFCC_Save_Editor
 
         public Main_Form()
         {
-            new Thread(OpenSQL).Start();
-
             InitializeComponent();
             CharEditor_levelResets_picturebox.Parent = CharEditor_character_pictureBox;
             CharEditor_levelResets_picturebox.Location = new Point(62, 0);
+
+            try
+            {
+                File.WriteAllBytes("Database.sqlite3", Properties.Resources.Database);
+                File.SetAttributes("Database.sqlite3", File.GetAttributes("Database.sqlite3") | FileAttributes.Hidden);
+                connection.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to create the database files or while trying to open the SQL connection\n\n{ex}", "Error");
+            }
         }
 
 
@@ -779,7 +786,7 @@ namespace TFFCC_Save_Editor
                 ushort topSongOffset = 0x3854;
                 for (int i = 0; i < 8; i++)
                 {
-                    SqlDataReader reader = new SqlCommand($"SELECT Series, Song, Type FROM Songs WHERE Value = '0x{(BitConverter.ToUInt16(savedata, topSongOffset)).ToString("X2")}'", connection).ExecuteReader();
+                    SQLiteDataReader reader = new SQLiteCommand($"SELECT Series, Song, Type FROM Songs WHERE Value = '0x{(BitConverter.ToUInt16(savedata, topSongOffset)).ToString("X2")}'", connection).ExecuteReader();
                     reader.Read();
 
                     if (savedata[topSongOffset] != 0xFF)
@@ -829,30 +836,30 @@ namespace TFFCC_Save_Editor
                 var savetype = savedata;
                 //Party
                 //Leader
-                SqlDataReader readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC98].ToString("X2")}'", connection).ExecuteReader();
+                SQLiteDataReader readerChar = new SQLiteCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC98].ToString("X2")}'", connection).ExecuteReader();
                 while (readerChar.Read())
                 {
                     Party1_character_comboBox.SelectedItem = readerChar["Character"].ToString();
                     Party1_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
 
-                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                    savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
-                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    SQLiteDataReader readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party1_ability1_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party1_ability2_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party1_ability3_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party1_ability4_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
@@ -860,30 +867,30 @@ namespace TFFCC_Save_Editor
                 readerChar.Close();
 
                 //Party 2
-                readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9A].ToString("X2")}'", connection).ExecuteReader();
+                readerChar = new SQLiteCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9A].ToString("X2")}'", connection).ExecuteReader();
                 while (readerChar.Read())
                 {
                     Party2_character_comboBox.SelectedItem = readerChar["Character"].ToString();
                     Party2_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
 
-                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                    savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
-                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    SQLiteDataReader readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party2_ability1_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party2_ability2_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party2_ability3_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party2_ability4_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
@@ -891,30 +898,30 @@ namespace TFFCC_Save_Editor
                 readerChar.Close();
 
                 //Party 3
-                readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9C].ToString("X2")}'", connection).ExecuteReader();
+                readerChar = new SQLiteCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9C].ToString("X2")}'", connection).ExecuteReader();
                 while (readerChar.Read())
                 {
                     Party3_character_comboBox.SelectedItem = readerChar["Character"].ToString();
                     Party3_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
 
-                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                    savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
-                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    SQLiteDataReader readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party3_ability1_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party3_ability2_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party3_ability3_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party3_ability4_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
@@ -922,30 +929,30 @@ namespace TFFCC_Save_Editor
                 readerChar.Close();
 
                 //Party 4
-                readerChar = new SqlCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9E].ToString("X2")}'", connection).ExecuteReader();
+                readerChar = new SQLiteCommand($"SELECT Character, DLC, Value, [Ability 1], [Ability 2], [Ability 3], [Ability 4] FROM Characters WHERE Value = '0x{savedata[0xC9E].ToString("X2")}'", connection).ExecuteReader();
                 while (readerChar.Read())
                 {
                     Party4_character_comboBox.SelectedItem = readerChar["Character"].ToString();
                     Party4_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.{readerChar["Character"].ToString()}.png"));
 
-                    savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                    savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
-                    SqlDataReader readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    SQLiteDataReader readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 1"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party4_ability1_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 2"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party4_ability2_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 3"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party4_ability3_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
 
-                    readerAbility = new SqlCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
+                    readerAbility = new SQLiteCommand($"SELECT Ability FROM Abilities WHERE Value = '0x{BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Ability 4"].ToString(), 16)).ToString("X2")}'", connection).ExecuteReader();
                     readerAbility.Read();
                     Party4_ability4_textBox.Text = readerAbility["Ability"].ToString();
                     readerAbility.Close();
@@ -957,11 +964,11 @@ namespace TFFCC_Save_Editor
                 //if the character is changed or if max button is pressed in the character editor then set CharEditor_character_changed to true
                 if (sender != null && sender.ToString() == "Max Button Pressed" || ((ComboBox)sender) != null && ((ComboBox)sender).Name == "CharEditor_character_comboBox") CharEditor_character_changed = true;
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Characters WHERE Character = @character", connection);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Characters WHERE Character = @character", connection);
                 cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
                 readerChar = cmd.ExecuteReader();
                 readerChar.Read();
-                savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
                 //Read Charcter Name for max stats button
                 Max_character_stats_button.Text = $"Max {readerChar["Character"].ToString()} Stats";
@@ -1053,7 +1060,7 @@ namespace TFFCC_Save_Editor
                 }
 
                 //Write Party
-                SqlDataReader readerChar = new SqlCommand("SELECT Character, Value FROM Characters", connection).ExecuteReader();
+                SQLiteDataReader readerChar = new SQLiteCommand("SELECT Character, Value FROM Characters", connection).ExecuteReader();
                 for (int i = 0; readerChar.Read(); i++)
                 {
                     if (readerChar["Character"].ToString() == Party1_character_comboBox.SelectedItem.ToString()) savedata[0xC98] = Convert.ToByte(readerChar["Value"].ToString(), 16);
@@ -1064,11 +1071,11 @@ namespace TFFCC_Save_Editor
                 readerChar.Close();
 
                 //Write Character Editor
-                SqlCommand cmd = new SqlCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
                 cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
                 readerChar = cmd.ExecuteReader();
                 readerChar.Read();
-                var savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                var savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
                 //Write HP
                 Array.Copy(BitConverter.GetBytes((ushort)CharEditor_hp_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["HP"].ToString(), 16), 2);
@@ -1159,11 +1166,11 @@ namespace TFFCC_Save_Editor
             try
             {
                 //Write Character Editor
-                SqlCommand cmd = new SqlCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
                 cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
-                SqlDataReader readerChar = cmd.ExecuteReader();
+                SQLiteDataReader readerChar = cmd.ExecuteReader();
                 readerChar.Read();
-                var savetype = readerChar["DLC"].ToString() == "True" ? extsavedata : savedata;
+                var savetype = readerChar["DLC"].ToString() == "true" ? extsavedata : savedata;
 
                 //Write Max HP
                 Array.Copy(new byte[] { 0x0F, 0x27 }, 0, savetype, Convert.ToInt32(readerChar["HP"].ToString(), 16), 2);
@@ -1198,10 +1205,10 @@ namespace TFFCC_Save_Editor
             if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
             try
             {
-                SqlDataReader reader = new SqlCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters", connection).ExecuteReader();
+                SQLiteDataReader reader = new SQLiteCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters", connection).ExecuteReader();
                 for (int i = 0; reader.Read(); i++)
                 {
-                    var savetype = reader["DLC"].ToString() == "True" ? extsavedata : savedata;
+                    var savetype = reader["DLC"].ToString() == "true" ? extsavedata : savedata;
 
                     //Write Max HP
                     Array.Copy(new byte[] { 0x0F, 0x27 }, 0, savetype, Convert.ToInt32(reader["HP"].ToString(), 16), 2);
@@ -1241,7 +1248,7 @@ namespace TFFCC_Save_Editor
             try
             {
                 //Read and initialise Items datagrid
-                SqlDataReader reader = new SqlCommand("SELECT Item, Offset FROM Items", connection).ExecuteReader();
+                SQLiteDataReader reader = new SQLiteCommand("SELECT Item, Offset FROM Items", connection).ExecuteReader();
                 for (int i = 0; reader.Read(); i++)
                 {
                     Items_dataGridView.Rows[Items_dataGridView.Rows.Add()].Cells["Item"].Value = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Items.{reader["Item"].ToString()}.png"));
@@ -1267,9 +1274,9 @@ namespace TFFCC_Save_Editor
             {
                 for (int i = 0; i < Items_dataGridView.RowCount; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT Offset FROM Items WHERE Item = @item", connection);
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT Offset FROM Items WHERE Item = @item", connection);
                     cmd.Parameters.AddWithValue("@item", Items_dataGridView.Rows[i].Cells["Item"].Tag.ToString());
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    SQLiteDataReader reader = cmd.ExecuteReader();
 
                     reader.Read();
                     savedata[Convert.ToUInt16(reader["Offset"].ToString(), 16)] = (byte)(Convert.ToByte(Items_dataGridView.Rows[i].Cells["Quantity"].Value) + 0x80);
@@ -1289,9 +1296,9 @@ namespace TFFCC_Save_Editor
             {
                 string iName = ((DataGridView)sender)[0, e.RowIndex].Tag == null ? "Potion" : ((DataGridView)sender)[0, e.RowIndex].Tag.ToString();
 
-                SqlCommand cmd = new SqlCommand("SELECT Equip, [Quest Medley] FROM Items WHERE Item = @item", connection);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT Equip, [Quest Medley] FROM Items WHERE Item = @item", connection);
                 cmd.Parameters.AddWithValue("@item", iName);
-                SqlDataReader reader = cmd.ExecuteReader();
+                SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     Item_equip_richTextBox.Text = reader["Equip"].ToString();
@@ -1312,7 +1319,7 @@ namespace TFFCC_Save_Editor
             try
             {
                 //Read and initialise CollectaCards datagrid
-                SqlDataReader reader = new SqlCommand("SELECT CollectaCard, [Normal Offset], [Rare Offset], [Premium Offset] FROM CollectaCards", connection).ExecuteReader();
+                SQLiteDataReader reader = new SQLiteCommand("SELECT CollectaCard, [Normal Offset], [Rare Offset], [Premium Offset] FROM CollectaCards", connection).ExecuteReader();
                 for (int i = 0; reader.Read(); i++)
                 {
                     Cards_dataGridView.Rows[Cards_dataGridView.Rows.Add()].Cells["Card_name"].Value = reader["CollectaCard"].ToString();
@@ -1342,9 +1349,9 @@ namespace TFFCC_Save_Editor
             {
                 for (int i = 0; i < Cards_dataGridView.RowCount; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT [Normal Offset], [Rare Offset], [Premium Offset] FROM CollectaCards WHERE CollectaCard = @collectaCard", connection);
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT [Normal Offset], [Rare Offset], [Premium Offset] FROM CollectaCards WHERE CollectaCard = @collectaCard", connection);
                     cmd.Parameters.AddWithValue("@collectaCard", Cards_dataGridView.Rows[i].Cells["Card_name"].Value.ToString());
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    SQLiteDataReader reader = cmd.ExecuteReader();
 
                     reader.Read();
                     savedata[Convert.ToUInt16(reader["Normal Offset"].ToString(), 16)] = (byte)(Convert.ToByte(Cards_dataGridView.Rows[i].Cells["Card_normal"].Value) + 0x80);
@@ -1366,9 +1373,9 @@ namespace TFFCC_Save_Editor
             {
                 string cName = ((DataGridView)sender)[0, e.RowIndex].Value == null ? "#001 Warrior of Light" : ((DataGridView)sender)[0, e.RowIndex].Value.ToString();
 
-                SqlCommand cmd = new SqlCommand("SELECT [Normal Description], [Rare Description], [Premium Description] FROM CollectaCards WHERE CollectaCard = @collectaCard", connection);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT [Normal Description], [Rare Description], [Premium Description] FROM CollectaCards WHERE CollectaCard = @collectaCard", connection);
                 cmd.Parameters.AddWithValue("@collectaCard", cName);
-                SqlDataReader reader = cmd.ExecuteReader();
+                SQLiteDataReader reader = cmd.ExecuteReader();
 
                 card_normal_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Normal.{cName} Normal.png"));
                 card_rare_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.CollectaCards.Rare.{cName} Rare.png"));
@@ -1555,7 +1562,7 @@ namespace TFFCC_Save_Editor
                 int Total_expert_all_criticals = 0;
                 int Total_ultimate_all_criticals = 0;
                 List<Song> Songs_list = new List<Song>();
-                SqlDataReader reader = new SqlCommand("SELECT * FROM Songs", connection).ExecuteReader();
+                SQLiteDataReader reader = new SQLiteCommand("SELECT * FROM Songs", connection).ExecuteReader();
                 for (int i = 0; reader.Read(); i++)
                 {
                     Songs_dataGridView.Rows[Songs_dataGridView.Rows.Add()].Cells["songs_Difficulty"].Value = "Basic";
@@ -1731,35 +1738,18 @@ namespace TFFCC_Save_Editor
         }
 
 
-        //Open SQL connection and create database files
-        private void OpenSQL()
-        {
-            try
-            {
-                File.WriteAllBytes("Database.mdf", Properties.Resources.Database);
-                File.SetAttributes("Database.mdf", File.GetAttributes("Database.mdf") | FileAttributes.Hidden);
-                connection.Open();
-                File.SetAttributes("Database_log.ldf", File.GetAttributes("Database_log.ldf") | FileAttributes.Hidden);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Something went wrong while trying to create the database files or while trying to open the SQL connection\n\n{ex}", "Error");
-            }
-        }
-
         //Before form is closed kill SQL processes and delete SQL database files 
         private void Kill_SQL(object sender, FormClosingEventArgs e)
         {
             try
             {
-                connection.Close();
-                foreach (var process in Process.GetProcessesByName("sqlservr"))
+                while (connection.State.ToString() == "Open")
                 {
-                    process.Kill();
-                    process.WaitForExit();
+                    connection.Close();
                 }
-                File.Delete("Database.mdf");
-                File.Delete("Database_log.ldf");
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                File.Delete("Database.sqlite3");
             }
             catch (Exception ex)
             {
