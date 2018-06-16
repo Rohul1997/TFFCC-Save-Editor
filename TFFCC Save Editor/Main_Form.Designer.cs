@@ -54,16 +54,16 @@ namespace TFFCC_Save_Editor
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Profile_groupBox;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Progress_star5_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star4_pictureBox = new System.Windows.Forms.PictureBox();
             this.Progress_star3_pictureBox = new System.Windows.Forms.PictureBox();
@@ -384,6 +384,70 @@ namespace TFFCC_Save_Editor
             this.Open_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_files_as_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Top_characters_used_groupBox = new System.Windows.Forms.GroupBox();
+            this.Top_characters_used_1_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_2_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_3_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_4_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_5_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_6_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_7_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_8_label = new System.Windows.Forms.Label();
+            this.Top_characters_used_1_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_2_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_3_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_4_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_5_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_6_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_7_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_8_character_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_1_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_2_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_3_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_4_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_5_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_6_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_7_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_8_levelResets_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Top_characters_used_1_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_2_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_3_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_4_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_5_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_6_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_7_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_8_timesUsed_textBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.Top_characters_used_1_character_textBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Top_characters_used_1_level_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_2_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_2_level_textBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Top_characters_used_3_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_3_level_textBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Top_characters_used_4_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_4_level_textBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Top_characters_used_5_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_5_level_textBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Top_characters_used_6_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_6_level_textBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Top_characters_used_7_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_7_level_textBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Top_characters_used_8_character_textBox = new System.Windows.Forms.TextBox();
+            this.Top_characters_used_8_level_textBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             Profile_groupBox = new System.Windows.Forms.GroupBox();
             Profile_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Progress_star5_pictureBox)).BeginInit();
@@ -514,6 +578,23 @@ namespace TFFCC_Save_Editor
             ((System.ComponentModel.ISupportInitialize)(this.Cards_dataGridView)).BeginInit();
             this.Songs_tabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.Top_characters_used_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_1_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_2_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_3_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_4_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_5_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_6_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_7_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_8_character_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_1_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_2_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_3_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_4_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_5_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_6_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_7_levelResets_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_8_levelResets_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Profile_groupBox
@@ -767,8 +848,8 @@ namespace TFFCC_Save_Editor
             // 
             // songs_Date
             // 
-            dataGridViewCellStyle10.NullValue = null;
-            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.NullValue = null;
+            this.songs_Date.DefaultCellStyle = dataGridViewCellStyle1;
             this.songs_Date.HeaderText = "Date";
             this.songs_Date.Name = "songs_Date";
             this.songs_Date.Width = 68;
@@ -2270,6 +2351,7 @@ namespace TFFCC_Save_Editor
             // 
             // TopRecords_tabPage
             // 
+            this.TopRecords_tabPage.Controls.Add(this.Top_characters_used_groupBox);
             this.TopRecords_tabPage.Controls.Add(this.Top_songs_played_groupBox);
             this.TopRecords_tabPage.Location = new System.Drawing.Point(4, 22);
             this.TopRecords_tabPage.Name = "TopRecords_tabPage";
@@ -3997,37 +4079,37 @@ namespace TFFCC_Save_Editor
             this.Items_dataGridView.AllowUserToDeleteRows = false;
             this.Items_dataGridView.AllowUserToResizeRows = false;
             this.Items_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Items_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Items_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
             this.Quantity});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Items_dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.Items_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Items_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Items_dataGridView.Name = "Items_dataGridView";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Items_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Items_dataGridView.RowHeadersVisible = false;
             this.Items_dataGridView.Size = new System.Drawing.Size(582, 411);
             this.Items_dataGridView.TabIndex = 3;
@@ -4038,9 +4120,9 @@ namespace TFFCC_Save_Editor
             // Item
             // 
             this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = null;
-            this.Item.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = null;
+            this.Item.DefaultCellStyle = dataGridViewCellStyle3;
             this.Item.HeaderText = "Item Name";
             this.Item.Name = "Item";
             this.Item.ReadOnly = true;
@@ -4270,39 +4352,39 @@ namespace TFFCC_Save_Editor
             this.Cards_dataGridView.AllowUserToDeleteRows = false;
             this.Cards_dataGridView.AllowUserToResizeRows = false;
             this.Cards_dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Cards_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cards_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Card_name,
             this.Card_normal,
             this.Card_rare,
             this.Card_premium});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cards_dataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.Cards_dataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.Cards_dataGridView.Location = new System.Drawing.Point(3, 29);
             this.Cards_dataGridView.Name = "Cards_dataGridView";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cards_dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Cards_dataGridView.RowHeadersVisible = false;
             this.Cards_dataGridView.Size = new System.Drawing.Size(371, 411);
             this.Cards_dataGridView.TabIndex = 6;
@@ -4313,10 +4395,10 @@ namespace TFFCC_Save_Editor
             // Card_name
             // 
             this.Card_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.Format = "N0";
-            dataGridViewCellStyle16.NullValue = null;
-            this.Card_name.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Card_name.DefaultCellStyle = dataGridViewCellStyle7;
             this.Card_name.FillWeight = 240F;
             this.Card_name.HeaderText = "Card Name";
             this.Card_name.Name = "Card_name";
@@ -4455,6 +4537,653 @@ namespace TFFCC_Save_Editor
             this.Save_files_as_ToolStripMenuItem.Text = "Save Files As...";
             this.Save_files_as_ToolStripMenuItem.Click += new System.EventHandler(this.Save_files_as_ToolStripMenuItem_Click);
             // 
+            // Top_characters_used_groupBox
+            // 
+            this.Top_characters_used_groupBox.Controls.Add(this.label21);
+            this.Top_characters_used_groupBox.Controls.Add(this.label20);
+            this.Top_characters_used_groupBox.Controls.Add(this.label19);
+            this.Top_characters_used_groupBox.Controls.Add(this.label18);
+            this.Top_characters_used_groupBox.Controls.Add(this.label17);
+            this.Top_characters_used_groupBox.Controls.Add(this.label16);
+            this.Top_characters_used_groupBox.Controls.Add(this.label15);
+            this.Top_characters_used_groupBox.Controls.Add(this.label14);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_8_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_7_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_6_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_5_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_4_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_3_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_2_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_1_level_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_8_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_7_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_6_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_5_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_4_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_3_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_2_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_1_character_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.label28);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_1_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.label27);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_2_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.label26);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_3_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.label25);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_4_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.label24);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_5_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.label23);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_6_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.label22);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_7_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_8_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_8_label);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_7_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_1_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_6_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_2_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_5_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_3_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_4_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_4_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_3_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_5_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_2_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_6_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_1_timesUsed_textBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_7_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_8_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_8_character_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_7_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_1_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_6_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_2_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_5_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_3_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Controls.Add(this.Top_characters_used_4_levelResets_pictureBox);
+            this.Top_characters_used_groupBox.Location = new System.Drawing.Point(414, 3);
+            this.Top_characters_used_groupBox.Name = "Top_characters_used_groupBox";
+            this.Top_characters_used_groupBox.Size = new System.Drawing.Size(407, 437);
+            this.Top_characters_used_groupBox.TabIndex = 1;
+            this.Top_characters_used_groupBox.TabStop = false;
+            this.Top_characters_used_groupBox.Text = "Top Characters Used";
+            // 
+            // Top_characters_used_1_label
+            // 
+            this.Top_characters_used_1_label.AutoSize = true;
+            this.Top_characters_used_1_label.Location = new System.Drawing.Point(10, 35);
+            this.Top_characters_used_1_label.Name = "Top_characters_used_1_label";
+            this.Top_characters_used_1_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_1_label.TabIndex = 0;
+            this.Top_characters_used_1_label.Text = "#1";
+            // 
+            // Top_characters_used_2_label
+            // 
+            this.Top_characters_used_2_label.AutoSize = true;
+            this.Top_characters_used_2_label.Location = new System.Drawing.Point(10, 87);
+            this.Top_characters_used_2_label.Name = "Top_characters_used_2_label";
+            this.Top_characters_used_2_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_2_label.TabIndex = 0;
+            this.Top_characters_used_2_label.Text = "#2";
+            // 
+            // Top_characters_used_3_label
+            // 
+            this.Top_characters_used_3_label.AutoSize = true;
+            this.Top_characters_used_3_label.Location = new System.Drawing.Point(10, 139);
+            this.Top_characters_used_3_label.Name = "Top_characters_used_3_label";
+            this.Top_characters_used_3_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_3_label.TabIndex = 0;
+            this.Top_characters_used_3_label.Text = "#3";
+            // 
+            // Top_characters_used_4_label
+            // 
+            this.Top_characters_used_4_label.AutoSize = true;
+            this.Top_characters_used_4_label.Location = new System.Drawing.Point(10, 191);
+            this.Top_characters_used_4_label.Name = "Top_characters_used_4_label";
+            this.Top_characters_used_4_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_4_label.TabIndex = 0;
+            this.Top_characters_used_4_label.Text = "#4";
+            // 
+            // Top_characters_used_5_label
+            // 
+            this.Top_characters_used_5_label.AutoSize = true;
+            this.Top_characters_used_5_label.Location = new System.Drawing.Point(10, 243);
+            this.Top_characters_used_5_label.Name = "Top_characters_used_5_label";
+            this.Top_characters_used_5_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_5_label.TabIndex = 0;
+            this.Top_characters_used_5_label.Text = "#5";
+            // 
+            // Top_characters_used_6_label
+            // 
+            this.Top_characters_used_6_label.AutoSize = true;
+            this.Top_characters_used_6_label.Location = new System.Drawing.Point(10, 295);
+            this.Top_characters_used_6_label.Name = "Top_characters_used_6_label";
+            this.Top_characters_used_6_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_6_label.TabIndex = 0;
+            this.Top_characters_used_6_label.Text = "#6";
+            // 
+            // Top_characters_used_7_label
+            // 
+            this.Top_characters_used_7_label.AutoSize = true;
+            this.Top_characters_used_7_label.Location = new System.Drawing.Point(10, 347);
+            this.Top_characters_used_7_label.Name = "Top_characters_used_7_label";
+            this.Top_characters_used_7_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_7_label.TabIndex = 0;
+            this.Top_characters_used_7_label.Text = "#7";
+            // 
+            // Top_characters_used_8_label
+            // 
+            this.Top_characters_used_8_label.AutoSize = true;
+            this.Top_characters_used_8_label.Location = new System.Drawing.Point(10, 399);
+            this.Top_characters_used_8_label.Name = "Top_characters_used_8_label";
+            this.Top_characters_used_8_label.Size = new System.Drawing.Size(20, 13);
+            this.Top_characters_used_8_label.TabIndex = 0;
+            this.Top_characters_used_8_label.Text = "#8";
+            // 
+            // Top_characters_used_1_character_pictureBox
+            // 
+            this.Top_characters_used_1_character_pictureBox.Location = new System.Drawing.Point(45, 21);
+            this.Top_characters_used_1_character_pictureBox.Name = "Top_characters_used_1_character_pictureBox";
+            this.Top_characters_used_1_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_1_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_1_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_1_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_2_character_pictureBox
+            // 
+            this.Top_characters_used_2_character_pictureBox.Location = new System.Drawing.Point(45, 73);
+            this.Top_characters_used_2_character_pictureBox.Name = "Top_characters_used_2_character_pictureBox";
+            this.Top_characters_used_2_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_2_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_2_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_2_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_3_character_pictureBox
+            // 
+            this.Top_characters_used_3_character_pictureBox.Location = new System.Drawing.Point(45, 125);
+            this.Top_characters_used_3_character_pictureBox.Name = "Top_characters_used_3_character_pictureBox";
+            this.Top_characters_used_3_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_3_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_3_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_3_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_4_character_pictureBox
+            // 
+            this.Top_characters_used_4_character_pictureBox.Location = new System.Drawing.Point(45, 177);
+            this.Top_characters_used_4_character_pictureBox.Name = "Top_characters_used_4_character_pictureBox";
+            this.Top_characters_used_4_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_4_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_4_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_4_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_5_character_pictureBox
+            // 
+            this.Top_characters_used_5_character_pictureBox.Location = new System.Drawing.Point(45, 229);
+            this.Top_characters_used_5_character_pictureBox.Name = "Top_characters_used_5_character_pictureBox";
+            this.Top_characters_used_5_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_5_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_5_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_5_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_6_character_pictureBox
+            // 
+            this.Top_characters_used_6_character_pictureBox.Location = new System.Drawing.Point(45, 281);
+            this.Top_characters_used_6_character_pictureBox.Name = "Top_characters_used_6_character_pictureBox";
+            this.Top_characters_used_6_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_6_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_6_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_6_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_7_character_pictureBox
+            // 
+            this.Top_characters_used_7_character_pictureBox.Location = new System.Drawing.Point(45, 333);
+            this.Top_characters_used_7_character_pictureBox.Name = "Top_characters_used_7_character_pictureBox";
+            this.Top_characters_used_7_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_7_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_7_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_7_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_8_character_pictureBox
+            // 
+            this.Top_characters_used_8_character_pictureBox.Location = new System.Drawing.Point(45, 385);
+            this.Top_characters_used_8_character_pictureBox.Name = "Top_characters_used_8_character_pictureBox";
+            this.Top_characters_used_8_character_pictureBox.Size = new System.Drawing.Size(40, 40);
+            this.Top_characters_used_8_character_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_8_character_pictureBox.TabIndex = 2;
+            this.Top_characters_used_8_character_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_1_levelResets_pictureBox
+            // 
+            this.Top_characters_used_1_levelResets_pictureBox.Location = new System.Drawing.Point(238, 27);
+            this.Top_characters_used_1_levelResets_pictureBox.Name = "Top_characters_used_1_levelResets_pictureBox";
+            this.Top_characters_used_1_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_1_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_1_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_1_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_2_levelResets_pictureBox
+            // 
+            this.Top_characters_used_2_levelResets_pictureBox.Location = new System.Drawing.Point(238, 79);
+            this.Top_characters_used_2_levelResets_pictureBox.Name = "Top_characters_used_2_levelResets_pictureBox";
+            this.Top_characters_used_2_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_2_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_2_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_2_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_3_levelResets_pictureBox
+            // 
+            this.Top_characters_used_3_levelResets_pictureBox.Location = new System.Drawing.Point(238, 131);
+            this.Top_characters_used_3_levelResets_pictureBox.Name = "Top_characters_used_3_levelResets_pictureBox";
+            this.Top_characters_used_3_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_3_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_3_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_3_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_4_levelResets_pictureBox
+            // 
+            this.Top_characters_used_4_levelResets_pictureBox.Location = new System.Drawing.Point(238, 183);
+            this.Top_characters_used_4_levelResets_pictureBox.Name = "Top_characters_used_4_levelResets_pictureBox";
+            this.Top_characters_used_4_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_4_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_4_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_4_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_5_levelResets_pictureBox
+            // 
+            this.Top_characters_used_5_levelResets_pictureBox.Location = new System.Drawing.Point(238, 235);
+            this.Top_characters_used_5_levelResets_pictureBox.Name = "Top_characters_used_5_levelResets_pictureBox";
+            this.Top_characters_used_5_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_5_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_5_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_5_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_6_levelResets_pictureBox
+            // 
+            this.Top_characters_used_6_levelResets_pictureBox.Location = new System.Drawing.Point(238, 287);
+            this.Top_characters_used_6_levelResets_pictureBox.Name = "Top_characters_used_6_levelResets_pictureBox";
+            this.Top_characters_used_6_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_6_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_6_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_6_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_7_levelResets_pictureBox
+            // 
+            this.Top_characters_used_7_levelResets_pictureBox.Location = new System.Drawing.Point(238, 339);
+            this.Top_characters_used_7_levelResets_pictureBox.Name = "Top_characters_used_7_levelResets_pictureBox";
+            this.Top_characters_used_7_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_7_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_7_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_7_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_8_levelResets_pictureBox
+            // 
+            this.Top_characters_used_8_levelResets_pictureBox.Location = new System.Drawing.Point(238, 391);
+            this.Top_characters_used_8_levelResets_pictureBox.Name = "Top_characters_used_8_levelResets_pictureBox";
+            this.Top_characters_used_8_levelResets_pictureBox.Size = new System.Drawing.Size(28, 28);
+            this.Top_characters_used_8_levelResets_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Top_characters_used_8_levelResets_pictureBox.TabIndex = 2;
+            this.Top_characters_used_8_levelResets_pictureBox.TabStop = false;
+            // 
+            // Top_characters_used_1_timesUsed_textBox
+            // 
+            this.Top_characters_used_1_timesUsed_textBox.Location = new System.Drawing.Point(351, 31);
+            this.Top_characters_used_1_timesUsed_textBox.Name = "Top_characters_used_1_timesUsed_textBox";
+            this.Top_characters_used_1_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_1_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_1_timesUsed_textBox.TabIndex = 2;
+            // 
+            // Top_characters_used_2_timesUsed_textBox
+            // 
+            this.Top_characters_used_2_timesUsed_textBox.Location = new System.Drawing.Point(351, 83);
+            this.Top_characters_used_2_timesUsed_textBox.Name = "Top_characters_used_2_timesUsed_textBox";
+            this.Top_characters_used_2_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_2_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_2_timesUsed_textBox.TabIndex = 4;
+            // 
+            // Top_characters_used_3_timesUsed_textBox
+            // 
+            this.Top_characters_used_3_timesUsed_textBox.Location = new System.Drawing.Point(351, 135);
+            this.Top_characters_used_3_timesUsed_textBox.Name = "Top_characters_used_3_timesUsed_textBox";
+            this.Top_characters_used_3_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_3_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_3_timesUsed_textBox.TabIndex = 6;
+            // 
+            // Top_characters_used_4_timesUsed_textBox
+            // 
+            this.Top_characters_used_4_timesUsed_textBox.Location = new System.Drawing.Point(351, 187);
+            this.Top_characters_used_4_timesUsed_textBox.Name = "Top_characters_used_4_timesUsed_textBox";
+            this.Top_characters_used_4_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_4_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_4_timesUsed_textBox.TabIndex = 8;
+            // 
+            // Top_characters_used_5_timesUsed_textBox
+            // 
+            this.Top_characters_used_5_timesUsed_textBox.Location = new System.Drawing.Point(351, 239);
+            this.Top_characters_used_5_timesUsed_textBox.Name = "Top_characters_used_5_timesUsed_textBox";
+            this.Top_characters_used_5_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_5_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_5_timesUsed_textBox.TabIndex = 10;
+            // 
+            // Top_characters_used_6_timesUsed_textBox
+            // 
+            this.Top_characters_used_6_timesUsed_textBox.Location = new System.Drawing.Point(351, 291);
+            this.Top_characters_used_6_timesUsed_textBox.Name = "Top_characters_used_6_timesUsed_textBox";
+            this.Top_characters_used_6_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_6_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_6_timesUsed_textBox.TabIndex = 12;
+            // 
+            // Top_characters_used_7_timesUsed_textBox
+            // 
+            this.Top_characters_used_7_timesUsed_textBox.Location = new System.Drawing.Point(351, 343);
+            this.Top_characters_used_7_timesUsed_textBox.Name = "Top_characters_used_7_timesUsed_textBox";
+            this.Top_characters_used_7_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_7_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_7_timesUsed_textBox.TabIndex = 14;
+            // 
+            // Top_characters_used_8_timesUsed_textBox
+            // 
+            this.Top_characters_used_8_timesUsed_textBox.Location = new System.Drawing.Point(351, 395);
+            this.Top_characters_used_8_timesUsed_textBox.Name = "Top_characters_used_8_timesUsed_textBox";
+            this.Top_characters_used_8_timesUsed_textBox.ReadOnly = true;
+            this.Top_characters_used_8_timesUsed_textBox.Size = new System.Drawing.Size(37, 20);
+            this.Top_characters_used_8_timesUsed_textBox.TabIndex = 16;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label22.Location = new System.Drawing.Point(3, 66);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(400, 2);
+            this.label22.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.White;
+            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label23.Location = new System.Drawing.Point(3, 170);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(400, 2);
+            this.label23.TabIndex = 1;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.White;
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label24.Location = new System.Drawing.Point(3, 274);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(400, 2);
+            this.label24.TabIndex = 1;
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.White;
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label25.Location = new System.Drawing.Point(2, 378);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(400, 2);
+            this.label25.TabIndex = 1;
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.White;
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label26.Location = new System.Drawing.Point(4, 118);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(400, 2);
+            this.label26.TabIndex = 1;
+            // 
+            // label27
+            // 
+            this.label27.BackColor = System.Drawing.Color.White;
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label27.Location = new System.Drawing.Point(4, 222);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(400, 2);
+            this.label27.TabIndex = 1;
+            // 
+            // label28
+            // 
+            this.label28.BackColor = System.Drawing.Color.White;
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label28.Location = new System.Drawing.Point(4, 326);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(400, 2);
+            this.label28.TabIndex = 1;
+            // 
+            // Top_characters_used_1_character_textBox
+            // 
+            this.Top_characters_used_1_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_1_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_1_character_textBox.Location = new System.Drawing.Point(91, 35);
+            this.Top_characters_used_1_character_textBox.Name = "Top_characters_used_1_character_textBox";
+            this.Top_characters_used_1_character_textBox.ReadOnly = true;
+            this.Top_characters_used_1_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_1_character_textBox.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(272, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 13);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Level";
+            // 
+            // Top_characters_used_1_level_textBox
+            // 
+            this.Top_characters_used_1_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_1_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_1_level_textBox.Location = new System.Drawing.Point(305, 35);
+            this.Top_characters_used_1_level_textBox.Name = "Top_characters_used_1_level_textBox";
+            this.Top_characters_used_1_level_textBox.ReadOnly = true;
+            this.Top_characters_used_1_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_1_level_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_2_character_textBox
+            // 
+            this.Top_characters_used_2_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_2_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_2_character_textBox.Location = new System.Drawing.Point(91, 87);
+            this.Top_characters_used_2_character_textBox.Name = "Top_characters_used_2_character_textBox";
+            this.Top_characters_used_2_character_textBox.ReadOnly = true;
+            this.Top_characters_used_2_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_2_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_2_level_textBox
+            // 
+            this.Top_characters_used_2_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_2_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_2_level_textBox.Location = new System.Drawing.Point(305, 87);
+            this.Top_characters_used_2_level_textBox.Name = "Top_characters_used_2_level_textBox";
+            this.Top_characters_used_2_level_textBox.ReadOnly = true;
+            this.Top_characters_used_2_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_2_level_textBox.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(272, 87);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(33, 13);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Level";
+            // 
+            // Top_characters_used_3_character_textBox
+            // 
+            this.Top_characters_used_3_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_3_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_3_character_textBox.Location = new System.Drawing.Point(91, 139);
+            this.Top_characters_used_3_character_textBox.Name = "Top_characters_used_3_character_textBox";
+            this.Top_characters_used_3_character_textBox.ReadOnly = true;
+            this.Top_characters_used_3_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_3_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_3_level_textBox
+            // 
+            this.Top_characters_used_3_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_3_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_3_level_textBox.Location = new System.Drawing.Point(305, 139);
+            this.Top_characters_used_3_level_textBox.Name = "Top_characters_used_3_level_textBox";
+            this.Top_characters_used_3_level_textBox.ReadOnly = true;
+            this.Top_characters_used_3_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_3_level_textBox.TabIndex = 17;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(272, 139);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(33, 13);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Level";
+            // 
+            // Top_characters_used_4_character_textBox
+            // 
+            this.Top_characters_used_4_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_4_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_4_character_textBox.Location = new System.Drawing.Point(91, 191);
+            this.Top_characters_used_4_character_textBox.Name = "Top_characters_used_4_character_textBox";
+            this.Top_characters_used_4_character_textBox.ReadOnly = true;
+            this.Top_characters_used_4_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_4_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_4_level_textBox
+            // 
+            this.Top_characters_used_4_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_4_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_4_level_textBox.Location = new System.Drawing.Point(305, 191);
+            this.Top_characters_used_4_level_textBox.Name = "Top_characters_used_4_level_textBox";
+            this.Top_characters_used_4_level_textBox.ReadOnly = true;
+            this.Top_characters_used_4_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_4_level_textBox.TabIndex = 17;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(272, 191);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(33, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Level";
+            // 
+            // Top_characters_used_5_character_textBox
+            // 
+            this.Top_characters_used_5_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_5_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_5_character_textBox.Location = new System.Drawing.Point(91, 243);
+            this.Top_characters_used_5_character_textBox.Name = "Top_characters_used_5_character_textBox";
+            this.Top_characters_used_5_character_textBox.ReadOnly = true;
+            this.Top_characters_used_5_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_5_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_5_level_textBox
+            // 
+            this.Top_characters_used_5_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_5_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_5_level_textBox.Location = new System.Drawing.Point(305, 243);
+            this.Top_characters_used_5_level_textBox.Name = "Top_characters_used_5_level_textBox";
+            this.Top_characters_used_5_level_textBox.ReadOnly = true;
+            this.Top_characters_used_5_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_5_level_textBox.TabIndex = 17;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(272, 243);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(33, 13);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Level";
+            // 
+            // Top_characters_used_6_character_textBox
+            // 
+            this.Top_characters_used_6_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_6_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_6_character_textBox.Location = new System.Drawing.Point(91, 295);
+            this.Top_characters_used_6_character_textBox.Name = "Top_characters_used_6_character_textBox";
+            this.Top_characters_used_6_character_textBox.ReadOnly = true;
+            this.Top_characters_used_6_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_6_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_6_level_textBox
+            // 
+            this.Top_characters_used_6_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_6_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_6_level_textBox.Location = new System.Drawing.Point(305, 295);
+            this.Top_characters_used_6_level_textBox.Name = "Top_characters_used_6_level_textBox";
+            this.Top_characters_used_6_level_textBox.ReadOnly = true;
+            this.Top_characters_used_6_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_6_level_textBox.TabIndex = 17;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(272, 295);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(33, 13);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Level";
+            // 
+            // Top_characters_used_7_character_textBox
+            // 
+            this.Top_characters_used_7_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_7_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_7_character_textBox.Location = new System.Drawing.Point(91, 347);
+            this.Top_characters_used_7_character_textBox.Name = "Top_characters_used_7_character_textBox";
+            this.Top_characters_used_7_character_textBox.ReadOnly = true;
+            this.Top_characters_used_7_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_7_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_7_level_textBox
+            // 
+            this.Top_characters_used_7_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_7_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_7_level_textBox.Location = new System.Drawing.Point(305, 347);
+            this.Top_characters_used_7_level_textBox.Name = "Top_characters_used_7_level_textBox";
+            this.Top_characters_used_7_level_textBox.ReadOnly = true;
+            this.Top_characters_used_7_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_7_level_textBox.TabIndex = 17;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(272, 347);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(33, 13);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Level";
+            // 
+            // Top_characters_used_8_character_textBox
+            // 
+            this.Top_characters_used_8_character_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_8_character_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_8_character_textBox.Location = new System.Drawing.Point(91, 399);
+            this.Top_characters_used_8_character_textBox.Name = "Top_characters_used_8_character_textBox";
+            this.Top_characters_used_8_character_textBox.ReadOnly = true;
+            this.Top_characters_used_8_character_textBox.Size = new System.Drawing.Size(80, 13);
+            this.Top_characters_used_8_character_textBox.TabIndex = 17;
+            // 
+            // Top_characters_used_8_level_textBox
+            // 
+            this.Top_characters_used_8_level_textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Top_characters_used_8_level_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Top_characters_used_8_level_textBox.Location = new System.Drawing.Point(305, 399);
+            this.Top_characters_used_8_level_textBox.Name = "Top_characters_used_8_level_textBox";
+            this.Top_characters_used_8_level_textBox.ReadOnly = true;
+            this.Top_characters_used_8_level_textBox.Size = new System.Drawing.Size(17, 13);
+            this.Top_characters_used_8_level_textBox.TabIndex = 17;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(272, 399);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(33, 13);
+            this.label21.TabIndex = 18;
+            this.label21.Text = "Level";
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4468,7 +5197,7 @@ namespace TFFCC_Save_Editor
             this.MaximizeBox = false;
             this.Name = "Main_Form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.31";
+            this.Text = "Theatrhythm Final Fantasy: Curtain Call - Save Editor v0.33";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kill_SQL);
             Profile_groupBox.ResumeLayout(false);
             Profile_groupBox.PerformLayout();
@@ -4613,6 +5342,24 @@ namespace TFFCC_Save_Editor
             this.Songs_tabPage.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.Top_characters_used_groupBox.ResumeLayout(false);
+            this.Top_characters_used_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_1_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_2_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_3_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_4_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_5_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_6_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_7_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_8_character_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_1_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_2_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_3_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_4_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_5_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_6_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_7_levelResets_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top_characters_used_8_levelResets_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4939,6 +5686,70 @@ namespace TFFCC_Save_Editor
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox Top_characters_used_groupBox;
+        private System.Windows.Forms.TextBox Top_characters_used_1_character_textBox;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label Top_characters_used_1_label;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label Top_characters_used_2_label;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label Top_characters_used_3_label;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label Top_characters_used_4_label;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label Top_characters_used_5_label;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label Top_characters_used_6_label;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label Top_characters_used_7_label;
+        private System.Windows.Forms.TextBox Top_characters_used_8_timesUsed_textBox;
+        private System.Windows.Forms.Label Top_characters_used_8_label;
+        private System.Windows.Forms.TextBox Top_characters_used_7_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_1_character_pictureBox;
+        private System.Windows.Forms.TextBox Top_characters_used_6_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_2_character_pictureBox;
+        private System.Windows.Forms.TextBox Top_characters_used_5_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_3_character_pictureBox;
+        private System.Windows.Forms.TextBox Top_characters_used_4_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_4_character_pictureBox;
+        private System.Windows.Forms.TextBox Top_characters_used_3_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_5_character_pictureBox;
+        private System.Windows.Forms.TextBox Top_characters_used_2_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_6_character_pictureBox;
+        private System.Windows.Forms.TextBox Top_characters_used_1_timesUsed_textBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_7_character_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_8_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_8_character_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_7_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_1_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_6_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_2_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_5_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_3_levelResets_pictureBox;
+        private System.Windows.Forms.PictureBox Top_characters_used_4_levelResets_pictureBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox Top_characters_used_1_level_textBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox Top_characters_used_8_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_7_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_6_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_5_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_4_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_3_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_2_level_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_8_character_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_7_character_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_6_character_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_5_character_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_4_character_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_3_character_textBox;
+        private System.Windows.Forms.TextBox Top_characters_used_2_character_textBox;
     }
 }
 
