@@ -99,7 +99,6 @@ namespace TFFCC_Save_Editor
                 Read_items(null, null);
                 Read_collectacards(null, null);
                 Read_characters(null, null);
-                Read_write_top_characters_used();
                 Read_songs(null, null);
 
                 //Enable savedata.bk & extsavedata.bk stuff
@@ -1133,6 +1132,8 @@ namespace TFFCC_Save_Editor
                 CharEditor_stamina_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Stamina"].ToString(), 16));
                 //Read Spirit
                 CharEditor_spirit_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Spirit"].ToString(), 16));
+                //Read Times Used
+                CharEditor_timesUsed_numericUpDown.Value = BitConverter.ToUInt16(savetype, Convert.ToInt32(readerChar["Times Used"].ToString(), 16));
                 readerChar.Close();
 
                 //Read Level Resets Image
@@ -1141,6 +1142,8 @@ namespace TFFCC_Save_Editor
                 if (CharEditor_levelResets_numericUpDown.Value < 10 && CharEditor_levelResets_numericUpDown.Value > 0) CharEditor_levelResets_picturebox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{CharEditor_levelResets_numericUpDown.Value}.png"));
                 if (CharEditor_levelResets_numericUpDown.Value > 9) CharEditor_levelResets_picturebox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
                 CharEditor_character_changed = false;
+
+                Read_write_top_characters_used();
             }
             catch (Exception ex)
             {
@@ -1174,7 +1177,7 @@ namespace TFFCC_Save_Editor
                 readerChar.Close();
 
                 //Write Character Editor
-                SQLiteCommand cmd = new SQLiteCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit FROM Characters WHERE Character = @character", connection);
+                SQLiteCommand cmd = new SQLiteCommand("SELECT DLC, [Level Resets], HP, [Total CP], Strength, Agility, Magic, Luck, Stamina, Spirit, [Times Used] FROM Characters WHERE Character = @character", connection);
                 cmd.Parameters.AddWithValue("@character", CharEditor_character_comboBox.SelectedItem.ToString());
                 readerChar = cmd.ExecuteReader();
                 readerChar.Read();
@@ -1198,6 +1201,8 @@ namespace TFFCC_Save_Editor
                 Array.Copy(BitConverter.GetBytes((ushort)CharEditor_stamina_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Stamina"].ToString(), 16), 2);
                 //Write Spirit
                 Array.Copy(BitConverter.GetBytes((ushort)CharEditor_spirit_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Spirit"].ToString(), 16), 2);
+                //Times Used
+                Array.Copy(BitConverter.GetBytes((ushort)CharEditor_timesUsed_numericUpDown.Value), 0, savetype, Convert.ToInt32(readerChar["Times Used"].ToString(), 16), 2);
                 readerChar.Close();
 
                 Read_characters(null, null);
@@ -1254,7 +1259,6 @@ namespace TFFCC_Save_Editor
                 if (sender.ToString() != "reading level reset")
                 {
                     Write_characters(null, null);
-                    Read_write_top_characters_used();
                 }
             }
             catch (Exception ex)
