@@ -99,6 +99,7 @@ namespace TFFCC_Save_Editor
                 Read_items(null, null);
                 Read_collectacards(null, null);
                 Read_characters(null, null);
+                Read_write_top_characters_used();
                 Read_songs(null, null);
 
                 //Enable savedata.bk & extsavedata.bk stuff
@@ -826,6 +827,142 @@ namespace TFFCC_Save_Editor
         }
 
 
+        //For top characters used when reading characters
+        public class Character : IComparable<Character>
+        {
+            public UInt32 TimesUsed { get; set; }
+            public string CharacterName { get; set; }
+            public string Value { get; set; }
+            public byte Level { get; set; }
+            public byte LevelResets { get; set; }
+
+            public int CompareTo(Character other)
+            {
+                return TimesUsed.CompareTo(other.TimesUsed);
+            }
+        }
+
+        //Read and write Top Characters used
+        private void Read_write_top_characters_used()
+        {
+            try
+            {
+                SQLiteDataReader reader = new SQLiteCommand("SELECT Character, DLC, Value, Level, [Level Resets], [Times Used] FROM Characters", connection).ExecuteReader();
+                List<Character> Characters_list = new List<Character>();
+                while (reader.Read())
+                {
+                    Characters_list.Add(new Character() { CharacterName = reader["Character"].ToString(), TimesUsed = BitConverter.ToUInt32(reader["DLC"].ToString() == "true" ? extsavedata : savedata, Convert.ToInt32(reader["Times Used"].ToString(), 16)), Value = reader["Value"].ToString(), Level = (reader["DLC"].ToString() == "true" ? extsavedata : savedata)[Convert.ToUInt32(reader["Level"].ToString(), 16)], LevelResets = (reader["DLC"].ToString() == "true" ? extsavedata : savedata)[Convert.ToUInt32(reader["Level Resets"].ToString(), 16)] });
+                }
+                reader.Close();
+
+                //Write top characters used values onto save and read values on editor
+                Characters_list.Sort();
+                Characters_list.Reverse();
+                ushort topCharacterOffset = 0x38DC;
+                for (int i = 0; i < 8; i++)
+                {
+                    if (Characters_list[i].TimesUsed != 0)
+                    {
+                        savedata[topCharacterOffset] = Convert.ToByte(Characters_list[i].Value, 16);
+                        savedata[topCharacterOffset + 4] = Characters_list[i].Level;
+                        Array.Copy(BitConverter.GetBytes(Characters_list[i].TimesUsed), 0, savedata, topCharacterOffset + 6, 2);
+
+                        if (i == 0)
+                        {
+                            Top_characters_used_1_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_1_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_1_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_1_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_1_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_1_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_1_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 1)
+                        {
+                            Top_characters_used_2_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_2_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_2_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_2_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_2_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_2_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_2_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 2)
+                        {
+                            Top_characters_used_3_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_3_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_3_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_3_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_3_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_3_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_3_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 3)
+                        {
+                            Top_characters_used_4_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_4_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_4_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_4_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_4_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_4_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_4_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 4)
+                        {
+                            Top_characters_used_5_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_5_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_5_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_5_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_5_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_5_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_5_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 5)
+                        {
+                            Top_characters_used_6_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_6_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_6_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_6_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_6_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_6_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_6_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 6)
+                        {
+                            Top_characters_used_7_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_7_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_7_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_7_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_7_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_7_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_7_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                        if (i == 7)
+                        {
+                            Top_characters_used_8_character_textBox.Text = Characters_list[i].CharacterName;
+                            Top_characters_used_8_character_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Characters.Characters_Small.{Characters_list[i].CharacterName}.png"));
+                            Top_characters_used_8_level_textBox.Text = $"Level {Characters_list[i].Level.ToString()}";
+                            Top_characters_used_8_timesUsed_textBox.Text = Characters_list[i].TimesUsed.ToString();
+                            if (Characters_list[i].LevelResets == 0) Top_characters_used_8_levelResets_pictureBox.Image = null;
+                            if (Characters_list[i].LevelResets < 10 && Characters_list[i].LevelResets > 0) Top_characters_used_8_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{Characters_list[i].LevelResets}.png"));
+                            if (Characters_list[i].LevelResets > 9) Top_characters_used_8_levelResets_pictureBox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
+                        }
+                    }
+                    else
+                    {
+                        Array.Copy(new byte[] { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }, 0, savedata, topCharacterOffset, 8);
+                    }
+                    topCharacterOffset += 8;
+                }
+                Characters_list.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Something went wrong while trying to update Top Characters Used\n\n{ex}", "Error");
+            }
+        }
+
+
         //Characters Tab
         bool CharEditor_character_changed;
         //Read Characters tab
@@ -1000,43 +1137,9 @@ namespace TFFCC_Save_Editor
 
                 //Read Level Resets Image
                 Set_LvReset_totalCP("reading level reset", null);
-                switch (CharEditor_levelResets_numericUpDown.Value)
-                {
-                    case 0:
-                        CharEditor_levelResets_picturebox.Image = null;
-                        break;
-                    case 1:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_1;
-                        break;
-                    case 2:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_2;
-                        break;
-                    case 3:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_3;
-                        break;
-                    case 4:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_4;
-                        break;
-                    case 5:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_5;
-                        break;
-                    case 6:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_6;
-                        break;
-                    case 7:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_7;
-                        break;
-                    case 8:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_8;
-                        break;
-                    case 9:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_9;
-                        break;
-                    default:
-                        CharEditor_levelResets_picturebox.Image = Properties.Resources.Level_Resets_10;
-                        break;
-                }
-
+                if (CharEditor_levelResets_numericUpDown.Value == 0) CharEditor_levelResets_picturebox.Image = null;
+                if (CharEditor_levelResets_numericUpDown.Value < 10 && CharEditor_levelResets_numericUpDown.Value > 0) CharEditor_levelResets_picturebox.Image = Image.FromStream(assembly.GetManifestResourceStream($"TFFCC_Save_Editor.Resources.Level_Resets_{CharEditor_levelResets_numericUpDown.Value}.png"));
+                if (CharEditor_levelResets_numericUpDown.Value > 9) CharEditor_levelResets_picturebox.Image = Image.FromStream(assembly.GetManifestResourceStream("TFFCC_Save_Editor.Resources.Level_Resets_10.png"));
                 CharEditor_character_changed = false;
             }
             catch (Exception ex)
@@ -1105,7 +1208,7 @@ namespace TFFCC_Save_Editor
             }
         }
 
-        //Set level reset value, level reset image and minimum Total CP value
+        //Set minimum Total CP value
         private void Set_LvReset_totalCP(object sender, EventArgs e)
         {
             if (!savedata_loaded || !extsavedata_loaded || CharEditor_character_changed) return;
@@ -1151,6 +1254,7 @@ namespace TFFCC_Save_Editor
                 if (sender.ToString() != "reading level reset")
                 {
                     Write_characters(null, null);
+                    Read_write_top_characters_used();
                 }
             }
             catch (Exception ex)
