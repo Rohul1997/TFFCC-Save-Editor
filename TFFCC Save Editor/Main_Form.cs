@@ -81,6 +81,13 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
+                savedata = File.ReadAllBytes(open_savedata.FileName);
+                if (savedata.LongLength != 0x7498)
+                {
+                    MessageBox.Show("The savedata.bk file chosen is either corrupted or invalid", "Error");
+                    return;
+                }
+
                 open_extsavedata.Filter = " extsavedata.bk Files|extsavedata.bk|All Files (*.*)|*.*";
                 if (open_extsavedata.ShowDialog() != DialogResult.OK)
                 {
@@ -88,8 +95,12 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
-                savedata = File.ReadAllBytes(open_savedata.FileName);
                 extsavedata = File.ReadAllBytes(open_extsavedata.FileName);
+                if (extsavedata.LongLength != 0x2D32E0)
+                {
+                    MessageBox.Show("The extsavedata.bk file chosen is either corrupted or invalid", "Error");
+                    return;
+                }
 
                 Items_dataGridView.Rows.Clear();
                 Cards_dataGridView.Rows.Clear();
