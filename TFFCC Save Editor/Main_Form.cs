@@ -46,12 +46,15 @@ namespace TFFCC_Save_Editor
         bool extsavedata_loaded;
         byte[] savedata;
         byte[] extsavedata;
+        byte[] savedataBak = new byte[0x7498];
+        byte[] extsavedataBak = new byte[0x2D32E0];
 
         public Main_Form()
         {
             InitializeComponent();
             CharEditor_levelResets_picturebox.Parent = CharEditor_character_pictureBox;
             CharEditor_levelResets_picturebox.Location = new Point(62, 0);
+            backup_saves_toolStripMenuItem.Checked = Properties.Settings.Default.backup;
 
             try
             {
@@ -102,6 +105,9 @@ namespace TFFCC_Save_Editor
                     return;
                 }
 
+                savedata.CopyTo(savedataBak, 0);
+                extsavedata.CopyTo(extsavedataBak, 0);
+
                 Items_dataGridView.Rows.Clear();
                 Cards_dataGridView.Rows.Clear();
                 Songs_dataGridView.Rows.Clear();
@@ -130,6 +136,14 @@ namespace TFFCC_Save_Editor
                 Write_records(null, null);
                 Write_characters(null, null);
                 Write_items(null, null);
+
+                if (Properties.Settings.Default.backup)
+                {
+                    File.WriteAllBytes($"{open_savedata.FileName}.bak", savedataBak);
+                    File.WriteAllBytes($"{open_extsavedata.FileName}.bak", extsavedataBak);
+                }
+                savedata.CopyTo(savedataBak, 0);
+                extsavedata.CopyTo(extsavedataBak, 0);
 
                 File.WriteAllBytes(open_savedata.FileName, savedata);
                 File.WriteAllBytes(open_extsavedata.FileName, extsavedata);
@@ -1813,6 +1827,22 @@ namespace TFFCC_Save_Editor
             {
                 MessageBox.Show($"Something went wrong while trying to close/kill the SQL process or trying to delete the database files\n\n{ex}", "Error");
             }
+        }
+
+        //When backup saves is clicked write to settings
+        private void Backup_saves_changed(object sender, EventArgs e)
+        {
+            if (backup_saves_toolStripMenuItem.Checked)
+            {
+                backup_saves_toolStripMenuItem.Checked = false;
+            }
+            else
+            {
+                backup_saves_toolStripMenuItem.Checked = true;
+            }
+
+            Properties.Settings.Default.backup = backup_saves_toolStripMenuItem.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }
